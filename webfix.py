@@ -183,6 +183,17 @@ def html_rewrite_links(rule, file):
                 continue
             tag[attr] = rewrite_href(rule, file, tag[attr])
 
+def select_2011(rule, file):
+    return file.abs_source_path.parts[1] == '2011'
+
+def html_rewrite_2011_fr_link(rule, file):
+    attr = 'href'
+    for tag in file.payload.find_all('a'):
+        if not tag.has_attr(attr):
+            continue
+        if not tag[attr] == '/2011?lang=fr':
+            continue
+        tag[attr] = '/2011/index-lang=fr.html'
 
 class File:
     def __init__(self, abs_source_path, abs_target_path, normalized_source_name, normalized_target_name):
@@ -194,9 +205,11 @@ class File:
 
     def __str__(self):
         return f'<File {self.normalized_source_name} to {self.normalized_target_name}>'
+
 HTML_RULES = (
     (Rule, select_all, parse_html)
   , (Rule, select_all, html_rewrite_links)
+  , (Rule, select_2011, html_rewrite_2011_fr_link)
   , (Rule, select_all, serialze_html)
 )
 
