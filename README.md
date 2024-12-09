@@ -21,7 +21,7 @@ The out directory contains code from runing the tool.
 # setup/install
 $ python -m venv venv
 $ . venv/bin/acivate
-(venv)$ pip install -upgrade pip
+(venv)$ pip install --upgrade pip
 (venv)$ pip install -r requirements.txt
 ```
 
