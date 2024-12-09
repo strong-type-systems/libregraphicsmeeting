@@ -68,12 +68,10 @@ def select_css_file(rule, file):
     return '.css' in file.normalized_source_name
 
 def parse_html(rule, file):
-    parser = 'html.parser'
-    if b'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd' in file.payload:
-        #parser = 'xml'
-        parser = 'html5lib'
-
-    parser = 'html5lib'
+    parser = 'html5lib' #'html.parser'
+    if file.normalized_source_name.endswith('.xml') \
+            or file.payload.startswith(b'<?xml version='):
+        parser = 'xml'
     file.payload = BeautifulSoup(file.payload, parser)
 
 def serialze_html(rule, file):
@@ -128,7 +126,7 @@ def css_rewrite_links(rule, file):
             start += len(url) + len(URL_END_TOKEN)
             if not url.startswith('data:'):
                 new_url = rewrite_href(rule, file, url)
-                print('url:',url, 'new_url', new_url)
+                # print('url:',url, 'new_url', new_url)
             else:
                 new_url = url
 
