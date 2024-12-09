@@ -229,6 +229,13 @@ def rename_file(file_name):
         if suffix in new_name and not new_name.endswith(suffix):
             new_name = new_name + suffix
             break
+    # There are .php files that are by a simple server rather served as pctet/stream
+    # than as text/html
+    for suffix, additional in [('.php', '.html')]:
+        # The web serve may send the wrong mime type is this is not the case
+        if new_name.endswith(suffix):
+            new_name = new_name + additional
+            break
     return new_name
 
 def main(source_dir, target_dir, force=False):
