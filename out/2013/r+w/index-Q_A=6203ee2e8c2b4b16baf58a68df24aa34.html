@@ -1,0 +1,126 @@
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Libre Graphics Questions &amp; Answers
+  </title>
+  <script language="javascript">
+   var initialQtxt;
+var qgreen, agreen = false;
+
+function rawurlencode(str) {
+  return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
+  replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/~/g, '%7E');
+}
+
+window.onresize = function(event) {
+  document.getElementById('answer').style.paddingTop =   (58+((document.getElementById('controls').offsetTop) + 50) - (document.getElementById('answer').offsetTop))  +'px';
+}
+
+function textAreaChanged(elem) {
+
+	if(elem.name == 'question') {
+		if(rawurlencode(elem.value) == initialQtxt) {
+			document.getElementById('questionbg').style.backgroundColor = 'transparent';
+			document.getElementById('allanswers').style.display = 'block';
+			qgreen = false;
+		} else {
+			document.getElementById('questionbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			document.getElementById('allanswers').style.display = 'none';
+			qgreen = true;
+		}
+	}
+	else if(elem.name == 'answer') {
+		if(elem.value == "") {
+			document.getElementById('answerbg').style.backgroundColor = 'transparent';
+			agreen = false;
+		} else {
+			document.getElementById('answerbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			agreen = true;
+		}
+	}
+	
+	if(!qgreen && !agreen) {
+		document.getElementById('write').src = 'i/free/png/interface/write.png';
+		document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read_over.png)';
+	}
+}
+  </script>
+  <link href="q+a.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body onload="onresize();">
+  <div class="komplett">
+   <form accept-charset="utf-8" action="post.php" method="post" name="voicesfromthepublic">
+    <div class="questionbg" id="questionbg">
+    </div>
+    <textarea autocomplete="off" class="question" name="question" onkeyup="textAreaChanged(question)" spellcheck="false">How can I make time for this if I need to take care of my children too?</textarea>
+    <script>
+     initialQtxt = 'How%20can%20I%20make%20time%20for%20this%20if%20I%20need%20to%20take%20care%20of%20my%20children%20too%3F';
+    </script>
+    <div class="answerbg" id="answerbg">
+    </div>
+    <textarea autocomplete="off" class="answer" id="answer" name="answer" onkeyup="textAreaChanged(answer)" spellcheck="false"></textarea>
+    <div class="people">
+     <img class="talkL" src="i/free/png/people/L-004-h104c102t101z001_L.png"/>
+     <img class="talkR" src="i/free/png/people/R-002-h101l106b102z001_R.png"/>
+    </div>
+    <div class="allanswers" id="allanswers">
+     <div class="answer_3" id="answerx">
+      Any seriously used application will take the same amount of time to learn and use. It's just sad that nowadays, reading the user manual already makes you an expert compared to the average user.
+     </div>
+     <div class="answer_0" id="answerx">
+      It doesn't necessarily take much more extra time than the proprietary ones. Just download it instead of buying a proprietary app from a sotore, and use the thing. If you have any extra time, you might even file a bug report.
+     </div>
+     <div class="answer_3" id="answerx">
+      Teach them how to code.
+     </div>
+     <div class="answer_3" id="answerx">
+      You make time for everything, esp for your kids.
+     </div>
+     <div class="answer_0" id="answerx">
+      By kicking out proprietary software. Involving your children in free software.
+     </div>
+     <div class="pluslinks">
+      <a href="http://www.forkable.eu/generators/r+w/o/__/6203ee2e8c2b4b16baf58a68df24aa34.html">
+       see posters for this conversation
+      </a>
+      <br/>
+      <a href="http://www.forkable.eu/generators/r+w/o/__/SEEME">
+       see all posters
+      </a>
+      <br/>
+      <a href="o/free/voice/index.html">
+       see all conversations
+      </a>
+      <br/>
+      (
+      <a href="o/free/pdf/people/L-004-h104c102t101_L.pdf">
+       *
+      </a>
+      |
+      <a href="o/free/pdf/people/R-002-h101l106b102_R.pdf">
+       *
+      </a>
+      )
+     </div>
+    </div>
+    <div class="controls" id="controls">
+     <a class="read" href="index.html" id="read">
+     </a>
+     <input class="write" id="write" name="submit to the pool" src="i/free/png/interface/write.png" type="image"/>
+    </div>
+   </form>
+  </div>
+  <div class="bottom">
+   <div class="logo">
+    <a href="../index.html">
+     <img class="logo" src="http://www.forkable.eu/generators/r+w/o/press/rgb/LGM-Logo+15_Solo_120px.png"/>
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

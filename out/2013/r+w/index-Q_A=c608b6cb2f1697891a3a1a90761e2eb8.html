@@ -1,0 +1,147 @@
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Libre Graphics Questions &amp; Answers
+  </title>
+  <script language="javascript">
+   var initialQtxt;
+var qgreen, agreen = false;
+
+function rawurlencode(str) {
+  return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
+  replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/~/g, '%7E');
+}
+
+window.onresize = function(event) {
+  document.getElementById('answer').style.paddingTop =   (58+((document.getElementById('controls').offsetTop) + 50) - (document.getElementById('answer').offsetTop))  +'px';
+}
+
+function textAreaChanged(elem) {
+
+	if(elem.name == 'question') {
+		if(rawurlencode(elem.value) == initialQtxt) {
+			document.getElementById('questionbg').style.backgroundColor = 'transparent';
+			document.getElementById('allanswers').style.display = 'block';
+			qgreen = false;
+		} else {
+			document.getElementById('questionbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			document.getElementById('allanswers').style.display = 'none';
+			qgreen = true;
+		}
+	}
+	else if(elem.name == 'answer') {
+		if(elem.value == "") {
+			document.getElementById('answerbg').style.backgroundColor = 'transparent';
+			agreen = false;
+		} else {
+			document.getElementById('answerbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			agreen = true;
+		}
+	}
+	
+	if(!qgreen && !agreen) {
+		document.getElementById('write').src = 'i/free/png/interface/write.png';
+		document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read_over.png)';
+	}
+}
+  </script>
+  <link href="q+a.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body onload="onresize();">
+  <div class="komplett">
+   <form accept-charset="utf-8" action="post.php" method="post" name="voicesfromthepublic">
+    <div class="questionbg" id="questionbg">
+    </div>
+    <textarea autocomplete="off" class="question" name="question" onkeyup="textAreaChanged(question)" spellcheck="false">Why bother with free software if I can pirate adobe stuff?</textarea>
+    <script>
+     initialQtxt = 'Why%20bother%20with%20free%20software%20if%20I%20can%20pirate%20adobe%20stuff%3F';
+    </script>
+    <div class="answerbg" id="answerbg">
+    </div>
+    <textarea autocomplete="off" class="answer" id="answer" name="answer" onkeyup="textAreaChanged(answer)" spellcheck="false"></textarea>
+    <div class="people">
+     <img class="talkL" src="i/free/png/people/L-002-h101b103l104z002_L.png"/>
+     <img class="talkR" src="i/free/png/people/R-002-h102l106b104z001_R.png"/>
+    </div>
+    <div class="allanswers" id="allanswers">
+     <div class="answer_3" id="answerx">
+      Free software is your software. If you want you can influence it's development instead of being just a customer. Being part of a community is not always easy (especially at first) but can be very rewarding. It's a different kind of investment, but those who embrace it tend to get a lot out of it.
+     </div>
+     <div class="answer_1" id="answerx">
+      Si te encanta el alcohol, el acero y la mar... sube a mi barco grumete!
+     </div>
+     <div class="answer_0" id="answerx">
+      Why don't u be a real pirate? ARRRR
+     </div>
+     <div class="answer_2" id="answerx">
+      Because if you "bother" with free software, you're supporting a better, more ethical social system. And please don't use the loaded term "pirate"
+     </div>
+     <div class="answer_0" id="answerx">
+      Because Adobe let you pirate their stuff on purpose. A way to spread the software education and addiction. Then when you'll publish or become a bit more public, you'll have to pay them to be 'legal' with your studio. This is a situation designed to make you first a thief , then a slave.... enjoy.
+     </div>
+     <div class="answer_1" id="answerx">
+      It's like walking around in a prisoner costume. Feels good? Will you brag of how good thief you are;)?
+     </div>
+     <div class="answer_2" id="answerx">
+      Even pirates, before they attack another ship, hoist a black flag.
+     </div>
+     <div class="answer_0" id="answerx">
+      Whence I be done yo-ho-hoin', I'm going t' shoot their sword.
+     </div>
+     <div class="answer_0" id="answerx">
+      You close the way for alternatives.
+     </div>
+     <div class="answer_3" id="answerx">
+      Pirating software does not build alternatives, it just takes other people's work without their permission.
+     </div>
+     <div class="answer_0" id="answerx">
+      Why bother to pirate Adobe stuff if you can freely have free software?
+     </div>
+     <div class="answer_3" id="answerx">
+      Let's jump on board, and cut them to pieces?
+     </div>
+     <div class="pluslinks">
+      <a href="http://www.forkable.eu/generators/r+w/o/__/c608b6cb2f1697891a3a1a90761e2eb8.html">
+       see posters for this conversation
+      </a>
+      <br/>
+      <a href="http://www.forkable.eu/generators/r+w/o/__/SEEME">
+       see all posters
+      </a>
+      <br/>
+      <a href="o/free/voice/index.html">
+       see all conversations
+      </a>
+      <br/>
+      (
+      <a href="o/free/pdf/people/L-002-h101b103l104_L.pdf">
+       *
+      </a>
+      |
+      <a href="o/free/pdf/people/R-002-h102l106b104_R.pdf">
+       *
+      </a>
+      )
+     </div>
+    </div>
+    <div class="controls" id="controls">
+     <a class="read" href="index.html" id="read">
+     </a>
+     <input class="write" id="write" name="submit to the pool" src="i/free/png/interface/write.png" type="image"/>
+    </div>
+   </form>
+  </div>
+  <div class="bottom">
+   <div class="logo">
+    <a href="../index.html">
+     <img class="logo" src="http://www.forkable.eu/generators/r+w/o/press/rgb/LGM-Logo+15_Solo_120px.png"/>
+    </a>
+   </div>
+  </div>
+ </body>
+</html>
