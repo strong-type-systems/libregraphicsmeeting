@@ -13,7 +13,7 @@ The transformations are:
 
 Transformations are not yet complete.
 
-The out directory contains code from runing the tool.
+The `docs` directory contains code from runing the tool. `docs` is chosen because it's the one name GitHub actions allows to serve a website directly from a subdirectory in a repository.
 
 ## Install
 
@@ -29,14 +29,14 @@ $ . venv/bin/acivate
 ## Execute the tool
 
 ```
-(venv)$ ./webfix.py -f libregraphicsmeeting.org out
+(venv)$ ./webfix.py -f libregraphicsmeeting.org docs
 ```
 
 ## Serve from http://localhost
 
 ```
-~/libregraphicsmeeting$ cd out
-~/libregraphicsmeeting/out$ python3 -m http.server
+~/libregraphicsmeeting$ cd docs
+~/libregraphicsmeeting/docs$ python3 -m http.server
 ```
 
 
