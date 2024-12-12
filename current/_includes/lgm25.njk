@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Libre Graphics Meeting</title>
-  </head>
-  <body>
-This is a placeholder home page for the <h1>Libre Graphics Meeting</h1>
-Check out older editions of the LGM in the <h2>Archive</h2>
-    <ul>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }} - Libre Graphics Meeting 2025 Nuremberg</title>
+        <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
+        <!-- for syntax highlighting https://www.11ty.dev/docs/plugins/syntaxhighlight/-->
+        <!--
+        <link
+            href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css"
+            rel="stylesheet"
+        />
+        -->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>LGM</h1>
+                <nav>
+                    {{ collections.all
+                        | eleventyNavigation
+                        | eleventyNavigationToHtml({
+                            activeListItemClass: "active",
+                            activeKey: eleventyNavigation.key
+                        })
+                        | safe
+                    }}
+
+<h3>Past Editions</h3>
+    <ul><!-- The archive of past editions. -->
         <li><a href="/2024">
          LGM 2024 Rennes
         </a></li>
@@ -61,5 +80,16 @@ Check out older editions of the LGM in the <h2>Archive</h2>
          LGM 2006 Lyon
         </a></li>
      </ul>
-  </body>
+                </nav>
+            </header>
+            <div>
+                {{ content | safe }}
+            </div>
+            <footer>
+                <ul>
+                    <li><a href="{{rootPath}}/impressum">Impressum</a></li>
+                </ul>
+            </footer>
+        </div> <!-- wrapper -->
+    </body>
 </html>
