@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{{ title }} - Libre Graphics Meeting 2025 Nuremberg</title>
+        <title>{%- if title %}{{title}} - {% endif-%}
+        Libre Graphics Meeting 2025 – RE:imagination, Nuremberg, Germany</title>
         <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
         <!-- for syntax highlighting https://www.11ty.dev/docs/plugins/syntaxhighlight/-->
         <!--
@@ -11,11 +12,16 @@
             rel="stylesheet"
         />
         -->
+        {% if headInject %}
+            {{ headInject | safe }}
+        {% endif %}
     </head>
     <body>
         <div class="wrapper">
             <header>
-                <h1>LGM</h1>
+                <h1>Libre Graphics Meeting 2025 – RE:imagination</h1>
+                <h2>28-31 May Nuremberg, Germany</h2>
+
                 <nav>
                     {{ collections.all
                         | eleventyNavigation
@@ -25,66 +31,38 @@
                         })
                         | safe
                     }}
-
-<h3>Past Editions</h3>
-    <ul><!-- The archive of past editions. -->
-        <li><a href="/2024">
-         LGM 2024 Rennes
-        </a></li>
-        <li><a href="/2021/en/index.html">
-         LGM 2021 (online)
-        </a></li>
-        <li><a href="/2020/en/index.html">
-         LGM 2020 Rennes (online)
-        </a></li>
-        <li><a href="/2019/">
-         LGM 2019 Saarbruck
-        </a></li>
-        <li><a href="/2018/">
-         LGM 2018 Sevilla
-        </a></li>
-        <li><a href="/2017/">
-         LGM 2017 Rio de Janeiro
-        </a></li>
-        <li><a href="/2016/">
-         LGM 2016 London
-        </a></li>
-        <li><a href="/2015/">
-         LGM 2015 Toronto
-        </a></li>
-        <li><a href="/2014/">
-         LGM 2014 Leipzig
-        </a></li>
-        <li><a href="/2013/">
-         LGM 2013 Madrid
-        </a></li>
-        <li><a href="/2012/">
-         LGM 2012 Vienna
-        </a></li>
-        <li><a href="/2011/">
-         LGM 2011 Montreal
-        </a></li>
-        <li><a href="/2010/">
-         LGM 2010 Brussels
-        </a></li>
-        <li><a href="/2009/">
-         LGM 2009 Montreal
-        </a></li>
-        <li><a href="/2008/">
-         LGM 2008 Wrocław
-        </a></li>
-        <li><a href="/2007/">
-         LGM 2007 Montreal
-        </a></li>
-        <li><a href="/2006/">
-         LGM 2006 Lyon
-        </a></li>
-     </ul>
+                    {%- set pastEditions = [
+                            ['/2024/', '2024', 'Rennes']
+                          , ['/2021/en/index.html', '2021', '(online)']
+                          , ['/2020/en/index.html', '2020', 'Rennes (online)']
+                          , ['/2019/', '2019', 'Saarbruck']
+                          , ['/2018/', '2018', 'Sevilla']
+                          , ['/2017/', '2017', 'Rio de Janeiro']
+                          , ['/2016/', '2016', 'London']
+                          , ['/2015/', '2015', 'Toronto']
+                          , ['/2014/', '2014', 'Leipzig']
+                          , ['/2013/', '2013', 'Madrid']
+                          , ['/2012/', '2012', 'Vienna']
+                          , ['/2011/', '2011', 'Montreal']
+                          , ['/2010/', '2010', 'Brussels']
+                          , ['/2009/', '2009', 'Montreal']
+                          , ['/2008/', '2008', 'Wrocław']
+                          , ['/2007/', '2007', 'Montreal']
+                          , ['/2006/', '2006', 'Lyon']
+                    ] %}
+                    <div class="past_editions">
+                    <span>Past Editions</span>
+                    <ul><!-- The archive of past editions. -->
+                        {% for href, year, location in pastEditions -%}
+                        <li><a href="{{ href }}"><em>{{ year }}</em> | <strong>{{ location }}</strong></a></li>
+                        {%- endfor %}
+                    </ul>
+                    </div>
                 </nav>
             </header>
-            <div>
+            <article>
                 {{ content | safe }}
-            </div>
+            </article>
             <footer>
                 <ul>
                     <li><a href="{{rootPath}}/impressum">Impressum</a></li>
