@@ -10,11 +10,12 @@ import markdownItGitHubHeadings from "markdown-it-github-headings";
 import process from 'process';
 export default function (eleventyConfig) {
     // Output directory: _site
-
     const dir = {
             input: 'current'
           , output: 'docs'
         }
+      , rootDir = '2025'
+      , rootPath = `/${rootDir}`
       ;
 
     eleventyConfig.setIncludesDirectory(`_includes`);
@@ -24,6 +25,9 @@ export default function (eleventyConfig) {
 
     // use this as the default layout.
     eleventyConfig.addGlobalData("layout", "lgm25");
+    // This requires dir.input as that setting is not passed to addPassthroughCopy.
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js`);
 
     let mdOptions = {
         html: true,
@@ -56,7 +60,7 @@ export default function (eleventyConfig) {
         //        .map(()=>'../')
         //        .join('');
         //}
-        return '/2025';
+        return rootPath;
     });
 
 
@@ -71,7 +75,8 @@ export default function (eleventyConfig) {
               , {eleventyNavigation: null}
     );
 
-
+    eleventyConfig.addGlobalData('logo',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025.svg`));
+    eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
     return {
         dir
     }

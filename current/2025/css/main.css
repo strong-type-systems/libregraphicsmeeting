@@ -1,0 +1,174 @@
+@font-face {
+  font-family: RobotoFlex;
+  src:url("./RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].woff2") format("woff2");
+  font-weight:100 900;
+}
+
+@font-face {
+  font-family: RobotoFlex;
+  src:url("./RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght].woff2") format("woff2");
+  font-style:italic;
+  font-weight:100 900;
+}
+
+:root{
+    background: greenyellow;
+    font-family: RobotoFlex;
+}
+
+body{
+
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+
+/* move out of view as we use SVG to dispaly the information visually */
+header :is(h1, h2){
+    position: absolute;
+    top: -100vh
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    padding: 1.5em;
+    background: white;
+    flex: max-content;
+}
+
+
+header {
+    display: grid;
+    grid: auto-flow dense / 40px 40px 1fr;
+
+
+    grid-template-columns: 18em 1fr;
+    grid-template-rows: 1fr auto 2.3em;
+
+  grid-template-areas:
+        "logo filler"
+        "logo reimagination"
+        "logo nav";
+}
+
+header .filler {
+    background: white;
+    grid-area: filler;
+}
+
+header .identity-logo {
+    width: 15em;
+    border:1.5em solid white;
+    grid-area: logo;
+}
+
+header .identiy-reimagination{
+    width: max-content;
+    grid-area: reimagination;
+}
+
+nav {
+    white-space: nowrap;
+    /* prevent the collapsibles from pushing the content down */
+    overflow: visible;
+    height: 2.3em;
+    position: relative;
+    z-index: 5;
+    grid-area: nav;
+}
+nav > *{
+    display: inline-block;
+    background: greenyellow;
+    vertical-align: top;
+    margin: 0;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul > li{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+nav .past_editions li {
+    display: block;
+}
+
+/* collapsible button*/
+.past_editions > span {
+    display: block;
+    background: black;
+    color: white;
+    margin: .3em;
+    padding: .3em;
+    min-width: 11em;
+}
+.past_editions > span:after{
+    padding-left: .5em;
+    float: right;
+    content: "…";
+}
+
+/* Not changing this indicator on :hover, as then it
+ * also shows when the open menu locked .
+ */
+.past_editions.ui_collapsible_mixin-open > span:after {
+    content: "X";
+}
+
+.past_editions.ui_collapsible_mixin-closed > ul {
+    display: none;
+}
+
+:is(
+    .past_editions.ui_collapsible_mixin:hover,
+    .past_editions.ui_collapsible_mixin-open
+){
+    background: linear-gradient(greenyellow, deeppink);
+}
+
+:is(
+    .past_editions.ui_collapsible_mixin:hover,
+    .past_editions.ui_collapsible_mixin-open
+) > ul {
+    display: block;
+}
+
+nav a, nav span {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav a {
+    display: block;
+    background: white;
+    margin: .3em 0 .3em .3em;
+    padding: .3em;
+}
+.past_editions a{
+    margin-right: .3em;
+}
+
+nav a:hover {
+    color: deeppink;
+    text-decoration: underline;
+    text-decoration-thickness: .2em;
+    text-decoration-color: greenyellow;
+}
+
+.heading_anchor{
+    text-decoration: none;
+    font-size: 1rem;
+    color: grey;
+    font-weight: normal;
+}
+

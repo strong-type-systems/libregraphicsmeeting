@@ -5,6 +5,12 @@
         <title>{%- if title %}{{title}} - {% endif-%}
         Libre Graphics Meeting 2025 – RE:imagination, Nuremberg, Germany</title>
         <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
+        <link
+            rel="stylesheet"
+            href="{{ rootPath }}/css/main.css" />
+        <script src="{{ rootPath }}/js/main.mjs"
+            async
+            type="module"></script>
         <!-- for syntax highlighting https://www.11ty.dev/docs/plugins/syntaxhighlight/-->
         <!--
         <link
@@ -19,6 +25,9 @@
     <body>
         <div class="wrapper">
             <header>
+                {{ logo | safe}}
+                {{ reimagination | safe}}
+                <div class="filler"></div>
                 <h1>Libre Graphics Meeting 2025 – RE:imagination</h1>
                 <h2>28-31 May Nuremberg, Germany</h2>
 
@@ -49,7 +58,7 @@
                           , ['/2008/', '2008', 'Wrocław']
                           , ['/2007/', '2007', 'Montreal']
                           , ['/2006/', '2006', 'Lyon']
-                    ] %}
+                    ] -%}
                     <div class="past_editions">
                     <span>Past Editions</span>
                     <ul><!-- The archive of past editions. -->
@@ -60,12 +69,12 @@
                     </div>
                 </nav>
             </header>
-            <article>
+            <article class="content">
                 {{ content | safe }}
             </article>
             <footer>
                 <ul>
-                    <li><a href="{{rootPath}}/impressum">Impressum</a></li>
+                    <li><a href="{{ rootPath }}/impressum">Impressum</a></li>
                 </ul>
             </footer>
         </div> <!-- wrapper -->
