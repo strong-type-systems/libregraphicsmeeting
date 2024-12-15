@@ -1,6 +1,6 @@
 <svg
    class="identiy-reimagination"
-   viewBox="0 0 2750 350"
+   viewBox="0 0 2720 350"
    version="1.1"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
@@ -12,7 +12,7 @@
     <mask
        style="fill:#fff;"
        id="reimagination-text-mask">
-       <rect x="0" y="0" width="10000" height="10000" fill="white" />
+       <rect x="-10" y="-10" width="10000" height="10000" fill="white" />
        <text
            xml:space="preserve"
            style="font-size:400px;
@@ -28,8 +28,8 @@
        style="fill:#fff"
        width="3000"
        height="420"
-       x="0"
-       y="0"
+       x="-10"
+       y="-10"
        mask="url(#reimagination-text-mask)"
        />
     <text

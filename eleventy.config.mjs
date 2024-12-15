@@ -75,7 +75,8 @@ export default function (eleventyConfig) {
               , {eleventyNavigation: null}
     );
 
-    eleventyConfig.addGlobalData('logo',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025.svg`));
+    eleventyConfig.addGlobalData('logo_boxes',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-boxes.svg`));
+    eleventyConfig.addGlobalData('logo_text',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-text.svg`));
     eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
     return {
         dir
