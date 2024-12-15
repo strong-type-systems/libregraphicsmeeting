@@ -11,7 +11,7 @@
   font-weight:100 900;
 }
 
-:root{
+:root {
     background: #333;
     font-family: RobotoFlex;
     --hue-offset: 0turn;
@@ -37,7 +37,9 @@ header :is(h1, h2){
     flex-direction: column;
     min-height: 100vh;
     padding: 0 1em;
+    container: wrapper / inline-size;
 }
+
 
 .content {
     padding: 1.5em;
@@ -56,6 +58,7 @@ header {
         "logo nav";
 }
 
+
 header .filler {
     background: white;
     grid-area: filler;
@@ -67,12 +70,14 @@ header .identity-logo {
     border-style: solid;
     border-color: white;
     grid-area: logo;
-    border-bottom: none
+    border-bottom: none;
+    display: block;
 }
 
 header .identiy-reimagination{
-    width: max-content;
+    width: auto;
     grid-area: reimagination;
+    display: block;
 }
 
 nav {
@@ -192,6 +197,46 @@ nav a:hover {
 .play_pause.is_playing {
     background: no-repeat var(--symbol-url-pause);
 }
+
+@container wrapper (width <= 870px) {
+    header {
+        grid-template-areas:
+            "logo filler"
+            "logo reimagination"
+            "nav nav";
+    }
+}
+@container wrapper (width <= 830px) {
+    header {
+        grid-template-columns: 17em auto;
+        grid-template-areas:
+            "logo filler"
+            "reimagination reimagination"
+            "nav nav";
+    }
+    header .identiy-reimagination{
+        border-left: .5em solid white;
+    }
+}
+@container wrapper (width <= 550px) {
+    header .filler {
+        display: none;
+    }
+    header nav {
+        width: 3em;
+        overflow: hidden;
+    }
+    header {
+        display: block;
+    }
+    header .identity-logo {
+        width: auto;
+    }
+    header .identiy-reimagination{
+        border-left: .5em solid white;
+    }
+}
+
 
 .heading_anchor{
     text-decoration: none;
