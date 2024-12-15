@@ -241,7 +241,6 @@ class BackgroundTransitioner {
     }
 
     _valueForProp(property, isInitial) {
-        console.log('_valueForProp isInitial', isInitial, property, !!property.valueFn);
         if(property.valueFn) {
             return property.valueFn(property, isInitial, this);
         }
