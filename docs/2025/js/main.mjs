@@ -1,37 +1,74 @@
 
 
-function* cycleGen(arr) {
+function* cycleColorsGen(arr, fn) {
+    let args = [];
     while(true)
-        yield* arr;
+        for(const item of arr) {
+            if(fn)
+                args = yield fn(item, ...(args ? args : []));
+            else
+                yield item;
+        }
 }
 
+const SYNTAX_MAP = {
+    '<turn>': '<angle>'
+}
 function propertiesFromEntries(varPrefix, properties) {
-    var propertiesMap = new Map();
-    for(const [name, syntax] of properties) {
-        const cssName = `--${varPrefix}-${name}`;
+    const propertiesMap = new Map();
+    for(const [name, syntax, valueFn, transition=true, extra={}] of properties) {
+        const cssName = `--${varPrefix}-${name}`
+          , cssSyntax = syntax in SYNTAX_MAP ? SYNTAX_MAP[syntax] : syntax
+          ;
         propertiesMap.set(name, {
             name
-          , syntax
+          , syntax: cssSyntax
           , cssName
           , cssVar: `var(${cssName})`
+          , transition: transition
+          , valueFn: valueFn
+          , ...extra
         });
     }
     return propertiesMap;
 }
 
-function defineRepeatingConicGradient(varPrefix, amountColors) {
+function defineRepeatingConicGradient(varPrefix, amountColors, amountGradients, gradientIndex) {
     const  propertiesMap = propertiesFromEntries(varPrefix, [
-            ['from', '<angle>']
-          , ['position-h', '<percentage>']
-          , ['position-v', '<percentage>']
+            ['from', '<angle>', ()=>`${randomBetween(10, 140)}deg`]
+          , ['position-h', '<percentage>', ()=>`${randomBetween(0, 100)}%`]
+          , ['position-v', '<percentage>', ()=>`${randomBetween(0, 100)}%`]
         ])
       , colors = []
+      , colorPositions = (property, isInitial, transitioner)=>{
+            const fromName = `color-${property.i}-from`
+              , toName = `color-${property.i}-to`
+              ;
+            if(property.name === fromName) {
+                const value = `${Math.random()}turn`;
+                property.lastValue = value
+                return value;
+            }
+            else
+                return propertiesMap.get(fromName).lastValue;
+
+            return false;
+        }
+      , colorValueFn = (property, isInitial, transitioner) => {
+            // make upper layer gradients more transparent, so we can see through a lot
+            const step = 1/amountGradients
+              , low = gradientIndex / amountGradients
+              , high = 1
+              , alphaFn = ()=> randomBetween(low, high)
+              ;
+            return transitioner.colorsIter.next([isInitial ? false : true, alphaFn]).value;
+        }
       ;
     for(let i=0;i<amountColors;i++) {
         const colorPropertiesMap = propertiesFromEntries(varPrefix, [
-            [`color-${i}-color`, '<color>']
-           , [`color-${i}-from`, '<percentage>']
-           , [`color-${i}-to`, '<percentage>']
+             [`color-${i}-color`, '<color>', colorValueFn, true]
+           , [`color-${i}-from`, '<turn>' , colorPositions , true, {i, lastValue: null}]
+           , [`color-${i}-to`, '<turn>' , colorPositions, true, {i}]
         ]);
         const color = Array.from(colorPropertiesMap.values()).map(entry=>entry.cssVar);
 
@@ -67,7 +104,7 @@ function defineMultiRepeatingConicGradient(varPrefix, repetitions, amountColors)
       , cssFunctions = []
     for(let i=0; i<repetitions  ; i++) {
         const repetitionPrefix = `${varPrefix}-${i}`
-         , {cssFunction, propertiesMap} = defineRepeatingConicGradient(repetitionPrefix, amountColors)
+         , {cssFunction, propertiesMap} = defineRepeatingConicGradient(repetitionPrefix, amountColors, repetitions, i)
          ;
         cssFunctions.push(cssFunction)
         allProperties.push(...propertiesMap.values());
@@ -105,51 +142,115 @@ function randomBetween(min, max) {
     return  Math.random() * (max - min) + min;
 }
 
-const GREENYELLOW = 'oklch(91.3% 0.2335 130.02 / .5)'
- , HOTPINK = 'oklch(72.83% 0.19707545854163525 351.9947080594076 / .5)'
+const GREENYELLOW = [91.3, 0.2335, 130.02]
+ , DEEPPINK = [72.83, 0.19707545854163525, 351.9947080594076]
  ;
+
+function makeColor([l, c, h], addHueOffset=false, alphaFn=false) {
+    const alpha = (alphaFn ? alphaFn : Math.random)()
+      , hueOffset = addHueOffset
+            ? ' + var(--hue-offset)'
+            : ''
+      , color =  `oklch(${l}% ${c} calc(${h}deg${hueOffset}) / ${alpha})`
+      ;
+    return color
+}
 class BackgroundTransitioner {
-    constructor(backgroundElement) {
-        this.backgroundElement = backgroundElement;
+    constructor(backgroundElement, buttonSelector) {
+        this._isPlayingKey = 'backgroundTransitionIsPlaying';
+        this.element = backgroundElement;
         backgroundElement.addEventListener('transitionend', this._transitionendHandler.bind(this));
 
-        const colors = [GREENYELLOW, HOTPINK];
-        this._colorsIter = cycleGen(colors);
+        const colors = [GREENYELLOW, DEEPPINK];
+        this.colorsIter = cycleColorsGen(colors, makeColor);
 
-        const {css, allProperties} = defineMultiRepeatingConicGradient('lgm25bg', 20, 2)
+        const {css, allProperties} = defineMultiRepeatingConicGradient('lgm25bg', 3, 6)
           , transitions = []
           ;
         this.allProperties = new Map(allProperties.map(prop=>[prop.cssName, prop]));
         for(const property of allProperties) {
-            let initialValue = this._valueForProp(property)
+            let initialValue = this._valueForProp(property, true)
             const cssPropertyDefinition = {
                   name: property.cssName
                 , syntax: property.syntax
                 , inherits: false
-                , initialValue
             }
+            if(initialValue !== false)
+                cssPropertyDefinition.initialValue = initialValue;
             window.CSS.registerProperty(cssPropertyDefinition);
-            transitions.push(
-                // property name | duration | easing function | delay
-                // transition: margin-right 4s ease-in-out 1s;
-                `${property.cssName} ${randomBetween(25,90)}s ease-in-out ${randomBetween(0, 3)}s`
-            )
-        }
-        backgroundElement.style.background = css;
-        // One or more single-property transitions, separated by commas.
-        backgroundElement.style.transition = transitions.join(', ');
 
-        setTimeout(()=>{
-            for(const property of allProperties) {
-                backgroundElement.style.setProperty(property.cssName, this._valueForProp(property));
-            }
-        }, 100);
+        }
+        backgroundElement.style.background = css + ', #fff';
+
+        this.buttons = [];
+        const togglePlay = this._togglePlayHandler.bind(this);
+        for(const button of document.querySelectorAll(buttonSelector)) {
+            this.buttons.push(button);
+            button.addEventListener('click', togglePlay);
+        }
+        this.isPlaying = false;
+        this._timeoutID = null;
+        if(localStorage.getItem(this._isPlayingKey) === '1')
+            this._togglePlayHandler();
     }
-    _valueForProp(property) {
+
+    _setAllProperties() {
+        for(const property of this.allProperties.values()) {
+            const result = this._valueForProp(property, false);
+            if(result !== false)
+                this.element.style.setProperty(property.cssName, result);
+        }
+    }
+    _setTransitions() {
+        const transitions = [];
+        for(const property of this.allProperties.values()) {
+            if(property.transition)
+                transitions.push(
+                    // property name | duration | easing function | delay
+                    // transition: margin-right 4s ease-in-out 1s;
+                    `${property.cssName} ${randomBetween(10,40)}s ease-in-out ${randomBetween(0, 5)}s`
+                );
+        }
+        // One or more single-property transitions, separated by commas.
+        this.element.style.transition = transitions.join(', ');
+    }
+
+    _togglePlayHandler(/*event*/) {
+        this.isPlaying = !this.isPlaying;
+        if(this.isPlaying) {
+            this._setTransitions();
+            if(this._timeoutID)
+                clearTimeout(this._timeoutID);
+            this._timeoutID = setTimeout(()=>this._setAllProperties(), 100);
+        }
+        else {
+            var computedStyle = window.getComputedStyle(this.element);
+            for(const property of this.allProperties.values()) {
+                const value = computedStyle.getPropertyValue(property.cssName);
+                this.element.style.setProperty(property.cssName, value);
+            }
+            this.element.style.transition =  'none';
+            clearTimeout(this._timeoutID);
+        }
+
+        localStorage.setItem(this._isPlayingKey, this.isPlaying ? '1' : '0');
+        this.buttons.map(button=>{
+            button.classList[this.isPlaying ? 'add' : 'remove']('is_playing');
+            button.classList[this.isPlaying ? 'remove' : 'add']('is_pausing');
+        });
+    }
+
+    _valueForProp(property, isInitial) {
+        console.log('_valueForProp isInitial', isInitial, property, !!property.valueFn);
+        if(property.valueFn) {
+            return property.valueFn(property, isInitial, this);
+        }
         if(property.syntax === '<color>')
-            return this._colorsIter.next().value;
+            return this.colorsIter.next([isInitial ? false : true]).value;
         if (property.syntax === '<angle>')
             return `${randomBetween(10, 140)}deg`;
+        if (property.syntax === '<turn>')
+            return `${randomBetween(0, 1)}turn`;
         if (property.syntax === '<percentage>')
             return `${randomBetween(20, 80)}%`;
         throw new Error(`Don't know how to set initial value for `
@@ -159,9 +260,11 @@ class BackgroundTransitioner {
         const property = this.allProperties.get(event.propertyName);
         if(!property)
             return
-        this.backgroundElement.style.setProperty(event.propertyName, this._valueForProp(property));
+        const result = this._valueForProp(property)
+        if(result !== false)
+            this.element.style.setProperty(property.cssName, result);
         // const stops = Math.round(Math.random() * 10)
-        //   , colors = ['greenyellow', 'hotpink']
+        //   , colors = ['greenyellow', 'deeppink']
         //   , colorsIter  = cycleGen(colors)
         //   , gradient = []
         //   ;
@@ -206,7 +309,7 @@ function collapsible(element, buttonSelector, isInitiallyOpen=false) {
 
 function main() {
     for(const [selector, fn, ...args] of [
-                    [':root', (...args)=>new BackgroundTransitioner(...args)]
+                    ['.wrapper', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
                   , ['nav > .past_editions', collapsible, '.past_editions > span']
                 ]) {
         for(const element of document.querySelectorAll(selector))
