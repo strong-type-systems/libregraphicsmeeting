@@ -195,15 +195,18 @@ nav a:hover {
 .play_pause {
     --symbol-url-play: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,31.4v-14.8l11,7.4'></path></svg>");
     --symbol-url-pause: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
-    --symbol-size: 3.1em;
+    --symbol-size: 3.3em;
     background: no-repeat var(--symbol-url-play);
     background-size: contain;
     position: absolute;
-    width: calc(var(--symbol-size)/2);
+    width: calc(var(--symbol-size)/1.5);
     height: var(--symbol-size);
     border: none;
     cursor: pointer;
-
+    padding: 0;
+    background-position: center;
+    display: inline-block;
+    margin: .2em 0;
 }
 
 .play_pause span {
@@ -212,11 +215,11 @@ nav a:hover {
 }
 .play_pause,
 .play_pause.is_pausing {
-    background: no-repeat var(--symbol-url-play);
+    background-image: var(--symbol-url-play);
 }
 
 .play_pause.is_playing {
-    background: no-repeat var(--symbol-url-pause);
+    background-image: var(--symbol-url-pause);
 }
 
 @container wrapper (width <= 870px) {
