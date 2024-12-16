@@ -294,15 +294,17 @@ function collapsible(element, buttonSelector, isInitiallyOpen=false) {
     element.classList.add(isInitiallyOpen ? openClassName : closedClassName);
     element.addEventListener('click', (event)=>{
         const button = event.target.closest(buttonSelector);
+        if(event.target.closest('a') || event.target.closest('button')) return;
         if(button === null) return;
         if(button.closest(element.tagName) !== element) return;
+        if(event.defaultPrevented) return;
         event.preventDefault();
         const isOpen = element.classList.contains(openClassName);
 
         element.classList[isOpen ? 'remove' : 'add'](openClassName);
         element.classList[isOpen ? 'add' : 'remove'](closedClassName);
-        if(!isOpen)
-            element.scrollIntoView({block: 'start', inline: 'nearest', behavior: 'smooth'});
+        // if(!isOpen)
+        //     element.scrollIntoView({block: 'start', inline: 'nearest', behavior: 'smooth'});
     });
 }
 
@@ -310,6 +312,8 @@ function main() {
     for(const [selector, fn, ...args] of [
                     ['.wrapper', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
                   , ['nav > .past_editions', collapsible, '.past_editions > span']
+                  , ['nav li:has(> ul)', collapsible, 'li']
+                  , ['nav', collapsible, 'nav']
                 ]) {
         for(const element of document.querySelectorAll(selector))
             fn(element, ...args);
