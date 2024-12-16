@@ -310,7 +310,7 @@ function collapsible(element, buttonSelector, isInitiallyOpen=false) {
 
 function main() {
     for(const [selector, fn, ...args] of [
-                    ['.wrapper', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
+                    ['body', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
                   , ['nav > .past_editions', collapsible, '.past_editions > span']
                   , ['nav li:has(> ul)', collapsible, 'li']
                   , ['nav', collapsible, 'nav']
