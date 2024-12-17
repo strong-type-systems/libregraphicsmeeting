@@ -258,7 +258,10 @@ nav a {
 nav a,
 .past_editions > span {
     padding: 0 .3em;
+    font-variation-settings: "opsz" 12, 'wdth' 60;
+    text-transform: uppercase;
 }
+
 .past_editions > span {
     padding-right: 0;
 }
@@ -631,4 +634,9 @@ nav li.active > a:hover {
 }
 .content a:hover {
     --text-grad: 50;
+}
+
+em {
+    /* FIXME: use "slnt" */
+    font-style: oblique;
 }

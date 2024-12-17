@@ -8,7 +8,7 @@
         <link
             rel="stylesheet"
             href="{{ rootPath }}/css/main.css" />
-        <script src="{{ rootPath }}/js/main.mjs"
+        <script src="{{ rootPath }}/js/main.js"
             async
             type="module"></script>
         <!-- for syntax highlighting https://www.11ty.dev/docs/plugins/syntaxhighlight/-->
@@ -65,7 +65,7 @@
                     <span>Past Editions</span>
                     <ul><!-- The archive of past editions. -->
                         {% for href, year, location in pastEditions -%}
-                        <li><a href="{{ href }}"><em>{{ year }}</em> | <strong>{{ location }}</strong></a></li>
+                        <li><a href="{{ href }}"><em>{{ year }}</em> | <span>{{ location }}</span></a></li>
                         {%- endfor %}
                     </ul>
                     </div>
