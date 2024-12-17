@@ -270,9 +270,17 @@ nav a:hover {
     text-decoration-color: var(--greenyellow, greenyellow);
 }
 
+nav li.active > a {
+    background: var(--deeppink, deeppink);
+}
+
+nav li.active > a:hover {
+    color: white;
+}
+
 .play_pause {
-    --symbol-url-play: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,31.4v-14.8l11,7.4'></path></svg>");
-    --symbol-url-pause: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
+    --symbol-url-play: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path fill='%23fff' d='M10,31.4v-14.8l11,7.4'></path></svg>");
+    --symbol-url-pause: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path fill='%23fff' d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
     --symbol-size: 2.5em;
     background: no-repeat var(--symbol-url-play);
     background-size: contain;
@@ -448,7 +456,7 @@ nav a:hover {
 }
 
 
-.heading_anchor{
+.content .heading_anchor{
     text-decoration: none;
     font-size: 1rem;
     color: grey;
@@ -457,25 +465,170 @@ nav a:hover {
 }
 
 .content {
-    padding: 1.5em 4em 1.5em 17em;
+    --left-padding: 17em;
+    --right-padding: 4em;
+    padding: 1.5em 0;
+    padding-left: var(--left-padding);
+    padding-right: var(--right-padding);
 }
+
+@container wrapper (width <= 61.625em) {
+    .content {
+        /* from 61.625 to 59.125*/
+        /** now reduce 2.5em of padding -right **/
+        --right-padding: calc(1.5em + 100cqw - 59.125em);
+    }
+}
+
+.content {
+    --text-wdth: calc(90 + 35 * var(--text-wdth-ratio, 1));
+    --line-height: 1.4;
+}
+
+@container wrapper (width <= 59.125em) {
+    .content {
+        /* Now:
+         * 59.125 - 3 = 56.125 line length
+         *
+         */
+        --text-wdth-ratio: 1;
+        /* fix it now */
+        --right-padding: 1.5em;
+    }
+}
+
+
+@container wrapper (width <= 58.34375em) {
+    .content {
+        --text-wdth-ratio: 0.75;
+        --line-height: 1.35;
+    }
+}
+@container wrapper (width <= 57.5625em) {
+    .content {
+        --text-wdth-ratio: 0.5;
+        --line-height: 1.3;
+    }
+}
+
+@container wrapper (width <= 56.78125em) {
+    .content {
+        --text-wdth-ratio: 0.25;
+        --line-height: 1.25;
+    }
+}
+
+@container wrapper (width <= 56em) {
+
+    .content {
+        /* this is a big break, we get most of the left-padding added
+         * to the line-length an basically are back to the
+         * original line-length
+         */
+        --text-wdth-ratio: 1;
+        --right-padding: 4em;
+        --left-padding: 1.5em;
+        --line-height: 1.4;
+    }
+}
+
+@container wrapper (width <= 40.625em) {
+    .content {
+        /** now reduce 2.5em of padding -right
+         * from 40.625em to 38.125em.
+         * */
+        --right-padding: calc(1.5em + 100cqw - 38.125em);
+    }
+}
+
+@container wrapper (width <= 38.125em) {
+    .content {
+        --right-padding: 1.5em;
+        --text-wdth-ratio: 1;
+    }
+}
+
+@container wrapper (width <= 27.34375em) {
+    .content {
+        --text-wdth-ratio: 0.75;
+        --line-height: 1.35;
+    }
+}
+@container wrapper (width <= 36.5625em) {
+    .content {
+        --text-wdth-ratio: 0.5;
+        --line-height: 1.3;
+    }
+}
+
+@container wrapper (width <= 35.78125em) {
+    .content {
+        --text-wdth-ratio: 0.25;
+        --line-height: 1.25;
+    }
+}
+
+@container wrapper (width <= 35em) {
+    .content {
+        --text-wdth-ratio: 0;
+        --line-height: 1.2;
+    }
+}
+
+@container wrapper (width <= 30em) {
+    .content :is(p, li) {
+        hyphens: auto;
+    }
+}
+
+
 .content h1 {
     font-size: 4em;
     font-variation-settings: "opsz" 48, "wdth" 54, "wght" 500;
-    margin-block-end: 0;
+    margin-block-start: 0;
 }
 
+@container wrapper (width <= 35em) {
+    .content h1 {
+        font-size: 2.5em;
+        font-variation-settings: "opsz" 30, "wdth" 50, "wght" 550;
+    }
+}
+.content :is(h1, h2, h3, h4, h5, h5) {
+    margin-block-end: 0;
+    line-height: 1;
+}
+
+
+.content *{
+    font-variation-settings: "opsz" 16, "wdth" var(--text-wdth), 'GRAD' var(--text-grad, 0);
+}
+.content,
 .content :is(p, li) {
+    --text-grad: 0;
     font-size: 1.4rem;
-    font-variation-settings: "opsz" 16, "wdth" 125;
     margin: 0;
-    line-height: 1.4;
+    line-height: var(--line-height, 1.4);
 }
 .content p + p {
     text-indent: 1.5em;
 }
 
-.content :is(ul, ol) {
-    list-style-position: inside;
-    padding: 0;
+
+.content blockquote p {
+    font-size: 2.5em;
+    font-variation-settings: 'opsz' 20, 'slnt' -7,'wght' 90;
+    line-height: 1.1em;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.content a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-thickness: .2em;
+    text-decoration-color: var(--greenyellow, greenyellow);
+}
+.content a:hover {
+    --text-grad: 50;
 }
