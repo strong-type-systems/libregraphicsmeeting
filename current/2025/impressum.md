@@ -4,8 +4,6 @@ title: Impressum
 
 # Impressum
 
-This document is required by German law.
-
 <h2>Strong Type Systems GmbH</h2>
 <p class="adr">
     <span class="street-address">Wirthstr. 36</span><br />
@@ -40,3 +38,6 @@ This document is required by German law.
 <p>
     <span class="vat-id">gemäß § 27a UStG: <strong>DE360181327</strong></span>
 </p>
+
+---
+This document is required by German law, do not remove!

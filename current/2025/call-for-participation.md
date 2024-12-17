@@ -1,8 +1,8 @@
 ---
 title: Call for Participation
 eleventyNavigation:
-  key: Participate
-  order: 5
+  key: Call for Participation
+  order: 2
 ---
 # Call for Participation
 
@@ -58,7 +58,7 @@ Call opens: 18 December 2025
 
 We will let you know if your presentation is selected by end of February 2025 at the latest.
 
-*We welcome all workshop  proposals, but would also like to encourage
+We welcome all workshop  proposals, but would also like to encourage
 workshops which build on  topics addressed in talks. Please don’t hesitate
 to submit proposals for both!
 
@@ -72,8 +72,7 @@ a short report, to be made available to the Libre Graphics Community afterwards.
 ### Submission Guidelines
 - Abstracts should be no longer than 300 words.
 - Include a brief bio (100 words) and contact information.
-- Submissions should be sent to [email protected] by **January 31, 2025**.
+- Submissions should be sent to [libregraphicsmeeting@strong-type.systems](mailto:libregraphicsmeeting@strong-type.systems) by **January 31, 2025**.
 
----
 
-*We look forward to your contributions and to seeing you in Nuremberg!*
+> We look forward to your contributions and to seeing you in Nuremberg!
