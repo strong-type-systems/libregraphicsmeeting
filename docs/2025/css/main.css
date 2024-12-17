@@ -603,7 +603,7 @@ nav li.active > a:hover {
 .content *{
     font-variation-settings: "opsz" 16, "wdth" var(--text-wdth), 'GRAD' var(--text-grad, 0);
 }
-.content,
+
 .content :is(p, li) {
     --text-grad: 0;
     font-size: 1.4rem;
@@ -632,4 +632,3 @@ nav li.active > a:hover {
 .content a:hover {
     --text-grad: 50;
 }
-
