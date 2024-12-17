@@ -36,7 +36,7 @@ header :is(h1, h2){
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding: 0 1em;
+    margin: 0 1em;
     container: wrapper / inline-size;
 }
 
@@ -49,8 +49,10 @@ header :is(h1, h2){
 
 header {
     display: grid;
+    --nav-full-height: 2.6em;
+
     grid-template-columns: 17em auto;
-    grid-template-rows: auto auto 1fr 2.6em;
+    grid-template-rows: auto auto 1fr var(--nav-full-height);
     grid-template-areas:
         "logo-boxes filler-1"
         "logo-text reimagination"
@@ -66,6 +68,30 @@ header .filler {
 header .filler-1 {
     grid-area: filler-1;
 }
+
+/*
+ * Safari (IOS) seems to have a clipping issue with our SVGs
+ * at a 1px gap someties the background shines through. This
+ * fixes it.
+ */
+header > *, .content, footer {
+    outline: 1px solid white;
+}
+nav {
+    outline: none;
+}
+
+footer{
+    background: black;
+    outline-color: black;
+    color: white;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
 
 header .filler-2 {
     grid-area: filler-2;
@@ -102,87 +128,139 @@ header .identiy-reimagination {
 }
 
 nav {
-    white-space: nowrap;
-    /* prevent the collapsibles from pushing the content down */
-    overflow: visible;
-    height: 2.3em;
-    position: relative;
-    z-index: 5;
     grid-area: nav;
-}
-nav > *{
-    display: inline-block;
-    vertical-align: top;
-    margin: 0;
+    display: flex;
+    overflow: visible;
+    --nav-gap-size: .4em;
+    /*
+    height: 2.5em;
+    */
+
+    z-index: 5;
+    font-weight: bold;
+
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
-}
-nav ul > li{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
+nav > ul > li,
+.past_editions {
+    position: relative;
 }
 
-nav .past_editions li {
+nav > ul {
+    display: flex;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.past_editions > span,
+nav > ul > li {
+    display: inline-block;
+}
+
+.past_editions ul a,
+nav li > ul a {
     display: block;
+    margin: var(--nav-gap-size);
+    height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
+    line-height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
 }
 
-/* collapsible button*/
+.past_editions > span,
+nav > ul > li > a {
+    margin: var(--nav-gap-size);
+    display: inline-block;
+    height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
+    line-height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
+}
+
 .past_editions > span {
-    display: block;
-    background: black;
-    color: white;
-    margin: .4em;
-    padding: .3em;
-    min-width: 11em;
+    padding-right: 0;
 }
-.past_editions > span:after{
-    padding-left: .5em;
-    float: right;
-    content: "…";
+.past_editions > span,
+nav > ul > li > a {
+    margin-right: 0;
 }
 
-/* Not changing this indicator on :hover, as then it
- * also shows when the open menu locked .
- */
-.past_editions.ui_collapsible_mixin-open > span:after {
-    content: "X";
+
+
+:is(.past_editions > span, nav li:has(> ul)):after,
+:is(.past_editions > span, nav li:has(> ul)):before {
+    content: "▽\FE0E";
+    text-align: center;
+    display: inline-block;
+    width: 2em;
+    height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
+    line-height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
 }
 
-.past_editions.ui_collapsible_mixin-closed > ul {
+:is(.past_editions > span, nav li:has(> ul)):before {
     display: none;
 }
 
-:is(
-    .past_editions.ui_collapsible_mixin:hover,
-    .past_editions.ui_collapsible_mixin-open
-){
+.past_editions > span,
+.past_editions > span:after,
+.past_editions > span:before,
+nav li:has(> ul):after,
+nav li:has(> ul):before {
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
+nav .past_editions > ul,
+nav ul > li > ul {
+    position: absolute;
+    top: calc(var(--nav-full-height) - var(--nav-gap-size));
+    left: var(--nav-gap-size);
     background: linear-gradient(var(--greenyellow, greenyellow), var(--deeppink, deeppink));
+    white-space: nowrap;
+    display: none;
 }
 
-:is(
-    .past_editions.ui_collapsible_mixin:hover,
-    .past_editions.ui_collapsible_mixin-open
-) > ul {
+@media (hover: hover) {
+    /*
+     * in IOS the hover style interferes with being able to
+     * collapse the sub-menu again, so this style is only
+     * added when hover is truly available.
+     */
+    nav .past_editions:hover > ul,
+    nav li:has(> ul):hover > ul {
+        display: block;
+    }
+
+    .past_editions:hover > span:after, nav li:has(> ul):hover:after,
+    .past_editions:hover > span:before, nav li:has(> ul):hover:before {
+        content: '▼\FE0E';
+    }
+
+}
+
+:is(.past_editions, li).ui_collapsible_mixin-open > ul {
     display: block;
 }
 
-nav a, nav span {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
+:is(.past_editions.ui_collapsible_mixin-open > span, li.ui_collapsible_mixin-open):after,
+:is(.past_editions.ui_collapsible_mixin-open > span, li.ui_collapsible_mixin-open):before {
+    content: '▼\FE0E';
 }
+
+
 nav a {
-    display: block;
+    color: black;
     background: white;
-    margin: .4em 0 .4em .4em;
-    padding: .3em;
+    text-decoration: none;
 }
-.past_editions a{
-    margin-right: .3em;
+
+nav a,
+.past_editions > span {
+    padding: 0 .3em;
+}
+.past_editions > span {
+    padding-right: 0;
 }
 
 nav a:hover {
@@ -192,18 +270,27 @@ nav a:hover {
     text-decoration-color: var(--greenyellow, greenyellow);
 }
 
+nav li.active > a {
+    background: var(--deeppink, deeppink);
+}
+
+nav li.active > a:hover {
+    color: white;
+}
+
 .play_pause {
-    --symbol-url-play: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,31.4v-14.8l11,7.4'></path></svg>");
-    --symbol-url-pause: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
-    --symbol-size: 3.1em;
+    --symbol-url-play: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path fill='%23fff' d='M10,31.4v-14.8l11,7.4'></path></svg>");
+    --symbol-url-pause: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path fill='%23fff' d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
+    --symbol-size: 2.5em;
     background: no-repeat var(--symbol-url-play);
     background-size: contain;
-    position: absolute;
-    width: calc(var(--symbol-size)/2);
-    height: var(--symbol-size);
     border: none;
     cursor: pointer;
-
+    padding: 0 0 0 calc(var(--symbol-size)/1.5);
+    background-position: left center;
+    display: block;
+    margin-left: var(--nav-gap-size);
+    height: 100%;
 }
 
 .play_pause span {
@@ -212,14 +299,14 @@ nav a:hover {
 }
 .play_pause,
 .play_pause.is_pausing {
-    background: no-repeat var(--symbol-url-play);
+    background-image: var(--symbol-url-play);
 }
 
 .play_pause.is_playing {
-    background: no-repeat var(--symbol-url-pause);
+    background-image: var(--symbol-url-pause);
 }
 
-@container wrapper (width <= 870px) {
+@container wrapper (width <= 56em) {
     header {
         grid-template-areas:
             "logo-boxes filler-1"
@@ -228,8 +315,11 @@ nav a:hover {
             "nav nav";
     }
 
-    nav a:first-child {
+    nav > ul > li:first-child > a {
         margin-left: 0;
+    }
+    nav > ul > li:first-child > ul {
+        left: 0
     }
 
     header .identity-logo-text {
@@ -237,15 +327,25 @@ nav a:hover {
     }
 }
 
-@container  wrapper (width <= 750px) {
+@container  wrapper (width <= 48em) {
     header .filler-2 {
         display: none;
     }
+
+    header .identity-logo-boxes {
+        border-bottom: .5em solid white;
+    }
+
+    header .identity-logo-text {
+        border-bottom: none;
+    }
+
     header {
-        grid-template-columns: 17em auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto 1fr auto var(--nav-full-height);
         grid-template-areas:
-            "logo-boxes filler-1"
-            "logo-text filler-1"
+            "logo-boxes logo-text"
+            "filler-1 logo-text"
             "reimagination reimagination"
             "nav nav";
     }
@@ -253,21 +353,110 @@ nav a:hover {
         border: .5em solid white;
     }
 }
-@container wrapper (width <= 550px) {
-    header .filler {
-        display: none;
-    }
-    header nav {
-        width: 3em;
-        overflow: hidden;
-    }
+@container wrapper (width <= 36em) {
     header {
         display: block;
     }
+
+    header .filler {
+        display: none;
+    }
+
+    nav:before,
+    nav.ui_collapsible_mixin-open:after {
+        content: '•••';
+        display: block;
+        text-align: center;
+        height: var(--nav-full-size);
+        cursor: pointer;
+        background: black;
+        color: white;
+    }
+
+    nav.ui_collapsible_mixin-closed > * {
+        display: none;
+    }
+
+    nav {
+        padding: var(--nav-gap-size) 0;
+        height: initial;
+    }
+    nav, nav > ul {
+        flex-direction: column;
+    }
+    nav .past_editions > ul, nav ul > li > ul {
+        position: initial;
+    }
+
+    .past_editions > span,
+    nav > ul > li > a,
+    .play_pause {
+        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .play_pause {
+        height: var(--nav-full-height);
+    }
+    .play_pause span {
+        position: initial;
+    }
+
+    :is(nav .past_editions > ul, nav ul > li > ul) > li {
+        padding: 0 0 var(--nav-gap-size) 2em;
+    }
+     nav ul > li > ul > li:first-child {
+        padding-top: var(--nav-gap-size);
+    }
+
+    .past_editions ul a, nav li > ul a {
+        margin: 0;
+    }
+
+    .past_editions > span,
+     nav > ul > li > a {
+        display: block;
+    }
+    .past_editions > span {
+        padding-left: 0;
+    }
+
+    nav li:has(ul) {
+        overflow: hidden;
+    }
+    nav li:has(ul) > a {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding-left: 2.3em;
+    }
+    :is(.past_editions > span, nav li:has(> ul)):before {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+    }
+    :is(.past_editions > span, nav li:has(> ul)):after {
+        display: none;
+    }
+
+    nav .past_editions > ul, nav ul > li > ul {
+        background: transparent;
+    }
+
+    .play_pause{
+        background-color: white;
+        background-position: 1em center;
+        color: black;
+        font-weight: bold;
+        font-size: 1rem;
+        height: fit-content;
+    }
+
 }
 
 
-.heading_anchor{
+.content .heading_anchor{
     text-decoration: none;
     font-size: 1rem;
     color: grey;
@@ -276,25 +465,171 @@ nav a:hover {
 }
 
 .content {
-    padding: 1.5em 4em 1.5em 17em;
+    --left-padding: 17em;
+    --right-padding: 4em;
+    padding: 1.5em 0;
+    padding-left: var(--left-padding);
+    padding-right: var(--right-padding);
 }
+
+@container wrapper (width <= 61.625em) {
+    .content {
+        /* from 61.625 to 59.125*/
+        /** now reduce 2.5em of padding -right **/
+        --right-padding: calc(1.5em + 100cqw - 59.125em);
+    }
+}
+
+.content {
+    --text-wdth: calc(90 + 35 * var(--text-wdth-ratio, 1));
+    --line-height: 1.4;
+}
+
+@container wrapper (width <= 59.125em) {
+    .content {
+        /* Now:
+         * 59.125 - 3 = 56.125 line length
+         *
+         */
+        --text-wdth-ratio: 1;
+        /* fix it now */
+        --right-padding: 1.5em;
+    }
+}
+
+
+@container wrapper (width <= 58.34375em) {
+    .content {
+        --text-wdth-ratio: 0.75;
+        --line-height: 1.35;
+    }
+}
+@container wrapper (width <= 57.5625em) {
+    .content {
+        --text-wdth-ratio: 0.5;
+        --line-height: 1.3;
+    }
+}
+
+@container wrapper (width <= 56.78125em) {
+    .content {
+        --text-wdth-ratio: 0.25;
+        --line-height: 1.25;
+    }
+}
+
+@container wrapper (width <= 56em) {
+
+    .content {
+        /* this is a big break, we get most of the left-padding added
+         * to the line-length an basically are back to the
+         * original line-length
+         */
+        --text-wdth-ratio: 1;
+        --right-padding: 4em;
+        --left-padding: 1.5em;
+        --line-height: 1.4;
+    }
+}
+
+@container wrapper (width <= 40.625em) {
+    .content {
+        /** now reduce 2.5em of padding -right
+         * from 40.625em to 38.125em.
+         * */
+        --right-padding: calc(1.5em + 100cqw - 38.125em);
+    }
+}
+
+@container wrapper (width <= 38.125em) {
+    .content {
+        --right-padding: 1.5em;
+        --text-wdth-ratio: 1;
+    }
+}
+
+@container wrapper (width <= 27.34375em) {
+    .content {
+        --text-wdth-ratio: 0.75;
+        --line-height: 1.35;
+    }
+}
+@container wrapper (width <= 36.5625em) {
+    .content {
+        --text-wdth-ratio: 0.5;
+        --line-height: 1.3;
+    }
+}
+
+@container wrapper (width <= 35.78125em) {
+    .content {
+        --text-wdth-ratio: 0.25;
+        --line-height: 1.25;
+    }
+}
+
+@container wrapper (width <= 35em) {
+    .content {
+        --text-wdth-ratio: 0;
+        --line-height: 1.2;
+    }
+}
+
+@container wrapper (width <= 30em) {
+    .content :is(p, li) {
+        hyphens: auto;
+    }
+}
+
+
 .content h1 {
     font-size: 4em;
     font-variation-settings: "opsz" 48, "wdth" 54, "wght" 500;
-    margin-block-end: 0;
+    margin-block-start: 0;
 }
 
+@container wrapper (width <= 35em) {
+    .content h1 {
+        font-size: 2.5em;
+        font-variation-settings: "opsz" 30, "wdth" 50, "wght" 550;
+    }
+}
+.content :is(h1, h2, h3, h4, h5, h5) {
+    margin-block-end: 0;
+    line-height: 1;
+}
+
+
+.content *{
+    font-variation-settings: "opsz" 16, "wdth" var(--text-wdth), 'GRAD' var(--text-grad, 0);
+}
+.content,
 .content :is(p, li) {
+    --text-grad: 0;
     font-size: 1.4rem;
-    font-variation-settings: "opsz" 16, "wdth" 125;
     margin: 0;
-    line-height: 1.4;
+    line-height: var(--line-height, 1.4);
 }
 .content p + p {
     text-indent: 1.5em;
 }
 
-.content :is(ul, ol) {
-    list-style-position: inside;
-    padding: 0;
+
+.content blockquote p {
+    font-size: 2.5em;
+    font-variation-settings: 'opsz' 20, 'slnt' -7,'wght' 90;
+    line-height: 1.1em;
+    text-align: center;
+    margin: 1rem 0;
 }
+
+.content a {
+    color: black;
+    text-decoration: underline;
+    text-decoration-thickness: .2em;
+    text-decoration-color: var(--greenyellow, greenyellow);
+}
+.content a:hover {
+    --text-grad: 50;
+}
+
