@@ -69,7 +69,12 @@
                         {%- endfor %}
                     </ul>
                     </div>
-                    <button class="play_pause" title="Play and pause the animation of the background."><span>Play/pause background animation.</span></button>
+                    <button type="button" class="play_pause"
+                        title="Play and pause the animation of the background."
+                        ><span class="is_pausing-label">Play</span
+                        ><span class="is_playing-label">Pause</span
+                        ><span class="play_pause-purpose"> background animation.</span
+                    ></button>
                 </nav>
             </header>
             <article class="content">

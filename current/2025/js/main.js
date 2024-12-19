@@ -189,9 +189,17 @@ class BackgroundTransitioner {
             button.addEventListener('click', togglePlay);
         }
         this.isPlaying = false;
+        this._setButtonsState();
         this._timeoutID = null;
         if(localStorage.getItem(this._isPlayingKey) === '1')
             this._togglePlayHandler();
+    }
+
+    _setButtonsState() {
+        this.buttons.map(button=>{
+            button.classList[this.isPlaying ? 'add' : 'remove']('is_playing');
+            button.classList[this.isPlaying ? 'remove' : 'add']('is_pausing');
+        })
     }
 
     _setAllProperties() {
@@ -234,10 +242,7 @@ class BackgroundTransitioner {
         }
 
         localStorage.setItem(this._isPlayingKey, this.isPlaying ? '1' : '0');
-        this.buttons.map(button=>{
-            button.classList[this.isPlaying ? 'add' : 'remove']('is_playing');
-            button.classList[this.isPlaying ? 'remove' : 'add']('is_pausing');
-        });
+        this._setButtonsState();
     }
 
     _valueForProp(property, isInitial) {

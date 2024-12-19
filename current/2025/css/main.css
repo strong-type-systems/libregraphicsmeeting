@@ -137,8 +137,7 @@ nav {
     */
 
     z-index: 5;
-    font-weight: bold;
-
+    white-space: nowrap;
 }
 
 nav > ul > li,
@@ -170,7 +169,8 @@ nav li > ul a {
 }
 
 .past_editions > span,
-nav > ul > li > a {
+nav > ul > li > a,
+nav button {
     margin: var(--nav-gap-size);
     display: inline-block;
     height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
@@ -256,10 +256,15 @@ nav a {
 }
 
 nav a,
+.past_editions > span,
+nav button span {
+    font-variation-settings: "opsz" 12, 'wdth' 60, 'wght' 700;
+    text-transform: uppercase;
+}
+
+nav a,
 .past_editions > span {
     padding: 0 .3em;
-    font-variation-settings: "opsz" 12, 'wdth' 60;
-    text-transform: uppercase;
 }
 
 .past_editions > span {
@@ -281,33 +286,71 @@ nav li.active > a:hover {
     color: white;
 }
 
-.play_pause {
-    --symbol-url-play: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path fill='%23fff' d='M10,31.4v-14.8l11,7.4'></path></svg>");
-    --symbol-url-pause: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path fill='%23fff' d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
+
+.play_pause, .play_pause:before, .play_pause:after{
+    --symbol-url-is-pausing: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,31.4v-14.8l11,7.4'></path></svg>");
+    --symbol-url-is-playing: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 12 12 24'><path d='M10,32v-16h4v16zm6,0v-16h4v16z'></path></svg>");
     --symbol-size: 2.5em;
-    background: no-repeat var(--symbol-url-play);
-    background-size: contain;
+    --icon-width: calc(var(--symbol-size) * .4);
+}
+.play_pause {
+    font: unset;
     border: none;
     cursor: pointer;
-    padding: 0 0 0 calc(var(--symbol-size)/1.5);
-    background-position: left center;
-    display: block;
+    background: none;
+    white-space: nowrap;
+    color: white;
+    position: relative;
+    padding-left: var(--icon-width);
+    padding-right: 0;
     margin-left: var(--nav-gap-size);
+    margin-right: 0;
+}
+
+
+.play_pause:before {
+    content: "";
+    mask-image: var(--symbol-url-is-pausing);
+    mask-repeat: no-repeat;
+    mask-position: left center;
+    width: var(--icon-width);
     height: 100%;
-}
-
-.play_pause span {
+    display: block;
     position: absolute;
-    top: -1000vh;
-}
-.play_pause,
-.play_pause.is_pausing {
-    background-image: var(--symbol-url-play);
+    left:0;
+    top:0;
+    background-color: white;
 }
 
-.play_pause.is_playing {
-    background-image: var(--symbol-url-pause);
+
+.play_pause {
+    /* no javascript generated classes: we don't need this*/
+    display: none;
 }
+
+.play_pause:where(.is_pausing, .is_playing) {
+    display: block;
+}
+
+.play_pause span{
+    display: none;
+}
+
+.play_pause.is_pausing .is_pausing-label,
+.play_pause.is_playing .is_playing-label {
+    display: inline;
+}
+
+.play_pause.is_pausing:before{
+    mask-image: var(--symbol-url-is-pausing);
+}
+.play_pause.is_playing:before{
+    mask-image: var(--symbol-url-is-playing);
+}
+
+
+
+
 
 @container wrapper (width <= 56em) {
     header {
@@ -447,13 +490,19 @@ nav li.active > a:hover {
         background: transparent;
     }
 
-    .play_pause{
+    .play_pause {
         background-color: white;
-        background-position: 1em center;
         color: black;
-        font-weight: bold;
-        font-size: 1rem;
         height: fit-content;
+        text-align: left;
+        padding-left: calc(var(--icon-width) + var(--nav-gap-size));
+    }
+    .play_pause:before {
+        background-color: black;
+        left: var(--nav-gap-size);
+    }
+    .play_pause .play_pause-purpose{
+        display: inline;
     }
 
 }
