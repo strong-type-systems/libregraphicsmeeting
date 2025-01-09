@@ -16,3 +16,9 @@ The Libre Graphics Meeting  is an annual meeting on Free/Libre and
 Open Source software for graphics. For now, please see the [Call for Participation]({{rootPath}}/call-for-participation), **read it, share it and spread the word!**
 
 > Thank you!
+
+
+## News
+{% news collections.news, 10 %}
+
+[… more News]({{rootPath}}/news)

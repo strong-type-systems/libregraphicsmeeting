@@ -1,13 +1,41 @@
 import markdownIt from "markdown-it";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import path from 'path'
+// import path from 'path'
 import fs from 'fs';
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import embedEverything from "eleventy-plugin-embed-everything";
 import markdownItGitHubHeadings from "markdown-it-github-headings";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+//import process from 'process';
 
-import process from 'process';
+
+function newsDate(page) {
+    const [y, m, d] =page.fileSlug.split('-', 3).map(i=>parseFloat(i))
+      , date = new Date(y, m-1, d)
+      ;
+    return `<time datetime="${date.toString()}">${date.toDateString()}</time>`;
+}
+
+function renderNews(items, limit=Infinity) {
+    const result = ['<ol class="news">']
+      , posts = items.toSorted((a,b)=>a.page.fileSlug.localeCompare(
+                    b.page.fileSlug, 'en', { sensitivity: 'base' }))
+                .reverse()
+                .slice(0, limit)
+      ;
+    for(const post of posts) {
+    result.push(`<li><article>
+        <span class="date"></span>
+        ${newsDate(post.page)}
+        <h1><a href="${post.url}">${post.data.title}</a></h1>
+        ${post.data.lead ? '<p class="lead">' + post.data.lead + '</p>' : ''}
+        </article></li>\n`);
+    }
+    result.push('</ol>');
+    return result.join('');
+}
+
 export default function (eleventyConfig) {
     // Output directory: _site
     const dir = {
@@ -78,6 +106,11 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData('logo_boxes',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-boxes.svg`));
     eleventyConfig.addGlobalData('logo_text',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-text.svg`));
     eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
+
+    eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addShortcode('newsDate', newsDate);
+    eleventyConfig.addShortcode('news', renderNews);
+
     return {
         dir
     }
