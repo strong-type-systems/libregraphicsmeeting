@@ -17,6 +17,53 @@
     --hue-offset: 0turn;
     --greenyellow: oklch(91.3% 0.2335 calc(130.02deg + var(--hue-offset)));
     --deeppink: oklch(72.83% 0.19707545854163525 calc(351.9947080594076deg + var(--hue-offset)));
+    /* use as specific override only --text-opsz: 12; /* 12 pt equals 16 px */
+    --text-wdth: 100;
+    --text-wght: 400;
+    --text-grad: 0;
+    --text-slnt: 0;
+    /* use this instead of em*/
+    --font-size: 1;
+    /* only used for opsz. We don't yet get the actual document fs*/
+    --document-font-size-pt: 12;
+}
+
+
+* {
+    /* if --document-font-size-pt would be dynamic according to the document
+     * something like this:
+     * calc(var(--font-size, 1) * var(--document-font-size-pt, 12) * 1pt);
+     */
+    font-size: calc(var(--font-size, 1) * 1rem);
+    --text-opsz: calc(var(--font-size, 1) * var(--document-font-size-pt, 12));
+    font-variation-settings: "opsz" var(--text-opsz, 12),
+            "wdth" var(--text-wdth, 100),
+            "wght" var(--text-wght, 400),
+            "GRAD" var(--text-grad, 0),
+            "slnt" var(--text-slnt, 0);
+}
+
+h1 {
+    --font-size: 2;
+}
+h2 {
+    --font-size: 1.5;
+}
+h3 {
+    --font-size: 1.333;
+}
+h4 {
+    --font-size: 1.2;
+}
+h5 {
+    --font-size: 1;
+}
+
+b, strong {
+    --text-wght: 600;
+}
+i, em {
+    --text-slnt: -7;
 }
 
 body {
@@ -259,7 +306,8 @@ nav a {
 nav a,
 .past_editions > span,
 nav button span {
-    font-variation-settings: "opsz" 12, 'wdth' 60, 'wght' 700;
+    --text-wdth: 60;
+    --text-wght: 700;
     text-transform: uppercase;
 }
 
@@ -511,9 +559,11 @@ nav li.active > a:hover {
 
 .content .heading_anchor{
     text-decoration: none;
-    font-size: 1rem;
+    --font-size: 1;
     color: grey;
     font-weight: normal;
+    --text-wght: 400;
+    --text-wdth: 100;
     margin-inline-start: -.8em;
 }
 
@@ -634,43 +684,70 @@ nav li.active > a:hover {
     }
 }
 
-
 .content h1 {
-    font-size: 4em;
-    font-variation-settings: "opsz" 48, "wdth" 54, "wght" 500;
+    --font-size: 4;
+    --text-wdth: 54;
+    --text-wght: 500;
     margin-block-start: 0;
 }
-
 @container wrapper (width <= 35em) {
     .content h1 {
-        font-size: 2.5em;
-        font-variation-settings: "opsz" 30, "wdth" 50, "wght" 550;
+        --font-size: 2.5;
+        --text-wdth: 50;
+        --text-wght: 550;
     }
 }
+
+.content .news article h1 {
+    --font-size: 1.5;
+}
+
+ol.news{
+    list-style: none;
+      padding-inline-start: 0;
+}
+
 .content :is(h1, h2, h3, h4, h5, h5) {
     margin-block-end: 0;
     line-height: 1;
 }
 
-
-.content *{
-    font-variation-settings: "opsz" 16, "wdth" var(--text-wdth), 'GRAD' var(--text-grad, 0);
+.content :is(h2,h3,h4,h5) {
+    --text-wght: 600
 }
 
 .content :is(p, li) {
     --text-grad: 0;
-    font-size: 1.4rem;
+    --font-size: 1.4;
     margin: 0;
     line-height: var(--line-height, 1.4);
 }
-.content p + p {
+
+.content .news li article {
+    /*reset*/
+    --font-size: 1;
+}
+
+.content p.lead {
+    margin-bottom: 1lh;
+    font-style: italic;
+    --text-slnt: -7;
+}
+
+.news p.lead{
+    margin-bottom: .5lh;
+}
+
+.content p:not(.lead) + p {
     text-indent: 1.5em;
 }
 
 
 .content blockquote p {
-    font-size: 2.5em;
-    font-variation-settings: 'opsz' 20, 'slnt' -7,'wght' 90;
+    --font-size: 2.5;
+    --text-wght: 200;
+    --text-slnt: -7;
+    --text-wdth: 100;
     line-height: 1.1em;
     text-align: center;
     margin: 1rem 0;
@@ -686,7 +763,16 @@ nav li.active > a:hover {
     --text-grad: 50;
 }
 
-em {
-    /* FIXME: use "slnt" */
-    font-style: oblique;
+.call_for_action {
+  color: white;
+  background: var(--deeppink);
+  --text-wght: 1000;
+  --font-size: 3;
+  --text-wdth: 60;
+  text-align: center;
+  border: .3em double var(--greenyellow);
+  margin: 1rlh 0;
+}
+.call_for_action a:hover {
+    --text-wght: 800;
 }

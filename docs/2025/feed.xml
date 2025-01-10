@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Libre Graphics Meeting 2025, Nuremberg, Germany – RE:imagination</title>
+  <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
+  <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
+  <link href="https://libregraphicsmeeting.org/" />
+  <updated>2025-01-10T15:51:10Z</updated>
+  <id>https://libregraphicsmeeting.org/</id>
+  <author>
+    <name>Lasse Fister</name>
+    <email>libregraphicsmeeting@strong-type.systems</email>
+  </author>
+  <entry>
+    <title>Happy New Year!</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-01-09_0001-website-updates/" />
+    <updated>2025-01-09T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-01-09_0001-website-updates/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Happy New Year to everyone! We&amp;#39;re thrilled to share several exciting updates to our website and to kick off our fundraising efforts:
+&lt;/p&gt;
+    &amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;We’ve added a &amp;lt;a href=&amp;quot;/2025/news&amp;quot;&amp;gt;News&amp;lt;/a&amp;gt; section to the website, complete with an &amp;lt;a href=&amp;quot;/2025/feed.xml&amp;quot;&amp;gt;Atom Feed&amp;lt;/a&amp;gt;.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;You can now find details about our &amp;lt;a href=&amp;quot;/2025/reimbursement&amp;quot;&amp;gt;travel reimbursement&amp;lt;/a&amp;gt; program.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Our fundraising initiatives start with the launch of our &amp;lt;a href=&amp;quot;/2025/sponsors&amp;quot;&amp;gt;corporate sponsorship information page&amp;lt;/a&amp;gt;.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;A &amp;lt;a href=&amp;quot;/2025/donate&amp;quot;&amp;gt;donations&amp;lt;/a&amp;gt; campaign is also in the works.&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+</content>
+  </entry>
+  <entry>
+    <title>Libre Graphics Meeting 2025</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2024-12-18_0001-anouncement/" />
+    <updated>2024-12-18T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2024-12-18_0001-anouncement/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany on May 28-31, 2025.
+&lt;/p&gt;
+    &amp;lt;p&amp;gt;The Libre Graphics Meeting is an annual meeting on Free/Libre and
+Open Source software for graphics. For now, please see the
+&amp;lt;a href=&amp;quot;/2025/call-for-participation&amp;quot;&amp;gt;Call for Participation&amp;lt;/a&amp;gt;,
+&amp;lt;strong&amp;gt;read it, share it and spread the word!&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;blockquote&amp;gt;
+&amp;lt;p&amp;gt;Thank you!&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+</content>
+  </entry>
+</feed>
