@@ -763,7 +763,16 @@ ol.news{
     --text-grad: 50;
 }
 
-em {
-    /* FIXME: use "slnt" */
-    font-style: oblique;
+.call_for_action {
+  color: white;
+  background: var(--deeppink);
+  --text-wght: 1000;
+  --font-size: 3;
+  --text-wdth: 60;
+  text-align: center;
+  border: .3em double var(--greenyellow);
+  margin: 1rlh 0;
+}
+.call_for_action a:hover {
+    --text-wght: 800;
 }

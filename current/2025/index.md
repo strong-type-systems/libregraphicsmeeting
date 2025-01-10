@@ -13,12 +13,29 @@ headInject: >
 The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany on May 28-31, 2025.
 
 The Libre Graphics Meeting  is an annual meeting on Free/Libre and
-Open Source software for graphics. For now, please see the [Call for Participation]({{rootPath}}/call-for-participation), **read it, share it and spread the word!**
+Open Source software for graphics.
 
-> Thank you!
+<div class="call_for_action"><a href="{{rootPath}}/call-for-participation">Call for Participation</a><br />until January 31, 2025</div>
+
+**Read it, share it and spread the word!**
+
+<article>
+<h1>Latest News</h1>
+{% news collections.news, 5 %}
+
+[… all news]({{rootPath}}/news)
+</article>
+
+## Special focus – RE:imagination
+
+The Libre Graphics Meeting faced significant challenges during and after
+the pandemic. In [Rennes](/2024), France, 2024, the local organization team revitalized
+the event, and now we aim to rebuild the international community and
+strengthen the structures around the Libre Graphics Meeting.
+
+Join us to reconnect with old friends and forge new connections. Beyond
+the customary contributions, we are looking for presentations and discussions
+that embrace the theme of **RE:imagination**, exploring the future of the Libre
+Graphics Meeting together.
 
 
-## News
-{% news collections.news, 10 %}
-
-[… more News]({{rootPath}}/news)

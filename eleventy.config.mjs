@@ -29,7 +29,7 @@ function renderNews(items, limit=Infinity) {
         <span class="date"></span>
         ${newsDate(post.page)}
         <h1><a href="${post.url}">${post.data.title}</a></h1>
-        ${post.data.lead ? '<p class="lead">' + post.data.lead + '</p>' : ''}
+        <p class="lead">${post.data.lead ? post.data.lead : ''}<a href="${post.url}">(… full announcment)</a></p>
         </article></li>\n`);
     }
     result.push('</ol>');

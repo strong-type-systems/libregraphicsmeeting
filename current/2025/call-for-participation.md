@@ -1,7 +1,7 @@
 ---
 title: Call for Participation
 eleventyNavigation:
-  key: Call for Participation
+  key: Participate
   order: 2
 ---
 # Call for Participation
@@ -43,7 +43,7 @@ additional stand-alone submissions.
 ## Special focus – RE:imagination
 
 The Libre Graphics Meeting faced significant challenges during and after
-the pandemic. In Rennes, France, 2024, the local organization team revitalized
+the pandemic. In [Rennes](/2024), France, 2024, the local organization team revitalized
 the event, and now we aim to rebuild the international community and
 strengthen the structures around the Libre Graphics Meeting.
 
