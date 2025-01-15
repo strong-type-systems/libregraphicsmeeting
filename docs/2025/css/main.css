@@ -327,6 +327,14 @@ nav a:hover {
     text-decoration-color: var(--greenyellow, greenyellow);
 }
 
+nav li:has(li.active) > a{
+    background: var(--greenyellow, greenyellow);
+}
+nav li:has(li.active) > a:hover {
+    --text-grad: 70;
+    text-decoration-color: white;
+}
+
 nav li.active > a {
     background: var(--deeppink, deeppink);
 }
@@ -767,11 +775,16 @@ ol.news{
   color: white;
   background: var(--deeppink);
   --text-wght: 1000;
-  --font-size: 3;
+  --font-size: calc(2  + 1 * var(--text-wdth-ratio, 1));
   --text-wdth: 60;
   text-align: center;
   border: .3em double var(--greenyellow);
   margin: 1rlh 0;
+}
+.call_for_action a {
+    text-decoration-thickness: .1em;
+    text-decoration-style: double;
+
 }
 .call_for_action a:hover {
     --text-wght: 800;
