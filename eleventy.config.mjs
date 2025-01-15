@@ -46,6 +46,12 @@ export default function (eleventyConfig) {
       , rootPath = `/${rootDir}`
       ;
 
+    // I use this for the css and js files. Especially IPhone seems
+    // to have trouble to update these when they have changed. Looks
+    // like a server configuration thing, but I can't do much in that
+    // regard from here. I'd prefer to remove this again at some point.
+    // The Date will be different for each newly generated version.
+    eleventyConfig.addGlobalData('cacheBuster', `?cacheBuster=${(new Date()).toISOString()}`);
     eleventyConfig.setIncludesDirectory(`_includes`);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
