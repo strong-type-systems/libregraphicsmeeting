@@ -54,7 +54,7 @@ Graphics Meeting together.
 
 ##  Practical Details
 
-Call opens: 18 December 2025
+Call opens: 18 December 2024
 
 We will let you know if your presentation is selected by end of February 2025 at the latest.
 
