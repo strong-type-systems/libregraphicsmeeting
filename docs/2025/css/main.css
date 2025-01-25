@@ -184,7 +184,7 @@ nav {
     height: 2.5em;
     */
 
-    z-index: 5;
+    z-index: 500;
     white-space: nowrap;
 }
 
@@ -788,4 +788,13 @@ ol.news{
 }
 .call_for_action a:hover {
     --text-wght: 800;
+}
+
+.open_street_map-container {
+    aspect-ratio: 16/9;
+}
+
+.block-image {
+    display: block;
+    width: 100%;
 }

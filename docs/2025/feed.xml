@@ -4,12 +4,32 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-01-20T11:31:09Z</updated>
+  <updated>2025-01-25T15:14:38Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>Presenting the Venue and Call for Participation Reminder</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-01-25_0001-venue-reminder-cfp/" />
+    <updated>2025-01-25T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-01-25_0001-venue-reminder-cfp/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Make your travel plans and don&amp;#39;t forget to submit a proposal!
+&lt;/p&gt;
+    &amp;lt;p&amp;gt;Our Venue will be the Karl-Bröger-Zentrum. I posted the location and some
+information in &amp;lt;a href=&amp;quot;/2025/venues#main-venue-karl-br%C3%B6ger-zentrum&amp;quot;&amp;gt;Venues&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;We are located very close to the main station and the city center, it should
+be easy for you to get to the conference. &amp;lt;strong&amp;gt;You can start looking for accomodation now.&amp;lt;/strong&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;-only-5-days-left-&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#-only-5-days-left-&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;🚨 Only 5 Days Left! 🚨&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Our Call for Participation deadline is fast approaching, and &amp;lt;strong&amp;gt;we need your
+contributions&amp;lt;/strong&amp;gt; to make this a success! Now’s the time to rally and showcase
+your amazing projects.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Have any leads on captivating projects we should reach out to directly?&amp;lt;/strong&amp;gt; Let us know!&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;quot;call_for_action&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;/2025/call-for-participation&amp;quot;&amp;gt;Call for Participation&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;until January 31, 2025&amp;lt;/div&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>Happy New Year!</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-01-09_0001-website-updates/" />
