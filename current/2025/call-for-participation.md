@@ -52,6 +52,9 @@ the customary contributions, we are looking for presentations and discussions
 that embrace the theme of **RE:imagination**, exploring the future of the Libre
 Graphics Meeting together.
 
+*(**NOTE:** it's not a requirement to make reference to the special focus,
+feel free to conentrate on your own topic!)*
+
 ##  Practical Details
 
 Call opens: 18 December 2024

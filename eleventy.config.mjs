@@ -7,8 +7,7 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import embedEverything from "eleventy-plugin-embed-everything";
 import markdownItGitHubHeadings from "markdown-it-github-headings";
 import pluginRss from "@11ty/eleventy-plugin-rss";
-//import process from 'process';
-
+import Nunjucks from "nunjucks";
 
 function newsDate(page) {
     const [y, m, d] =page.fileSlug.split('-', 3).map(i=>parseFloat(i))
@@ -46,6 +45,12 @@ export default function (eleventyConfig) {
       , rootPath = `/${rootDir}`
       ;
 
+
+    const nunjucksEnvironment = new Nunjucks.Environment(
+        new Nunjucks.FileSystemLoader(`${dir.input}/_includes`)
+        );
+    eleventyConfig.setLibrary('njk', nunjucksEnvironment);
+
     // I use this for the css and js files. Especially IPhone seems
     // to have trouble to update these when they have changed. Looks
     // like a server configuration thing, but I can't do much in that
@@ -57,11 +62,16 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(embedEverything);
 
+    eleventyConfig.addPreprocessor("macro-inject", ".njk,.md", (data, content) => {
+          return `{%- import "macros.njk" as macro with context -%}\n` + content;
+    });
+
     // use this as the default layout.
     eleventyConfig.addGlobalData("layout", "lgm25");
     // This requires dir.input as that setting is not passed to addPassthroughCopy.
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css`);
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/img`);
 
     let mdOptions = {
         html: true,
@@ -119,5 +129,6 @@ export default function (eleventyConfig) {
 
     return {
         dir
+      , markdownTemplateEngine: 'njk'
     }
 };

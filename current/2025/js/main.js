@@ -1,4 +1,4 @@
-
+import * as leaflet from './leaflet/leaflet-src.esm.js';
 
 function* cycleColorsGen(arr, fn) {
     let args = [];
@@ -322,6 +322,44 @@ function main() {
                 ]) {
         for(const element of document.querySelectorAll(selector))
             fn(element, ...args);
+    }
+
+    for(const mapElement of document.querySelectorAll('.open_street_map')) {
+        const mapContainer = document.createElement('div')
+            mapElement.append(mapContainer);
+        mapContainer.classList.add('open_street_map-container')
+        const map = leaflet.map(mapContainer, {
+                attributionControl: false
+            })
+          , attributionControl = leaflet.control.attribution({
+                prefix: '&copy; <a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">Leaflet</a>'
+            }).addTo(map)
+          , geoURI = mapElement.getAttribute('data-geo')
+          , url = URL.parse(geoURI)
+          , [lat, lon] = url.pathname.split(',', 2).map(c=>parseFloat(c))
+          , osmLayer = leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 21,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map)
+          , title = mapElement.getAttribute('data-title')
+          , more = mapElement.getAttribute('data-more').replace('\\n', '<br />')
+          , href = mapElement.getAttribute('data-href') || '#'
+          ;
+        let z = 17;
+        if(url.searchParams.has('z'))
+            z = parseInt(url.searchParams.get('z'), 10);
+        map.setView([lat, lon], z);
+        const marker = leaflet.marker([lat, lon], {title}).addTo(map);
+        let markerContent = `<strong>${title}</strong>`;
+        if(more)
+            markerContent += '<br />' + more;
+        marker.bindPopup(markerContent);
+
+        const template = `<h3><a href="${href}">${title}</a><h3>
+<p>${more}</p>
+<a href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=${z}/${lat}/${lon}">Go to openstreetmap.com</a>
+`;
+        mapElement.append(document.createRange().createContextualFragment(template));
     }
 }
 
