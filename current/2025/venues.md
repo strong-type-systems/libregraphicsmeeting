@@ -11,7 +11,7 @@ Our main Venue is, the **Karl-Bröger-Zentrum**.
 
 ## Main Venue: [Karl-Bröger-Zentrum](https://www.karl-broeger-zentrum.de/)
 
-The Karl-Bröger-Zentrum is just a 5-minute walk from the main station and the city center. See the [map below](#orientation).
+The Karl-Bröger-Zentrum is just a 5-minute walk from the central station and the city center. See the [map below](#orientation).
 
 <img class="block-image" src="{{rootPath}}/img/KBZ-combined-small.jpeg" alt="Main Hall Karl-Bröger-Zentrum" />
 
