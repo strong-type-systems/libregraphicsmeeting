@@ -40,24 +40,21 @@ function defineRepeatingConicGradient(varPrefix, amountColors, amountGradients, 
           , ['position-v', '<percentage>', ()=>`${randomBetween(0, 100)}%`]
         ])
       , colors = []
-      , colorPositions = (property, isInitial, transitioner)=>{
+      , colorPositions = (property/*, isInitial, transitioner*/)=>{
             const fromName = `color-${property.i}-from`
-              , toName = `color-${property.i}-to`
+              //, toName = `color-${property.i}-to`
               ;
             if(property.name === fromName) {
                 const value = `${Math.random()}turn`;
                 property.lastValue = value
                 return value;
             }
-            else
-                return propertiesMap.get(fromName).lastValue;
-
-            return false;
+            return propertiesMap.get(fromName).lastValue;
         }
       , colorValueFn = (property, isInitial, transitioner) => {
             // make upper layer gradients more transparent, so we can see through a lot
-            const step = 1/amountGradients
-              , low = gradientIndex / amountGradients
+            const //step = 1/amountGradients
+                low = gradientIndex / amountGradients
               , high = 1
               , alphaFn = ()=> randomBetween(low, high)
               ;
@@ -159,14 +156,15 @@ class BackgroundTransitioner {
     constructor(backgroundElement, buttonSelector) {
         this._isPlayingKey = 'backgroundTransitionIsPlaying';
         this.element = backgroundElement;
+        // expose, so we can use the api for video production
+        this.element.ownerDocument.defaultView.backgroundTransitioner = this;
+
         backgroundElement.addEventListener('transitionend', this._transitionendHandler.bind(this));
 
         const colors = [GREENYELLOW, DEEPPINK];
         this.colorsIter = cycleColorsGen(colors, makeColor);
 
-        const {css, allProperties} = defineMultiRepeatingConicGradient('lgm25bg', 3, 6)
-          , transitions = []
-          ;
+        const {css, allProperties} = defineMultiRepeatingConicGradient('lgm25bg', 3, 6);
         this.allProperties = new Map(allProperties.map(prop=>[prop.cssName, prop]));
         for(const property of allProperties) {
             let initialValue = this._valueForProp(property, true)
@@ -209,36 +207,68 @@ class BackgroundTransitioner {
                 this.element.style.setProperty(property.cssName, result);
         }
     }
-    _setTransitions() {
-        const transitions = [];
+
+    _getTransitionsData() {
+        const transitionsData = new Map();
         for(const property of this.allProperties.values()) {
+            if(property.transition) {
+                transitionsData.set(property.cssName,
+                    {
+                        property
+                      , duration: randomBetween(10,40)
+                      , easingFunction:'ease-in-out'
+                      , delay: randomBetween(0, 5)
+                    }
+                );
+            }
+        }
+        return transitionsData;
+    }
+
+    _setTransitions() {
+        const transitionsData = this._getTransitionsData()
+          , transitions = []
+          ;
+        for(const {property, duration, easingFunction, delay} of transitionsData.values()) {
             if(property.transition)
                 transitions.push(
                     // property name | duration | easing function | delay
                     // transition: margin-right 4s ease-in-out 1s;
-                    `${property.cssName} ${randomBetween(10,40)}s ease-in-out ${randomBetween(0, 5)}s`
+                    `${property.cssName} ${duration}s ${easingFunction} ${delay}s`
                 );
         }
         // One or more single-property transitions, separated by commas.
         this.element.style.transition = transitions.join(', ');
     }
 
+    startTransitions() {
+        this._setTransitions();
+        if(this._timeoutID)
+            clearTimeout(this._timeoutID);
+        this._timeoutID = setTimeout(()=>this._setAllProperties(), 100);
+    }
+
+    stopTransitons() {
+        var computedStyle = window.getComputedStyle(this.element)
+          , state = new Map()
+          ;
+        for(const property of this.allProperties.values()) {
+            const value = computedStyle.getPropertyValue(property.cssName);
+            this.element.style.setProperty(property.cssName, value);
+            state.set(property.cssName, value);
+        }
+        this.element.style.transition =  'none';
+        clearTimeout(this._timeoutID);
+        return state;
+    }
+
     _togglePlayHandler(/*event*/) {
         this.isPlaying = !this.isPlaying;
         if(this.isPlaying) {
-            this._setTransitions();
-            if(this._timeoutID)
-                clearTimeout(this._timeoutID);
-            this._timeoutID = setTimeout(()=>this._setAllProperties(), 100);
+            this.startTransitions();
         }
         else {
-            var computedStyle = window.getComputedStyle(this.element);
-            for(const property of this.allProperties.values()) {
-                const value = computedStyle.getPropertyValue(property.cssName);
-                this.element.style.setProperty(property.cssName, value);
-            }
-            this.element.style.transition =  'none';
-            clearTimeout(this._timeoutID);
+            this.stopTransitons();
         }
 
         localStorage.setItem(this._isPlayingKey, this.isPlaying ? '1' : '0');
@@ -281,6 +311,122 @@ class BackgroundTransitioner {
         // backgroundElement.style.background = bg;
         // console.log(stops, 'setNewBackground', bg, 'backgroundElement', backgroundElement);
     }
+
+    videoCtrlInit() {
+        this._videoCtrlInitialValues = this.stopTransitons();
+        // this does not change in this run anymore
+        this._videoCtrlTransitionsData = this._getTransitionsData();
+        this._videoCtrlEvents = [];
+    }
+    _videoCtrlEnsureTransitions(time) {
+        // for one transition full transition time is duration + delay
+        // transition end is triggered when totalTime is up
+        // we can thus create a list of timestamps, when the transitions ends
+        //
+        // if time is say 100
+        // and full transition time is 5.4
+        // we get 100/5.4 = 18.51851851851852
+        // with Math.ceil we must figure we must create 19 entries
+        //
+        // we first create these entries for all transitions
+        // then we order them
+        // then we set values to them in order, so we make sure this
+        // behaves like the css transitions based version
+        // we don't set new values if they already exist. that way we can
+        // run this method multiple times and it always only adds to the
+        // back of the transition events list when it is required.
+
+        const newEvents = [];
+        for(const tansitionData of this._videoCtrlTransitionsData.values()) {
+            if(!tansitionData.iterations) {
+                tansitionData.iterations = [];
+                tansitionData.fullDuration = tansitionData.duration + tansitionData.delay;
+            }
+
+            // TODO: not sure why the +1 is required but I keep reading
+            // from + 1 below.
+            const requiredAmount = Math.ceil(time / tansitionData.fullDuration) + 1;
+            for(let i=tansitionData.iterations.length; i<requiredAmount;i++) {
+                // Because we use tansitionData.iterations.length as starting
+                // index, we don't redefine an existing transition,
+                const transitionEvent = {
+                      localIndex: i
+                    , timeCode: i * tansitionData.fullDuration
+                     // could use this as a sorting argument, if
+                     // two events have the same timeCode, once they have
+                     // a global position they wont loose it anymore
+                     // that way the timeline is ensured to stay stable.
+                     // but I believe this is never used.
+                    , globalIndex: Infinity
+                    , value: null
+                    , property: tansitionData.property
+                }
+                console.log(`add event to ${transitionEvent.property.name} at index ${transitionEvent.localIndex} === ${tansitionData.iterations.length}` );
+                tansitionData.iterations.push(transitionEvent);
+                newEvents.push(transitionEvent);
+            }
+        }
+        newEvents.sort((evtA, evtB)=>evtA.timeCode -evtB.timeCode);
+        for(const event of newEvents) {
+            // only ever append
+            event.globalIndex = this._videoCtrlEvents.length;
+            // we can set value now, it is in correct order.
+            if(event.localIndex === 0) // if i is 0 we can use the inital value
+                event.value = this._videoCtrlInitialValues[event.property.cssName]
+            else {
+                // This can return false! When? Though it looks like
+                // it does not happen ever for real.
+                console.log('event', event, 'event.property.cssName', event.property.cssName);
+                event.value = this._valueForProp(event.property);
+                if(event.value === false)
+                    throw new Error(`ASSERTION FAILED _valueForProp returned false`
+                        ` for "${event.property.name} valueFn ${event.property.valueFn}"`);
+            }
+            this._videoCtrlEvents.push(event);
+        }
+    }
+
+    _videoCtrlGetTransitionsAt(tansitionData, time) {
+        // is 0 if local time is within delay otherwise it's between 0 and 1
+        const position = time / tansitionData.fullDuration
+          , fromIndex =  Math.floor(position)
+          , toIndex = fromIndex + 1
+          , localT = position % 1
+          , localTime = tansitionData.fullDuration * localT
+          , transitionTime = localTime - tansitionData.delay
+          , transitionT = transitionTime < 0
+                    ? 0
+                    : transitionTime / tansitionData.duration
+          , events = []
+          ;
+        for(const index of [fromIndex, toIndex]) {
+            const event = tansitionData.iterations[index];
+            if(!event)
+                throw new Error(`KEY ERROR index ${index} not in `
+                    + `tansitionData.iterations for "${tansitionData.property.name}" run `
+                    + `_videoCtrlEnsureTransitions first!`);
+            events.push(event);
+        }
+        return [...events, transitionT];
+    }
+
+    _videoCtrlInterpolate(property, easingFunction, from, to, transitionT) {
+        console.log(`NOT IMPLEMENTED _videoCtrlInterpolate `
+            + `syntax: ${property.syntax} from: ${from.value} `
+            + `to: ${to.value} t: ${transitionT}`);
+    }
+
+    videoCtrlSetToTime(time) {
+        this._videoCtrlEnsureTransitions(time);
+        for(const transitionData of this._videoCtrlTransitionsData.values()) {
+            const [from, to, transitionT] = this._videoCtrlGetTransitionsAt(transitionData, time)
+              , property = transitionData.property
+              , value = this._videoCtrlInterpolate(transitionData.property,
+                    transitionData.easingFunction, from, to, transitionT)
+              ;
+            this.element.style.setProperty(property.cssName, value);
+        }
+    }
 }
 
 window.CSS.registerProperty({
@@ -313,53 +459,56 @@ function collapsible(element, buttonSelector, isInitiallyOpen=false) {
     });
 }
 
+function addMap(mapElement) {
+    const mapContainer = document.createElement('div')
+        mapElement.append(mapContainer);
+    mapContainer.classList.add('open_street_map-container')
+    const map = leaflet.map(mapContainer, {
+            attributionControl: false
+        })
+      , attributionControl = leaflet.control.attribution({
+            prefix: '&copy; <a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">Leaflet</a>'
+        })
+      , geoURI = mapElement.getAttribute('data-geo')
+      , url = URL.parse(geoURI)
+      , [lat, lon] = url.pathname.split(',', 2).map(c=>parseFloat(c))
+      , osmLayer = leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 21,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        })
+      , title = mapElement.getAttribute('data-title')
+      , more = mapElement.getAttribute('data-more').replace('\\n', '<br />')
+      , href = mapElement.getAttribute('data-href') || '#'
+      ;
+    attributionControl.addTo(map);
+    osmLayer.addTo(map);
+    let z = 17;
+    if(url.searchParams.has('z'))
+        z = parseInt(url.searchParams.get('z'), 10);
+    map.setView([lat, lon], z);
+    const marker = leaflet.marker([lat, lon], {title}).addTo(map);
+    let markerContent = `<strong>${title}</strong>`;
+    if(more)
+        markerContent += '<br />' + more;
+    marker.bindPopup(markerContent);
+
+    const template = `<h3><a href="${href}">${title}</a><h3>
+<p>${more}</p>
+<a href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=${z}/${lat}/${lon}">Go to openstreetmap.com</a>
+`;
+    mapElement.append(document.createRange().createContextualFragment(template));
+}
+
 function main() {
     for(const [selector, fn, ...args] of [
                     ['body', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
                   , ['nav > .past_editions', collapsible, '.past_editions > span']
                   , ['nav li:has(> ul)', collapsible, 'li']
                   , ['nav', collapsible, 'nav']
+                  , ['.open_street_map', addMap]
                 ]) {
         for(const element of document.querySelectorAll(selector))
             fn(element, ...args);
-    }
-
-    for(const mapElement of document.querySelectorAll('.open_street_map')) {
-        const mapContainer = document.createElement('div')
-            mapElement.append(mapContainer);
-        mapContainer.classList.add('open_street_map-container')
-        const map = leaflet.map(mapContainer, {
-                attributionControl: false
-            })
-          , attributionControl = leaflet.control.attribution({
-                prefix: '&copy; <a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">Leaflet</a>'
-            }).addTo(map)
-          , geoURI = mapElement.getAttribute('data-geo')
-          , url = URL.parse(geoURI)
-          , [lat, lon] = url.pathname.split(',', 2).map(c=>parseFloat(c))
-          , osmLayer = leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 21,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map)
-          , title = mapElement.getAttribute('data-title')
-          , more = mapElement.getAttribute('data-more').replace('\\n', '<br />')
-          , href = mapElement.getAttribute('data-href') || '#'
-          ;
-        let z = 17;
-        if(url.searchParams.has('z'))
-            z = parseInt(url.searchParams.get('z'), 10);
-        map.setView([lat, lon], z);
-        const marker = leaflet.marker([lat, lon], {title}).addTo(map);
-        let markerContent = `<strong>${title}</strong>`;
-        if(more)
-            markerContent += '<br />' + more;
-        marker.bindPopup(markerContent);
-
-        const template = `<h3><a href="${href}">${title}</a><h3>
-<p>${more}</p>
-<a href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=${z}/${lat}/${lon}">Go to openstreetmap.com</a>
-`;
-        mapElement.append(document.createRange().createContextualFragment(template));
     }
 }
 
