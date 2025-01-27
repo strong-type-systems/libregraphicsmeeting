@@ -1,3 +1,10 @@
 {%- macro example(title) -%}
 Example Macro: <strong>{{title}}</strong>
 {%- endmacro -%}
+
+{%- macro sponsor(level, name, url, logoUrl, slogan=null) -%}
+<div class="sponsor sponsor-level_{{level}}">
+    <a class="sponsor-logo" href="{{url}}"><img src="{{logoUrl}}" alt="Logo Sponsor: {{name}}" /></a>
+    <span class="sponsor-text"><a class="sponsor-link" href="{{url}}">{{name}}</a>{%- if slogan %} – {{slogan}}{%- endif -%}</span>
+</div>
+{%- endmacro -%}

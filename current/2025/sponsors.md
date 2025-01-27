@@ -8,6 +8,21 @@ eleventyNavigation:
 
 # Sponsoring the Libre Graphics Meeting
 
+Thank you to all our sponsoring partners: without your support, LGM would
+not be the incredible event it is. Your contributions make all the
+difference, and we truly appreciate your partnership.
+
+## Silver Partners
+
+{{ macro.sponsor('silver', 'B1 Systems', 'https://www.b1-systems.de',
+    rootPath + '/img/partners/b1-systems_logo.svg',
+    'Linux/Open Source Consulting, Training, Managed Service & Support') }}
+
+
+---
+
+## Sponsorship Information
+
 The Libre Graphics Meeting (LGM) is the annual event for developers and
 users of free software graphics applications. It provides a unique opportunity
 to collaborate and advance the cause of high-quality Free/Libre graphics
