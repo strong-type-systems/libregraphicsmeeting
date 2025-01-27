@@ -48,12 +48,12 @@ libre graphics and those presenting at the meeting.
 ### Gold € 5.000
  * Thanked in all press releases.
  * Your logo and link on sponsors page of the website.
- * Your logo in printed info-materials at the event.
+ * Your logo in digital and/or printed printed info-materials at the event[*](#digital-or-printed).
  * Thanked in a dedicated sponsorship announcement in our [News]({{rootPath}}/news) and social media.
 
 ### Silver € 3.000
  * Your logo and link on sponsors page of the website.
- * Your logo in printed info-materials at the event.
+ * Your logo in digital and/or printed printed info-materials at the event[*](#digital-or-printed).
  * Thanked in a dedicated sponsorship announcement in our [News]({{rootPath}}/news) and social media.
 
 ### Bronze € 1.000
@@ -73,3 +73,11 @@ If you wish to become a sponsor, please contact
 Lasse Fister via [libregraphicsmeeting@strong-type.systems](mailto:libregraphicsmeeting@strong-type.systems).
 
 > Thank you for your support!
+
+#### Details
+
+<span id="digital-or-printed">*</span>  At the event a digital program
+display will feature programming information and sponsors in a continuous
+loop slideshow. However, the decision on whether a printed program will be
+available is still pending. If a printed program is produced, it will include
+a sponsors page featuring your logo.
