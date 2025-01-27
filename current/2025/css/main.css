@@ -724,7 +724,7 @@ ol.news{
     --text-wght: 600
 }
 
-.content :is(p, li, .sponsor) {
+.content :is(p, li, .sponsorship) {
     --text-grad: 0;
     --font-size: 1.4;
     margin: 0;
@@ -799,46 +799,46 @@ ol.news{
     width: 100%;
 }
 
-.content .sponsor {
+.content .sponsorship {
     display: flex;
     gap: .5em;
     flex-flow: row wrap;
     margin-top: .5lh;
 }
 
-.sponsor .sponsor-logo {
+.sponsorship .sponsorship-logo {
     display: block;
     text-decoration: none;
     --min-width: min(100%, max(var(--sponsor-small-max, 13em), var(--sponsor-width, 100%)));
     flex: 0 0 var(--min-width);
 }
 
-.sponsor .sponsor-text {
+.sponsorship .sponsorship-info {
     display: block;
     text-decoration: none;
     flex: 1 1 10em;
 }
 
-.sponsor .sponsor-logo img {
+.sponsorship .sponsorship-logo img {
     width: 100%;
 }
 
-.sponsor-level_gold {
+.sponsorship-level_gold {
     --sponsor-width: 40%;
     --sponsor-small-max: 13em;
 }
 
-.sponsor-level_silver {
+.sponsorship-level_silver {
     --sponsor-width: 33%;
     --sponsor-small-max: 11em;
 }
 
-.sponsor-level_bronze {
+.sponsorship-level_bronze {
     --sponsor-width: 25%;
     --sponsor-small-max: 9em;
 }
 
-.sponsor-level_iron {
+.sponsorship-level_iron {
     --sponsor-width: 20%;
     --sponsor-small-max: 7em;
 }
