@@ -57,8 +57,9 @@ function defineRepeatingConicGradient(varPrefix, amountColors, amountGradients, 
                 low = gradientIndex / amountGradients
               , high = 1
               , alphaFn = ()=> randomBetween(low, high)
+              , addHueOffset = false && (isInitial ? false : true)
               ;
-            return transitioner.colorsIter.next([isInitial ? false : true, alphaFn]).value;
+            return transitioner.colorsIter.next([addHueOffset, alphaFn]).value;
         }
       ;
     for(let i=0;i<amountColors;i++) {
@@ -139,16 +140,28 @@ function randomBetween(min, max) {
     return  Math.random() * (max - min) + min;
 }
 
+function easeInOutCubic(t) {
+    // via https://easings.net/#easeInOutCubic
+    return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+function interpolateNumber(t, a, b) {
+    // Also (?): (t, a, b) => (1 - t) * a + t * b;
+    return ((b - a) * t) + a;
+}
+
 const GREENYELLOW = [91.3, 0.2335, 130.02]
  , DEEPPINK = [72.83, 0.19707545854163525, 351.9947080594076]
  ;
 
 function makeColor([l, c, h], addHueOffset=false, alphaFn=false) {
     const alpha = (alphaFn ? alphaFn : Math.random)()
-      , hueOffset = addHueOffset
-            ? ' + var(--hue-offset)'
-            : ''
-      , color =  `oklch(${l}% ${c} calc(${h}deg${hueOffset}) / ${alpha})`
+      , hue = addHueOffset
+            ? `calc(${h}deg + var(--hue-offset))`
+            : `${h}deg`
+      , color =  `oklch(${l}% ${c} ${hue} / ${alpha})`
       ;
     return color
 }
@@ -279,8 +292,10 @@ class BackgroundTransitioner {
         if(property.valueFn) {
             return property.valueFn(property, isInitial, this);
         }
-        if(property.syntax === '<color>')
-            return this.colorsIter.next([isInitial ? false : true]).value;
+        if(property.syntax === '<color>') {
+            const addHueOffset = false && isInitial ? false : true
+            return this.colorsIter.next([addHueOffset]).value;
+        }
         if (property.syntax === '<angle>')
             return `${randomBetween(10, 140)}deg`;
         if (property.syntax === '<turn>')
@@ -312,12 +327,27 @@ class BackgroundTransitioner {
         // console.log(stops, 'setNewBackground', bg, 'backgroundElement', backgroundElement);
     }
 
-    videoCtrlInit() {
+    async videoCtrlInit() {
         this._videoCtrlInitialValues = this.stopTransitons();
+        if(!this._culori) {
+            const interpolate = await import('./culori-4.0.1/src/interpolate/interpolate.js')
+              , format = await import('./culori-4.0.1/src/formatter.js')
+              , modeOklchModule = await import('./culori-4.0.1/src/oklch/definition.js')
+              , modeRgbModule = await import('./culori-4.0.1/src/rgb/definition.js')
+              , modes = await import('./culori-4.0.1/src/modes.js')
+              ;
+            modes.useMode(modeOklchModule.default);
+            modes.useMode(modeRgbModule.default);
+            this._culori = {
+                interpolate: interpolate.interpolate
+              , formatCss: format.formatCss
+            }
+        }
         // this does not change in this run anymore
         this._videoCtrlTransitionsData = this._getTransitionsData();
         this._videoCtrlEvents = [];
     }
+
     _videoCtrlEnsureTransitions(time) {
         // for one transition full transition time is duration + delay
         // transition end is triggered when totalTime is up
@@ -343,9 +373,13 @@ class BackgroundTransitioner {
                 tansitionData.fullDuration = tansitionData.duration + tansitionData.delay;
             }
 
-            // TODO: not sure why the +1 is required but I keep reading
-            // from + 1 below.
-            const requiredAmount = Math.ceil(time / tansitionData.fullDuration) + 1;
+            // we always need at least 2 the initial one at index 0 and
+            // the next one at index 1
+            const requiredAmount = tansitionData.iterations.length < 2
+                    ? 2
+                     // this calculates the higer index + 1 to get the amount/length
+                    : Math.ceil(time / tansitionData.fullDuration) + 1
+                    ;
             for(let i=tansitionData.iterations.length; i<requiredAmount;i++) {
                 // Because we use tansitionData.iterations.length as starting
                 // index, we don't redefine an existing transition,
@@ -361,7 +395,6 @@ class BackgroundTransitioner {
                     , value: null
                     , property: tansitionData.property
                 }
-                console.log(`add event to ${transitionEvent.property.name} at index ${transitionEvent.localIndex} === ${tansitionData.iterations.length}` );
                 tansitionData.iterations.push(transitionEvent);
                 newEvents.push(transitionEvent);
             }
@@ -371,17 +404,16 @@ class BackgroundTransitioner {
             // only ever append
             event.globalIndex = this._videoCtrlEvents.length;
             // we can set value now, it is in correct order.
-            if(event.localIndex === 0) // if i is 0 we can use the inital value
-                event.value = this._videoCtrlInitialValues[event.property.cssName]
-            else {
-                // This can return false! When? Though it looks like
-                // it does not happen ever for real.
-                console.log('event', event, 'event.property.cssName', event.property.cssName);
-                event.value = this._valueForProp(event.property);
-                if(event.value === false)
-                    throw new Error(`ASSERTION FAILED _valueForProp returned false`
-                        ` for "${event.property.name} valueFn ${event.property.valueFn}"`);
+            if(event.localIndex === 0) { // if i is 0 we can use the inital value
+                event.value = this._videoCtrlInitialValues.get(event.property.cssName);
+                continue;
             }
+            // This can return false! When? Though it looks like
+            // it does not happen ever for real.
+            event.value = this._valueForProp(event.property);
+            if(event.value === false)
+                throw new Error(`ASSERTION FAILED _valueForProp returned false`
+                    ` for "${event.property.cssName} valueFn ${event.property.valueFn}"`);
             this._videoCtrlEvents.push(event);
         }
     }
@@ -401,22 +433,49 @@ class BackgroundTransitioner {
           ;
         for(const index of [fromIndex, toIndex]) {
             const event = tansitionData.iterations[index];
-            if(!event)
+            if(!event) {
                 throw new Error(`KEY ERROR index ${index} not in `
-                    + `tansitionData.iterations for "${tansitionData.property.name}" run `
+                    + `tansitionData.iterations for "${tansitionData.property.cssName}" run `
                     + `_videoCtrlEnsureTransitions first!`);
+            }
             events.push(event);
         }
         return [...events, transitionT];
     }
 
     _videoCtrlInterpolate(property, easingFunction, from, to, transitionT) {
-        console.log(`NOT IMPLEMENTED _videoCtrlInterpolate `
-            + `syntax: ${property.syntax} from: ${from.value} `
-            + `to: ${to.value} t: ${transitionT}`);
+        let parse, format;
+        const simpleCases = new Set(['<angle>','<percentage>'])
+        if(simpleCases.has(property.syntax)) {
+            for(const unit of ['deg', 'turn', '%']) {
+                if(from.value.endsWith(unit)) {
+                    // 128.53289467691405deg
+                    parse=({value:val})=>parseFloat(val.slice(0, -1 * unit.length))
+                    format=(val)=>`${val}${unit}`;
+                }
+            }
+            if(!parse)
+                throw new Error(`VALUE ERROR don't know how to parse property.syntax ${property.syntax} looking like from "${from.value}".`);
+
+            const [fromNumber, toNumber] = [from, to].map(parse)
+               , t = easeInOutCubic(transitionT)
+               ;
+            return format(interpolateNumber(t, fromNumber, toNumber));
+        }
+        else if(property.syntax === '<color>') {
+            const color = this._culori.interpolate([from.value, easeInOutCubic, to.value]
+                    // CAUTION the pure CSS/transition version interpolates in RGB
+                    // to achieve the same colors we must do so too!
+                    , 'rgb')(transitionT);
+            return this._culori.formatCss(color);
+        }
+        else
+            throw new Error(`VALUE ERROR don't know how to parse property.syntax "${property.syntax}".`);
     }
 
     videoCtrlSetToTime(time) {
+        if(!this._videoCtrlTransitionsData)
+            throw new Error(`NOT READY run videoCtrlInit first!`);
         this._videoCtrlEnsureTransitions(time);
         for(const transitionData of this._videoCtrlTransitionsData.values()) {
             const [from, to, transitionT] = this._videoCtrlGetTransitionsAt(transitionData, time)
@@ -426,6 +485,28 @@ class BackgroundTransitioner {
               ;
             this.element.style.setProperty(property.cssName, value);
         }
+    }
+
+    videoCtrlAnimateStart() {
+        if(!this._videoCtrlTransitionsData)
+            throw new Error(`NOT READY run videoCtrlInit first!`);
+        this.videoCtrlAnimateStop();
+        this._videoCtrlAnimateStartTime = performance.now();
+        this._videoCtrlAnimateNext(true);
+    }
+
+    _videoCtrlAnimateNext(initial, timestamp=null) {
+        const nowT = initial
+                ? 0
+                : timestamp - this._videoCtrlAnimateStartTime;
+        this.videoCtrlSetToTime(nowT / 1000);
+        this._videoCtrlAnimateCancelRequestID = requestAnimationFrame(this._videoCtrlAnimateNext.bind(this, false));
+    }
+
+    videoCtrlAnimateStop() {
+        cancelAnimationFrame(this._videoCtrlAnimateCancelRequestID);
+        this._videoCtrlAnimateCancelRequestID = null;
+        this._videoCtrlAnimateStartTime = null;
     }
 }
 
