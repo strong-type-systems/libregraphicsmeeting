@@ -4,6 +4,15 @@ eleventyNavigation:
   key: Participate
   order: 2
 ---
+
+***NOTE* The Call for Participation has concluded. However, we
+can presumably fit some more contributions into the schedule; there
+might be a chance for latecomers to have their proposals included.
+[Read the official announcement]({{rootPath}}/news/2025-02-02_0001-closed-call-for-participation)
+and follow our [news]({{rootPath}}/news) for updates.**
+
+---
+
 # Call for Participation
 
 We are thrilled to announce the eighteenth annual Libre Graphics Meeting (LGM)
