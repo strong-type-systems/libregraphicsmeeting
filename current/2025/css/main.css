@@ -109,7 +109,7 @@ header {
 }
 
 
-header .filler {
+.filler {
     background: white;
 }
 
@@ -145,11 +145,11 @@ header .filler-2 {
     grid-area: filler-2;
 }
 
-header .identity-logo-container{
+.identity-logo-container{
     grid-area: logo;
 }
 
-header :is(.identity-logo-boxes, .identity-logo-text, .identiy-reimagination) {
+:is(.identity-logo-boxes, .identity-logo-text, .identiy-reimagination) {
     width: 100%;
     box-sizing: border-box;
     display: block;
@@ -160,17 +160,17 @@ header :is(.identity-logo-boxes, .identity-logo-text, .identiy-reimagination) {
 
 }
 
-header .identity-logo-boxes {
+.identity-logo-boxes {
     grid-area: logo-boxes;
     border-width: 1.5em .2em 0 .2em;
 }
 
-header .identity-logo-text {
+.identity-logo-text {
     grid-area: logo-text;
     border-width: 0 .5em 0 .5em;
 }
 
-header .identiy-reimagination {
+.identiy-reimagination {
     grid-area: reimagination;
     border-width: 0 .5em 0 0;
 }
@@ -843,3 +843,78 @@ ol.news{
     --sponsor-small-max: 7em;
 }
 
+.clips-container {
+    max-width: initial;
+    /* for target 1080p/50  */
+    height: 1080px;
+    width: 1920px;
+    overflow: hidden;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+
+.clips-container .filler-1 {
+    grid-area: filler-1;
+}
+.clips-container .filler-1 {
+    grid-area: filler-2;
+}
+
+.clips-container .presentation-payload {
+    grid-area: content;
+    background: white;
+    font-size: 40pt;
+}
+
+.clips-container article {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto 1fr auto auto 1fr auto;
+    grid-template-areas:
+        "logo-boxes content"
+        "filler-1 content"
+        "logo-text content"
+        "logo-text content"
+        "filler-2 content"
+        "reimagination reimagination";
+    height: 100%;
+    border: 25px solid white;
+    box-sizing: border-box;
+}
+
+.clips-container .presentation-payload {
+    padding-left: 50px;
+    h1 {
+        --font-size: 9.1;
+        --text-wght: 650;
+        --text-wdth: 70;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1;
+    }
+    .heading_anchor {
+        display: none;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        display: inline;
+        --font-size: 3.6;
+        --text-wght: 550;
+        /* This way, with a long 4 line title, we hit the baseline
+         * of the bottom logo text "May 28 - 31"
+         * h1 font-size/line-height is important as well!
+         * */
+        line-height: 1.2;
+    }
+    li:after{
+        content: ", ";
+    }
+    li:first-child:after{
+        content: ""
+    }
+}

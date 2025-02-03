@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{%- if title %}{{title}} - {% endif-%}
+        Libre Graphics Meeting 2025 – RE:imagination, Nuremberg, Germany</title>
+        <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
+        <link
+            rel="stylesheet"
+            href="{{ rootPath }}/css/main.css{{ cacheBuster }}" />
+        <script src="{{ rootPath }}/js/main.js{{ cacheBuster }}"
+            async
+            type="module"></script>
+    </head>
+    <body class="clips-container">
+            <article>
+                {{ logo_boxes | safe}}
+                {{ logo_text | safe}}
+                {{ reimagination | safe}}
+                <div class="presentation-payload">
+                    {{ content | safe }}
+                </div>
+                <div class="filler filler-1"></div>
+                <div class="filler filler-2"></div>
+            </article>
+    </body>
+</html>

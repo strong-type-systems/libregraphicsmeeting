@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+
+import path from 'node:path';
+import puppeteer from 'puppeteer';
+import { mkdir } from 'node:fs/promises';
+
+async function runTest() {
+    const browser = await puppeteer.launch({
+        headless: false,
+        timeout: 100000
+    });
+
+    try {
+
+        const url = 'http://localhost:8081/2025/clips/test/'
+          , basename = path.basename(url)
+          , targetFolder = `./clip_frames/${basename}/`
+          , createDir = await mkdir(targetFolder, { recursive: true })
+          ;
+
+
+        const page = await browser.newPage();
+        await page.setViewport({ width: 1920, height: 1080 });
+        await page.goto(url, {
+            waitUntil: ["load", "domcontentloaded"]
+        });
+        const videoCtrlInit = await page.evaluate(async ()=>await backgroundTransitioner.videoCtrlInit());
+        const frameRate = 50
+          , seconds= 15
+          , tOffset=3
+          ;
+        for(let i=0,l=seconds * frameRate;i<l;i++) {
+            const currentTime = tOffset + i/frameRate;
+            const videoCtrlInit = await page.evaluate(
+                async (currentTime)=>await backgroundTransitioner.videoCtrlSetToTime(currentTime)
+              , currentTime
+            );
+            await page.screenshot({
+                type: "png",
+                path: `${targetFolder}frame_${String(i).padStart(10, '0')}.png`,
+                fullPage: true,
+            });
+            console.log(`DONE ${i} of ${l} time: ${currentTime - tOffset}s (offset ${tOffset})`);
+        }
+    } finally {
+        await browser.close();
+    }
+
+    browser.close();
+}
+
+
+runTest();

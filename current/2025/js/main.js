@@ -346,6 +346,7 @@ class BackgroundTransitioner {
         // this does not change in this run anymore
         this._videoCtrlTransitionsData = this._getTransitionsData();
         this._videoCtrlEvents = [];
+        return 'videoCtrlInit DONE!';
     }
 
     _videoCtrlEnsureTransitions(time) {
