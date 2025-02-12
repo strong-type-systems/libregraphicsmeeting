@@ -4,12 +4,38 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-01-27T11:36:05Z</updated>
+  <updated>2025-02-12T10:31:58Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>The Call for Participation has concluded.</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-02-02_0001-closed-call-for-participation/" />
+    <updated>2025-02-02T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-02-02_0001-closed-call-for-participation/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Some slots will still be available. Read here about our next steps.
+&lt;/p&gt;
+    &amp;lt;p&amp;gt;&amp;lt;strong&amp;gt;Thank you all for your submissions.&amp;lt;/strong&amp;gt; We can already announce that all
+proposals will be accepted. We will send notice to all individual
+submitters within the coming week.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;transparency&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#transparency&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Transparency&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;So far, we’ll have 19 presentations and 11 BoFs or Workshops. However, we
+can presumably fit some more contributions into the schedule; there
+might be a chance for latecomers to have their proposals included.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;If you missed the initial deadline, we invite you to submit your proposals now.
+Please read the &amp;lt;a href=&amp;quot;/2025/call-for-participation&amp;quot;&amp;gt;Call for Participation&amp;lt;/a&amp;gt;.
+Details about the process are explaine below.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;whats-next&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#whats-next&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;What’s next?&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;We will be crafting a preliminary program soon; this will also help us determine
+the required premises and the booking of these. Once that’s in place,
+we will publish the initial program and announce any remaining free slots
+for further contributions. New submissions will be accepted on a first-come,
+first-served basis, so don’t hesitate!&amp;lt;/p&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>Sponsorship Announcement: B1 Systems</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-01-27_0001-sponsoring-update-welcome-b1-systems/" />
