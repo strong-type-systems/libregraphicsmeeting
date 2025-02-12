@@ -19,6 +19,12 @@ difference, and we truly appreciate your partnership.
     'Linux/Open Source Consulting, Training, Managed Service & Support') }}
 
 
+## Bronze Partners
+
+{{ macro.sponsor('silver', 'SUSE', 'https://www.suse.com',
+    rootPath + '/img/partners/SUSE_Logo-vert_L_Green-pos_sRGB.svg',
+    'Open Source Software Solutions for Enterprise Servers & Cloud') }}
+
 ---
 
 ## Sponsorship Information
