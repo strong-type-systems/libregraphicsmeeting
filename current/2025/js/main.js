@@ -541,9 +541,13 @@ function collapsible(element, buttonSelector, isInitiallyOpen=false) {
     });
 }
 
-function addMap(mapElement) {
-    const mapContainer = document.createElement('div')
-        mapElement.append(mapContainer);
+
+
+
+
+async function addMap(mapElement) {
+    const mapContainer = document.createElement('div');
+    mapElement.append(mapContainer);
     mapContainer.classList.add('open_street_map-container')
     const map = leaflet.map(mapContainer, {
             attributionControl: false
@@ -551,34 +555,58 @@ function addMap(mapElement) {
       , attributionControl = leaflet.control.attribution({
             prefix: '&copy; <a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">Leaflet</a>'
         })
-      , geoURI = mapElement.getAttribute('data-geo')
-      , url = URL.parse(geoURI)
-      , [lat, lon] = url.pathname.split(',', 2).map(c=>parseFloat(c))
-      , osmLayer = leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 21,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        })
-      , title = mapElement.getAttribute('data-title')
-      , more = mapElement.getAttribute('data-more').replace('\\n', '<br />')
-      , href = mapElement.getAttribute('data-href') || '#'
       ;
     attributionControl.addTo(map);
+    const osmLayer = leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 17,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
     osmLayer.addTo(map);
-    let z = 17;
-    if(url.searchParams.has('z'))
-        z = parseInt(url.searchParams.get('z'), 10);
-    map.setView([lat, lon], z);
-    const marker = leaflet.marker([lat, lon], {title}).addTo(map);
-    let markerContent = `<strong>${title}</strong>`;
-    if(more)
-        markerContent += '<br />' + more;
-    marker.bindPopup(markerContent);
 
-    const template = `<h3><a href="${href}">${title}</a><h3>
-<p>${more}</p>
+    if(mapElement.classList.contains('open_street_map-with_routing')) {
+        const geoGpxURL = mapElement.getAttribute('data-geo-gpx')
+          //, response = await fetch(geoJsonURL)
+          //, geoJsonData = await response.json()
+          ;
+         if(!leaflet.GPX) {
+            // not ideal how this is handled in the plugin:-/
+            window.L = {...leaflet};
+            await import('./leaflet-gpx-2.1.2/gpx.js');
+        }
+        const options = {
+                async: true,
+                polyline_options: { color: 'red' },
+            }
+          , gpx = new window.L.GPX(geoGpxURL, options).on('loaded', (e) => {
+                map.fitBounds(e.target.getBounds());
+            })
+          ;
+        gpx.addTo(map);
+    }
+    if(mapElement.hasAttribute('data-geo')) {
+        const geoURI = mapElement.getAttribute('data-geo')
+          , url = URL.parse(geoURI)
+          , [lat, lon] = url.pathname.split(',', 2).map(c=>parseFloat(c))
+          , title = mapElement.getAttribute('data-title')
+          , more = mapElement.getAttribute('data-more').replace('\\n', '<br />')
+          , href = mapElement.getAttribute('data-href') || '#'
+          ;
+        let z = 17;
+        if(url.searchParams.has('z'))
+            z = parseInt(url.searchParams.get('z'), 10);
+        map.setView([lat, lon], z);
+        const marker = leaflet.marker([lat, lon], {title}).addTo(map);
+        let markerContent = `<strong>${title}</strong>`;
+        if(more)
+            markerContent += '<br />' + more;
+        marker.bindPopup(markerContent);
+
+        const template = `<p>${more}<br />
 <a href="https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=${z}/${lat}/${lon}">Go to openstreetmap.com</a>
+</p>
 `;
-    mapElement.append(document.createRange().createContextualFragment(template));
+        mapElement.append(document.createRange().createContextualFragment(template));
+    }
 }
 
 function main() {
