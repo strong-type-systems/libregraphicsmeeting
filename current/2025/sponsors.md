@@ -1,7 +1,7 @@
 ---
 title: Sponsors
 eleventyNavigation:
-  parent: Participate
+  parent: Schedule
   key: Sponsors
   order: 2
 ---

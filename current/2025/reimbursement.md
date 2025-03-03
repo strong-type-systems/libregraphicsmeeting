@@ -1,7 +1,7 @@
 ---
 title: Reimbursement
 eleventyNavigation:
-  parent: Participate
+  parent: Schedule
   key: Reimbursement
   order: 3
 ---

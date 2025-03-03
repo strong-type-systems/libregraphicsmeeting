@@ -8,6 +8,12 @@ import embedEverything from "eleventy-plugin-embed-everything";
 import markdownItGitHubHeadings from "markdown-it-github-headings";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import Nunjucks from "nunjucks";
+import schedule from "./lib/js/schedule.js"
+
+
+function renderSchedudle() {
+    return schedule.renderHTML();
+}
 
 function newsDate(page) {
     const [y, m, d] =page.fileSlug.split('-', 3).map(i=>parseFloat(i))
@@ -126,6 +132,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addShortcode('newsDate', newsDate);
     eleventyConfig.addShortcode('news', renderNews);
+    eleventyConfig.addShortcode('schedule', renderSchedudle);
 
     return {
         dir

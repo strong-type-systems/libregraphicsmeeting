@@ -1,6 +1,7 @@
 ---
 title: Call for Participation
 eleventyNavigation:
+  parent: Schedule
   key: Participate
   order: 2
 ---
