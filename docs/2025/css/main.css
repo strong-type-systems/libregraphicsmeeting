@@ -735,7 +735,7 @@ ol.news{
     line-height: var(--line-height, 1.4);
 }
 
-.host-events time {
+:is(.label-events, .host-events) time {
     display: inline;
     --text-wght: 600;
 }
@@ -859,7 +859,7 @@ h1 .event-type{
     white-space: nowrap;
 }
 
-.host-events .event-type{
+:is(.label-events, .host-events) .event-type{
     --text-wght: 600;
     white-space: nowrap;
 }
