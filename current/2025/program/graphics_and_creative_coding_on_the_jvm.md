@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-labels: ['FreeCAD', 'splines', 'cad']
+labels: ['Processing', 'live', 'community', 'OpenJDK', 'JVM']
 type: BoF
 title: "Graphics and Creative Coding on the JVM"
 hosts: [Abe, Edwin, Neil, Raphaël, Stef]

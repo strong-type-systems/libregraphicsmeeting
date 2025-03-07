@@ -48,7 +48,7 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
 {% heading 'h2', 'Labels', 'labels' %}
 <ul class="event-labels">
 {%-for label in labels%}
-   <li><a href="{{rootPath}}/program/label-{{label}}">#{{label}}</a></li>
+   <li><a href="{{rootPath}}/program/label-{{label | slugify}}">#{{label}}</a></li>
 {%- endfor %}
 </ul>
 {% endif %}

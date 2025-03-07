@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-labels: [printing, maps, Qgis, Scribus, Inkscape, Ghostscript, toolbox]
+labels: [printing, maps, Qgis, Scribus, Inkscape, Ghostscript, PostScript, toolbox]
 type: talk
 title: "Printing maps with spot colors"
 hosts: ['Atelier_cartographique', Pierre, Julie]

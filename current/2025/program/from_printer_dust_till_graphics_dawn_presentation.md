@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-labels: [printers, PostScript, XPUB]
+labels: [printers, PostScript, Ghostscript, XPUB]
 type: talk
 title: "From Printer Dust Till Grahics Dawn"
 hosts: [XPUB, Manetta, Joseph]

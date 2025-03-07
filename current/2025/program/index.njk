@@ -31,7 +31,7 @@ eleventyNavigation:
       {{ macro.hostLink(host) }}
     {% endfor %}
     {%-for label in page.data.labels %}
-      <a class="label-link" href="{{rootPath}}/program/label-{{label}}">#{{label}}</a>
+      <a class="label-link" href="{{rootPath}}/program/label-{{label | slugify}}">#{{label}}</a>
     {%- endfor %}
   {%- endif -%}
 {%- endmacro -%}

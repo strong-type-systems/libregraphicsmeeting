@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-labels: ['Processing', 'community']
+labels: ['Processing', 'community', 'live']
 type: talk
 title: "The State of Processing: How We’re Bringing a Creative Coding Icon Back to Life"
 hosts: ['Raphaël', 'Stef']

@@ -49,6 +49,19 @@ function wrapShortcode(fn) {
     }
 };
 
+function _sortEventsByDate (a, b) {
+    const aDate = a.data.dailySchedules.keyToTimes.get(a.fileSlug)?.[0]
+        , bDate = b.data.dailySchedules.keyToTimes.get(b.fileSlug)?.[0]
+        ;
+    if(aDate === undefined && bDate === undefined)
+        return 0;
+    if(aDate === undefined)
+        return 1;
+    if(bDate === undefined)
+        return -1;
+    return aDate - bDate;
+}
+
 export default function (eleventyConfig) {
     // Output directory: _site
     const dir = {
@@ -182,18 +195,7 @@ export default function (eleventyConfig) {
         }
         for(const events of hosts.values()){
             // sort in place
-            events.sort((a, b)=>{
-                const aDate = a.data.dailySchedules.keyToTimes.get(a.fileSlug)?.[0]
-                  , bDate = b.data.dailySchedules.keyToTimes.get(b.fileSlug)?.[0]
-                  ;
-                if(aDate === undefined && bDate === undefined)
-                    return 0;
-                if(aDate === undefined)
-                    return 1;
-                if(bDate === undefined)
-                    return -1;
-                return aDate - bDate
-            });
+            events.sort(_sortEventsByDate);
         }
         return hosts
     })
@@ -208,7 +210,36 @@ export default function (eleventyConfig) {
             }
         }
         return events
-    })
+    });
+
+    eleventyConfig.addCollection('allLabels', function (collectionApi) {
+        const labels = new Map()
+        for(const item of collectionApi.getAll()) {
+            if (item.data.labels) {
+                for(const rawLabel of item.data.labels) {
+
+                    const label = eleventyConfig.getFilter('slugify')(rawLabel);//rawLabel.toLowerCase();
+                    if(!labels.has(label))
+                        // for name it is first come first serve
+                        // but all pages with the same label slug will
+                        // be under the same label.
+                        labels.set(label, {name: rawLabel, pages: []});
+                    labels.get(label).pages.push(item);
+                }
+            }
+        }
+        for(const events of labels.values()) {
+            // sort in place
+            events.pages.sort(_sortEventsByDate);
+        }
+        return Array.from(labels.keys()).map((label)=>{
+            const data = labels.get(label)
+              , pages = data.pages.map(page=>page.fileSlug)
+              ;
+            return {name: data.name, slug: label, pages};
+        });
+    });
+
 
     return {
         dir
