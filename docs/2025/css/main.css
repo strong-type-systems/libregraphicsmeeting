@@ -465,6 +465,7 @@ nav li.active > a:hover {
         display: none;
     }
 
+  header {
     nav:before,
     nav.ui_collapsible_mixin-open:after {
         content: '•••';
@@ -561,7 +562,7 @@ nav li.active > a:hover {
     .play_pause .play_pause-purpose{
         display: inline;
     }
-
+  }
 }
 
 
@@ -581,6 +582,9 @@ nav li.active > a:hover {
     padding: 1.5em 0;
     padding-left: var(--left-padding);
     padding-right: var(--right-padding);
+}
+.content .page-nav{
+    margin-bottom: 1.5em;
 }
 
 @container wrapper (width <= 61.625em) {
@@ -724,11 +728,16 @@ ol.news{
     --text-wght: 600
 }
 
-.content :is(p, li, .sponsorship) {
+.content :is(p, li, .sponsorship, time, table.schedule) {
     --text-grad: 0;
     --font-size: 1.4;
     margin: 0;
     line-height: var(--line-height, 1.4);
+}
+
+.host-events time {
+    display: inline;
+    --text-wght: 600;
 }
 
 .content .news li article {
@@ -841,6 +850,115 @@ ol.news{
 .sponsorship-level_iron {
     --sponsor-width: 20%;
     --sponsor-small-max: 7em;
+}
+
+
+
+h1 .event-type{
+    --text-wght: 300;
+    white-space: nowrap;
+}
+
+.host-events .event-type{
+    --text-wght: 600;
+    white-space: nowrap;
+}
+
+h2:has(+ .event-hosts, + .event-labels) {
+    display: inline-block;
+    --font-size: 1.4;
+}
+
+.event-hosts,
+.event-labels {
+    display: inline;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    li {
+        display: inline;
+        padding-right: .5em;
+    }
+    &:after {
+        content: '';
+        display: block;
+    }
+}
+
+.schedule :is(td, th){
+    vertical-align: top;
+}
+
+.schedule .page-link {
+    --text-wght: 700;
+}
+
+.schedule .page-link:hover {
+    --text-grad: -100;
+}
+
+.content .schedule h3 {
+  margin-block: 0;
+  line-height: unset;
+  --font-size: inherit;
+}
+
+.schedule_item-type-sessions ul{
+    margin: 0;
+    padding: 0;
+}
+
+.schedule {
+    border-collapse: collapse;
+}
+.schedule :is(th) {
+    padding-inline-start: .1em;
+    padding-inline-end: .6em;
+}
+
+.schedule td, .schedule_item-type-sessions li:not(:last-child) {
+    padding-block-end: .4em;
+}
+
+.content .schedule a {
+    text-decoration-thickness: .1em;
+}
+
+.legend-general,
+.schedule :is(.schedule_item-type-general, .schedule_item-type-community) {
+    --mark-color: #fb7cae;
+}
+.legend-talk,
+.schedule :is(.schedule_item-type-talk, .schedule_item-type-lightning) {
+    --mark-color: #b9f54a;
+}
+.legend-sessions,
+.schedule .schedule_item-type-sessions {
+    --mark-color: #ddc982;
+}
+
+
+
+.schedule_item th, .schedule-legend span {
+    background: linear-gradient(0.75turn, #ffffff00, var(--mark-color));
+}
+
+.schedule-legend span {
+    display: inline-block;
+    padding: .3em;
+    --font-size: 1.2;
+}
+
+.host-link, .label-link, .schedule_item-own_type {
+    white-space: nowrap;
+}
+
+.label-link {
+    --text-wght: 300;
+    --font-size: 1.2;
+}
+
+.host-link:has(+ .host-link):after {
+    content: ',';
 }
 
 .clips-container {
