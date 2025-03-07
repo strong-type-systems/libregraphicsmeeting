@@ -1,7 +1,7 @@
 ---
 title: Donate! (work in progress)
 eleventyNavigation:
-  parent: Schedule
+  parent: Program
   key: Donate
   title: Donate!
   order: 1

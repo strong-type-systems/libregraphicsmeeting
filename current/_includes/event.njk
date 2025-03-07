@@ -1,0 +1,59 @@
+---
+layout: lgm25.njk
+---
+<nav class="page-nav">
+Back to <a href="{{rootPath}}/program">Program</a><br />
+</nav>
+
+
+{% for date in dailySchedules.keyToTimes.get(page.fileSlug) %}
+    <time datetime="{{date.toISOString()}}">{{
+        date.toLocaleDateString('en-US', {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: '2-digit', minute:'2-digit', hour12: false,
+                timeZone: dailySchedules.timeZone[1],
+                timeZoneName: 'short'
+            })
+    }}</time>
+{% else %}
+
+{% endfor %}
+
+
+
+{% set h1Content-%}
+{{-title}}{% if type %}<span class="event-type">—{{type}}</span>{% endif %}
+{%-endset -%}
+{% heading 'h1', h1Content, page.fileSlug %}
+
+{% if hosts.length %}
+{% heading 'h2', 'Hosted By', 'hosted-by' %}
+<ul class="event-hosts">
+{%-for host in hosts%}
+    {% set hostPage = collections.all | filterPage('hosts', host) %}
+    <li>
+    {%- if hostPage -%}
+        <a class="host-link" href="{{hostPage.url}}">{{hostPage.data.fullName}}</a></li>
+    {%- else -%}
+        {{host}}
+    {%- endif -%}
+{%- endfor %}
+</ul>
+{% endif %}
+
+{% if labels.length %}
+{% heading 'h2', 'Labels', 'labels' %}
+<ul class="event-labels">
+{%-for label in labels%}
+   <li><a href="{{rootPath}}/program/label-{{label}}">#{{label}}</a></li>
+{%- endfor %}
+</ul>
+{% endif %}
+
+{% heading 'h2', 'Abstract', 'abstract' %}
+
+{{ content | safe }}
+

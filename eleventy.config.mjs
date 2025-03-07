@@ -10,16 +10,11 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import Nunjucks from "nunjucks";
 import schedule from "./lib/js/schedule.js"
 
-
-function renderSchedudle() {
-    return schedule.renderHTML();
-}
-
 function newsDate(page) {
     const [y, m, d] =page.fileSlug.split('-', 3).map(i=>parseFloat(i))
       , date = new Date(y, m-1, d)
       ;
-    return `<time datetime="${date.toString()}">${date.toDateString()}</time>`;
+    return `<time datetime="${date.toISOString()}">${date.toDateString()}</time>`;
 }
 
 function renderNews(items, limit=Infinity) {
@@ -40,6 +35,19 @@ function renderNews(items, limit=Infinity) {
     result.push('</ol>');
     return result.join('');
 }
+
+function wrapShortcode(fn) {
+    return (...args)=> {
+        try {
+            return fn(...args);
+        }
+        catch(e) {
+            // eleventy error reporting is bad when called as a shortcode...
+            console.error(e);
+            throw e;
+        }
+    }
+};
 
 export default function (eleventyConfig) {
     // Output directory: _site
@@ -86,7 +94,7 @@ export default function (eleventyConfig) {
         typographer: true,
     };
     const md = markdownIt(mdOptions);
-    md.use(markdownItGitHubHeadings, {
+    const headingsOptions = {
         // NOTE: I support the cause of adding prefixes to heading ids,
         // as described in the docs of markdown-it-github-headings, but
         // the hrefs created here do not contain the prefixes. The suggestion
@@ -98,8 +106,28 @@ export default function (eleventyConfig) {
         //, prefix: 'section-'
         , linkIcon: '#'
         , className: 'heading_anchor'
-    })
+    };
+    md.use(markdownItGitHubHeadings, headingsOptions)
     eleventyConfig.setLibrary("md", md);
+
+
+    // This replicates (part of) the behavior of markdownItGitHubHeadings
+    // to be used as a shortcode.
+    eleventyConfig.addShortcode('heading', (tag, text, achor=null)=>{
+        const {prefixHeadingIds, prefix, linkIcon, className} = headingsOptions
+          , rawId = achor === null ? encodeURIComponent(text) : achor
+          , id = prefixHeadingIds
+                ? `${prefix}${rawId}`
+                : rawId
+                ;
+        return `<${tag}><a
+            id="${id}"
+            href="#${id}"
+            class="${className}"
+            aria-hidden="true"
+            >${linkIcon}</a>${text}</${tag}>`;
+    });
+
 
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addGlobalData('eleventyComputed.rootPath', ()=>{
@@ -132,7 +160,55 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addShortcode('newsDate', newsDate);
     eleventyConfig.addShortcode('news', renderNews);
-    eleventyConfig.addShortcode('schedule', renderSchedudle);
+
+    for(const [tag, fn] of schedule.shortcodes)
+        eleventyConfig.addShortcode(tag, wrapShortcode(fn))
+
+    eleventyConfig.addFilter('filterPage', (pages, ...pathParts) => {
+        const path = [rootPath, ...pathParts].join('/');
+        return pages.find(page => page.filePathStem === path);
+    });
+
+    eleventyConfig.addCollection('eventsForHost', function (collectionApi) {
+        const hosts = new Map();
+        for(const item of collectionApi.getAll()) {
+            if (item.data.hosts) {
+                for(const hostSlug of item.data.hosts) {
+                    if(!hosts.has(hostSlug))
+                        hosts.set(hostSlug, []);
+                    hosts.get(hostSlug).push(item);
+                }
+            }
+        }
+        for(const events of hosts.values()){
+            // sort in place
+            events.sort((a, b)=>{
+                const aDate = a.data.dailySchedules.keyToTimes.get(a.fileSlug)?.[0]
+                  , bDate = b.data.dailySchedules.keyToTimes.get(b.fileSlug)?.[0]
+                  ;
+                if(aDate === undefined && bDate === undefined)
+                    return 0;
+                if(aDate === undefined)
+                    return 1;
+                if(bDate === undefined)
+                    return -1;
+                return aDate - bDate
+            });
+        }
+        return hosts
+    })
+
+    eleventyConfig.addGlobalData('dailySchedules', schedule.createDailySchedules());
+    eleventyConfig.addCollection('allEvents', function (collectionApi) {
+        const events = new Map();
+        for(const item of collectionApi.getAll()) {
+            if (item.page.filePathStem.startsWith(`${rootPath}/program/`)
+                    && item.data.layout === 'event.njk') {
+                events.set(item.page.fileSlug, item);
+            }
+        }
+        return events
+    })
 
     return {
         dir

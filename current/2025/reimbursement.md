@@ -1,7 +1,7 @@
 ---
 title: Reimbursement
 eleventyNavigation:
-  parent: Schedule
+  parent: Program
   key: Reimbursement
   order: 3
 ---

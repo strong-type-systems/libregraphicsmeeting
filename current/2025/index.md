@@ -16,7 +16,8 @@ The Libre Graphics Meeting  is an annual meeting on Free/Libre and
 Open Source software for graphics.
 
 <article>
-<h1>Latest News</h1>
+{% heading 'h1', 'Latest News', 'latest-news' %}
+
 {% news collections.news, 3 %}
 
 [… all news]({{rootPath}}/news)

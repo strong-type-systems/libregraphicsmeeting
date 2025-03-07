@@ -8,3 +8,22 @@ Example Macro: <strong>{{title}}</strong>
     <span class="sponsorship-info"><a class="sponsorship-link" href="{{url}}">{{name}}</a>{%- if slogan %} – {{slogan}}{%- endif -%}</span>
 </div>
 {%- endmacro -%}
+
+
+{%- macro hostLink(host) -%}
+{% set hostPage = collections.all | filterPage('hosts', host) %}
+{%- if hostPage -%}
+    <a class="host-link" href="{{hostPage.url}}">{{hostPage.data.fullName}}</a>
+{%- else -%}
+    {{host}}
+{%- endif -%}
+{%- endmacro -%}
+
+
+{%- macro hostLinkList(hosts) -%}
+<ul>
+{%- for host in hosts -%}
+    <li>{{ hostLink(host) }}</li>
+{% endfor %}
+</ul>
+{%- endmacro -%}

@@ -1,7 +1,7 @@
 ---
 title: Venues
 eleventyNavigation:
-  parent: Schedule
+  parent: Program
   key: Venues
   order: 5
 ---

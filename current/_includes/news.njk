@@ -1,10 +1,14 @@
 ---
 layout: lgm25.njk
 ---
-<a href="{{rootPath}}/news">News</a><br />
+<nav class="page-nav">
+Back to <a href="{{rootPath}}/news">News</a><br />
+</nav>
+
 {% newsDate page %}
 
-<h1>{{title}}</h1>
+{% heading 'h1', title, page.fileSlug %}
+
 {%- if lead %}
 <p class="lead">{{lead | safe}}</p>
 {% endif-%}

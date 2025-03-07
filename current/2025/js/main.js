@@ -612,9 +612,9 @@ async function addMap(mapElement) {
 function main() {
     for(const [selector, fn, ...args] of [
                     ['body', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
-                  , ['nav > .past_editions', collapsible, '.past_editions > span']
-                  , ['nav li:has(> ul)', collapsible, 'li']
-                  , ['nav', collapsible, 'nav']
+                  , ['header nav > .past_editions', collapsible, '.past_editions > span']
+                  , ['header nav li:has(> ul)', collapsible, 'li']
+                  , ['header nav', collapsible, 'nav']
                   , ['.open_street_map', addMap]
                 ]) {
         for(const element of document.querySelectorAll(selector))

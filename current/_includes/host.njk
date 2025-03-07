@@ -1,0 +1,25 @@
+---
+layout: lgm25.njk
+---
+<nav class="page-nav">
+Back to <a href="{{rootPath}}/program">Program</a><br />
+</nav>
+{% heading 'h1', fullName, page.fileSlug %}
+
+{{ content | safe }}
+
+{% heading 'h2', 'Events by ' + fullName, 'events' %}
+
+<ul class="host-events">
+{% for item in collections.eventsForHost.get(page.fileSlug) %}
+    <li>{% for date in dailySchedules.keyToTimes.get(item.fileSlug) %}
+    <time datetime="{{date.toISOString()}}">{{
+        date.toLocaleDateString('en-US', {
+                weekday: "long",
+                hour: '2-digit', minute:'2-digit', hour12: false
+            })
+    }}</time>
+    {% endfor %}
+    <a href="{{ item.url }}">{{ item.data.title }}</a>{% if item.data.type %}<span class="event-type">—{{item.data.type}}</span>{% endif %}</li>
+{% endfor %}
+</ul>
