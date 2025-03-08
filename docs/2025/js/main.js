@@ -191,7 +191,7 @@ class BackgroundTransitioner {
             window.CSS.registerProperty(cssPropertyDefinition);
 
         }
-        backgroundElement.style.background = css + ', #fff';
+        backgroundElement.style.setProperty('--background', css + ', #fff');
 
         this.buttons = [];
         const togglePlay = this._togglePlayHandler.bind(this);
