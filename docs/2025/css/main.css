@@ -409,27 +409,16 @@ nav li.active > a:hover {
 
 
 .donate {
-	background: var(--background);
-	position: fixed;
-	width: 10em;
-	aspect-ratio: 1;
-	border-radius: 50%;
-
-	border: .5em solid black;
-	background-size: 100% 100vh;
-	background-position: 100vh 100vh;
-}
-.donate {
     background: var(--background);
     position: fixed;
     width: 10em;
     aspect-ratio: 1;
     border-radius: 50%;
-    left: max(3em, calc((100vw - 72em) / 2 + 3em ));
+    left: max(3.8em, calc((100vw - 72em) / 2 + 3.8em ));
     top: 22em;
     border: .5em solid black;
-    background-size: 100% 100vh;
-    background-position: 100vh 100vh;
+    background-size: 100vw 100vh;
+    background-position: -3.8em 35em;
 }
 
 .donate a {
@@ -438,24 +427,26 @@ nav li.active > a:hover {
     --text-wdth: 54;
     text-transform: uppercase;
     display: block;
-    background: white;
+
     width: 90%;
     aspect-ratio: 1;
     margin: 5%;
     border-radius: 50%;
-    color: black;
+
     position: absolute;
     text-align: center;
     line-height: 4em;
     text-decoration-style: double;
     text-decoration-thickness: .15em;
-    text-decoration-color: deeppink;
-}
-.donate a:hover {
+
     background: black;
     color: white;
     text-decoration-color: greenyellow;
-
+}
+.donate a:hover {
+    background: white;
+    color: black;
+    text-decoration-color: deeppink;
 }
 
 @container wrapper (width <= 56em) {
@@ -483,6 +474,7 @@ nav li.active > a:hover {
         right: 1em;
         top: 1em;
         position: absolute;
+        background: transparent;
     }
 }
 
