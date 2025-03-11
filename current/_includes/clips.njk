@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{%- if title %}{{title}} - {% endif-%}
+        <title>{%- if clip.data.title %}{{clip.data.title   }} - {% endif-%}
         Libre Graphics Meeting 2025 – RE:imagination, Nuremberg, Germany</title>
         <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
         <link
@@ -17,7 +17,7 @@
                 {{ logo_boxes | safe}}
                 {{ logo_text | safe}}
                 {{ reimagination | safe}}
-                <div class="presentation-payload" id={{title|slugify}}>
+                <div class="presentation-payload {{clip.data.clipsInjectClass}}">
                     {{ content | safe }}
                 </div>
                 <div class="filler filler-1"></div>

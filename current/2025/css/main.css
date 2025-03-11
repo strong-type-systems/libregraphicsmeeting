@@ -1067,6 +1067,7 @@ h2:has(+ .event-hosts, + .event-labels) {
 
 .clips-container .presentation-payload {
     padding-left: 50px;
+    padding-top: 30px;
     h1 {
         --font-size: 9.1;
         --text-wght: 650;
@@ -1075,6 +1076,11 @@ h2:has(+ .event-hosts, + .event-labels) {
         margin: 0;
         line-height: 1;
     }
+
+    &.adjust-long-title h1 {
+        --font-size: 7.8;
+    }
+
     .heading_anchor {
         display: none;
     }
@@ -1093,25 +1099,16 @@ h2:has(+ .event-hosts, + .event-labels) {
          * */
         line-height: 1.2;
     }
-    /* The md to html conversion add a <p> tag inside each <li> tags when
-     * the list is greater than one, we use this to add a comma after each
-     * elements when needed */
-    li > p {
+    li {
         margin: 0;
         display: inline-block;
     }
-    li > p:after {
+    li:after {
         content: ", ";
     }
-    li:last-child > p:after{
+    li:last-child:after{
         content: ""
     }
-}
-/* There is 2 exceptions, 2 titles too big. Instead of reducing every other
- * titles, we fix the 2 exceptions here */
-#building-a-website-design-system-with-atomic-design-principles-using-penpot > h1,
-#the-state-of-processing-how-we-re-bringing-a-creative-coding-icon-back-to-life > h1 {
-    --font-size: 7.8;
 }
 
 @media print {

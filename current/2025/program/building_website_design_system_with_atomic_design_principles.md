@@ -3,6 +3,7 @@ labels: [Penpot, web]
 type: talk
 title: "Building a Website Design System with Atomic Design Principles Using Penpot"
 hosts: [María]
+clipsInjectClass: adjust-long-title
 ---
 
 In this talk, I will demonstrate how to leverage Penpot, a powerful open-source

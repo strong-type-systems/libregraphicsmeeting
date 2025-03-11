@@ -9,6 +9,14 @@ Example Macro: <strong>{{title}}</strong>
 </div>
 {%- endmacro -%}
 
+{%- macro hostName(host) -%}
+{% set hostPage = collections.all | filterPage('hosts', host) %}
+{%- if hostPage -%}
+   {{hostPage.data.fullName}}
+{%- else -%}
+    {{host}}
+{%- endif -%}
+{%- endmacro -%}
 
 {%- macro hostLink(host) -%}
 {% set hostPage = collections.all | filterPage('hosts', host) %}

@@ -200,13 +200,31 @@ export default function (eleventyConfig) {
         return hosts
     })
 
+
     eleventyConfig.addGlobalData('dailySchedules', schedule.createDailySchedules());
+
+    const _isProgramItem = item=>item.page.filePathStem.startsWith(`${rootPath}/program/`)
+                                        && item.data.layout === 'event.njk';
     eleventyConfig.addCollection('allEvents', function (collectionApi) {
         const events = new Map();
         for(const item of collectionApi.getAll()) {
-            if (item.page.filePathStem.startsWith(`${rootPath}/program/`)
-                    && item.data.layout === 'event.njk') {
+            if (_isProgramItem(item)) {
                 events.set(item.page.fileSlug, item);
+            }
+        }
+        return events
+    });
+
+
+    eleventyConfig.addCollection('eventClips', function (collectionApi) {
+        const events = []
+        for(const item of collectionApi.getAll()) {
+            if (_isProgramItem(item)) {
+                events.push({
+                    key: item.page.fileSlug
+                  , permalink: `${rootPath}/clips/${item.page.fileSlug}`
+                  , data: item.data
+                });
             }
         }
         return events
@@ -217,7 +235,6 @@ export default function (eleventyConfig) {
         for(const item of collectionApi.getAll()) {
             if (item.data.labels) {
                 for(const rawLabel of item.data.labels) {
-
                     const label = eleventyConfig.getFilter('slugify')(rawLabel);//rawLabel.toLowerCase();
                     if(!labels.has(label))
                         // for name it is first come first serve
