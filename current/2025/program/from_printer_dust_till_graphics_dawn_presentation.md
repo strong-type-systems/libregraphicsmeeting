@@ -1,7 +1,7 @@
 ---
 labels: [printers, PostScript, Ghostscript, XPUB]
 type: talk
-title: "From Printer Dust Till Grahics Dawn"
+title: "From Printer Dust Till Graphics Dawn"
 hosts: [XPUB, Manetta, Joseph]
 ---
 

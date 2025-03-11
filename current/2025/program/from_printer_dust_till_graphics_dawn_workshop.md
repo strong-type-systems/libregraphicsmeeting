@@ -1,7 +1,7 @@
 ---
 labels: [printers, PostScript, XPUB]
 type: workshop
-title: "From Printer Dust Till Grahics Dawn"
+title: "From Printer Dust Till Graphics Dawn"
 hosts: [XPUB, Manetta, Joseph]
 ---
 

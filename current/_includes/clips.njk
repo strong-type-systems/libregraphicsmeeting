@@ -17,7 +17,7 @@
                 {{ logo_boxes | safe}}
                 {{ logo_text | safe}}
                 {{ reimagination | safe}}
-                <div class="presentation-payload">
+                <div class="presentation-payload" id={{title|slugify}}>
                     {{ content | safe }}
                 </div>
                 <div class="filler filler-1"></div>
