@@ -15,6 +15,11 @@ The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany 
 The Libre Graphics Meeting  is an annual meeting on Free/Libre and
 Open Source software for graphics.
 
+Read our [Program]({{rootPath}}/program), consider
+to help us and [Donate!]({{rootPath}}/donate). If you plan to attend,
+please [register]({{rootPath}}/register) yourself.
+
+
 <article>
 {% heading 'h1', 'Latest News', 'latest-news' %}
 

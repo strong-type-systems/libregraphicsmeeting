@@ -20,6 +20,12 @@ We use ulule.com as the donations system.
 
 Donate generously and help to spread the word.
 
+## Sponsorship
+
+We also have a [sponsorship program]({{rootPath}}/sponsors/#sponsorship-information)
+for bigger and corporate contributions.
+
+
 ## Thank you for your support!
 
 Your donations will help us to bring people together in Nuremberg and make

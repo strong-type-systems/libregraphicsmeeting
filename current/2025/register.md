@@ -34,7 +34,7 @@ in the registration process.
 
 **You are already registered** if you are a presenter or host of another session.
 Registration is optional, but it will help us estimate how many T-shirts
-and Bags to print. Pleas use the **"Presenters-Registration"** option to
+and Bags to print. Please use the **"Presenters-Registration"** option to
 not take away a seat from another attendee.
 
 ## Additional Remarks

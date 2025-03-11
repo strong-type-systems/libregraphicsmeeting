@@ -2,11 +2,11 @@
 title: Call for Participation
 eleventyNavigation:
   parent: Program
-  key: Participate
+  key: Call for Participation
   order: 5
 ---
 
-***NOTE* The Call for Participation has concluded.**
+***NOTE:* The Call for Participation has concluded. Please see the [Program]({{rootPath}}/program) and don't forget to [Register!]({{rootPath}}/register)**
 
 ---
 
