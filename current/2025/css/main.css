@@ -82,6 +82,7 @@ header :is(h1, h2){
 
 
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -407,8 +408,55 @@ nav li.active > a:hover {
 }
 
 
+.donate {
+	background: var(--background);
+	position: fixed;
+	width: 10em;
+	aspect-ratio: 1;
+	border-radius: 50%;
 
+	border: .5em solid black;
+	background-size: 100% 100vh;
+	background-position: 100vh 100vh;
+}
+.donate {
+    background: var(--background);
+    position: fixed;
+    width: 10em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    left: max(3em, calc((100vw - 72em) / 2 + 3em ));
+    top: 22em;
+    border: .5em solid black;
+    background-size: 100% 100vh;
+    background-position: 100vh 100vh;
+}
 
+.donate a {
+    --font-size: 2;
+    --text-wght: 900;
+    --text-wdth: 54;
+    text-transform: uppercase;
+    display: block;
+    background: white;
+    width: 90%;
+    aspect-ratio: 1;
+    margin: 5%;
+    border-radius: 50%;
+    color: black;
+    position: absolute;
+    text-align: center;
+    line-height: 4em;
+    text-decoration-style: double;
+    text-decoration-thickness: .15em;
+    text-decoration-color: deeppink;
+}
+.donate a:hover {
+    background: black;
+    color: white;
+    text-decoration-color: greenyellow;
+
+}
 
 @container wrapper (width <= 56em) {
     header {
@@ -428,6 +476,13 @@ nav li.active > a:hover {
 
     header .identity-logo-text {
         border-bottom: .5em solid white;
+    }
+
+    .donate {
+        left: unset;
+        right: 1em;
+        top: 1em;
+        position: absolute;
     }
 }
 
@@ -455,6 +510,12 @@ nav li.active > a:hover {
     }
     header .identiy-reimagination{
         border: .5em solid white;
+    }
+
+    .donate {
+        left: 10%;
+        right: unset;
+        top: 3em;
     }
 }
 @container wrapper (width <= 36em) {
@@ -564,6 +625,13 @@ nav li.active > a:hover {
         display: inline;
     }
   }
+
+    .donate {
+        left: unset;
+        right: 1em;
+        top: 1em;
+        bottom: unset;
+    }
 }
 
 
@@ -713,6 +781,7 @@ nav li.active > a:hover {
 
 .content .news article h1 {
     --font-size: 1.5;
+    --text-wght: 600;
 }
 
 ol.news{
@@ -794,6 +863,7 @@ ol.news{
 .call_for_action a {
     text-decoration-thickness: .1em;
     text-decoration-style: double;
+    text-transform: uppercase;
 
 }
 .call_for_action a:hover {
@@ -890,7 +960,8 @@ h2:has(+ .event-hosts, + .event-labels) {
 }
 
 .schedule .page-link {
-    --text-wght: 700;
+    --text-wght: 600;
+    --text-wdth: 54;
 }
 
 .schedule .page-link:hover {

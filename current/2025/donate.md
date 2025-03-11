@@ -9,16 +9,16 @@ eleventyNavigation:
 
 # {{title}}
 
-We encourage everyone to help spread the word and donate generously.
+All funds raised will go towards covering conference expenses and
+[reimbursing travel costs]({{rootPath}}/reimbursement) for participants
+who actively contribute to libre graphics and those presenting at the meeting.
 
 <div class="call_for_action">
 <a href="https://www.ulule.com/lgm25nbg/">Donate Here</a><br />
 We use ulule.com as the donations system.
 </div>
 
-All funds raised will go towards covering conference expenses and
-[reimbursing travel costs]({{rootPath}}/reimbursement) for participants
-who actively contribute to libre graphics and those presenting at the meeting.
+Donate generously and help to spread the word.
 
 ## Thank you for your support!
 
