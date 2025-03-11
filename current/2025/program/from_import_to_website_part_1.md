@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [photography, web, ART, RawTherapee, toolbox]
 type: workshop
 title: "From the import to the website – part 1: importing and developing raw captures"

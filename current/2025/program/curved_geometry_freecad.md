@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['FreeCAD', 'splines', 'cad']
 type: BoF
 title: "Curved Geometry in FreeCAD"

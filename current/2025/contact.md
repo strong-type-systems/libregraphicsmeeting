@@ -1,7 +1,7 @@
 ---
 title: Contact
 eleventyNavigation:
-  parent: About
+  parent: Home
   key: Contact
   order: 100
 ---

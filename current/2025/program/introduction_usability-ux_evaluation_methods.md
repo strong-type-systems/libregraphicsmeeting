@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['usability', 'ux']
 type: talk
 title: "Introduction to Usability/UX Evaluation Methods"

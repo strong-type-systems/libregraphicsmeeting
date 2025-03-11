@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['video', 'web', 'PeerTube']
 type: talk
 title: "Hyper 8 Video System"

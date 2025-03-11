@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['video', 'toolbox']
 type: talk
 title: "A View on the Open-Source Video Editing Landscape"

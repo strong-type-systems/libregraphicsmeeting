@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [pdf, toolbox]
 type: talk
 title: "The PDF Toolbox "

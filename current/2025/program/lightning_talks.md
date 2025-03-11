@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: []
 type: talk
 title: "Lightning Talks"

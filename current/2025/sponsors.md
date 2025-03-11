@@ -1,7 +1,7 @@
 ---
 title: Sponsors
 eleventyNavigation:
-  parent: Program
+  parent: Home
   key: Sponsors
   order: 2
 ---

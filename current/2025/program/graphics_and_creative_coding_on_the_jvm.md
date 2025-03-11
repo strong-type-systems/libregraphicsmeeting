@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['Processing', 'live', 'community', 'OpenJDK', 'JVM']
 type: BoF
 title: "Graphics and Creative Coding on the JVM"

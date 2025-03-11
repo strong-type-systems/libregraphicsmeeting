@@ -1,7 +1,7 @@
 ---
 title: Reimbursement
 eleventyNavigation:
-  parent: Program
+  parent: Register
   key: Reimbursement
   order: 3
 ---
@@ -16,8 +16,7 @@ kilometer based on Google maps distance.
 
 The money for reimbursement is raised by the organizing team from [corporate
 sponsors]({{rootPath}}/sponsors), and donated by community members through
-a [crowdfunding campaign]({{rootPath}}/donate). **The crowdfunding campaign
-will be announced through our channel as soon as it is ready.** As money is
+a [crowdfunding campaign]({{rootPath}}/donate). As money is
 always tight, we very much appreciate your support for LGM by paying (partially)
 for your own trip. If that is not possible, we are happy to do what we can
 so that you can join us for the meeting.

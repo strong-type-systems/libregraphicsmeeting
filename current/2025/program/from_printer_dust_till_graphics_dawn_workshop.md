@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [printers, PostScript, XPUB]
 type: workshop
 title: "From Printer Dust Till Grahics Dawn"

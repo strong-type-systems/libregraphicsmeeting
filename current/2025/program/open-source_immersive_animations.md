@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['animation', 'Blender', 'live', '3d']
 type: workshop
 title: Open Source Immersive Animations

@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [Wayland, Krita, Kdenlive]
 type: talk
 title: "Art on Wayland – Challenges and Opportunities for Graphic Tablets"

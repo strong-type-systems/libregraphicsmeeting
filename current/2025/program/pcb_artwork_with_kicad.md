@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['KiCAD', 'cad']
 type: talk
 title: "PCB Artwork with KiCAD"

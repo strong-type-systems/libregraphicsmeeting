@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [Penpot, web]
 type: talk
 title: "Building a Website Design System with Atomic Design Principles Using Penpot"

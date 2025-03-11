@@ -5,7 +5,6 @@ layout: lgm25.njk
 Back to <a href="{{rootPath}}/program">Program</a><br />
 </nav>
 
-
 {% for date in dailySchedules.keyToTimes.get(page.fileSlug) %}
     <time datetime="{{date.toISOString()}}">{{
         date.toLocaleDateString('en-US', {

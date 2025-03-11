@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['ai', 'ownership', 'intelectual-property']
 type: talk
 title: "The elephant in the room: who owns the image?"

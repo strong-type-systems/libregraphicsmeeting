@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: []
 type: talk
 title: "State of Libre Graphics"

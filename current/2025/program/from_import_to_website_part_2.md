@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [photography, web, Digikam, Wordpress, toolbox]
 type: workshop
 title: "From the import to the website – part 2: editing metadata and creating a sophisticated web photo gallery or archive"

@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['Inkscape', 'InkStitch', embroidery]
 type: talk
 title: "Ink/Stitch"

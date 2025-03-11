@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [printers, PostScript, Ghostscript, XPUB]
 type: talk
 title: "From Printer Dust Till Grahics Dawn"

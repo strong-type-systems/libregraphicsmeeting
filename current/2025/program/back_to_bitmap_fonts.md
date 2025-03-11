@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['fonts', 'typography']
 type: talk
 title: "Let's All Go Back To Bitmap Fonts!"

@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['FreeCAD', 'splines', 'cad']
 type: talk
 title: "The Curious Case of Splines in FreeCAD"

@@ -1,9 +1,9 @@
 ---
 title: Code of Conduct
 eleventyNavigation:
-  parent: About
+  parent: Home
   key: Code of Conduct
-  order: 100
+  order: 90
 ---
 # Code of Conduct
 

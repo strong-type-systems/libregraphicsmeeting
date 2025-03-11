@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ["re:imagination", community]
 type: interactive
 title: "RE:imagination Workshop"

@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [Godot, Blender, Gimp, Krita]
 type: talk
 title: "Making Waterfalls"

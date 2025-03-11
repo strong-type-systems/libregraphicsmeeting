@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [coding, tools, ui, ux]
 type: talk
 title: "Libre Designers and the Software Apocalypse"

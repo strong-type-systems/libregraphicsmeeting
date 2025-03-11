@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['UpStage', 'cyberformance', 'live']
 type: talk
 title: UpStage

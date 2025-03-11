@@ -3,7 +3,7 @@ title: Venues
 eleventyNavigation:
   parent: Program
   key: Venues
-  order: 5
+  order: 2
 ---
 # {{ title }}
 

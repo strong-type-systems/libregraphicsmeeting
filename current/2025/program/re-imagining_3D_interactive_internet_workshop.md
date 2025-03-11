@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['Hubs', 'Blender', 'web', '3D']
 type: workshop
 title: "Re:Imagining a 3D and interactive internet"

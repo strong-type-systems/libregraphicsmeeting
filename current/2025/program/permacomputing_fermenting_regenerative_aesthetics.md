@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['permacomputing']
 type: talk
 title: "Permacomputing: Fermenting Regenerative Aesthetics"

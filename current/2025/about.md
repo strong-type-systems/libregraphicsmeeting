@@ -1,5 +1,6 @@
 ---
 eleventyNavigation:
+  parent: Home
   key: About
   order: 3
 permalink: null

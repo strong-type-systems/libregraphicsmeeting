@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: ['usability', 'ux']
 type: workshop
 title: "Run a Brief Usability Test to Find Usability Issues"

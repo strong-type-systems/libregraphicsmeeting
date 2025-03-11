@@ -44,7 +44,7 @@
                         | eleventyNavigation
                         | eleventyNavigationToHtml({
                             activeListItemClass: "active",
-                            activeKey: eleventyNavigation.key
+                            activeKey: eleventyNavigation.key or navigationActive
                         })
                         | safe
                     }}
@@ -83,6 +83,7 @@
                     ></button>
                 </nav>
             </header>
+
             <article class="content">
                 {{ content | safe }}
             </article>

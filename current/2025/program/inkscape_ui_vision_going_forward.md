@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [Inkscape, ui, ux]
 type: talk
 title: "Inkscape UI vision going forward"

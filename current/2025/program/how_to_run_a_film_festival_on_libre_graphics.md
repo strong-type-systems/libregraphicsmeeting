@@ -1,5 +1,4 @@
 ---
-layout: event.njk
 labels: [toolbox, events]
 type: talk
 title: "How to run a film festival on Libre Graphics"
