@@ -1058,7 +1058,7 @@ h2:has(+ .event-hosts, + .event-labels) {
         "filler-1 content"
         "logo-text content"
         "logo-text content"
-        "filler-2 content"
+        "filler-2 filler-2"
         "reimagination reimagination";
     height: 100%;
     border: 25px solid white;
@@ -1068,6 +1068,17 @@ h2:has(+ .event-hosts, + .event-labels) {
 .clips-container .presentation-payload {
     padding-left: 50px;
     padding-top: 30px;
+
+    /* bottom align content */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    /* this is an adjustment to bring the base-line down to the logo/title baseline */
+    margin-bottom: -0.2em;
+    z-index: 100;
+    position: relative;
+    /* end micro adjustment */
+
     h1 {
         --font-size: 9.1;
         --text-wght: 650;
@@ -1079,6 +1090,9 @@ h2:has(+ .event-hosts, + .event-labels) {
 
     &.adjust-long-title h1 {
         --font-size: 7.8;
+    }
+    &.adjust-very-long-title h1 {
+         --font-size: 7.1;
     }
 
     .heading_anchor {

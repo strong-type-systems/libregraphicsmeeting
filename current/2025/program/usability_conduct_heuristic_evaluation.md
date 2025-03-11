@@ -3,6 +3,7 @@ labels: ['usability', 'ux']
 type: workshop
 title: "Conduct a Heuristic Evaluation of your/an Application to Find Potential Usability Issues"
 hosts: ['SimonH']
+clipsInjectClass: adjust-very-long-title
 ---
 
 
