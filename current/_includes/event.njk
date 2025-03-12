@@ -6,8 +6,10 @@ layoutClass: event
 Back to <a href="{{rootPath}}/program">Program</a><br />
 </nav>
 
+
+<ul class="event-times">
 {% for date in dailySchedules.keyToTimes.get(page.fileSlug) %}
-    <time datetime="{{date.toISOString()}}">{{
+    <li><time datetime="{{date.toISOString()}}">{{
         date.toLocaleDateString('en-US', {
                 weekday: "long",
                 year: "numeric",
@@ -17,11 +19,9 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
                 timeZone: dailySchedules.timeZone[1],
                 timeZoneName: 'short'
             })
-    }}</time>
-{% else %}
-
+    }}</time></li>
 {% endfor %}
-
+</ul>
 
 
 {% set h1Content-%}

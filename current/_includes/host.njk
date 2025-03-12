@@ -13,14 +13,15 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
 
 <ul class="host-events">
 {% for item in collections.eventsForHost.get(page.fileSlug) %}
-    <li>{% for date in dailySchedules.keyToTimes.get(item.fileSlug) %}
+    {% for date in dailySchedules.keyToTimes.get(item.fileSlug) %}
+    <li>
     <time datetime="{{date.toISOString()}}">{{
         date.toLocaleDateString('en-US', {
                 weekday: "long",
                 hour: '2-digit', minute:'2-digit', hour12: false
             })
     }}</time>
-    {% endfor %}
     <a href="{{ item.url }}">{{ item.data.title }}</a>{% if item.data.type %}<span class="event-type">—{{item.data.type}}</span>{% endif %}</li>
+    {% endfor %}
 {% endfor %}
 </ul>

@@ -956,6 +956,12 @@ h2:has(+ .event-hosts, + .event-labels) {
     }
 }
 
+.event-times {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .schedule :is(td, th){
     vertical-align: top;
 }
