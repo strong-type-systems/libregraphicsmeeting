@@ -2,7 +2,7 @@
 labels: ['UpStage', 'cyberformance', 'live']
 type: workshop
 title: UpStage
-hosts: ['Helen', 'Gloria']
+hosts: ['Helen']
 ---
 
 A hands-on introduction to UpStage as an online platform for live, collaborative artistic performances.
