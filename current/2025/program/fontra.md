@@ -1,7 +1,7 @@
 ---
 labels: [fonts, typography, vector]
 type: talk
-title: "Fontra — The browser-based Font Editor"
+title: "Fontra —\nThe browser-based Font Editor"
 hosts: [Lasse, TBD]
 ---
 

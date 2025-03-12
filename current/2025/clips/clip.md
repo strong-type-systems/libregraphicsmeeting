@@ -7,7 +7,9 @@ permalink: "{{clip.permalink}}/"
 ---
 
 {% set event = collections.allEvents.get(clip.key) %}
-# {{clip.data.title}}
+
+<h1>{{clip.data.title}}</h1>
+
 <ul>
 {% for host in clip.data.hosts %}
   <li>{{ macro.hostName(host) }}</li>

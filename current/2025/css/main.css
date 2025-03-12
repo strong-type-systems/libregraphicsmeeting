@@ -1101,6 +1101,7 @@ h2:has(+ .event-hosts, + .event-labels) {
         text-transform: uppercase;
         margin: 0;
         line-height: 1;
+        white-space: pre-wrap;
     }
 
     &.adjust-long-title h1 {

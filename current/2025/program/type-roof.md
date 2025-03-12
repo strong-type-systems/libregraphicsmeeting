@@ -1,7 +1,7 @@
 ---
 labels: [fonts, typography, web, printing, animation]
 type: talk
-title: "TypeRoof — Type Tooling Infrastructure"
+title: "TypeRoof —\nType Tooling Infrastructure"
 hosts: [Lasse]
 ---
 
