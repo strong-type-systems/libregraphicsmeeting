@@ -939,7 +939,9 @@ h2:has(+ .event-hosts, + .event-labels) {
     padding: 0 0 0 .5em;
     li {
         display: inline;
-        padding-right: .5em;
+    }
+    li:not(:last-child)::after {
+        content: ", ";
     }
     &:after {
         content: '';
@@ -1112,10 +1114,8 @@ h2:has(+ .event-hosts, + .event-labels) {
          * h1 font-size/line-height is important as well!
          * */
         line-height: 1.2;
-    }
-    li {
         margin: 0;
-        display: inline-block;
+        white-space: nowrap;
     }
     li:after {
         content: ", ";
