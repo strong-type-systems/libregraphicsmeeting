@@ -15,10 +15,10 @@ The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany 
 The Libre Graphics Meeting  is an annual meeting on Free/Libre and
 Open Source software for graphics.
 
+## Key Actions
  1. Read our [Program]({{rootPath}}/program),
  2. if you plan to attend, please [Register!]({{rootPath}}/register) yourself,
  3. and consider to [Donate!]({{rootPath}}/donate).
-
 
 <article>
 {% heading 'h1', 'Latest News', 'latest-news' %}
@@ -36,7 +36,7 @@ the event, and now we aim to rebuild the international community and
 strengthen the structures around the Libre Graphics Meeting.
 
 Join us to reconnect with old friends and forge new connections. Under the
-theme of **RE:imagination**, we are going to explore the future of the Libre
-Graphics Meeting together.
+theme of [RE:imagination](http://localhost:8080/2025/program/label-re-imagination/),
+we are going to explore the future of the Libre Graphics Meeting together.
 
 

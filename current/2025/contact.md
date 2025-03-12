@@ -25,9 +25,8 @@ become regular, you should probably get into the team).
 
 ## Chat – Matrix and IRC
 
-Our **IRC** is at "`#lgm`" at [irc.libera.chat](https://libera.chat/guides/connect).
-
-There is a **Matrix** channel that also bridges to the IRC at [#lgm:kde.org](https://matrix.to/#/%23lgm:kde.org).
+* Our **IRC** is at "`#lgm`" at [irc.libera.chat](https://libera.chat/guides/connect).
+* There is a **Matrix** channel that also bridges to the IRC at [#lgm:kde.org](https://matrix.to/#/%23lgm:kde.org).
 
 ## Website
 
