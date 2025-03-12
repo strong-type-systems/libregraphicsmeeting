@@ -1,7 +1,7 @@
 ---
 labels: [pdf, toolbox]
 type: talk
-title: "The PDF Toolbox "
+title: "The PDF Toolbox"
 hosts: [Cédric]
 ---
 

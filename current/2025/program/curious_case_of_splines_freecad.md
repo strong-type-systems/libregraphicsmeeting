@@ -1,5 +1,5 @@
 ---
-labels: ['FreeCAD', 'splines', 'cad']
+labels: ['FreeCAD', 'splines', 'cad', vector]
 type: talk
 title: "The Curious Case of Splines in FreeCAD"
 hosts: ['Ajinkya']

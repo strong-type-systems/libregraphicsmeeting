@@ -1,5 +1,5 @@
 ---
-labels: [Godot, Blender, Gimp, Krita]
+labels: [Godot, Blender, Gimp, Krita, 3d]
 type: talk
 title: "Making Waterfalls"
 hosts: [Tom]

@@ -1,5 +1,5 @@
 ---
-labels: [Inkscape, ui, ux]
+labels: [Inkscape, ui, ux, vector]
 type: talk
 title: "Inkscape UI vision going forward"
 hosts: [Henrique]

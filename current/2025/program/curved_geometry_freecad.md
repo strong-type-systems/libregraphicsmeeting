@@ -1,5 +1,5 @@
 ---
-labels: ['FreeCAD', 'splines', 'cad']
+labels: ['FreeCAD', 'splines', 'cad', vector]
 type: BoF
 title: "Curved Geometry in FreeCAD"
 hosts: ['Ajinkya']

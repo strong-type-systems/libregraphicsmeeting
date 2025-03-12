@@ -1,5 +1,5 @@
 ---
-labels: ['fonts', 'typography']
+labels: [fonts, typography, vector]
 type: talk
 title: "Let's All Go Back To Bitmap Fonts!"
 hosts: ['Nathan']

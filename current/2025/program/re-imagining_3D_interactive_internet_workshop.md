@@ -1,5 +1,5 @@
 ---
-labels: ['Hubs', 'Blender', 'web', '3D']
+labels: ['Hubs', 'Blender', 'web', '3d']
 type: workshop
 title: "Re:Imagining a 3D and interactive internet"
 hosts: [Gottfried, Frederik]
