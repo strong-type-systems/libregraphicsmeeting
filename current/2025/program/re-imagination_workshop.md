@@ -2,7 +2,7 @@
 labels: ["re:imagination", community]
 type: interactive
 title: "RE:imagination Workshop"
-hosts: [Lasse, SimonH]
+hosts: [LGM, Lasse, SimonH]
 ---
 
 An interactive session with all attendants. We are looking for your experience,

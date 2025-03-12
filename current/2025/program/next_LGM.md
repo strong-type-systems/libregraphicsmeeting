@@ -2,7 +2,7 @@
 labels: ["re:imagination", community]
 type: discussion
 title: "Next year's meeting"
-hosts: [Lasse, SimonH]
+hosts: [LGM, TBD]
 ---
 
 We discuss our conclusions of our special focus [re:imagination]({{rootPath}}/program/label-re:imagination)

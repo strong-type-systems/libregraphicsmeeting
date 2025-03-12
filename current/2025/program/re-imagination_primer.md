@@ -2,7 +2,7 @@
 labels: ["re:imagination", community]
 type: talk
 title: "RE:imagination Primer"
-hosts: [Lasse, SimonH]
+hosts: [LGM, Lasse, SimonH]
 ---
 
 We're kicking of this years special focus -- RE:imagination -- exploring the possible futures of the Libre Graphics Meeting.

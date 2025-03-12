@@ -2,7 +2,7 @@
 labels: []
 type: null
 title: "Closing session"
-hosts: [Lasse]
+hosts: [LGM, Lasse]
 ---
 
-Goodby.
+Goodbye.

@@ -2,7 +2,7 @@
 labels: []
 type: talk
 title: "State of Libre Graphics"
-hosts: [Lasse]
+hosts: [LGM, TBD]
 ---
 
 An update from the many projects of our community.

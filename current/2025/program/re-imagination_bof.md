@@ -2,7 +2,7 @@
 labels: ["re:imagination", community]
 type: BoF
 title: "RE:imagination"
-hosts: [Lasse]
+hosts: [LGM, Lasse]
 ---
 
 {% set workshop = collections.allEvents.get('re-imagination_workshop') %}
