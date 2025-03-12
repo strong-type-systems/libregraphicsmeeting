@@ -1,7 +1,7 @@
 ---
 labels: [photography, web, ART, RawTherapee, toolbox]
 type: workshop
-title: "From the import to the website – part 1: importing and developing raw captures"
+title: "From the Import to the Website – part 1: importing and developing raw captures"
 hosts: [Anna]
 ---
 

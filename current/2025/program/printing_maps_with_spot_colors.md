@@ -1,7 +1,7 @@
 ---
 labels: [printing, maps, Qgis, Scribus, Inkscape, Ghostscript, PostScript, toolbox]
 type: talk
-title: "Printing maps with spot colors"
+title: "Printing Maps with Spot Colors"
 hosts: ['Atelier_cartographique', Pierre, Julie]
 ---
 
@@ -31,3 +31,4 @@ describe how we use QGIS functionalities to optimize the maps for spot color
 printing and show the tips and tricks we learned along the way - and share
 the results, hoping to inspire other mapmakers around to give it a try.
 
+{{ macro.blockImage('events/printing_maps_with_spot_colors-feYCQ39ktaCeaGSR.png', 'A') }}

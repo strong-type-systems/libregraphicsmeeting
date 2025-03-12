@@ -1,7 +1,7 @@
 ---
 labels: [toolbox, events]
 type: talk
-title: "How to run a film festival on Libre Graphics"
+title: "How to Run a Film Festival on Libre Graphics"
 hosts: [Marc]
 ---
 

@@ -15,9 +15,7 @@ eleventyNavigation:
 
 Karl-Bröger-Zentrum is just a 5-minute walk from the central station and the city center. See the [map below](#orientation).
 
-<img class="block-image"
-    src="{{rootPath}}/img/KBZ-combined-small.jpeg"
-    alt="Main Hall Karl-Bröger-Zentrum" />
+{{ macro.blockImage('KBZ-combined-small.jpeg', 'Main Hall Karl-Bröger-Zentrum') }}
 
 The conference hall used to be a newspaper printing press.
 

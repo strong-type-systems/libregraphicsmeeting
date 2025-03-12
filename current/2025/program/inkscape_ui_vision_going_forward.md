@@ -1,7 +1,7 @@
 ---
 labels: [Inkscape, ui, ux, vector]
 type: talk
-title: "Inkscape UI vision going forward"
+title: "Inkscape UI Vision Going Forward"
 hosts: [Henrique]
 ---
 

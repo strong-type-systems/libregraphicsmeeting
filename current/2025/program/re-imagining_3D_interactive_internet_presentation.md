@@ -1,7 +1,7 @@
 ---
 labels: ['Hubs', 'Blender', 'web', '3d']
 type: talk
-title: "Re:Imagining a 3D and interactive internet"
+title: "Re:Imagining a 3D and Interactive Internet"
 hosts: [Gottfried, Frederik]
 ---
 
@@ -18,3 +18,5 @@ you are used to Blender’s nodes graphs, you might feel right at home.
 However managing interactivity creates a distinct difference, since every
 node needs to get triggered by events, be it player interaction or just
 timer based.
+
+{{ macro.blockImage('events/re-imagining_3D_interactive_internet-BehaviorGraph.png', 'BehaviorGraph Logo Illustration') }}

@@ -35,3 +35,11 @@ Example Macro: <strong>{{title}}</strong>
 {% endfor %}
 </ul>
 {%- endmacro -%}
+
+{% macro blockImage(file, alt) %}
+<div class="block-image">
+<img
+    src="{{rootPath}}/img/{{file}}"
+    alt="{{alt}}" />
+</div>
+{% endmacro %}

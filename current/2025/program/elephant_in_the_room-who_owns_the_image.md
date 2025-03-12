@@ -1,7 +1,7 @@
 ---
 labels: ['ai', 'ownership', 'intelectual-property']
 type: talk
-title: "The elephant in the room: who owns the image?"
+title: "The Elephant in the Room: Who Owns the Image?"
 hosts: ['Eylul']
 ---
 
