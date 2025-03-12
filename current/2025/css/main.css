@@ -453,9 +453,10 @@ nav li.active > a:hover {
     header {
         grid-template-areas:
             "logo-boxes filler-1"
-            "logo-text reimagination"
             "logo-text filler-2"
+            "logo-text reimagination"
             "nav nav";
+        grid-template-rows: auto 1fr auto var(--nav-full-height);
     }
 
     nav > ul > li:first-child > a {
@@ -471,8 +472,8 @@ nav li.active > a:hover {
 
     .donate {
         left: unset;
-        right: 1em;
-        top: 1em;
+        right: 20%;
+        top: 3em;
         position: absolute;
         background: transparent;
     }
@@ -621,7 +622,7 @@ nav li.active > a:hover {
     .donate {
         left: unset;
         right: 1em;
-        top: 1em;
+        top: 10vw;
         bottom: unset;
     }
 }
@@ -762,7 +763,13 @@ nav li.active > a:hover {
     --text-wdth: 54;
     --text-wght: 500;
     margin-block-start: 0;
+    text-transform: uppercase;
 }
+
+:is(.host, .event) .content h1 {
+    text-transform: initial;
+}
+
 @container wrapper (width <= 35em) {
     .content h1 {
         --font-size: 2.5;
