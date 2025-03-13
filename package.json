@@ -23,6 +23,8 @@
     "eleventy-plugin-embed-everything": "^1.19.0",
     "globals": "^15.12.0",
     "markdown-it-github-headings": "^2.0.1",
+    "postcss": "^8.5.3",
+    "postcss-nesting": "^13.0.1",
     "puppeteer": "^24.1.1"
   },
   "main": "index.js",

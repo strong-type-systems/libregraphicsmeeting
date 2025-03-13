@@ -8,6 +8,8 @@ import embedEverything from "eleventy-plugin-embed-everything";
 import markdownItGitHubHeadings from "markdown-it-github-headings";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import Nunjucks from "nunjucks";
+import postcss from 'postcss';
+import postcssNesting from 'postcss-nesting';
 import schedule from "./lib/js/schedule.js"
 
 function newsDate(page) {
@@ -96,8 +98,8 @@ export default function (eleventyConfig) {
     // use this as the default layout.
     eleventyConfig.addGlobalData("layout", "lgm25");
     // This requires dir.input as that setting is not passed to addPassthroughCopy.
-    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css`);
-    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css/[!*.css]*`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js/[!*.css]*`);
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/img`);
 
     let mdOptions = {
@@ -257,6 +259,23 @@ export default function (eleventyConfig) {
         });
     });
 
+    eleventyConfig.addTemplateFormats('css');
+    eleventyConfig.addExtension('css', {
+        outputFileExtension: 'css'
+      , compile: async function(inputContent, inputPath, ...args) {
+               if(inputContent === '/2025') {
+                    // really strange! This call is not documented and I
+                    // can't find a corresponding error for it.
+                    // There are similar reports though.
+                    return;
+                }
+                const output = await postcss([
+                    postcssNesting(/* pluginOptions */)
+                ]).process(inputContent, {  from: inputPath}/*, processOptions */);
+                //console.log(output);
+                return async () => output.css;
+           }
+    });
 
     return {
         dir
