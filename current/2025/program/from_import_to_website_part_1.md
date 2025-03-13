@@ -15,7 +15,7 @@ the work with the raw developer software ART, which is a fork of the popular
 open source raw developer RawTherapee. ART exists since a few years now,
 its creator Alberto Griggio optimised (among other things) the user interface
 of the software so it is easier to use for new users (both newcomers to
-photography and newcomers to open source photography software). The sujbects
+photography and newcomers to open source photography software). The subjects
 of the pictures will be mostly nature shots and landscapes with high dynamic
 range (dark foreground, bright sky) that were taken before and after
 LGM 2024 in Britanny.
