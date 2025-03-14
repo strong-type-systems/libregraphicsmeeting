@@ -1151,12 +1151,32 @@ h2:has(+ .event-hosts, + .event-labels) {
   .wrapper{
     width: 13cm;
   }
+  .donate {
+    display: none;
+  }
   header {
+    display: block;
+  }
+
+  header :is(.identity-logo-text, .identiy-reimagination, .filler-1, .filler-2, nav) {
+    display: none;
+  }
+
+  .identity-logo.identity-logo-boxes{
+    /* Prevent printers from removing background-images of controls. */
     background: black;
+    width: 10em;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  header nav{
-    opacity: 0;
+
+  header :is(h1, h2) {
+    position: initial;
+    --text-wght: 800;
+    --text-wdth: 70;
+    text-transform: uppercase;
   }
+
   .content{
         --left-padding: 0;
   }
