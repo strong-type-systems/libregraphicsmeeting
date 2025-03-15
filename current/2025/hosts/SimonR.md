@@ -16,4 +16,5 @@ tools, in the region.
 
 ## Links
 
-* [Fediverse: @freebliss@post.lurk.org](@freebliss@post.lurk.org)
+* https://simonrepp.com
+* [Fediverse: @freebliss@post.lurk.org](https://post.lurk.org/@freebliss)

@@ -16,4 +16,4 @@ life in Hacksneck, Virginia, USA with his extended family.
 
 * https://wintermute.org
 * brendan@howell-ersatz.com
-* [Fediverse: @praxeology@post.lurk.org](@praxeology@post.lurk.org)
+* [Fediverse: @praxeology@post.lurk.org](https://post.lurk.org/@praxeology)
