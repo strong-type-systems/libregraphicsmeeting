@@ -5,7 +5,7 @@ title: "Hyper 8 Video System"
 hosts: ['SimonR']
 ---
 
-Hyper 8 is a static site generator for video, developed since 2023 and
+[Hyper 8](https://simonrepp.com/hyper8) is a static site generator for video, developed since 2023 and
 first released in 2024. It uses a file-based, modular building block
 system for authoring video sites ranging from single videos, to
 playlists, to video collections of arbitrary hierarchical complexity.
@@ -21,3 +21,7 @@ Who is this for? What was the motivation? How does this relate to
 PeerTube? What is being developed at the moment? Where is it going in
 the future? What are the challenges, learnings, anecdotes so far? And so
 on. And of course also: Your questions!
+
+## Links
+
+* [Hyper 8 Video System](https://simonrepp.com/hyper8)
