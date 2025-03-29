@@ -4,12 +4,38 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-03-17T09:44:27Z</updated>
+  <updated>2025-03-29T02:35:08Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>LGM will be streamed and recorded</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-03-29_0001-video-streaming-and-recording/" />
+    <updated>2025-03-29T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-03-29_0001-video-streaming-and-recording/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Nothing can beat meeting in person, but the second best thing is live streams and recordings.
+&lt;/p&gt;
+    &amp;lt;p&amp;gt;We are more than excited to be &amp;lt;a href=&amp;quot;%7BrootPath%7D/partners/#live-streaming-and-video-recording&amp;quot;&amp;gt;partnering&amp;lt;/a&amp;gt;
+with &amp;lt;a href=&amp;quot;https://chaoswest.tv/&amp;quot;&amp;gt;Chaos-West TV&amp;lt;/a&amp;gt; to broadcast the LGM live online
+and to capture the sessions on video for later viewing via &amp;lt;a href=&amp;quot;https://media.ccc.de/&amp;quot;&amp;gt;media.ccc.de&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;quot;partner&amp;quot;&amp;gt;
+    &amp;lt;a class=&amp;quot;partner-logo&amp;quot; href=&amp;quot;https://chaoswest.tv/&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;/2025/img/partners/chaos-west-tv_logo.svg&amp;quot; alt=&amp;quot;Logo Sponsor: Chaos-West TV&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;span class=&amp;quot;partner-info&amp;quot;&amp;gt;&amp;lt;a class=&amp;quot;partner-link&amp;quot; href=&amp;quot;https://chaoswest.tv/&amp;quot;&amp;gt;Chaos-West TV&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;p&amp;gt;While you can stay at home and enjoy the spectacle from afar, our speakers
+will have to travel to get into the focus of our cameras. To ease their
+effort we are organizing a &amp;lt;a href=&amp;quot;/2025/reimbursement/&amp;quot;&amp;gt;reimbursement program&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;If you’d like to help make this possible, please consider &amp;lt;a href=&amp;quot;/2025/donate&amp;quot;&amp;gt;donating&amp;lt;/a&amp;gt;.
+Your support makes all the difference—thank you!&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;quot;call_for_action&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;https://www.ulule.com/lgm25nbg/&amp;quot;&amp;gt;Donate Here&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;
+We use ulule.com as the donations system.
+&amp;lt;/div&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>Program public, Registrations open, Donate!</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-03-12_0001-program-registrations-donations/" />

@@ -874,30 +874,31 @@ ol.news{
         max-width: 100%;
     }
 
-.content .sponsorship {
+.content :is(.sponsorship, .partner) {
     display: flex;
     gap: .5em;
     flex-flow: row wrap;
     margin-top: .5lh;
 }
 
-.sponsorship .sponsorship-logo {
+:is(.sponsorship, .partner) :is(.sponsorship-logo, .partner-logo) {
     display: block;
     text-decoration: none;
     --min-width: min(100%, max(var(--sponsor-small-max, 13em), var(--sponsor-width, 100%)));
     flex: 0 0 var(--min-width);
 }
 
-.sponsorship .sponsorship-info {
+:is(.sponsorship, .partner) :is(.sponsorship-info, .partner-info) {
     display: block;
     text-decoration: none;
     flex: 1 1 10em;
 }
 
-.sponsorship .sponsorship-logo img {
+:is(.sponsorship, .partner) :is(.sponsorship-logo, .partner-logo) img {
     width: 100%;
 }
 
+.partner,
 .sponsorship-level_gold {
     --sponsor-width: 40%;
     --sponsor-small-max: 13em;
