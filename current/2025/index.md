@@ -17,7 +17,9 @@ Open Source software for graphics.
 
 ## Key Actions
  1. Read our [Program]({{rootPath}}/program),
- 2. if you plan to attend, please [Register!]({{rootPath}}/register) yourself,
+ 2.
+    - if you plan to attend, please [Register!]({{rootPath}}/register) yourself,
+    - otherwise, [a live broadcast and recordings will be available]({{rootPath}}/news/2025-03-29_0001-video-streaming-and-recording/), monitor this site for further directions,
  3. and consider to [Donate!]({{rootPath}}/donate).
 
 <article>

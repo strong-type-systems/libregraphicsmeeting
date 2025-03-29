@@ -2,7 +2,7 @@
 eleventyNavigation:
   parent: Home
   key: About
-  order: 3
+  order: 4
 permalink: null
 ---
 

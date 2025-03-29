@@ -9,6 +9,13 @@ Example Macro: <strong>{{title}}</strong>
 </div>
 {%- endmacro -%}
 
+{%- macro partner(name, url, logoUrl, slogan=null) -%}
+<div class="partner">
+    <a class="partner-logo" href="{{url}}"><img src="{{logoUrl}}" alt="Logo Sponsor: {{name}}" /></a>
+    <span class="partner-info"><a class="partner-link" href="{{url}}">{{name}}</a>{%- if slogan %} – {{slogan}}{%- endif -%}</span>
+</div>
+{%- endmacro -%}
+
 {%- macro hostName(host) -%}
 {% set hostPage = collections.all | filterPage('hosts', host) %}
 {%- if hostPage -%}
