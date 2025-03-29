@@ -6,7 +6,7 @@ lead: >
     Nothing can beat meeting in person, but the second best thing is live streams and recordings.
 ---
 
-We are more than excited to be [partnering]({rootPath}/partners/#live-streaming-and-video-recording)
+We are more than excited to be [partnering]({{rootPath}}/partners/#live-streaming-and-video-recording)
 with [Chaos-West TV](https://chaoswest.tv/) to broadcast the LGM live online
 and to capture the sessions on video for later viewing via [media.ccc.de](https://media.ccc.de/).
 
