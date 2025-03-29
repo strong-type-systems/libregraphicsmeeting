@@ -99,7 +99,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData("layout", "lgm25");
     // This requires dir.input as that setting is not passed to addPassthroughCopy.
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css/[!*.css]*`);
-    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js/[!*.css]*`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js`);
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/img`);
 
     let mdOptions = {
