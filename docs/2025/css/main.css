@@ -519,10 +519,7 @@ nav li.active > a:hover {
     header .filler {
         display: none;
     }
-
-  header {
-    nav:before,
-    nav.ui_collapsible_mixin-open:after {
+    header nav:before,header nav.ui_collapsible_mixin-open:after {
         content: '•••';
         display: block;
         text-align: center;
@@ -532,92 +529,88 @@ nav li.active > a:hover {
         color: white;
     }
 
-    nav.ui_collapsible_mixin-closed > * {
+    header nav.ui_collapsible_mixin-closed > * {
         display: none;
     }
 
-    nav {
+    header nav {
         padding: var(--nav-gap-size) 0;
         height: initial;
     }
-    nav, nav > ul {
+    header nav,header nav > ul {
         flex-direction: column;
     }
-    nav .past_editions > ul, nav ul > li > ul {
+    header nav .past_editions > ul,header nav ul > li > ul {
         position: initial;
     }
 
-    .past_editions > span,
-    nav > ul > li > a,
-    .play_pause {
+    header .past_editions > span,header nav > ul > li > a,header .play_pause {
         margin: 0;
         margin-left: 0;
         margin-right: 0;
     }
 
-    .play_pause {
+    header .play_pause {
         height: var(--nav-full-height);
     }
-    .play_pause span {
+    header .play_pause span {
         position: initial;
     }
 
-    :is(nav .past_editions > ul, nav ul > li > ul) > li {
+    header :is(nav .past_editions > ul,nav ul > li > ul) > li {
         padding: 0 0 var(--nav-gap-size) 2em;
     }
-     nav ul > li > ul > li:first-child {
+     header nav ul > li > ul > li:first-child {
         padding-top: var(--nav-gap-size);
     }
 
-    .past_editions ul a, nav li > ul a {
+    header .past_editions ul a,header nav li > ul a {
         margin: 0;
     }
 
-    .past_editions > span,
-     nav > ul > li > a {
+    header .past_editions > span,header nav > ul > li > a {
         display: block;
     }
-    .past_editions > span {
+    header .past_editions > span {
         padding-left: 0;
     }
 
-    nav li:has(ul) {
+    header nav li:has(ul) {
         overflow: hidden;
     }
-    nav li:has(ul) > a {
+    header nav li:has(ul) > a {
         position: absolute;
         top: 0;
         width: 100%;
         padding-left: 2.3em;
     }
-    :is(.past_editions > span, nav li:has(> ul)):before {
+    header :is(.past_editions > span,nav li:has( > ul)):before {
         display: inline-block;
         position: relative;
         z-index: 1;
     }
-    :is(.past_editions > span, nav li:has(> ul)):after {
+    header :is(.past_editions > span,nav li:has( > ul)):after {
         display: none;
     }
 
-    nav .past_editions > ul, nav ul > li > ul {
+    header nav .past_editions > ul,header nav ul > li > ul {
         background: transparent;
     }
 
-    .play_pause {
+    header .play_pause {
         background-color: white;
         color: black;
         height: fit-content;
         text-align: left;
         padding-left: calc(var(--icon-width) + var(--nav-gap-size));
     }
-    .play_pause:before {
+    header .play_pause:before {
         background-color: black;
         left: var(--nav-gap-size);
     }
-    .play_pause .play_pause-purpose{
+    header .play_pause .play_pause-purpose{
         display: inline;
     }
-  }
 
     .donate {
         left: unset;
@@ -875,10 +868,11 @@ ol.news{
 
 .block-image {
     display: block;
-    img {
+}
+
+.block-image img {
         max-width: 100%;
     }
-}
 
 .content :is(.sponsorship, .partner) {
     display: flex;
@@ -947,17 +941,20 @@ h2:has(+ .event-hosts, + .event-labels) {
     display: inline;
     margin: 0;
     padding: 0 0 0 .5em;
-    li {
+}
+
+:is(.event-hosts,.event-labels) li {
         display: inline;
     }
-    li:not(:last-child)::after {
+
+:is(.event-hosts,.event-labels) li:not(:last-child)::after {
         content: ", ";
     }
-    &:after {
+
+:is(.event-hosts,.event-labels):after {
         content: '';
         display: block;
     }
-}
 
 .event-times {
     margin: 0;
@@ -1096,8 +1093,9 @@ h2:has(+ .event-hosts, + .event-labels) {
     z-index: 100;
     position: relative;
     /* end micro adjustment */
+}
 
-    h1 {
+:is(.clips-container .presentation-payload) h1 {
         --font-size: 9.1;
         --text-wght: 650;
         --text-wdth: 70;
@@ -1107,22 +1105,25 @@ h2:has(+ .event-hosts, + .event-labels) {
         white-space: pre-wrap;
     }
 
-    &.adjust-long-title h1 {
+.adjust-long-title:is(.clips-container .presentation-payload) h1 {
         --font-size: 7.8;
     }
-    &.adjust-very-long-title h1 {
+
+.adjust-very-long-title:is(.clips-container .presentation-payload) h1 {
          --font-size: 7.1;
     }
 
-    .heading_anchor {
+:is(.clips-container .presentation-payload) .heading_anchor {
         display: none;
     }
-    ul {
+
+:is(.clips-container .presentation-payload) ul {
         margin: 0;
         padding: 0;
         list-style: none;
     }
-    li {
+
+:is(.clips-container .presentation-payload) li {
         display: inline;
         --font-size: 3.6;
         --text-wght: 550;
@@ -1134,13 +1135,14 @@ h2:has(+ .event-hosts, + .event-labels) {
         margin: 0;
         white-space: nowrap;
     }
-    li:after {
+
+:is(.clips-container .presentation-payload) li:after {
         content: ", ";
     }
-    li:last-child:after{
+
+:is(.clips-container .presentation-payload) li:last-child:after{
         content: ""
     }
-}
 
 @media print {
   :root, body {
@@ -1158,32 +1160,6 @@ h2:has(+ .event-hosts, + .event-labels) {
   }
 
   header :is(.identity-logo-text, .identiy-reimagination, .filler-1, .filler-2, nav) {
-    display: none;
-  }
-
-  .identity-logo.identity-logo-boxes{
-    /* Prevent printers from removing background-images of controls. */
-    background: black;
-    width: 10em;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  header :is(h1, h2) {
-    position: initial;
-    --text-wght: 800;
-    --text-wdth: 70;
-    text-transform: uppercase;
-  }
-
-  .content{
-        --left-padding: 0;
-  }
-  * {
-    font-size: calc(var(--font-size, 1) * var(--document-font-size-pt, 12) * 1pt);
-  }
-}
--logo-text, .identiy-reimagination, .filler-1, .filler-2, nav) {
     display: none;
   }
 
