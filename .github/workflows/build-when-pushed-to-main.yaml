@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: 23
           cache: 'npm'
-      - run: nmp install markdown-it
+      - run: npm install markdown-it
       - run: npx @11ty/eleventy
 
 
