@@ -25,7 +25,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run ls
+      - run: ls
       #- uses: actions/checkout@v4
       #- run: |
       #    git clone https://github.com/libregraphicsmeeting/htdocs-2025 
