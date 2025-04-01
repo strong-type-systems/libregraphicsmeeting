@@ -414,7 +414,7 @@ nav li.active > a:hover {
     width: 10em;
     aspect-ratio: 1;
     border-radius: 50%;
-    left: max(3.8em, calc((100vw - 72em) / 2 + 3.8em ));
+    left: max(3.8em, calc((100% - 72em) / 2 + 3.8em ));
     top: 22em;
     border: .5em solid black;
     background-size: 100vw 100vh;
