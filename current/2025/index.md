@@ -8,6 +8,12 @@ headInject: >
     <link rel="canonical" href="https://libregraphicsmeeting/2025" />
 ---
 
+<div class="call_for_action">
+Please<br />
+<a href="{{rootPath}}/register">Register!</a><br />
+yourself.
+</div>
+
 # Welcome
 
 The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany on May 28-31, 2025.
