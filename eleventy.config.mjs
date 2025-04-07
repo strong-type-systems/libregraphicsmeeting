@@ -280,6 +280,9 @@ export default function (eleventyConfig) {
     // take only /current/2025/css/main.raw.css
     // transform it
     // output as /current/2025/css/main.css
+    // the next two lines seem lke bad design in eleventy to me.
+    eleventyConfig.addTemplateFormats('css');
+    eleventyConfig.addExtension('css', {compile: async inputContent => ()=>inputContent});
     {
         const cssRawData = fs.readFileSync(`${dir.input}/2025/css/main.raw.css`)
           , processed = postcss([postcssNesting]).process(cssRawData, {})
@@ -287,7 +290,7 @@ export default function (eleventyConfig) {
         eleventyConfig.addTemplate(
                 `${rootDir}/css/main.css`
               , processed.css
-              , {eleventyNavigation: null, layout: null}
+              , {eleventyNavigation: null}
         );
     }
 
