@@ -98,7 +98,7 @@ export default function (eleventyConfig) {
     // use this as the default layout.
     eleventyConfig.addGlobalData("layout", "lgm25");
     // This requires dir.input as that setting is not passed to addPassthroughCopy.
-    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css/[!*.css]*`);
+    eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/css`);
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/js`);
     eleventyConfig.addPassthroughCopy(`${dir.input}${rootPath}/img`);
 
@@ -259,23 +259,19 @@ export default function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addTemplateFormats('css');
-    eleventyConfig.addExtension('css', {
-        outputFileExtension: 'css'
-      , compile: async function(inputContent, inputPath, ...args) {
-               if(inputContent === '/2025') {
-                    // really strange! This call is not documented and I
-                    // can't find a corresponding error for it.
-                    // There are similar reports though.
-                    return;
-                }
-                const output = await postcss([
-                    postcssNesting(/* pluginOptions */)
-                ]).process(inputContent, {  from: inputPath}/*, processOptions */);
-                //console.log(output);
-                return async () => output.css;
-           }
-    });
+    // take only /current/2025/css/main.raw.css
+    // transform it
+    // output as /current/2025/css/main.css
+    {
+        const cssRawData = fs.readFileSync(`${dir.input}/2025/css/main.raw.css`)
+          , processed = postcss([postcssNesting]).process(cssRawData, {})
+          ;
+        eleventyConfig.addTemplate(
+                `${rootDir}/css/main.css`
+              , processed.css
+              , {eleventyNavigation: null, layout: null}
+        );
+    }
 
     return {
         dir
