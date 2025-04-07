@@ -888,6 +888,11 @@ ol.news{
     flex: 0 0 var(--min-width);
 }
 
+:is(.sponsorship, .partner).wide :is(.sponsorship-logo, .partner-logo) {
+    --min-width: 100%;
+}
+
+
 :is(.sponsorship, .partner) :is(.sponsorship-info, .partner-info) {
     display: block;
     text-decoration: none;
