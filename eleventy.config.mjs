@@ -8,8 +8,6 @@ import embedEverything from "eleventy-plugin-embed-everything";
 import markdownItGitHubHeadings from "markdown-it-github-headings";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import Nunjucks from "nunjucks";
-import postcss from 'postcss';
-import postcssNesting from 'postcss-nesting';
 import schedule from "./lib/js/schedule.js"
 
 import { createHash } from 'node:crypto';
@@ -276,23 +274,6 @@ export default function (eleventyConfig) {
             return {name: data.name, slug: label, pages};
         });
     });
-
-    // take only /current/2025/css/main.raw.css
-    // transform it
-    // output as /current/2025/css/main.css
-    // the next two lines seem lke bad design in eleventy to me.
-    eleventyConfig.addTemplateFormats('css');
-    eleventyConfig.addExtension('css', {compile: async inputContent => ()=>inputContent});
-    {
-        const cssRawData = fs.readFileSync(`${dir.input}/2025/css/main.raw.css`)
-          , processed = postcss([postcssNesting]).process(cssRawData, {})
-          ;
-        eleventyConfig.addTemplate(
-                `${rootDir}/css/main.css`
-              , processed.css
-              , {eleventyNavigation: null}
-        );
-    }
 
     return {
         dir
