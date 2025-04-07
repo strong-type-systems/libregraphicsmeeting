@@ -7,8 +7,8 @@
         <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
         <link
             rel="stylesheet"
-            href="{{ rootPath }}/css/main.css{{ cacheBuster }}" />
-        <script src="{{ rootPath }}/js/main.js{{ cacheBuster }}"
+            href="{% cacheBusterUrl 'css/main.css' %}"/>
+        <script src="{% cacheBusterUrl 'js/main.js' %}"
             async
             type="module"></script>
     </head>

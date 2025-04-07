@@ -13,8 +13,8 @@
             href="{{ rootPath }}/js/leaflet/leaflet.css" />
         <link
             rel="stylesheet"
-            href="{{ rootPath }}/css/main.css{{ cacheBuster }}" />
-        <script src="{{ rootPath }}/js/main.js{{ cacheBuster }}"
+            href="{% cacheBusterUrl 'css/main.css' %}"/>
+        <script src="{% cacheBusterUrl 'js/main.js' %}"
             async
             type="module"></script>
         <!-- for syntax highlighting https://www.11ty.dev/docs/plugins/syntaxhighlight/-->

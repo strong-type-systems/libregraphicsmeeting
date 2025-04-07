@@ -12,6 +12,24 @@ import postcss from 'postcss';
 import postcssNesting from 'postcss-nesting';
 import schedule from "./lib/js/schedule.js"
 
+import { createHash } from 'node:crypto';
+
+function cacheBusterUrl(dir, rootPath, file) {
+    const rewriteSource = {
+            'css/main.css': 'css/main.raw.css'
+        }
+      , sourceFile = Object.hasOwn(rewriteSource, file)
+                ? rewriteSource[file]
+                : file
+      ;
+    const key = `file:${sourceFile}`;
+    if(!Object.hasOwn(this, key)) {
+        const data = fs.readFileSync(`${dir}/${sourceFile}`);
+        this[key] = createHash('sha256').update(data).digest('hex');
+    }
+    return `${rootPath}/${file}?cacheBuster=${this[key]}`;
+}
+
 function newsDate(page) {
     const [y, m, d] =page.fileSlug.split('-', 3).map(i=>parseFloat(i))
       , date = new Date(y, m-1, d)
@@ -79,13 +97,6 @@ export default function (eleventyConfig) {
         new Nunjucks.FileSystemLoader(`${dir.input}/_includes`)
         );
     eleventyConfig.setLibrary('njk', nunjucksEnvironment);
-
-    // I use this for the css and js files. Especially IPhone seems
-    // to have trouble to update these when they have changed. Looks
-    // like a server configuration thing, but I can't do much in that
-    // regard from here. I'd prefer to remove this again at some point.
-    // The Date will be different for each newly generated version.
-    eleventyConfig.addGlobalData('cacheBuster', `?cacheBuster=${(new Date()).toISOString()}`);
     eleventyConfig.setIncludesDirectory(`_includes`);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -167,14 +178,21 @@ export default function (eleventyConfig) {
               , fs.readFileSync(`${dir.input}/2025/index.md`)
               , {eleventyNavigation: null}
     );
-
     eleventyConfig.addGlobalData('logo_boxes',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-boxes.svg`));
     eleventyConfig.addGlobalData('logo_text',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-text.svg`));
     eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
-
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addShortcode('newsDate', newsDate);
     eleventyConfig.addShortcode('news', renderNews);
+
+    // I use this for the css and js files. Especially IPhone seems
+    // to have trouble to update these when they have changed. Looks
+    // like a server configuration thing, but I can't do much in that
+    // regard from here. I'd prefer to remove this again at some point.
+    // This version hashes the file contents, so the cache will only
+    // refresh when the file content changes.
+    eleventyConfig.addShortcode('cacheBusterUrl', wrapShortcode(
+        cacheBusterUrl.bind({}/* cache */, `${dir.input}${rootPath}/`, rootPath)));
 
     for(const [tag, fn] of schedule.shortcodes)
         eleventyConfig.addShortcode(tag, wrapShortcode(fn))
