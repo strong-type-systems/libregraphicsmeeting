@@ -22,8 +22,8 @@ difference, and we truly appreciate your partnership.
 ## Bronze Partners
 
 {{ macro.sponsor('silver', 'SUSE', 'https://www.suse.com',
-    rootPath + '/img/partners/SUSE_Logo-vert_L_Green-pos_sRGB.svg',
-    'Open Source Software Solutions for Enterprise Servers & Cloud') }}
+    rootPath + '/img/partners/SUSE_OpenSource-Community-Logo-Positive-Padding.svg',
+    'Open Source Community Citizens', 'wide') }}
 
 ---
 

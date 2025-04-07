@@ -2,8 +2,8 @@
 Example Macro: <strong>{{title}}</strong>
 {%- endmacro -%}
 
-{%- macro sponsor(level, name, url, logoUrl, slogan=null) -%}
-<div class="sponsorship sponsorship-level_{{level}}">
+{%- macro sponsor(level, name, url, logoUrl, slogan=null, classes='') -%}
+<div class="sponsorship sponsorship-level_{{level}}{%- if classes %} {{classes}}{%- endif -%}">
     <a class="sponsorship-logo" href="{{url}}"><img src="{{logoUrl}}" alt="Logo Sponsor: {{name}}" /></a>
     <span class="sponsorship-info"><a class="sponsorship-link" href="{{url}}">{{name}}</a>{%- if slogan %} – {{slogan}}{%- endif -%}</span>
 </div>
