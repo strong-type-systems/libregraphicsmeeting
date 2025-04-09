@@ -16,5 +16,16 @@ in making LGM happen. We appreciate your dedication and support.
 {{ macro.partner('Chaos-West TV', 'https://chaoswest.tv/',
     rootPath + '/img/partners/chaos-west-tv_logo.svg') }}
 
+## Venues
+
+{{ macro.partner('Karl-Bröger-Zentrum', 'https://www.karl-broeger-zentrum.de/',
+    rootPath + '/img/partners/karl-broeger-zentrum_logo.svg',
+    'Ihr Tagungszentrum in Nürnberg') }}
+
+{{ macro.partner('Südstadtforum', 'https://www.suedstadtforum.de/',
+    rootPath + '/img/partners/suedstadt-forum_logo.jpg',
+    'Service und Soziales') }}
+
+
 
 
