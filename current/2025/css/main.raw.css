@@ -16,7 +16,7 @@
     font-family: RobotoFlex;
     --hue-offset: 0turn;
     --greenyellow: oklch(91.3% 0.2335 calc(130.02deg + var(--hue-offset)));
-    --deeppink: oklch(72.83% 0.19707545854163525 calc(351.9947080594076deg + var(--hue-offset)));
+    --hotpink: oklch(72.83% 0.19707545854163525 calc(351.9947080594076deg + var(--hue-offset)));
     /* use as specific override only --text-opsz: 12; /* 12 pt equals 16 px */
     --text-wdth: 100;
     --text-wght: 400;
@@ -266,7 +266,7 @@ nav ul > li > ul {
     position: absolute;
     top: calc(var(--nav-full-height) - var(--nav-gap-size));
     left: var(--nav-gap-size);
-    background: linear-gradient(var(--greenyellow, greenyellow), var(--deeppink, deeppink));
+    background: linear-gradient(var(--greenyellow, greenyellow), var(--hotpink, hotpink));
     white-space: nowrap;
     display: none;
 }
@@ -323,7 +323,7 @@ nav a,
 }
 
 nav a:hover {
-    color: var(--deeppink, deeppink);
+    color: var(--hotpink, hotpink);
     text-decoration: underline;
     text-decoration-thickness: .2em;
     text-decoration-color: var(--greenyellow, greenyellow);
@@ -338,7 +338,7 @@ nav li:has(li.active) > a:hover {
 }
 
 nav li.active > a {
-    background: var(--deeppink, deeppink);
+    background: var(--hotpink, hotpink);
 }
 
 nav li.active > a:hover {
@@ -446,7 +446,7 @@ nav li.active > a:hover {
 .donate a:hover {
     background: white;
     color: black;
-    text-decoration-color: deeppink;
+    text-decoration-color: hotpink;
 }
 
 @container wrapper (width <= 56em) {
@@ -851,7 +851,7 @@ ol.news{
 
 .call_for_action {
   color: white;
-  background: var(--deeppink);
+  background: var(--hotpink);
   --text-wght: 1000;
   --font-size: calc(2  + 1 * var(--text-wdth-ratio, 1));
   --text-wdth: 60;
