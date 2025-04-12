@@ -4,12 +4,32 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-04-09T07:05:27Z</updated>
+  <updated>2025-04-12T13:13:33Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>Revive the &#39;State of Libre Graphics&#39;</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-04-12_0001-revive-the-state-of-libre-graphics/" />
+    <updated>2025-04-12T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-04-12_0001-revive-the-state-of-libre-graphics/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Looking for someone or a group to organize and host the &amp;#39;State of Libre Graphics&amp;#39; presentation at LGM!&lt;/p&gt;
+    &amp;lt;p&amp;gt;It’s a classic tradition and would be great to revive this year. Scheduled right
+after the opening on Wednesday, 20 minutes (with the option to extend a bit). Perfect
+for remote prep + local contribution.&amp;lt;/p&amp;gt;
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;/2025/program/state_of_libre_graphics/&amp;quot;&amp;gt;Program item&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;We’ll set up a GitHub repo like 2019’s: &amp;lt;a href=&amp;quot;https://github.com/libregraphicsmeeting/state-of-lg-2019&amp;quot;&amp;gt;github.com/libregraphicsmeeting/state-of-lg-2019&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Call for contributions will be similar to the &amp;lt;a href=&amp;quot;/2016/state-of-libre-graphics-union-2016/&amp;quot;&amp;gt;2016 format&amp;lt;/a&amp;gt;,
+but if you’re taking this on, feel free to organize differently!&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&amp;lt;p&amp;gt;I can’t take this on myself—already stretched thin—but this would be a fantastic effort. Who’s in? 😊&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;— Lasse&amp;lt;/p&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>LGM will be streamed and recorded</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-03-29_0001-video-streaming-and-recording/" />
