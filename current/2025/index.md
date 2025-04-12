@@ -31,6 +31,8 @@ Open Source software for graphics.
 <article>
 {% heading 'h1', 'Latest News', 'latest-news' %}
 
+Follow us in the Fediverse: [@lgm@post.lurk.org](https://post.lurk.org/@lgm)
+
 {% news collections.news, 3 %}
 
 [… all news]({{rootPath}}/news)
