@@ -536,6 +536,10 @@ nav li.active > a:hover {
         display: none;
     }
 
+    li.ui_collapsible_mixin-open_in_mobile > ul {
+        display: block;
+    }
+
     nav {
         padding: var(--nav-gap-size) 0;
         height: initial;
