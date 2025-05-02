@@ -518,13 +518,16 @@ window.CSS.registerProperty({
   initialValue: "#c0ffee",
 });
 
-function collapsible(element, buttonSelector, isInitiallyOpen=false) {
+function collapsible(element, buttonSelector, openInMoble=false, isInitiallyOpen=false) {
     const baseClassName = 'ui_collapsible_mixin'
       , openClassName = `${baseClassName}-open`
       , closedClassName = `${baseClassName}-closed`
+      , openInMobleClassName = `${baseClassName}-open_in_mobile`
       ;
     element.classList.add(baseClassName);
     element.classList.add(isInitiallyOpen ? openClassName : closedClassName);
+    if(openInMoble)
+        element.classList.add(openInMobleClassName);
     element.addEventListener('click', (event)=>{
         const button = event.target.closest(buttonSelector);
         if(event.target.closest('a') || event.target.closest('button')) return;
@@ -612,9 +615,9 @@ async function addMap(mapElement) {
 function main() {
     for(const [selector, fn, ...args] of [
                     ['body', (...args)=>new BackgroundTransitioner(...args) , '.play_pause']
-                  , ['header nav > .past_editions', collapsible, '.past_editions > span']
-                  , ['header nav li:has(> ul)', collapsible, 'li']
-                  , ['header nav', collapsible, 'nav']
+                  , ['header nav > .past_editions', collapsible, '.past_editions > span', false]
+                  , ['header nav li:has(> ul)', collapsible, 'li', true]
+                  , ['header nav', collapsible, 'nav', false]
                   , ['.open_street_map', addMap]
                 ]) {
         for(const element of document.querySelectorAll(selector))
