@@ -18,7 +18,7 @@ advantages and disadvantages of each method.
 
 ### Three takeaways of this session will be:
 
-* A basic awareness for usability/UX and the importance of evaluation of it
+* A basic awareness for usability/UX and the importance of evaluating it
 * An overview of the two major usability/UX evaluation methods heuristic evaluation and
 usability testing
 * A first idea how to use these methods for your/a software project
@@ -26,4 +26,4 @@ usability testing
 ## Target group
 
 * UX/usability laymen
-* developers of software
+* Contributors to software
