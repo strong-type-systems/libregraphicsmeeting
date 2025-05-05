@@ -2,7 +2,7 @@
 labels: ['Inkscape', 'InkStitch', embroidery]
 type: talk
 title: "Ink/Stitch"
-hosts: [Kaalleen]
+hosts: [Daniel]
 ---
 
 Machine embroidery is becoming increasingly popular. It is more durable
