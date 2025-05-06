@@ -1018,7 +1018,7 @@ h2:has(+ .event-hosts, + .event-labels) {
     --mark-color: #fb7cae;
 }
 .legend-talk,
-.schedule :is(.schedule_item-type-talk, .schedule_item-type-lightning) {
+.schedule :is(.schedule_item-type-talk, .schedule_item-type-lightning, .schedule_item-type-keynote) {
     --mark-color: #b9f54a;
 }
 .legend-sessions,

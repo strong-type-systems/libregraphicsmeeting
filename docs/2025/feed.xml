@@ -4,12 +4,55 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-05-06T10:24:17Z</updated>
+  <updated>2025-05-06T17:25:37Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>Keynote Announcement: Dr. Richard Stallman</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-05-06_0002-keynote-announcement-richard-stallman/" />
+    <updated>2025-05-06T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-05-06_0002-keynote-announcement-richard-stallman/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Wednesday, May 28th on the topic of: Free/Libre Software and Freedom in the Digital Society&lt;/p&gt;
+    &amp;lt;p&amp;gt;On Wednesday, May 28th at 19:30, &amp;lt;a href=&amp;quot;/2025/hosts/Richard&amp;quot;&amp;gt;Dr. Richard Stallman&amp;lt;/a&amp;gt; will deliver a keynote on
+&amp;lt;a href=&amp;quot;/2025/program/free-libre-software-and-freedom-in-the-digital-society/&amp;quot;&amp;gt;Free/Libre Software and Freedom in the Digital Society&amp;lt;/a&amp;gt;
+at Libre Graphics Meeting.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;admissiontickets&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#admissiontickets&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Admission/Tickets&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Admission to the talk is free of charge at the registration desk when it
+opens on &amp;lt;strong&amp;gt;Wednesday&amp;lt;/strong&amp;gt;, available on a first-come, first-served basis.
+There is no online registration for this; conference registrations remain
+separate. This ensures that general conference registrations remain
+available for those attending the full event.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;personal-note-of-the-organizer&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#personal-note-of-the-organizer&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Personal Note of the Organizer&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;I recognize that opinions on Richard Stallman’s presence vary, and I
+acknowledge the concerns some have expressed. Since announcing the keynote
+on the &amp;lt;a href=&amp;quot;https://lists.freedesktop.org/archives/libre-graphics-meeting/2025-May/002828.html&amp;quot;&amp;gt;Libre Graphics Meeting mailing list&amp;lt;/a&amp;gt;
+and through previous direct consultations, a pattern of remarks voicing
+concern over this decision has emerged. I’m trying to answer these briefly:&amp;lt;/p&amp;gt;
+&amp;lt;h3&amp;gt;&amp;lt;a id=&amp;quot;remark-why-did-the-announcement-come-so-late&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#remark-why-did-the-announcement-come-so-late&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Remark: Why did the announcement come so late?&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;My time is limited. Up until the &amp;lt;a href=&amp;quot;https://atypi.org/presentation/parametric-typography-with-parametric-fonts/&amp;quot;&amp;gt;ATypI Copenhagen&amp;lt;/a&amp;gt;
+conference I had a double load of work: my regular work and organizing the
+LGM. I’m now working on catching up up on LGM tasks.&amp;lt;/p&amp;gt;
+&amp;lt;h3&amp;gt;&amp;lt;a id=&amp;quot;remark-richard-stallman-is-controversial&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#remark-richard-stallman-is-controversial&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Remark: Richard Stallman is controversial.&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;There have been attacks against him; in the meantime, &amp;lt;a href=&amp;quot;https://stallmansupport.org/&amp;quot;&amp;gt;stallmansupport.org&amp;lt;/a&amp;gt;
+has provided a defense. After reviewing the complaints and the defense,
+I concluded that the concerns lacked substantive weight.&amp;lt;/p&amp;gt;
+&amp;lt;h3&amp;gt;&amp;lt;a id=&amp;quot;remark-lack-of-relevance-especially-for-the-graphics-in-libre-graphics-meeting&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#remark-lack-of-relevance-especially-for-the-graphics-in-libre-graphics-meeting&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Remark: Lack of relevance, especially for the “graphics” in Libre Graphics Meeting.&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;His work is relevant to me every day in Libre Graphics. I understand that
+this may not be universally shared, but I know others who see it similarly.
+Even if his contributions aren’t directly tied to the “graphics” in Libre
+Graphics Meeting, I hope we can at least use him as a lens on the past to
+inspire ideas for the future.&amp;lt;/p&amp;gt;
+&amp;lt;h3&amp;gt;&amp;lt;a id=&amp;quot;concluding&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#concluding&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Concluding&amp;lt;/h3&amp;gt;
+&amp;lt;p&amp;gt;I hope we can have a conference that is welcoming to everyone and that
+discussion and participation, rather than shunning and avoidance, will
+make our community grow together.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;– Lasse&amp;lt;/p&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>Call for Slides: State of Libre Graphics</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/" />
