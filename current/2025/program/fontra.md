@@ -5,7 +5,7 @@ title: "Fontra —\nThe Browser-Based Font Editor"
 hosts: [Dave, Lasse]
 ---
 
-Fontra is a novel, open-source, browser-based, cross-platform, variable-first font editor.
+Fontra is a novel, libre, browser-based, cross-platform, variable-first font editor.
 
 ## Links
 
