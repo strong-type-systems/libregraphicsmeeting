@@ -4,12 +4,28 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-05-06T07:40:08Z</updated>
+  <updated>2025-05-06T10:06:24Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>Call for Slides: State of Libre Graphics</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/" />
+    <updated>2025-05-06T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Please submit your slides for the State of Libre Graphics presentation!&lt;/p&gt;
+    &amp;lt;p&amp;gt;The opening presentation at Libre Graphics Meeting is &amp;lt;a href=&amp;quot;/2025/program/state_of_libre_graphics/&amp;quot;&amp;gt;“State of Libre Graphics,”&amp;lt;/a&amp;gt;
+an update from the many software, curation, publication and umbrella projects
+of our Libre Graphics community.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;contribute&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#contribute&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Contribute&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Find all the details on how to contribute in the &amp;lt;a href=&amp;quot;https://github.com/libregraphicsmeeting/state-of-lg-2025&amp;quot;&amp;gt;README of the libregraphicsmeeting/state-of-lg-2025 Repository&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;share&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#share&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Share&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Please forward this message to projects that you think should contribute.&amp;lt;/p&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>Revive the &#39;State of Libre Graphics&#39;</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-04-12_0001-revive-the-state-of-libre-graphics/" />
