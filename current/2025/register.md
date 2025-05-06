@@ -17,7 +17,12 @@ this information for our planning.
 We use pretix.eu as the registration system.
 </div>
 
+## Do **NOT** Register to see Richard Stallman
 
+The keynote and conference registrations are separate. Admission to the
+talk is free of charge at the registration desk once it opens, as long as
+seats are available. This ensures that general conference registrations
+remain available for those attending the full event.
 
 ## Register your Swag
 
