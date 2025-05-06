@@ -213,6 +213,8 @@ nav > ul > li {
 .past_editions ul a,
 nav li > ul a {
     display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: var(--nav-gap-size);
     height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
     line-height: calc(var(--nav-full-height) - 2* var(--nav-gap-size));
