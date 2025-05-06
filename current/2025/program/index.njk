@@ -54,7 +54,7 @@ eleventyNavigation:
 {%- macro renderSchedulItem(scheduleItem) -%}
   {% if scheduleItem.type === 'break' %}
     {{ renderTypeBreak(scheduleItem) }}
-  {% elif ['talk', 'community', 'general', 'lightning'].includes(scheduleItem.type) %}
+  {% elif ['talk', 'community', 'general', 'lightning', 'keynote'].includes(scheduleItem.type) %}
     {{ renderTypeTalk(scheduleItem) }}
   {% elif scheduleItem.type === 'sessions' %}
     {{ renderTypeSessions(scheduleItem) }}
