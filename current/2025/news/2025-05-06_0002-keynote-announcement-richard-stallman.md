@@ -1,9 +1,13 @@
 ---
 layout: news.njk
 tags: news
-title: "Keynote Announcement: Dr.\xa0Richard Stallman"
-lead:  "Wednesday, May 28th on the topic of: Free/Libre Software and Freedom in the Digital Society"
+title: '<s>Keynote Announcement: Dr.&nbsp;Richard Stallman</s>'
+lead:  "<s>Wednesday, May 28th on the topic of: Free/Libre Software and Freedom in the Digital Society</s>"
 ---
+
+This announcement is void, see [The Keynote Will NOT Go Forward.]({{rootPath}}/news/2025-05-07_0001-keynote-will-not-go-forward)
+
+## Original Text
 
 On Wednesday, May 28th at 19:30, [Dr. Richard Stallman]({{rootPath}}/hosts/Richard) will deliver a keynote on
 [Free/Libre Software and Freedom in the Digital Society]({{rootPath}}/program/free-libre-software-and-freedom-in-the-digital-society/)
