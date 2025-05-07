@@ -4,20 +4,41 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-05-06T17:25:37Z</updated>
+  <updated>2025-05-07T08:54:45Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
   <entry>
-    <title>Keynote Announcement: Dr. Richard Stallman</title>
+    <title>The Keynote Will NOT Go Forward</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-05-07_0001-keynote-will-not-go-forward/" />
+    <updated>2025-05-07T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-05-07_0001-keynote-will-not-go-forward/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;Due to concern from the LGM community the planned Keynote with Dr. Richard Stallman is cancelled.&lt;/p&gt;
+    &amp;lt;p&amp;gt;The &amp;lt;a href=&amp;quot;/2025/news/2025-05-06_0002-keynote-announcement-richard-stallman&amp;quot;&amp;gt;announcement&amp;lt;/a&amp;gt;
+made a lot of people angry and upset, and anger and division is not what
+LGM is about. Public debate was one of the factors that led to this decision. The discussion can be read here:
+&amp;lt;a href=&amp;quot;https://post.lurk.org/@lgm/114462101041791903&amp;quot;&amp;gt;Inital post on Mastodon&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;LGM is committed to beeing an inclusive and safe venue for members of the
+libre graphics community, and we stand by the commitments to safety outlined
+by our &amp;lt;a href=&amp;quot;/2025/code-of-conduct&amp;quot;&amp;gt;Code of Conduct&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;personal-note-of-the-organizer&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#personal-note-of-the-organizer&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Personal Note of the Organizer&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;I’ll be welcoming everyone seeking a conversation with me about the topic.&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;– Lasse&amp;lt;/p&amp;gt;
+</content>
+  </entry>
+  <entry>
+    <title>&lt;s&gt;Keynote Announcement: Dr.&amp;nbsp;Richard Stallman&lt;/s&gt;</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-05-06_0002-keynote-announcement-richard-stallman/" />
     <updated>2025-05-06T00:00:00Z</updated>
     <id>https://libregraphicsmeeting.org/2025/news/2025-05-06_0002-keynote-announcement-richard-stallman/</id>
     <content type="html">
-    &lt;p class=&quot;lead&quot;&gt;Wednesday, May 28th on the topic of: Free/Libre Software and Freedom in the Digital Society&lt;/p&gt;
-    &amp;lt;p&amp;gt;On Wednesday, May 28th at 19:30, &amp;lt;a href=&amp;quot;/2025/hosts/Richard&amp;quot;&amp;gt;Dr. Richard Stallman&amp;lt;/a&amp;gt; will deliver a keynote on
+    &lt;p class=&quot;lead&quot;&gt;&amp;lt;s&amp;gt;Wednesday, May 28th on the topic of: Free/Libre Software and Freedom in the Digital Society&amp;lt;/s&amp;gt;&lt;/p&gt;
+    &amp;lt;p&amp;gt;This announcement is void, see &amp;lt;a href=&amp;quot;/2025/news/2025-05-07_0001-keynote-will-not-go-forward&amp;quot;&amp;gt;The Keynote Will NOT Go Forward.&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;original-text&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#original-text&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Original Text&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;On Wednesday, May 28th at 19:30, &amp;lt;a href=&amp;quot;/2025/hosts/Richard&amp;quot;&amp;gt;Dr. Richard Stallman&amp;lt;/a&amp;gt; will deliver a keynote on
 &amp;lt;a href=&amp;quot;/2025/program/free-libre-software-and-freedom-in-the-digital-society/&amp;quot;&amp;gt;Free/Libre Software and Freedom in the Digital Society&amp;lt;/a&amp;gt;
 at Libre Graphics Meeting.&amp;lt;/p&amp;gt;
 &amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;admissiontickets&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#admissiontickets&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Admission/Tickets&amp;lt;/h2&amp;gt;

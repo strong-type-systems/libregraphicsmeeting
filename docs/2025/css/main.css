@@ -66,6 +66,10 @@ i, em {
     --text-slnt: -7;
 }
 
+s {
+    text-decoration: line-through .2em;
+}
+
 body {
     max-width: 72em;
     margin: 0 auto;
