@@ -11,7 +11,7 @@ eleventyNavigation:
 
 If you are interested in becoming a future organizer of the LGM, don't
 hesitate and [Contact]({{rootPath}}/contact) us. Especially, if you can't
-be in Nuremberg this year, so that we can keep in touch and update you with
+**be in Nuremberg this year**, so that we can keep in touch and update you with
 the results from the conference. If there are special request, that you need
 us to look into, it would be also great to hear from you.
 
