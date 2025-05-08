@@ -8,12 +8,11 @@ hosts: [LGM, TBD]
 We discuss our conclusions of our special focus [re:imagination]({{rootPath}}/program/label-re:imagination)
 and find out more about the next edition of the LGM.
 
-## Call for Organizers 2026, 2027
-
-If you are interested in becoming a future organizer of the LGM don't
-hesitate and [Contact]({{rootPath}}/contact) us. There will be also plenty
-of sessions to discuss our next steps under the umbrella of our special focus
-[re:imagination]({{rootPath}}/program/label-re:imagination).
+<div class="call_for_action">
+Call for<br />
+<a href="{{rootPath}}/news/2025-05-08_0001-call-for-local-organizers-2026-2027">Local organizers</a><br />
+2026 and 2027.
+</div>
 
 ## Special focus – RE:imagination
 

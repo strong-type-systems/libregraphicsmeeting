@@ -38,6 +38,12 @@ Follow us in the Fediverse: [@lgm@post.lurk.org](https://post.lurk.org/@lgm)
 [… all news]({{rootPath}}/news)
 </article>
 
+<div class="call_for_action">
+Call for<br />
+<a href="{{rootPath}}/news/2025-05-08_0001-call-for-local-organizers-2026-2027">Local organizers</a><br />
+2026 and 2027.
+</div>
+
 ## Special focus – RE:imagination
 
 The Libre Graphics Meeting faced significant challenges during and after
