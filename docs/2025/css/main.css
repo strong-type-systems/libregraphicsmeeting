@@ -70,6 +70,14 @@ s {
     text-decoration: line-through .2em;
 }
 
+hr {
+    color: black;
+    border-width: .2em;
+    border-style: solid;
+    border-color: black;
+}
+
+
 body {
     max-width: 72em;
     margin: 0 auto;
