@@ -12,12 +12,18 @@ Thank you to all our sponsoring partners: without your support, LGM would
 not be the incredible event it is. Your contributions make all the
 difference, and we truly appreciate your partnership.
 
+
+## Gold Partners
+
+{{ macro.sponsor('gold', 'Font Bureau', 'https://github.com/FontBureau/',
+    rootPath + '/img/partners/font-bureau_logo.svg'
+    ) }}
+
 ## Silver Partners
 
 {{ macro.sponsor('silver', 'B1 Systems', 'https://www.b1-systems.de',
     rootPath + '/img/partners/b1-systems_logo.svg',
     'Linux/Open Source Consulting, Training, Managed Service & Support') }}
-
 
 ## Bronze Partners
 
