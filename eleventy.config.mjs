@@ -84,7 +84,7 @@ export default function (eleventyConfig) {
     // Output directory: _site
     const dir = {
             input: 'current'
-          , output: 'docs'
+          , output: 'archive'
         }
       , rootDir = '2025'
       , rootPath = `/${rootDir}`
