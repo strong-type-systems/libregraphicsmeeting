@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Libre graphics meeting, April 10-13 2013, Madrid › Log In
+  </title>
+  <link href="wp-admin/css/wp-admin-ver=3.4.1.css" id="wp-admin-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="wp-admin/css/colors-fresh-ver=3.4.1.css" id="colors-fresh-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js?ver=3.4.1" type="text/javascript">
+  </script>
+  <meta content="noindex,nofollow" name="robots"/>
+ </head>
+ <body class="login">
+  <div id="login">
+   <h1>
+    <a href="http://wordpress.org/" title="Powered by WordPress">
+     Libre graphics meeting, April 10-13 2013, Madrid
+    </a>
+   </h1>
+   <form action="/2013/wp/wp-login.php" id="loginform" method="post" name="loginform">
+    <p>
+     <label for="user_login">
+      Username
+      <br/>
+      <input class="input" id="user_login" name="log" size="20" tabindex="10" type="text" value=""/>
+     </label>
+    </p>
+    <p>
+     <label for="user_pass">
+      Password
+      <br/>
+      <input class="input" id="user_pass" name="pwd" size="20" tabindex="20" type="password" value=""/>
+     </label>
+    </p>
+    <p class="forgetmenot">
+     <label for="rememberme">
+      <input id="rememberme" name="rememberme" tabindex="90" type="checkbox" value="forever"/>
+      Remember Me
+     </label>
+    </p>
+    <p class="submit">
+     <input class="button-primary" id="wp-submit" name="wp-submit" tabindex="100" type="submit" value="Log In"/>
+     <input name="redirect_to" type="hidden" value="http://libregraphicsmeeting.org/2013/about/"/>
+     <input name="testcookie" type="hidden" value="1"/>
+    </p>
+   </form>
+   <p id="nav">
+    <a href="/2013/wp/wp-login.php?action=lostpassword" title="Password Lost and Found">
+     Lost your password?
+    </a>
+   </p>
+   <script type="text/javascript">
+    function wp_attempt_focus(){
+setTimeout( function(){ try{
+d = document.getElementById('user_login');
+d.focus();
+d.select();
+} catch(e){}
+}, 200);
+}
+
+wp_attempt_focus();
+if(typeof wpOnload=='function')wpOnload();
+   </script>
+   <p id="backtoblog">
+    <a href="../index.html" title="Are you lost?">
+     ← Back to Libre graphics meeting, April 10-13 2013, Madrid
+    </a>
+   </p>
+  </div>
+  <div class="clear">
+  </div>
+ </body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Libre Graphics Questions &amp; Answers
+  </title>
+  <script language="javascript">
+   var initialQtxt;
+var qgreen, agreen = false;
+
+function rawurlencode(str) {
+  return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
+  replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/~/g, '%7E');
+}
+
+window.onresize = function(event) {
+  document.getElementById('answer').style.paddingTop =   (58+((document.getElementById('controls').offsetTop) + 50) - (document.getElementById('answer').offsetTop))  +'px';
+}
+
+function textAreaChanged(elem) {
+
+	if(elem.name == 'question') {
+		if(rawurlencode(elem.value) == initialQtxt) {
+			document.getElementById('questionbg').style.backgroundColor = 'transparent';
+			document.getElementById('allanswers').style.display = 'block';
+			qgreen = false;
+		} else {
+			document.getElementById('questionbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			document.getElementById('allanswers').style.display = 'none';
+			qgreen = true;
+		}
+	}
+	else if(elem.name == 'answer') {
+		if(elem.value == "") {
+			document.getElementById('answerbg').style.backgroundColor = 'transparent';
+			agreen = false;
+		} else {
+			document.getElementById('answerbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			agreen = true;
+		}
+	}
+	
+	if(!qgreen && !agreen) {
+		document.getElementById('write').src = 'i/free/png/interface/write.png';
+		document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read_over.png)';
+	}
+}
+  </script>
+  <link href="q+a.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body onload="onresize();">
+  <div class="komplett">
+   <form accept-charset="utf-8" action="post.php" method="post" name="voicesfromthepublic">
+    <div class="questionbg" id="questionbg">
+    </div>
+    <textarea autocomplete="off" class="question" name="question" onkeyup="textAreaChanged(question)" spellcheck="false">This is way beyond the comfort zone?</textarea>
+    <script>
+     initialQtxt = 'This%20is%20way%20beyond%20the%20comfort%20zone%3F';
+    </script>
+    <div class="answerbg" id="answerbg">
+    </div>
+    <textarea autocomplete="off" class="answer" id="answer" name="answer" onkeyup="textAreaChanged(answer)" spellcheck="false"></textarea>
+    <div class="people">
+     <img class="talkL" src="i/free/png/people/L-002-h108b103l103z001_L.png"/>
+     <img class="talkR" src="i/free/png/people/R-002-h104b102l104z001_R.png"/>
+    </div>
+    <div class="allanswers" id="allanswers">
+     <div class="answer_3" id="answerx">
+      Lulz
+     </div>
+     <div class="pluslinks">
+      <a href="http://www.forkable.eu/generators/r+w/o/__/98f886ace388b73aafd54cf529d73520.html">
+       see posters for this conversation
+      </a>
+      <br/>
+      <a href="http://www.forkable.eu/generators/r+w/o/__/SEEME">
+       see all posters
+      </a>
+      <br/>
+      <a href="o/free/voice/index.html">
+       see all conversations
+      </a>
+      <br/>
+      (
+      <a href="o/free/pdf/people/L-002-h108b103l103_L.pdf">
+       *
+      </a>
+      |
+      <a href="o/free/pdf/people/R-002-h104b102l104_R.pdf">
+       *
+      </a>
+      )
+     </div>
+    </div>
+    <div class="controls" id="controls">
+     <a class="read" href="index.html" id="read">
+     </a>
+     <input class="write" id="write" name="submit to the pool" src="i/free/png/interface/write.png" type="image"/>
+    </div>
+   </form>
+  </div>
+  <div class="bottom">
+   <div class="logo">
+    <a href="../index.html">
+     <img class="logo" src="http://www.forkable.eu/generators/r+w/o/press/rgb/LGM-Logo+15_Solo_120px.png"/>
+    </a>
+   </div>
+  </div>
+ </body>
+</html>

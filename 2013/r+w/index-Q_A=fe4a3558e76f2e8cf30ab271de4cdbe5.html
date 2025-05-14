@@ -1,0 +1,135 @@
+<html>
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   Libre Graphics Questions &amp; Answers
+  </title>
+  <script language="javascript">
+   var initialQtxt;
+var qgreen, agreen = false;
+
+function rawurlencode(str) {
+  return encodeURIComponent(str).replace(/!/g, '%21').replace(/'/g, '%27').replace(/\(/g, '%28').
+  replace(/\)/g, '%29').replace(/\*/g, '%2A').replace(/~/g, '%7E');
+}
+
+window.onresize = function(event) {
+  document.getElementById('answer').style.paddingTop =   (58+((document.getElementById('controls').offsetTop) + 50) - (document.getElementById('answer').offsetTop))  +'px';
+}
+
+function textAreaChanged(elem) {
+
+	if(elem.name == 'question') {
+		if(rawurlencode(elem.value) == initialQtxt) {
+			document.getElementById('questionbg').style.backgroundColor = 'transparent';
+			document.getElementById('allanswers').style.display = 'block';
+			qgreen = false;
+		} else {
+			document.getElementById('questionbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			document.getElementById('allanswers').style.display = 'none';
+			qgreen = true;
+		}
+	}
+	else if(elem.name == 'answer') {
+		if(elem.value == "") {
+			document.getElementById('answerbg').style.backgroundColor = 'transparent';
+			agreen = false;
+		} else {
+			document.getElementById('answerbg').style.backgroundColor = '#00a651';
+			document.getElementById('write').src = 'i/free/png/interface/write_over.png';
+			document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read.png)';
+			agreen = true;
+		}
+	}
+	
+	if(!qgreen && !agreen) {
+		document.getElementById('write').src = 'i/free/png/interface/write.png';
+		document.getElementById('read').style.backgroundImage = 'url(i/free/png/interface/read_over.png)';
+	}
+}
+  </script>
+  <link href="q+a.css" rel="stylesheet" type="text/css"/>
+ </head>
+ <body onload="onresize();">
+  <div class="komplett">
+   <form accept-charset="utf-8" action="post.php" method="post" name="voicesfromthepublic">
+    <div class="questionbg" id="questionbg">
+    </div>
+    <textarea autocomplete="off" class="question" name="question" onkeyup="textAreaChanged(question)" spellcheck="false">If proprietary programs are so bad, why are people still using them?</textarea>
+    <script>
+     initialQtxt = 'If%20proprietary%20programs%20are%20so%20bad%2C%20why%20are%20people%20still%20using%20them%3F';
+    </script>
+    <div class="answerbg" id="answerbg">
+    </div>
+    <textarea autocomplete="off" class="answer" id="answer" name="answer" onkeyup="textAreaChanged(answer)" spellcheck="false"></textarea>
+    <div class="people">
+     <img class="talkL" src="i/free/png/people/L-002-h105b103l105z001_L.png"/>
+     <img class="talkR" src="i/free/png/people/R-002-h104l106b104z001_R.png"/>
+    </div>
+    <div class="allanswers" id="allanswers">
+     <div class="answer_3" id="answerx">
+      They aren't bad. In the short term they can even be the better solution. However you're dependant on one company to develop the tools you're using. This can work ok but you don't have much influence over the direction those tools go. Also you are helpless if the company goes bankrupt, is bought by another company or simply discontinues the product (or service).
+     </div>
+     <div class="answer_0" id="answerx">
+      If crimes are so bad, why do people keep committing them?
+     </div>
+     <div class="answer_3" id="answerx">
+      Because they learned to use those programs in art school, because art school chose to teach those programs, because companies ask for them in the job market, because companies think these programs are taught in art schools, and the cycle repeats.
+     </div>
+     <div class="answer_1" id="answerx">
+      IT IS CALLED VENDOR LOCK-IN!
+     </div>
+     <div class="answer_3" id="answerx">
+      That's individual for every user of the particular software. I'm using free software to get my work done faster.
+     </div>
+     <div class="answer_3" id="answerx">
+      Hi! I do like propietary SW, however open source SW usually is more helpful, in the long term talking.
+     </div>
+     <div class="answer_1" id="answerx">
+      If cars do harm to the environment, why are people still using them?
+     </div>
+     <div class="answer_2" id="answerx">
+      Proprietary programs are not bad, they are restrictive about your freedom: if you want more freedom about your artwork, you should use free softwares. Most people don't know any alternative, and some people despise free software because they aren't commercial. So most people still use them... help us spread the world about libre graphics!
+     </div>
+     <div class="pluslinks">
+      <a href="http://www.forkable.eu/generators/r+w/o/__/fe4a3558e76f2e8cf30ab271de4cdbe5.html">
+       see posters for this conversation
+      </a>
+      <br/>
+      <a href="http://www.forkable.eu/generators/r+w/o/__/SEEME">
+       see all posters
+      </a>
+      <br/>
+      <a href="o/free/voice/index.html">
+       see all conversations
+      </a>
+      <br/>
+      (
+      <a href="o/free/pdf/people/L-002-h105b103l105_L.pdf">
+       *
+      </a>
+      |
+      <a href="o/free/pdf/people/R-002-h104l106b104_R.pdf">
+       *
+      </a>
+      )
+     </div>
+    </div>
+    <div class="controls" id="controls">
+     <a class="read" href="index.html" id="read">
+     </a>
+     <input class="write" id="write" name="submit to the pool" src="i/free/png/interface/write.png" type="image"/>
+    </div>
+   </form>
+  </div>
+  <div class="bottom">
+   <div class="logo">
+    <a href="../index.html">
+     <img class="logo" src="http://www.forkable.eu/generators/r+w/o/press/rgb/LGM-Logo+15_Solo_120px.png"/>
+    </a>
+   </div>
+  </div>
+ </body>
+</html>
