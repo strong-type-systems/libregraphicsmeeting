@@ -1,4 +1,4 @@
-name: Deploy to GitHub Prduction
+name: Deploy to Production
 
 on:
   workflow_dispatch:
@@ -53,4 +53,3 @@ jobs:
           publish_branch: main  # default: gh-pages
           publish_dir: ./_production # this repository/source dir
           destination_dir: public # target repository/target dir
-          publish_branch: main
