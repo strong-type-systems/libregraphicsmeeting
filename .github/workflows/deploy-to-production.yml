@@ -56,5 +56,4 @@ jobs:
           publish_branch: main  # default: gh-pages
           publish_dir: ./_production # this repository/source dir
           destination_dir: public # target repository/target dir
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          enable_jekyll: true
