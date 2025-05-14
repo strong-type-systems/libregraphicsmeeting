@@ -8,7 +8,7 @@ import embedEverything from "eleventy-plugin-embed-everything";
 import markdownItGitHubHeadings from "markdown-it-github-headings";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import Nunjucks from "nunjucks";
-import schedule from "./lib/js/schedule.js"
+import schedule from "./lib/js/schedule.mjs"
 
 import { createHash } from 'node:crypto';
 

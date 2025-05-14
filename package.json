@@ -2,6 +2,7 @@
   "name": "libregraphicsmeeting2025",
   "version": "0.0.1",
   "description": "Website Libre Graphics Meeting 2025 Nuremberg.",
+  "type": "module",
   "directories": {
     "doc": "docs"
   },
@@ -20,6 +21,10 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "ajv": "^8.17.1",
+    "ajv-errors": "^3.0.0",
+    "ajv-formats": "^3.0.1",
+    "awesome-ajv-errors": "^5.1.0",
     "eleventy-plugin-embed-everything": "^1.19.0",
     "globals": "^15.12.0",
     "markdown-it-github-headings": "^2.0.1",
