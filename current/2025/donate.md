@@ -5,6 +5,13 @@ eleventyNavigation:
   key: Donate
   title: Donate!
   order: 1
+headInject: >
+    <!-- The donate page is duplicated at https://libregraphicsmeeting/2025/donate/index.html
+        But this is supposed a global, forever, landing page for the future
+        so that links to it remain valid for the future and new donations
+        campaigns.
+        This is for SEO. -->
+    <link rel="canonical" href="https://libregraphicsmeeting/donate.html" />
 ---
 
 # {{title}}
