@@ -171,19 +171,11 @@ export default function (eleventyConfig) {
     // but probably <link rel="canonical" href="https://libregraphicsmeeting/2025" /> is sufficient
     // The navigation will be based on the /2025 index, so that the site
     // is at any time suitable as a self contained archive.
-    for(const [fileToRoot, settings] of [
-                            ['index.md', {}]
-                          , ['donate.md', {permalink: '/donate.html'}]
-        ])
-        eleventyConfig.addTemplate(
-                    fileToRoot
-                  , fs.readFileSync(`${dir.input}/2025/${fileToRoot}`)
-                  , {eleventyNavigation: null
-                    , ...settings
-                    }
-        );
-
-
+    eleventyConfig.addTemplate(
+                `index.md`
+              , fs.readFileSync(`${dir.input}/2025/index.md`)
+              , {eleventyNavigation: null}
+    );
     eleventyConfig.addGlobalData('logo_boxes',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-boxes.svg`));
     eleventyConfig.addGlobalData('logo_text',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-text.svg`));
     eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
