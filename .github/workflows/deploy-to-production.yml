@@ -42,9 +42,12 @@ jobs:
       # copy all relevant files to "_production"
       - name: prepare publish_dir
         run: |
+          pwd
           mkdir _production
+          ls
           cp archive/*.html _production/
           cp -r archive/2025 _production/2025
+
       - name: Deploy to htdocs-2025
         uses: peaceiris/actions-gh-pages@v4
         with:
