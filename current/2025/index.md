@@ -16,7 +16,7 @@ yourself.
 
 # Welcome
 
-The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany on May 28-31, 2025.
+The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany on May 28–31, 2025.
 
 The Libre Graphics Meeting  is an annual meeting on Free/Libre and
 Open Source software for graphics.
