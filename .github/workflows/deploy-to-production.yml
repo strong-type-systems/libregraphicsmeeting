@@ -44,15 +44,17 @@ jobs:
         run: |
           pwd
           mkdir _production
-          ls
           cp archive/*.html _production/
           cp -r archive/2025 _production/2025
-
+          ls -la _production
       - name: Deploy to htdocs-2025
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: libregraphicsmeeting/htdocs-2025
           publish_branch: main  # default: gh-pages
           publish_dir: ./_production # this repository/source dir
           destination_dir: public # target repository/target dir
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
