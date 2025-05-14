@@ -9,34 +9,36 @@ The static website is generated with `eleventy`.
 To build the website from the sources in `current` use `$ npx @11ty/eleventy`
 or for local development as an updating server `npx @11ty/eleventy --serve`.
 
-This will put newly generated files into: `docs/index.html` and `docs/2025/`.
+This will put newly generated files into: `archive/index.html` and `archive/2025/`.
 
-NOTE: within `docs/` there's the "salvaged archive" (see below) as well, so
+NOTE: within `archive/` there's the "salvaged archive" (see below) as well, so
 the website is complete in this form. However, the actual website is taking
 its contents from `https://github.com/libregraphicsmeeting/htdocs-2025` and
 there only the `index.html` and `2025/` files are pushed/located and the
 archive is created as it used to be.
 
-## Use GitHub actions
+## Use of GitHub actions
 
-In order to make a GitHub actions workflow possible, some changes will be
-done:
+There are now two actions:
 
-* The `docs/*` archive will still live in here (maybe "docs" renamed to "archive"),
-* however the `docs/index.html` and `docs/2025/*` will be put into `.gitignore`.
-That way, we can still use `npx @11ty/eleventy --serve` for local development.
-* The github pages version version for staging currently under `https://libregraphicsmeeting.strong-type.systems/`
-will be served from a gh-pages branch.
-* We'll make an action that on push to `main` runs `npx @11ty/eleventy`, then copies all the contents of `docs/` into the `gh-pages` branch.
-* We'll make a second action, on manual dispatch (`workflow_dispatch`),
-  to update the production version. I.e. update  the files in
-  `libregraphicsmeeting/htdocs-2025/public/`. It would be more faithful
-  to the original workflow to get the files from the staging version,
-  but getting it from a fresh build decouples it from the gh-pages workflow
-  and that's better i.e. when a quicker update is required. Also, it would
-  be very similar to the gh-actions workflow, just copying less/selected files.
+### `deploy-to-ghpages.yml`
 
+This builds the page using `eleventy` and publishes it to the `gh-pages` branch. It publishes the full `archive` directory as that produces the complete page with the archive.
+This runs when pushed to `main`.
+The result can be seen at https://libregraphicsmeeting.strong-type.systems which is used as the staging and backup domain.
 
+### `deploy-to-production.yml`
+
+To run this:
+
+* go to https://github.com/strong-type-systems/libregraphicsmeeting/actions/workflows/deploy-to-production.yml
+* use the `Run workflow` select-ui, choose "Branch: main", press "Run workflow" button
+
+This updates https://github.com/libregraphicsmeeting/htdocs-2025 which in turn will update the production server.
+
+You will need to have a `secrets.PERSONAL_TOKEN` configured that is allowed to push to `libregraphicsmeeting/htdocs-2025`.
+Here's a good entry point for advice: https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-set-personal-access-token-personal_token
+I'm using a "classic token" with "Select scopes: repo"
 
 # Archive Salvage old README
 
@@ -55,7 +57,7 @@ The transformations are:
 
 Transformations are not yet complete.
 
-The `docs` directory contains code from runing the tool. `docs` is chosen because it's the one name GitHub actions allows to serve a website directly from a subdirectory in a repository.
+The `archive` directory contains code from runing the tool.
 
 ### Install
 
@@ -71,14 +73,14 @@ $ . venv/bin/acivate
 ## Execute the tool
 
 ```
-(venv)$ ./webfix.py -f libregraphicsmeeting.org docs
+(venv)$ ./webfix.py -f libregraphicsmeeting.org archive
 ```
 
 ## Serve from http://localhost
 
 ```
-~/libregraphicsmeeting$ cd docs
-~/libregraphicsmeeting/docs$ python3 -m http.server
+~/libregraphicsmeeting$ cd archive
+~/libregraphicsmeeting/archive$ python3 -m http.server
 ```
 
 
