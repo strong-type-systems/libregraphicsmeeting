@@ -19,7 +19,8 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
     <time datetime="{{date.toISOString()}}">{{
         date.toLocaleDateString('en-US', {
                 weekday: "long",
-                hour: '2-digit', minute:'2-digit', hour12: false
+                hour: '2-digit', minute:'2-digit', hour12: false,
+                timeZone: dailySchedules.timeZone[1]
             })
     }}</time>
     {% endfor %}

@@ -93,24 +93,24 @@ eleventyNavigation:
 
 {% for dayData in dailySchedules.days %}
     {{ legend() }}
-    {% set formattedDate = dayData.dateAndStartTime.toLocaleDateString('en-US', {
+    {% set formattedDate = dayData.dateAndStartTime.toLocaleDateString('en-DE', {
                     weekday: "long",
                     year: "numeric",
                     month: "long",
                     day: "numeric",
-                    timeZone: dailySchedules.timeZone.timeZoneName,
+                    timeZone: dailySchedules.timeZone[1],
                     timeZoneName: 'short'
                 })
     %}
-    {% set day = dayData.dateAndStartTime.toLocaleDateString('en-US', { weekday: "long"}) %}
+    {% set day = dayData.dateAndStartTime.toLocaleDateString('en-US', { weekday: "long", timeZone: dailySchedules.timeZone[1]}) %}
     {% heading 'h2', formattedDate, day %}
 <table class="schedule">
     {% for scheduleItem in dayData.schedule %}
-    {{ renderScheduleRow(dailySchedules.timeZone.timeZoneName, scheduleItem) }}
+    {{ renderScheduleRow(dailySchedules.timeZone[1], scheduleItem) }}
     {% endfor %}
     {% set scheduleItem = dayData.schedule | last %}
     {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
-    {{ renderScheduleRow(dailySchedules.timeZone.timeZoneName, endItem) }}
+    {{ renderScheduleRow(dailySchedules.timeZone[1], endItem) }}
 </table>
 {% endfor %}
 
