@@ -402,7 +402,7 @@
                 "language": "en",
                 "abstract": "An interactive session with all attendants. We are looking for your experience,\nknowledge and insights. How can we make the structure around the LGM sustainable.\n\n## Special focus – RE:imagination\n\nThe Libre Graphics Meeting faced significant challenges during and after\nthe pandemic. In [Rennes](/2024), France, 2024, the local organization team revitalized\nthe event, and now we aim to rebuild the international community and\nstrengthen the structures around the Libre Graphics Meeting.\n\nJoin us to reconnect with old friends and forge new connections. Under the\ntheme of **RE:imagination**, we are going to explore the future of the Libre\nGraphics Meeting together.",
                 "recording_license": "",
-                "do_not_record": false,
+                "do_not_record": true,
                 "persons": [
                   {
                     "code": "LGM",
