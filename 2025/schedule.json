@@ -42,7 +42,7 @@
                 "duration": "0:30",
                 "room": "main",
                 "slug": "welcome",
-                "url": "https://libregraphicsmeeting/2025/program/welcome/",
+                "url": "https://libregraphicsmeeting.org/2025/program/welcome/",
                 "title": "Welcome",
                 "subtitle": "",
                 "track": null,
@@ -58,7 +58,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -67,7 +67,7 @@
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Lasse/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Lasse/",
                     "biography": "## Biography\n\nLasse Fister is a Designer and Software Developer. He is the founder and\nthe Managing Director of [Strong Type Systems GmbH](https://strong-type.systems).\nThe company works with international clients and a global network of experts.\nStrong Type Systems is active at the intersection of typography, software\ndevelopment, and design, combining expertise from different domains, true\ncreative thinking, and proficiency.\n\nLasse has over a decade of experience as a freelance web application developer,\nsoftware developer, and font engineer in type production and type tooling.\n\nHe holds a design degree from Bauhaus University Weimar.\n\n## Links\n\n* [Strong Type Systems GmbH](https://strong-type.systems)\n* [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)"
                   }
                 ],
@@ -83,7 +83,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "re-imagination_primer",
-                "url": "https://libregraphicsmeeting/2025/program/re-imagination_primer/",
+                "url": "https://libregraphicsmeeting.org/2025/program/re-imagination_primer/",
                 "title": "RE:imagination Primer",
                 "subtitle": "",
                 "track": null,
@@ -99,7 +99,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -108,7 +108,7 @@
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Lasse/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Lasse/",
                     "biography": "## Biography\n\nLasse Fister is a Designer and Software Developer. He is the founder and\nthe Managing Director of [Strong Type Systems GmbH](https://strong-type.systems).\nThe company works with international clients and a global network of experts.\nStrong Type Systems is active at the intersection of typography, software\ndevelopment, and design, combining expertise from different domains, true\ncreative thinking, and proficiency.\n\nLasse has over a decade of experience as a freelance web application developer,\nsoftware developer, and font engineer in type production and type tooling.\n\nHe holds a design degree from Bauhaus University Weimar.\n\n## Links\n\n* [Strong Type Systems GmbH](https://strong-type.systems)\n* [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)"
                   },
                   {
@@ -117,7 +117,7 @@
                     "name": "Simon Harhues",
                     "avatar": null,
                     "guid": "b429545e-0949-5db1-993b-54a1aec5b62b",
-                    "url": "https://libregraphicsmeeting/2025/hosts/SimonH/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/SimonH/",
                     "biography": "## Biography\n\nSimon Harhues, after having been an application consultant and developer, is working as UX\nDesigner and UX Coach at a major packaging machine manufacturer for nearly a decade now.\nBefore, he did study Business Computer Science and Human-Computer Interaction (HCI). In his\nprivate life he is a Linux user and FOSS advocate. Among other things, in his free time he loves to\ntake photos, with subjects ranging from events over landscape and street to nature photography. His\nphoto editing mainly happens in darktable, but he also uses GIMP, Hugin, and Photofilmstrip for\nphoto related tasks."
                   }
                 ],
@@ -133,7 +133,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "state_of_libre_graphics",
-                "url": "https://libregraphicsmeeting/2025/program/state_of_libre_graphics/",
+                "url": "https://libregraphicsmeeting.org/2025/program/state_of_libre_graphics/",
                 "title": "State of Libre Graphics",
                 "subtitle": "",
                 "track": null,
@@ -149,7 +149,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -158,7 +158,7 @@
                     "name": "MABarbe",
                     "avatar": null,
                     "guid": "51c6984d-dc2c-5d84-bd4d-7426b33492bb",
-                    "url": "https://libregraphicsmeeting/2025/hosts/MABarbe/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/MABarbe/",
                     "biography": ""
                   }
                 ],
@@ -174,7 +174,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "state_of_processing",
-                "url": "https://libregraphicsmeeting/2025/program/state_of_processing/",
+                "url": "https://libregraphicsmeeting.org/2025/program/state_of_processing/",
                 "title": "The State of Processing: How We’re Bringing a Creative Coding Icon Back to Life",
                 "subtitle": "",
                 "track": null,
@@ -190,7 +190,7 @@
                     "name": "Raphaël de Courville",
                     "avatar": null,
                     "guid": "c6035fce-b434-5596-a73f-bd8ea02b256d",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Rapha%C3%ABl/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Rapha%C3%ABl/",
                     "biography": "## Biography\n\nRaphaël de Courville is a generative artist and designer from Paris. He\ncurrently serves as the Community Lead for the Processing project. Since\n2012 Raphaël has been the co-host of Creative Code Berlin, a community that\npromotes interdisciplinary practices in art and technology through monthly\nevents. Raphaël also shares insights on Creative Coding through his weekly\nlivestreams. He lives and works in Berlin.\n\n## Links\n\n* [Processing](https://processing.org)"
                   },
                   {
@@ -199,7 +199,7 @@
                     "name": "Stef Tervelde",
                     "avatar": null,
                     "guid": "72d28fd1-beaf-5a40-9ac6-2d6742f3f3fc",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Stef/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Stef/",
                     "biography": "## Biography\n\nStef Tervelde is a developer, designer and educator based in Berlin,\nspecializing in creating apps and websites from concept to launch. He\nholds a B.A. in Interaction Design from ArtEZ Academy of Art Arnhem.\nSince 2024, Stef has been focused on modernizing the Processing codebase\nand improving the developer experience on the repository.\n\n## Links\n\n* [Processing](https://processing.org)"
                   }
                 ],
@@ -215,7 +215,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "upstage_presentation",
-                "url": "https://libregraphicsmeeting/2025/program/upstage_presentation/",
+                "url": "https://libregraphicsmeeting.org/2025/program/upstage_presentation/",
                 "title": "UpStage",
                 "subtitle": "",
                 "track": null,
@@ -231,7 +231,7 @@
                     "name": "Helen Varley Jamieson",
                     "avatar": null,
                     "guid": "ce44e946-39e7-554c-828b-4c23e92ed5d9",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Helen/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Helen/",
                     "biography": "## Biography\n\nHelen Varley Jamieson is a theatre maker and digital artist, and one of the founders of UpStage. She has\ncreated many cyberformances in it as well as organising online festivals and giving workshops and\npresentations about UpStage and cyberformance for more than two decades. She is internationally\nrecognised as a pioneer in this field. Helen is an advocate for the use of open source tools, and encourages\nartists to be curious about how the digital tools that they use actually work. She has presented UpStage\nseveral times at LGM and is involved in feminist open source networks and projects including the Eclectic\nTech Carnival and Systerserver.\n\n## Links\n\n* [UpStage](https://upstage.org.nz/)\n* [UpStage: the cyberformance platform](https://upstage.live/)\n* [Mobilise/Demobilise](https://mobilise-demobilise.eu/)"
                   },
                   {
@@ -240,7 +240,7 @@
                     "name": "Gloria W.",
                     "avatar": null,
                     "guid": "134314c7-d327-5efd-9390-2e5cfbfa8cf0",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Gloria/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Gloria/",
                     "biography": "## Biography\n\nGloria W. is UpStage's lead developer. She has has more than two decades experience in open software\ndevelopment with government and non-profits. In 2020 she joined the UpStage team to work on the\ncomplete rewrite of the software and in early 2022 took on the role of lead developer, heading a diverse team\nof open source developers and UX designers located in the USA, Canada, Viet Nam and Europe.\n\n## Links\n\n* [UpStage](https://upstage.org.nz/)\n* [UpStage: the cyberformance platform](https://upstage.live/)\n* [Mobilise/Demobilise](https://mobilise-demobilise.eu/)"
                   }
                 ],
@@ -256,7 +256,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "back_to_bitmap_fonts",
-                "url": "https://libregraphicsmeeting/2025/program/back_to_bitmap_fonts/",
+                "url": "https://libregraphicsmeeting.org/2025/program/back_to_bitmap_fonts/",
                 "title": "Let's All Go Back To Bitmap Fonts!",
                 "subtitle": "",
                 "track": null,
@@ -272,7 +272,7 @@
                     "name": "Nathan Willis",
                     "avatar": null,
                     "guid": "e5fa6977-684d-5497-be51-bfd800f55697",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Nathan/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Nathan/",
                     "biography": "## Biography\n\nNathan Willis is an independent type designer and researcher currently living in London."
                   }
                 ],
@@ -288,7 +288,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "curious_case_of_splines_freecad",
-                "url": "https://libregraphicsmeeting/2025/program/curious_case_of_splines_freecad/",
+                "url": "https://libregraphicsmeeting.org/2025/program/curious_case_of_splines_freecad/",
                 "title": "The Curious Case of Splines in FreeCAD",
                 "subtitle": "",
                 "track": null,
@@ -304,7 +304,7 @@
                     "name": "Ajinkya Dahale",
                     "avatar": null,
                     "guid": "1fd1a726-f37a-5b57-b700-14d89049594f",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Ajinkya/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Ajinkya/",
                     "biography": "## Biography\n\nMy name is Ajinkya Dahale. A mechanical engineer by training, I am now a software developer based in India, currently working as a project staff at IIT Bombay, Mumbai. I have been a contributor to FreeCAD since 2016.\n\nIn FreeCAD, my focus has been mostly in the 2D constrained drawing workbench \"Sketcher\", as well as the underlying solver \"planegcs\". In further detail, my interest has been in adding support for general curved geometry."
                   }
                 ],
@@ -320,7 +320,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "permacomputing_fermenting_regenerative_aesthetics",
-                "url": "https://libregraphicsmeeting/2025/program/permacomputing_fermenting_regenerative_aesthetics/",
+                "url": "https://libregraphicsmeeting.org/2025/program/permacomputing_fermenting_regenerative_aesthetics/",
                 "title": "Permacomputing: Fermenting Regenerative Aesthetics",
                 "subtitle": "",
                 "track": null,
@@ -336,7 +336,7 @@
                     "name": "Brendan Howell",
                     "avatar": null,
                     "guid": "edd37e4b-36a5-5194-b686-c70c93c3899a",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Brendan/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Brendan/",
                     "biography": "## Biography\n\nBrendan Howell is an artist and a reluctant engineer. He is the creator of\nnumerous interactive artworks and inventions. Additionally, he has spent a\nlot of time teaching digital practices in applied and fine arts at various\nEuropean higher education institutions. He lives in Berlin, Germany but can\noften be found walking in wooded areas of Northern Europe or enjoying pastoral\nlife in Hacksneck, Virginia, USA with his extended family.\n\n## Links\n\n* https://wintermute.org\n* brendan@howell-ersatz.com\n* [Fediverse: @praxeology@post.lurk.org](https://post.lurk.org/@praxeology)"
                   }
                 ],
@@ -352,7 +352,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "open-source_video_editing_landscape",
-                "url": "https://libregraphicsmeeting/2025/program/open-source_video_editing_landscape/",
+                "url": "https://libregraphicsmeeting.org/2025/program/open-source_video_editing_landscape/",
                 "title": "A View on the Open-Source Video Editing Landscape",
                 "subtitle": "",
                 "track": null,
@@ -368,7 +368,7 @@
                     "name": "Simran Spiller",
                     "avatar": null,
                     "guid": "c511ea64-9813-5588-a7ed-27aa2cc73515",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Simran/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Simran/",
                     "biography": "## Biography\n\nSimran works as a technical writer in the database space and is a long-term member of the Pictogrammers icon collective and Olive video editor project. Besides a busy family and work life, he likes to design icons as a creative outlet, and helps out with the infrastructure and community management of the Olive project.\n\nWith over a decade of involvement in open-source projects, Simran knows both the highs and lows of working on open-source software, in professional as well as hobbyist capacities. His views on open source are rather pragmatic than ideological, but he is opinionated when it comes to usability. He is excited by the intersection of code and creativity and strives to improve the FLOSS space."
                   }
                 ],
@@ -394,7 +394,7 @@
                 "duration": "2:00",
                 "room": "main",
                 "slug": "re-imagination_workshop",
-                "url": "https://libregraphicsmeeting/2025/program/re-imagination_workshop/",
+                "url": "https://libregraphicsmeeting.org/2025/program/re-imagination_workshop/",
                 "title": "RE:imagination Workshop",
                 "subtitle": "",
                 "track": null,
@@ -410,7 +410,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -419,7 +419,7 @@
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Lasse/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Lasse/",
                     "biography": "## Biography\n\nLasse Fister is a Designer and Software Developer. He is the founder and\nthe Managing Director of [Strong Type Systems GmbH](https://strong-type.systems).\nThe company works with international clients and a global network of experts.\nStrong Type Systems is active at the intersection of typography, software\ndevelopment, and design, combining expertise from different domains, true\ncreative thinking, and proficiency.\n\nLasse has over a decade of experience as a freelance web application developer,\nsoftware developer, and font engineer in type production and type tooling.\n\nHe holds a design degree from Bauhaus University Weimar.\n\n## Links\n\n* [Strong Type Systems GmbH](https://strong-type.systems)\n* [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)"
                   },
                   {
@@ -428,7 +428,7 @@
                     "name": "Simon Harhues",
                     "avatar": null,
                     "guid": "b429545e-0949-5db1-993b-54a1aec5b62b",
-                    "url": "https://libregraphicsmeeting/2025/hosts/SimonH/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/SimonH/",
                     "biography": "## Biography\n\nSimon Harhues, after having been an application consultant and developer, is working as UX\nDesigner and UX Coach at a major packaging machine manufacturer for nearly a decade now.\nBefore, he did study Business Computer Science and Human-Computer Interaction (HCI). In his\nprivate life he is a Linux user and FOSS advocate. Among other things, in his free time he loves to\ntake photos, with subjects ranging from events over landscape and street to nature photography. His\nphoto editing mainly happens in darktable, but he also uses GIMP, Hugin, and Photofilmstrip for\nphoto related tasks."
                   }
                 ],
@@ -444,7 +444,7 @@
                 "duration": "1:00",
                 "room": "main",
                 "slug": "lightning_talks",
-                "url": "https://libregraphicsmeeting/2025/program/lightning_talks/",
+                "url": "https://libregraphicsmeeting.org/2025/program/lightning_talks/",
                 "title": "Lightning Talks",
                 "subtitle": "",
                 "track": null,
@@ -460,7 +460,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -469,7 +469,7 @@
                     "name": "TBD (Undetermined)",
                     "avatar": null,
                     "guid": "b6bc8065-d469-578a-add1-8770cca77349",
-                    "url": "https://libregraphicsmeeting/2025/hosts/TBD/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/TBD/",
                     "biography": "## To Be Determined\n\nWe are looking for someone taking over."
                   }
                 ],
@@ -485,7 +485,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "pcb_artwork_with_kicad",
-                "url": "https://libregraphicsmeeting/2025/program/pcb_artwork_with_kicad/",
+                "url": "https://libregraphicsmeeting.org/2025/program/pcb_artwork_with_kicad/",
                 "title": "PCB Artwork with KiCAD",
                 "subtitle": "",
                 "track": null,
@@ -501,7 +501,7 @@
                     "name": "Simon Budig",
                     "avatar": null,
                     "guid": "a2ec8869-f1e3-554d-a2ef-678d2853a954",
-                    "url": "https://libregraphicsmeeting/2025/hosts/SimonB/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/SimonB/",
                     "biography": "## Bigraphy\n\nSimon is active in the LGM community for quite a while now. After\ngetting involved with the GIMP project in 1998 he now is part of the\n\"old fart\" group within the gimp contributors. He works as a embedded\nlinux engineer in Siegen, Germany, where he also helps running the\n\"HaSi\" hackspace. He dabbles in electronics development and light based\nartworks, which is where his interest in KiCAD originates."
                   }
                 ],
@@ -517,7 +517,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "the_pdf_toolbox",
-                "url": "https://libregraphicsmeeting/2025/program/the_pdf_toolbox/",
+                "url": "https://libregraphicsmeeting.org/2025/program/the_pdf_toolbox/",
                 "title": "The PDF Toolbox",
                 "subtitle": "",
                 "track": null,
@@ -533,7 +533,7 @@
                     "name": "Cédric Gémy",
                     "avatar": null,
                     "guid": "1cff2c2d-de28-5238-866d-51628ad0de71",
-                    "url": "https://libregraphicsmeeting/2025/hosts/C%C3%A9dric/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/C%C3%A9dric/",
                     "biography": "## Biography\n\nCédric Gémy is founder of Activdesign and Activ.studio, a training center\nand a graphic design studio using and promoting free softwares. He wrote\nseveral books especially about Gimp, Inkscape, Scribus, Blender.\n\n## Links\n\n* [Activdesign](https://activdesign.eu)\n* [Activ.studio](https://activ.studio)"
                   }
                 ],
@@ -549,7 +549,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "hyper_8_video_system",
-                "url": "https://libregraphicsmeeting/2025/program/hyper_8_video_system/",
+                "url": "https://libregraphicsmeeting.org/2025/program/hyper_8_video_system/",
                 "title": "Hyper 8 Video System",
                 "subtitle": "",
                 "track": null,
@@ -565,7 +565,7 @@
                     "name": "Simon Repp",
                     "avatar": null,
                     "guid": "8d680a37-1571-5dae-8b93-ba14fdbb967e",
-                    "url": "https://libregraphicsmeeting/2025/hosts/SimonR/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/SimonR/",
                     "biography": "## Biography\n\nSimon Repp (he) works on media and systems with a focus on ethics,\nsimplicity and sustainability. His current occupation lies primarily in\nresearching and developing audiovisual media publishing tools with\nminimal environmental and operational resource requirements (such as\nFaircamp and Hyper 8). He is based in Vienna, and has been active in the\nworld of libre graphics for around 10 years, promoting and hosting user\ngroups especially for Blender, but also other libre media suites and\ntools, in the region.\n\n## Links\n\n* https://simonrepp.com\n* [Fediverse: @freebliss@post.lurk.org](https://post.lurk.org/@freebliss)"
                   }
                 ],
@@ -591,7 +591,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "re-imagining_3d_interactive_internet_presentation",
-                "url": "https://libregraphicsmeeting/2025/program/re-imagining_3D_interactive_internet_presentation/",
+                "url": "https://libregraphicsmeeting.org/2025/program/re-imagining_3D_interactive_internet_presentation/",
                 "title": "Re:Imagining a 3D and Interactive Internet",
                 "subtitle": "",
                 "track": null,
@@ -607,7 +607,7 @@
                     "name": "Gottfried Hofmann",
                     "avatar": null,
                     "guid": "80b1e43e-c8ef-5a45-bbb5-a9c2381427e3",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Gottfried/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Gottfried/",
                     "biography": "## Biography\n\nGottfried Hofmann and {{ macro.hostLink(['Frederik']) }} have been\ncontributing to the Blender community with tutorials, teaching, patches\nand addons. Together they are known as BlenderDiplom for their free\ntutorials on the subject.\n\nSince 2011 their expertise has grown from modelling/texturing and animation\nacross physics simulations like particles, fluids and smoke all the way over\nto python development. They have been speakers at several Blender Conferences\nand Libre Graphics Leipzig. And are now ready to talk about their latest\nrealm: browser-based interactivity.\n\n## Links\n\n* [website: BlenderDiplom](https://www.blenderdiplom.com)"
                   },
                   {
@@ -616,7 +616,7 @@
                     "name": "Frederik Steinmetz",
                     "avatar": null,
                     "guid": "624c4107-8c94-59b2-a385-86045d7283e0",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Frederik/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Frederik/",
                     "biography": "## Biography\n\n{{ macro.hostLink('Gottfried') }} and Frederik Steinmetz have been contributing\nto the Blender community with tutorials, teaching, patches and addons. Together\nthey are known as BlenderDiplom for their free tutorials on the subject.\n\nSince 2011 their expertise has grown from modelling/texturing and animation\nacross physics simulations like particles, fluids and smoke all the way over\nto python development. They have been speakers at several Blender Conferences\nand Libre Graphics Leipzig. And are now ready to talk about their latest\nrealm: browser-based interactivity.\n\n## Links\n\n* [website: BlenderDiplom](https://www.blenderdiplom.com)"
                   }
                 ],
@@ -632,7 +632,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "making_waterfalls",
-                "url": "https://libregraphicsmeeting/2025/program/making_waterfalls/",
+                "url": "https://libregraphicsmeeting.org/2025/program/making_waterfalls/",
                 "title": "Making Waterfalls",
                 "subtitle": "",
                 "track": null,
@@ -648,7 +648,7 @@
                     "name": "Tom Lechner",
                     "avatar": null,
                     "guid": "66b57ba9-19a7-5241-b296-9c4d3071efa8",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Tom/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Tom/",
                     "biography": ""
                   }
                 ],
@@ -664,7 +664,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "fontra",
-                "url": "https://libregraphicsmeeting/2025/program/fontra/",
+                "url": "https://libregraphicsmeeting.org/2025/program/fontra/",
                 "title": "Fontra —\nThe Browser-Based Font Editor",
                 "subtitle": "",
                 "track": null,
@@ -680,7 +680,7 @@
                     "name": "Dave Crossland",
                     "avatar": null,
                     "guid": "56bbeadf-7bd6-5d8e-a8d4-5efdb9e5cc2a",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Dave/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Dave/",
                     "biography": "## Biography\n\nDave Crossland attended the first Libre Graphics Meeting in 2006, and became\nfascinated with the potential of libre licensing to improve design. Since\nthen, he has worked to liberate typography, mainly as a program manager for\n[Google Fonts](https://fonts.google.com/). He believes the future is\nfree time and nothing else; free time, free software, free society.\n\n## Links\n\n* [Google Fonts](https://fonts.google.com/)"
                   },
                   {
@@ -689,7 +689,7 @@
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Lasse/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Lasse/",
                     "biography": "## Biography\n\nLasse Fister is a Designer and Software Developer. He is the founder and\nthe Managing Director of [Strong Type Systems GmbH](https://strong-type.systems).\nThe company works with international clients and a global network of experts.\nStrong Type Systems is active at the intersection of typography, software\ndevelopment, and design, combining expertise from different domains, true\ncreative thinking, and proficiency.\n\nLasse has over a decade of experience as a freelance web application developer,\nsoftware developer, and font engineer in type production and type tooling.\n\nHe holds a design degree from Bauhaus University Weimar.\n\n## Links\n\n* [Strong Type Systems GmbH](https://strong-type.systems)\n* [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)"
                   }
                 ],
@@ -705,7 +705,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "introduction_usability-ux_evaluation_methods",
-                "url": "https://libregraphicsmeeting/2025/program/introduction_usability-ux_evaluation_methods/",
+                "url": "https://libregraphicsmeeting.org/2025/program/introduction_usability-ux_evaluation_methods/",
                 "title": "Introduction to Usability/UX Evaluation Methods",
                 "subtitle": "",
                 "track": null,
@@ -721,7 +721,7 @@
                     "name": "Simon Harhues",
                     "avatar": null,
                     "guid": "b429545e-0949-5db1-993b-54a1aec5b62b",
-                    "url": "https://libregraphicsmeeting/2025/hosts/SimonH/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/SimonH/",
                     "biography": "## Biography\n\nSimon Harhues, after having been an application consultant and developer, is working as UX\nDesigner and UX Coach at a major packaging machine manufacturer for nearly a decade now.\nBefore, he did study Business Computer Science and Human-Computer Interaction (HCI). In his\nprivate life he is a Linux user and FOSS advocate. Among other things, in his free time he loves to\ntake photos, with subjects ranging from events over landscape and street to nature photography. His\nphoto editing mainly happens in darktable, but he also uses GIMP, Hugin, and Photofilmstrip for\nphoto related tasks."
                   }
                 ],
@@ -737,7 +737,7 @@
                 "duration": "1:00",
                 "room": "main",
                 "slug": "lightning_talks",
-                "url": "https://libregraphicsmeeting/2025/program/lightning_talks/",
+                "url": "https://libregraphicsmeeting.org/2025/program/lightning_talks/",
                 "title": "Lightning Talks",
                 "subtitle": "",
                 "track": null,
@@ -753,7 +753,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -762,7 +762,7 @@
                     "name": "TBD (Undetermined)",
                     "avatar": null,
                     "guid": "b6bc8065-d469-578a-add1-8770cca77349",
-                    "url": "https://libregraphicsmeeting/2025/hosts/TBD/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/TBD/",
                     "biography": "## To Be Determined\n\nWe are looking for someone taking over."
                   }
                 ],
@@ -778,7 +778,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "from_printer_dust_till_graphics_dawn_presentation",
-                "url": "https://libregraphicsmeeting/2025/program/from_printer_dust_till_graphics_dawn_presentation/",
+                "url": "https://libregraphicsmeeting.org/2025/program/from_printer_dust_till_graphics_dawn_presentation/",
                 "title": "From Printer Dust Till Graphics Dawn",
                 "subtitle": "",
                 "track": null,
@@ -794,7 +794,7 @@
                     "name": "XPUB",
                     "avatar": null,
                     "guid": "046cf150-6045-5a9b-ab15-ee2d4bd645b0",
-                    "url": "https://libregraphicsmeeting/2025/hosts/XPUB/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/XPUB/",
                     "biography": "## Biography\n\nXPUB is the Master of Arts in Fine Art and Design: Experimental Publishing\nof the Piet Zwart Institute in Rotterdam (NL). XPUB focuses on the acts of\nmaking things public and creating publics in the age of post-digital networks.\n\n## People\n\n{{ macro.hostLinkList(['Manetta', 'Joseph']) }}\n\n## Links\n\n* [website: xpub.nl](https://xpub.nl/)"
                   },
                   {
@@ -803,7 +803,7 @@
                     "name": "Manetta Berends",
                     "avatar": null,
                     "guid": "2c918018-0cb4-5727-9109-1ddd84f9e47c",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Manetta/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Manetta/",
                     "biography": "## Biography\n\nManetta Berends (she/her) works with forms of networked publishing,\nsituated software and collective infrastructures. She is a prototyping tutor\nat the Master Experimental Publishing ({{ macro.hostLink('XPUB') }}),\nco-runs an artistic server called creative crowds (CC) and works on various\npublishing projects and artistic tools.\n\n\n## Organization\n\n{{ macro.hostLinkList(['XPUB']) }}\n\n## Links\n\n* [website: manettaberends.nl](https://manettaberends.nl)"
                   },
                   {
@@ -812,7 +812,7 @@
                     "name": "Joseph Knierzinger",
                     "avatar": null,
                     "guid": "26025aa6-a5bf-5641-8e35-ca77d9b48b56",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Joseph/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Joseph/",
                     "biography": "## Biography\n\nPrototyping tutor at {{ macro.hostLink('XPUB') }}.\n\n## Organization\n\n{{ macro.hostLinkList(['XPUB']) }}"
                   }
                 ],
@@ -828,7 +828,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "elephant_in_the_room-who_owns_the_image",
-                "url": "https://libregraphicsmeeting/2025/program/elephant_in_the_room-who_owns_the_image/",
+                "url": "https://libregraphicsmeeting.org/2025/program/elephant_in_the_room-who_owns_the_image/",
                 "title": "The Elephant in the Room: Who Owns the Image?",
                 "subtitle": "",
                 "track": null,
@@ -844,7 +844,7 @@
                     "name": "Eylul Dogruel",
                     "avatar": null,
                     "guid": "29fc1c16-cb3e-52bd-89fd-941a765bff41",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Eylul/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Eylul/",
                     "biography": "## Biography\n\nEylul Dogruel is a multidisciplinary visual artist from Istanbul,\nTurkey. Her work focuses on the interaction between materials and and\ntheir style elements, and has been shown in international exhibits and\nevents. In addition to favoring free and open sourced software in her\nown work, Eylul is involved in advocacy for free culture, open source\nsoftware in art and art education. She also teaches photography part\ntime in Istanbul Technical University and is a contributor to the Ubuntu\nStudio project."
                   }
                 ],
@@ -860,7 +860,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "libre_designers_and_the_software_apocalypse",
-                "url": "https://libregraphicsmeeting/2025/program/libre_designers_and_the_software_apocalypse/",
+                "url": "https://libregraphicsmeeting.org/2025/program/libre_designers_and_the_software_apocalypse/",
                 "title": "Libre Designers and the Software Apocalypse",
                 "subtitle": "",
                 "track": null,
@@ -876,7 +876,7 @@
                     "name": "Neil C Smith",
                     "avatar": null,
                     "guid": "accdaf11-d87b-594e-ae8b-ad603071f8ff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Neil/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Neil/",
                     "biography": "## Biography\n\nNeil C Smith is an artist and technologist from Oxford (UK),\npassionate about FLOSS, interactive programming and live coding. He\nis the developer of PraxisLIVE, a hybrid visual live-programming IDE\nfor creative coding, works on releases of the Apache NetBeans IDE, and\ncontributes to a variety of other open-source libraries and tools.\n\n## Links\n\n* [website: www.codelerity.com](https://www.codelerity.com)\n* [PraxisLIVE](https://www.praxislive.org/)"
                   }
                 ],
@@ -902,7 +902,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "inkscape_ui_vision_going_forward",
-                "url": "https://libregraphicsmeeting/2025/program/inkscape_ui_vision_going_forward/",
+                "url": "https://libregraphicsmeeting.org/2025/program/inkscape_ui_vision_going_forward/",
                 "title": "Inkscape UI Vision Going Forward",
                 "subtitle": "",
                 "track": null,
@@ -918,7 +918,7 @@
                     "name": "Henrique Perticarati",
                     "avatar": null,
                     "guid": "331cd97f-5f77-559c-9fda-922ac8f5d078",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Henrique/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Henrique/",
                     "biography": "## Biography\n\nHenrique is a UX Designer crafting digital experiences, redesigning apps, and refining user interactions since 2011.\n\n## Contact info\n\n* https://www.linkedin.com/in/hperticarati/"
                   }
                 ],
@@ -934,7 +934,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "type-roof",
-                "url": "https://libregraphicsmeeting/2025/program/type-roof/",
+                "url": "https://libregraphicsmeeting.org/2025/program/type-roof/",
                 "title": "TypeRoof —\nType Tooling Infrastructure",
                 "subtitle": "",
                 "track": null,
@@ -950,7 +950,7 @@
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Lasse/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Lasse/",
                     "biography": "## Biography\n\nLasse Fister is a Designer and Software Developer. He is the founder and\nthe Managing Director of [Strong Type Systems GmbH](https://strong-type.systems).\nThe company works with international clients and a global network of experts.\nStrong Type Systems is active at the intersection of typography, software\ndevelopment, and design, combining expertise from different domains, true\ncreative thinking, and proficiency.\n\nLasse has over a decade of experience as a freelance web application developer,\nsoftware developer, and font engineer in type production and type tooling.\n\nHe holds a design degree from Bauhaus University Weimar.\n\n## Links\n\n* [Strong Type Systems GmbH](https://strong-type.systems)\n* [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)"
                   }
                 ],
@@ -966,7 +966,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "printing_maps_with_spot_colors",
-                "url": "https://libregraphicsmeeting/2025/program/printing_maps_with_spot_colors/",
+                "url": "https://libregraphicsmeeting.org/2025/program/printing_maps_with_spot_colors/",
                 "title": "Printing Maps with Spot Colors",
                 "subtitle": "",
                 "track": null,
@@ -982,7 +982,7 @@
                     "name": "Atelier cartographique",
                     "avatar": null,
                     "guid": "3fe0de6c-1717-5e26-8491-abf2c169cca8",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Atelier_cartographique/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Atelier_cartographique/",
                     "biography": "## Biography\n\nWe are a Brussels-based cooperative of cartographic practices. Our professions\nweave together software writing, design and territorial research to explore\nother modes of urban, social and political interaction.\n\nEach representation of the territory is produced from a specific point of\nview and is embedded within a particular production and reception context.\nWe commit to bring to light that no description of the territory is neutral,\nand to bring to life the underlying intentions within the projects with\nwhich we are associated.\n\n## People\n\n{{ macro.hostLinkList(['Julie', 'Pierre']) }}\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
                   },
                   {
@@ -991,7 +991,7 @@
                     "name": "Pierre Marchand",
                     "avatar": null,
                     "guid": "8d5205e6-38e1-5c9b-a65e-054ee504e9ed",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Pierre/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Pierre/",
                     "biography": "## Biography\n\nPierre Marchand writes software and is a researcher at UGent (S:PAM)\nHe was co-developer of the open-source packages Scribus, Fontmatrix,\nWaend and Cartostation. A former visual artist and forestry technician,\nhe is a programmer-architect for collective projects linked to digital\ndata and its representation. His research focuses on a form of speculative\nprogramming that activates the dynamics of questioning, both in relation\nto the tools and to their historical and cultural dimensions, by\nexploring the processes involved in the formation of a digital sensibility.\n\n## Organization\n\n{{ macro.hostLinkList(['Atelier_cartographique']) }}\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
                   },
                   {
@@ -1000,7 +1000,7 @@
                     "name": "Julie Vanderhaeghen",
                     "avatar": null,
                     "guid": "b95f5982-0f2a-5fc4-9dda-1c4b4aaacd9a",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Julie/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Julie/",
                     "biography": "## Biography\n\nJulie Vanderhaeghen is a geographer and illustrator, and a researcher at\nUGent (S:PAM). She has a cross-disciplinary role at AC, alternating\ncoordination with visual and technical questions and interventions.\n\n## Organization\n\n{{ macro.hostLinkList(['Atelier_cartographique']) }}\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
                   }
                 ],
@@ -1016,7 +1016,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "building_website_design_system_with_atomic_design_principles",
-                "url": "https://libregraphicsmeeting/2025/program/building_website_design_system_with_atomic_design_principles/",
+                "url": "https://libregraphicsmeeting.org/2025/program/building_website_design_system_with_atomic_design_principles/",
                 "title": "Building a Website Design System with Atomic Design Principles Using Penpot",
                 "subtitle": "",
                 "track": null,
@@ -1032,7 +1032,7 @@
                     "name": "María \"Tatica\" Leandro",
                     "avatar": null,
                     "guid": "fa34c46a-12d4-55d9-8784-3e8f0fc44673",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Mar%C3%ADa/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Mar%C3%ADa/",
                     "biography": "## Biography\n\nMy name is Maria \"tatica\" Leandro, and I am a passionate advocate for\nopen-source technologies with over 20 years of experience in design.\n\n\n## Links\n\n* [website: www.estudiotap.com](https://www.estudiotap.com)"
                   }
                 ],
@@ -1048,7 +1048,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "how_to_run_a_film_festival_on_libre_graphics",
-                "url": "https://libregraphicsmeeting/2025/program/how_to_run_a_film_festival_on_libre_graphics/",
+                "url": "https://libregraphicsmeeting.org/2025/program/how_to_run_a_film_festival_on_libre_graphics/",
                 "title": "How to Run a Film Festival on Libre Graphics",
                 "subtitle": "",
                 "track": null,
@@ -1064,7 +1064,7 @@
                     "name": "Marc Rodrigues",
                     "avatar": null,
                     "guid": "2861b41d-57fd-530e-aad6-68c685f0d60e",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Marc/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Marc/",
                     "biography": "## Biography\n\nMarc is a FOSS enthusiast and PR guy. He recently founded the LusOFest film festival in Offenbach.\n\n## Links\n\n* [website: LusOFest](https://www.lusofest.de)"
                   }
                 ],
@@ -1080,7 +1080,7 @@
                 "duration": "0:25",
                 "room": "main",
                 "slug": "ink-stitch",
-                "url": "https://libregraphicsmeeting/2025/program/ink-stitch/",
+                "url": "https://libregraphicsmeeting.org/2025/program/ink-stitch/",
                 "title": "Ink/Stitch",
                 "subtitle": "",
                 "track": null,
@@ -1096,7 +1096,7 @@
                     "name": "Daniel K. Schneider",
                     "avatar": null,
                     "guid": "45ec6291-ef0c-5b05-9465-836bf69fc4ec",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Daniel/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Daniel/",
                     "biography": "## Links\n\n* [Daniels Homepage](https://tecfa.unige.ch/perso/schneider/)\n* [Ink/Stitch](https://inkstitch.org/)\n* [Inkscape](https://inkscape.org/)"
                   }
                 ],
@@ -1112,7 +1112,7 @@
                 "duration": "0:50",
                 "room": "main",
                 "slug": "next_lgm",
-                "url": "https://libregraphicsmeeting/2025/program/next_LGM/",
+                "url": "https://libregraphicsmeeting.org/2025/program/next_LGM/",
                 "title": "Next year's meeting",
                 "subtitle": "",
                 "track": null,
@@ -1128,7 +1128,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -1137,7 +1137,7 @@
                     "name": "TBD (Undetermined)",
                     "avatar": null,
                     "guid": "b6bc8065-d469-578a-add1-8770cca77349",
-                    "url": "https://libregraphicsmeeting/2025/hosts/TBD/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/TBD/",
                     "biography": "## To Be Determined\n\nWe are looking for someone taking over."
                   }
                 ],
@@ -1153,7 +1153,7 @@
                 "duration": "0:20",
                 "room": "main",
                 "slug": "goodbye",
-                "url": "https://libregraphicsmeeting/2025/program/goodbye/",
+                "url": "https://libregraphicsmeeting.org/2025/program/goodbye/",
                 "title": "Closing session",
                 "subtitle": "",
                 "track": null,
@@ -1169,7 +1169,7 @@
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
-                    "url": "https://libregraphicsmeeting/2025/hosts/LGM/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/LGM/",
                     "biography": ""
                   },
                   {
@@ -1178,7 +1178,7 @@
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
-                    "url": "https://libregraphicsmeeting/2025/hosts/Lasse/",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Lasse/",
                     "biography": "## Biography\n\nLasse Fister is a Designer and Software Developer. He is the founder and\nthe Managing Director of [Strong Type Systems GmbH](https://strong-type.systems).\nThe company works with international clients and a global network of experts.\nStrong Type Systems is active at the intersection of typography, software\ndevelopment, and design, combining expertise from different domains, true\ncreative thinking, and proficiency.\n\nLasse has over a decade of experience as a freelance web application developer,\nsoftware developer, and font engineer in type production and type tooling.\n\nHe holds a design degree from Bauhaus University Weimar.\n\n## Links\n\n* [Strong Type Systems GmbH](https://strong-type.systems)\n* [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)"
                   }
                 ],
