@@ -769,9 +769,41 @@
                 "links": []
               },
               {
+                "guid": "abd14105-785c-52c6-8962-d557195462a7",
+                "code": "3000PCTFASTERFILESAVINGWITHTIMETRAVEL",
+                "id": 10,
+                "logo": null,
+                "date": "2025-05-30T14:50:00.000Z",
+                "start": "16:50",
+                "duration": "0:25",
+                "room": "main",
+                "slug": "3000-pct-faster-file-saving-with-time-travel",
+                "url": "https://libregraphicsmeeting.org/2025/program/3000-pct-faster-file-saving-with-time-travel/",
+                "title": "3000 % Faster File Saving With Time Travel",
+                "subtitle": "",
+                "track": null,
+                "type": "talk",
+                "language": "en",
+                "abstract": "A developer talk about coming up with a new file format for [Drawpile](https://drawpile.net/)\nwith the focus being on the findings and ideas that would be useful for\nother programs as well. Some of those ideas are already implemented and\nhave brought a massive speedup in file saving and loading, some wilder\nideas like continuous autosave with history-altering time-travel are in\nvarious states of currently still being worked on, but sufficiently cool\nto talk about anyway.\n\n## Links\n\n* [Drawpile](https://drawpile.net/)",
+                "recording_license": "",
+                "do_not_record": false,
+                "persons": [
+                  {
+                    "code": "CARSTEN",
+                    "id": 0,
+                    "name": "Carsten Hartenfels",
+                    "avatar": null,
+                    "guid": "7f350b2c-0b8c-5f16-b542-64d7068c8117",
+                    "url": "https://libregraphicsmeeting.org/2025/hosts/Carsten/",
+                    "biography": "## Biography\n\nMaintainer of Drawpile.\n\n## Links\n\n* [Drawpile](https://drawpile.net/)\n\n## Contact\n\n**askmeaboutloom** on IRC in #drawpile or #lgm."
+                  }
+                ],
+                "links": []
+              },
+              {
                 "guid": "250fa898-d6e8-50ba-95d2-a0ad1361f3f1",
                 "code": "FROMPRINTERDUSTTILLGRAPHICSDAWNPRESENTATION",
-                "id": 10,
+                "id": 11,
                 "logo": null,
                 "date": "2025-05-30T15:15:00.000Z",
                 "start": "17:15",
@@ -821,7 +853,7 @@
               {
                 "guid": "80c9eab1-6a89-55ab-9ce6-d9264f72822d",
                 "code": "ELEPHANTINTHEROOMWHOOWNSTHEIMAGE",
-                "id": 11,
+                "id": 12,
                 "logo": null,
                 "date": "2025-05-30T15:40:00.000Z",
                 "start": "17:40",
@@ -853,7 +885,7 @@
               {
                 "guid": "8c2d4f0a-6a17-51b3-a566-4006183992cf",
                 "code": "LIBREDESIGNERSANDTHESOFTWAREAPOCALYPSE",
-                "id": 12,
+                "id": 13,
                 "logo": null,
                 "date": "2025-05-30T16:05:00.000Z",
                 "start": "18:05",
