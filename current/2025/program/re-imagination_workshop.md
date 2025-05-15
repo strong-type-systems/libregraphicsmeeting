@@ -3,6 +3,7 @@ labels: ["re:imagination", community]
 type: interactive
 title: "RE:imagination Workshop"
 hosts: [LGM, Lasse, SimonH]
+doNotRecord: true
 ---
 
 An interactive session with all attendants. We are looking for your experience,
