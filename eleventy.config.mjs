@@ -233,6 +233,17 @@ export default function (eleventyConfig) {
         return events
     });
 
+    const _isHostItem = item=>item.page.filePathStem.startsWith(`${rootPath}/hosts/`)
+                                        && item.data.layout === 'host.njk';
+    eleventyConfig.addCollection('allHosts', function (collectionApi) {
+        const hosts = new Map();
+        for(const item of collectionApi.getAll()) {
+            if (_isHostItem(item)) {
+                hosts.set(item.page.fileSlug, item);
+            }
+        }
+        return hosts
+    });
 
     eleventyConfig.addCollection('eventClips', function (collectionApi) {
         const events = []

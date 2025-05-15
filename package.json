@@ -22,7 +22,6 @@
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "ajv": "^8.17.1",
-    "ajv-errors": "^3.0.0",
     "ajv-formats": "^3.0.1",
     "awesome-ajv-errors": "^5.1.0",
     "eleventy-plugin-embed-everything": "^1.19.0",
@@ -30,7 +29,8 @@
     "markdown-it-github-headings": "^2.0.1",
     "postcss": "^8.5.3",
     "postcss-nesting": "^13.0.1",
-    "puppeteer": "^24.1.1"
+    "puppeteer": "^24.1.1",
+    "uuid": "^11.1.0"
   },
   "main": "index.js",
   "repository": {
