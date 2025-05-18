@@ -29,7 +29,7 @@ of the ten heuristics by Nielsen
 ## Target group
 
 * UX/usability laymen
-* developers of software
+* Contributors to software
 
 ## To bring with you
 
