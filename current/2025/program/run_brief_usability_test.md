@@ -26,7 +26,7 @@ artifacts of a usability test
 ## Target group
 
 * UX/usability laymen
-* developers of software
+* Contributors to software
 
 ## To bring with you
 
