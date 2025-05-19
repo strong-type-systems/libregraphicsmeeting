@@ -29,7 +29,10 @@
 }
 
 
-* {
+*,
+header nav:before,
+header nav.ui_collapsible_mixin-open:after
+{
     /* if --document-font-size-pt would be dynamic according to the document
      * something like this:
      * font-size: calc(var(--font-size, 1) * var(--document-font-size-pt, 12) * 1pt);
@@ -537,7 +540,8 @@ nav li.active > a:hover {
   header {
     nav:before,
     nav.ui_collapsible_mixin-open:after {
-        content: '•••';
+        content: 'MENU';
+        --text-wght: 900;
         display: block;
         text-align: center;
         height: var(--nav-full-size);
@@ -612,6 +616,13 @@ nav li.active > a:hover {
         display: inline-block;
         position: relative;
         z-index: 1;
+    }
+
+    nav li:has(> ul):before {
+        /* hidden because in smallest/mobile view, the collapsable triangles
+         * are without function, as the menu us always open.
+         */
+        visibility: hidden;
     }
     :is(.past_editions > span, nav li:has(> ul)):after {
         display: none;
