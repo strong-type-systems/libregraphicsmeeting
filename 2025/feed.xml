@@ -4,12 +4,29 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-05-19T12:57:42Z</updated>
+  <updated>2025-05-19T14:02:05Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>Sponsorship Announcement: Font Bureau</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-05-19_0002-sponsoring-update-welcome-fontbureau/" />
+    <updated>2025-05-19T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-05-19_0002-sponsoring-update-welcome-fontbureau/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;📜 We&amp;#39;re overjoyed to announce that the Font Bureau is a gold 🥇 sponsor for the Libre Graphics Meeting 2025!
+&lt;/p&gt;
+    &amp;lt;p&amp;gt;🏆 Font Bureau is a longstanding type design studio known for its contributions
+to typography innovation. They create the incredible FLOSS &amp;lt;a href=&amp;quot;https://github.com/googlefonts/amstelvar-avar2&amp;quot;&amp;gt;Amsetlvar&amp;lt;/a&amp;gt;
+and &amp;lt;a href=&amp;quot;https://github.com/googlefonts/roboto-delta&amp;quot;&amp;gt;RobotoFlex/RobotoDelta&amp;lt;/a&amp;gt;
+parametric fonts and they establish the &amp;lt;a href=&amp;quot;https://fontbureau.github.io/TypeRoof/docs/&amp;quot;&amp;gt;TypeRoof&amp;lt;/a&amp;gt;
+project to proof and use parametric typography. 🅰️ 🅱️🔤📖✨&amp;lt;/p&amp;gt;
+&amp;lt;h2&amp;gt;&amp;lt;a id=&amp;quot;sponsorship-information&amp;quot; class=&amp;quot;heading_anchor&amp;quot; href=&amp;quot;#sponsorship-information&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;#&amp;lt;/a&amp;gt;Sponsorship Information&amp;lt;/h2&amp;gt;
+&amp;lt;p&amp;gt;Find information about becoming an LGM sponsorship partner and all of our sponsors on the &amp;lt;a href=&amp;quot;/2025/sponsors&amp;quot;&amp;gt;Sponsorship Information Page&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt;
+</content>
+  </entry>
   <entry>
     <title>Sponsorship Announcement: GIMP</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-05-19_0001-sponsoring-update-welcome-gimp/" />
