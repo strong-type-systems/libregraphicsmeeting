@@ -675,15 +675,6 @@
                 "do_not_record": false,
                 "persons": [
                   {
-                    "code": "DAVE",
-                    "id": 1455155935,
-                    "name": "Dave Crossland",
-                    "avatar": null,
-                    "guid": "56bbeadf-7bd6-5d8e-a8d4-5efdb9e5cc2a",
-                    "url": "https://libregraphicsmeeting.org/2025/hosts/Dave/",
-                    "biography": "## Biography\n\nDave Crossland attended the first Libre Graphics Meeting in 2006, and became\nfascinated with the potential of libre licensing to improve design. Since\nthen, he has worked to liberate typography, mainly as a program manager for\n[Google Fonts](https://fonts.google.com/). He believes the future is\nfree time and nothing else; free time, free software, free society.\n\n## Links\n\n* [Google Fonts](https://fonts.google.com/)"
-                  },
-                  {
                     "code": "LASSE",
                     "id": 3771085974,
                     "name": "Lasse Fister",
