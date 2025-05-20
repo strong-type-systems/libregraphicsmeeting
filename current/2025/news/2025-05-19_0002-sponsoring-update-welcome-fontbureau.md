@@ -7,7 +7,7 @@ lead: >
 ---
 
 🏆 Font Bureau is a longstanding type design studio known for its contributions
-to typography innovation. They create the incredible FLOSS [Amsetlvar](https://github.com/googlefonts/amstelvar-avar2)
+to typography innovation. They create the incredible FLOSS [Amstelvar](https://github.com/googlefonts/amstelvar-avar2)
 and [RobotoFlex/RobotoDelta](https://github.com/googlefonts/roboto-delta)
 parametric fonts and they establish the [TypeRoof](https://fontbureau.github.io/TypeRoof/docs/)
 project to proof and use parametric typography. 🅰️ 🅱️🔤📖✨
