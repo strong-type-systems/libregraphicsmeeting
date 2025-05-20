@@ -3,7 +3,7 @@ layout: news.njk
 tags: news
 title: "Sponsorship Announcement: Font Bureau"
 lead: >
-    📜 We're overjoyed to announce that the Font Bureau is a gold 🥇 sponsor for the Libre Graphics Meeting 2025!
+    📜 We're overjoyed to announce that the <a href="https://www.myfonts.com/collections/font-bureau-foundry?srsltid=AfmBOoow76AMX2wjZS58rQQJL9GD0fpnnmBL1DOPddYAo3b1ADOy391l" >Font Bureau</a> is a gold 🥇 sponsor for the Libre Graphics Meeting 2025!
 ---
 
 🏆 Font Bureau is a longstanding type design studio known for its contributions

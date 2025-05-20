@@ -15,7 +15,8 @@ difference, and we truly appreciate your partnership.
 
 ## Gold Partners
 
-{{ macro.sponsor('gold', 'Font Bureau', 'https://github.com/FontBureau/',
+{{ macro.sponsor('gold', 'Font Bureau',
+    'https://www.myfonts.com/collections/font-bureau-foundry?srsltid=AfmBOoow76AMX2wjZS58rQQJL9GD0fpnnmBL1DOPddYAo3b1ADOy391l',
     rootPath + '/img/partners/font-bureau_logo.svg'
     ) }}
 
