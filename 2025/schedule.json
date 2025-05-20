@@ -35,7 +35,7 @@
               {
                 "guid": "9fe86f24-e27f-5857-a2d0-65e25ede6c1a",
                 "code": "WELCOME",
-                "id": 1,
+                "id": 2682810148,
                 "logo": null,
                 "date": "2025-05-28T11:45:00.000Z",
                 "start": "13:45",
@@ -54,7 +54,7 @@
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -63,7 +63,7 @@
                   },
                   {
                     "code": "LASSE",
-                    "id": 1,
+                    "id": 3771085974,
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
@@ -76,7 +76,7 @@
               {
                 "guid": "101095fa-7157-5c60-ab99-18108c8ca2e9",
                 "code": "REIMAGINATIONPRIMER",
-                "id": 2,
+                "id": 269522426,
                 "logo": null,
                 "date": "2025-05-28T12:15:00.000Z",
                 "start": "14:15",
@@ -95,7 +95,7 @@
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -104,7 +104,7 @@
                   },
                   {
                     "code": "LASSE",
-                    "id": 1,
+                    "id": 3771085974,
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
@@ -113,7 +113,7 @@
                   },
                   {
                     "code": "SIMONH",
-                    "id": 2,
+                    "id": 3022607454,
                     "name": "Simon Harhues",
                     "avatar": null,
                     "guid": "b429545e-0949-5db1-993b-54a1aec5b62b",
@@ -126,7 +126,7 @@
               {
                 "guid": "6673d296-db3c-5d67-af0f-881ff76cf837",
                 "code": "STATEOFLIBREGRAPHICS",
-                "id": 3,
+                "id": 1718866582,
                 "logo": null,
                 "date": "2025-05-28T12:40:00.000Z",
                 "start": "14:40",
@@ -139,13 +139,13 @@
                 "track": null,
                 "type": "talk",
                 "language": "en",
-                "abstract": "An update from the many projects of our community.\n\n## Submit Slides and Content\n\nPlease submit your slides as Pull Requests to https://github.com/libregraphicsmeeting/state-of-lg-2025\ndetails to the format and process are in the README of the repository. If\nyou have trouble contributing this way, feel free to contact us directly:\n[libregraphicsmeeting@strong-type.systems](mailto:libregraphicsmeeting@strong-type.systems).\n\n## Call for Slides\n\nThe public announcement is at: [Call for Slides: State of Libre Graphics]({{rootPath}}news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/).",
+                "abstract": "An update from the many projects of our community.\n\n## Submit Slides and Content\n\nPlease submit your slides as Pull Requests to https://github.com/libregraphicsmeeting/state-of-lg-2025\ndetails to the format and process are in the README of the repository. If\nyou have trouble contributing this way, feel free to contact us directly:\n[libregraphicsmeeting@strong-type.systems](mailto:libregraphicsmeeting@strong-type.systems).\n\n## Call for Slides\n\nThe public announcement is at: [Call for Slides: State of Libre Graphics](news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/).",
                 "recording_license": "",
                 "do_not_record": false,
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -154,7 +154,7 @@
                   },
                   {
                     "code": "MABARBE",
-                    "id": 1,
+                    "id": 1371969613,
                     "name": "MABarbe",
                     "avatar": null,
                     "guid": "51c6984d-dc2c-5d84-bd4d-7426b33492bb",
@@ -167,7 +167,7 @@
               {
                 "guid": "c18cf2df-b5e9-509a-8e94-764be8456677",
                 "code": "STATEOFPROCESSING",
-                "id": 4,
+                "id": 3247239903,
                 "logo": null,
                 "date": "2025-05-28T13:05:00.000Z",
                 "start": "15:05",
@@ -186,7 +186,7 @@
                 "persons": [
                   {
                     "code": "RAPHAL",
-                    "id": 0,
+                    "id": 3322109902,
                     "name": "Raphaël de Courville",
                     "avatar": null,
                     "guid": "c6035fce-b434-5596-a73f-bd8ea02b256d",
@@ -195,7 +195,7 @@
                   },
                   {
                     "code": "STEF",
-                    "id": 1,
+                    "id": 1926402001,
                     "name": "Stef Tervelde",
                     "avatar": null,
                     "guid": "72d28fd1-beaf-5a40-9ac6-2d6742f3f3fc",
@@ -208,7 +208,7 @@
               {
                 "guid": "7718eed2-cdbd-5606-ad19-f5deac638901",
                 "code": "UPSTAGEPRESENTATION",
-                "id": 5,
+                "id": 1998122706,
                 "logo": null,
                 "date": "2025-05-28T13:30:00.000Z",
                 "start": "15:30",
@@ -227,7 +227,7 @@
                 "persons": [
                   {
                     "code": "HELEN",
-                    "id": 0,
+                    "id": 3460622662,
                     "name": "Helen Varley Jamieson",
                     "avatar": null,
                     "guid": "ce44e946-39e7-554c-828b-4c23e92ed5d9",
@@ -236,7 +236,7 @@
                   },
                   {
                     "code": "GLORIA",
-                    "id": 1,
+                    "id": 323163335,
                     "name": "Gloria W.",
                     "avatar": null,
                     "guid": "134314c7-d327-5efd-9390-2e5cfbfa8cf0",
@@ -249,7 +249,7 @@
               {
                 "guid": "f0f63c60-dd87-553f-ae91-b7698ba2d3de",
                 "code": "BACKTOBITMAPFONTS",
-                "id": 7,
+                "id": 4042669152,
                 "logo": null,
                 "date": "2025-05-28T14:20:00.000Z",
                 "start": "16:20",
@@ -268,7 +268,7 @@
                 "persons": [
                   {
                     "code": "NATHAN",
-                    "id": 0,
+                    "id": 3858393463,
                     "name": "Nathan Willis",
                     "avatar": null,
                     "guid": "e5fa6977-684d-5497-be51-bfd800f55697",
@@ -281,7 +281,7 @@
               {
                 "guid": "b8a1144e-0939-5306-bdab-ce34b855b86d",
                 "code": "CURIOUSCASEOFSPLINESFREECAD",
-                "id": 8,
+                "id": 3097564238,
                 "logo": null,
                 "date": "2025-05-28T14:45:00.000Z",
                 "start": "16:45",
@@ -300,7 +300,7 @@
                 "persons": [
                   {
                     "code": "AJINKYA",
-                    "id": 0,
+                    "id": 533833510,
                     "name": "Ajinkya Dahale",
                     "avatar": null,
                     "guid": "1fd1a726-f37a-5b57-b700-14d89049594f",
@@ -313,7 +313,7 @@
               {
                 "guid": "f1502d6f-4791-5d6b-a04b-591dcd74d20a",
                 "code": "PERMACOMPUTINGFERMENTINGREGENERATIVEAESTHETICS",
-                "id": 9,
+                "id": 4048563567,
                 "logo": null,
                 "date": "2025-05-28T15:10:00.000Z",
                 "start": "17:10",
@@ -332,7 +332,7 @@
                 "persons": [
                   {
                     "code": "BRENDAN",
-                    "id": 0,
+                    "id": 3990060619,
                     "name": "Brendan Howell",
                     "avatar": null,
                     "guid": "edd37e4b-36a5-5194-b686-c70c93c3899a",
@@ -345,7 +345,7 @@
               {
                 "guid": "1e11be55-3e1e-5fb6-8c2b-d108a85a5078",
                 "code": "OPENSOURCEVIDEOEDITINGLANDSCAPE",
-                "id": 10,
+                "id": 504479317,
                 "logo": null,
                 "date": "2025-05-28T15:35:00.000Z",
                 "start": "17:35",
@@ -364,7 +364,7 @@
                 "persons": [
                   {
                     "code": "SIMRAN",
-                    "id": 0,
+                    "id": 3306285668,
                     "name": "Simran Spiller",
                     "avatar": null,
                     "guid": "c511ea64-9813-5588-a7ed-27aa2cc73515",
@@ -387,7 +387,7 @@
               {
                 "guid": "ce58c9a8-20f6-5678-893b-475b1a516c54",
                 "code": "REIMAGINATIONWORKSHOP",
-                "id": 1,
+                "id": 3461925288,
                 "logo": null,
                 "date": "2025-05-29T08:10:00.000Z",
                 "start": "10:10",
@@ -406,7 +406,7 @@
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -415,7 +415,7 @@
                   },
                   {
                     "code": "LASSE",
-                    "id": 1,
+                    "id": 3771085974,
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
@@ -424,7 +424,7 @@
                   },
                   {
                     "code": "SIMONH",
-                    "id": 2,
+                    "id": 3022607454,
                     "name": "Simon Harhues",
                     "avatar": null,
                     "guid": "b429545e-0949-5db1-993b-54a1aec5b62b",
@@ -437,7 +437,7 @@
               {
                 "guid": "8dd10a7d-1826-53f7-a359-0d4107783e30",
                 "code": "LIGHTNINGTALKS",
-                "id": 5,
+                "id": 2379287165,
                 "logo": null,
                 "date": "2025-05-29T13:50:00.000Z",
                 "start": "15:50",
@@ -456,7 +456,7 @@
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -465,7 +465,7 @@
                   },
                   {
                     "code": "TBD",
-                    "id": 1,
+                    "id": 3065806949,
                     "name": "TBD (Undetermined)",
                     "avatar": null,
                     "guid": "b6bc8065-d469-578a-add1-8770cca77349",
@@ -478,7 +478,7 @@
               {
                 "guid": "00c266f2-d243-5e4e-96c4-987821ac149b",
                 "code": "PCBARTWORKWITHKICAD",
-                "id": 7,
+                "id": 12740338,
                 "logo": null,
                 "date": "2025-05-29T15:15:00.000Z",
                 "start": "17:15",
@@ -497,7 +497,7 @@
                 "persons": [
                   {
                     "code": "SIMONB",
-                    "id": 0,
+                    "id": 2733410409,
                     "name": "Simon Budig",
                     "avatar": null,
                     "guid": "a2ec8869-f1e3-554d-a2ef-678d2853a954",
@@ -510,7 +510,7 @@
               {
                 "guid": "7075b719-5f50-549e-b532-131311511765",
                 "code": "THEPDFTOOLBOX",
-                "id": 8,
+                "id": 1886762777,
                 "logo": null,
                 "date": "2025-05-29T15:40:00.000Z",
                 "start": "17:40",
@@ -529,7 +529,7 @@
                 "persons": [
                   {
                     "code": "CDRIC",
-                    "id": 0,
+                    "id": 486485037,
                     "name": "Cédric Gémy",
                     "avatar": null,
                     "guid": "1cff2c2d-de28-5238-866d-51628ad0de71",
@@ -542,7 +542,7 @@
               {
                 "guid": "6a674661-45d5-553d-9d01-891d4e35d0be",
                 "code": "HYPER8VIDEOSYSTEM",
-                "id": 9,
+                "id": 1785153121,
                 "logo": null,
                 "date": "2025-05-29T16:05:00.000Z",
                 "start": "18:05",
@@ -561,7 +561,7 @@
                 "persons": [
                   {
                     "code": "SIMONR",
-                    "id": 0,
+                    "id": 2372405815,
                     "name": "Simon Repp",
                     "avatar": null,
                     "guid": "8d680a37-1571-5dae-8b93-ba14fdbb967e",
@@ -584,7 +584,7 @@
               {
                 "guid": "de1024b1-1d42-5f9c-9d19-732973dd4695",
                 "code": "REIMAGINING3DINTERACTIVEINTERNETPRESENTATION",
-                "id": 1,
+                "id": 3725599921,
                 "logo": null,
                 "date": "2025-05-30T08:10:00.000Z",
                 "start": "10:10",
@@ -597,27 +597,27 @@
                 "track": null,
                 "type": "talk",
                 "language": "en",
-                "abstract": "Hubs is an open-source interactive browser based 3D meeting space. It is\nnow fully integrated in Blender 3D, which is using an extended version of\nthe gltf format. An extension allows you to attach all the basic components\nto objects, like particles, UV animations, water and much more. But you can\nalso share links, videos and audio right inside your 3D rooms.\n\nSoon another feature was added to the gtlf exporter, the Behavior Graph.\nIt enables interactivity via node-based logic and is only available in\nBlender 3D. It is the very feature we would like to present to you. If\nyou are used to Blender’s nodes graphs, you might feel right at home.\nHowever managing interactivity creates a distinct difference, since every\nnode needs to get triggered by events, be it player interaction or just\ntimer based.\n\n{{ macro.blockImage('events/re-imagining_3D_interactive_internet-BehaviorGraph.png', 'BehaviorGraph Logo Illustration') }}",
+                "abstract": "Hubs is an open-source interactive browser based 3D meeting space. It is\nnow fully integrated in Blender 3D, which is using an extended version of\nthe gltf format. An extension allows you to attach all the basic components\nto objects, like particles, UV animations, water and much more. But you can\nalso share links, videos and audio right inside your 3D rooms.\n\nSoon another feature was added to the gtlf exporter, the Behavior Graph.\nIt enables interactivity via node-based logic and is only available in\nBlender 3D. It is the very feature we would like to present to you. If\nyou are used to Blender’s nodes graphs, you might feel right at home.\nHowever managing interactivity creates a distinct difference, since every\nnode needs to get triggered by events, be it player interaction or just\ntimer based.\n\n![BehaviorGraph Logo Illustration](https://libregraphicsmeeting.org/2025/img/events/re-imagining_3D_interactive_internet-BehaviorGraph.png)",
                 "recording_license": "",
                 "do_not_record": false,
                 "persons": [
                   {
                     "code": "GOTTFRIED",
-                    "id": 0,
+                    "id": 2159141950,
                     "name": "Gottfried Hofmann",
                     "avatar": null,
                     "guid": "80b1e43e-c8ef-5a45-bbb5-a9c2381427e3",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Gottfried/",
-                    "biography": "## Biography\n\nGottfried Hofmann and {{ macro.hostLink(['Frederik']) }} have been\ncontributing to the Blender community with tutorials, teaching, patches\nand addons. Together they are known as BlenderDiplom for their free\ntutorials on the subject.\n\nSince 2011 their expertise has grown from modelling/texturing and animation\nacross physics simulations like particles, fluids and smoke all the way over\nto python development. They have been speakers at several Blender Conferences\nand Libre Graphics Leipzig. And are now ready to talk about their latest\nrealm: browser-based interactivity.\n\n## Links\n\n* [website: BlenderDiplom](https://www.blenderdiplom.com)"
+                    "biography": "## Biography\n\nGottfried Hofmann and Frederik have been\ncontributing to the Blender community with tutorials, teaching, patches\nand addons. Together they are known as BlenderDiplom for their free\ntutorials on the subject.\n\nSince 2011 their expertise has grown from modelling/texturing and animation\nacross physics simulations like particles, fluids and smoke all the way over\nto python development. They have been speakers at several Blender Conferences\nand Libre Graphics Leipzig. And are now ready to talk about their latest\nrealm: browser-based interactivity.\n\n## Links\n\n* [website: BlenderDiplom](https://www.blenderdiplom.com)"
                   },
                   {
                     "code": "FREDERIK",
-                    "id": 1,
+                    "id": 1649164551,
                     "name": "Frederik Steinmetz",
                     "avatar": null,
                     "guid": "624c4107-8c94-59b2-a385-86045d7283e0",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Frederik/",
-                    "biography": "## Biography\n\n{{ macro.hostLink('Gottfried') }} and Frederik Steinmetz have been contributing\nto the Blender community with tutorials, teaching, patches and addons. Together\nthey are known as BlenderDiplom for their free tutorials on the subject.\n\nSince 2011 their expertise has grown from modelling/texturing and animation\nacross physics simulations like particles, fluids and smoke all the way over\nto python development. They have been speakers at several Blender Conferences\nand Libre Graphics Leipzig. And are now ready to talk about their latest\nrealm: browser-based interactivity.\n\n## Links\n\n* [website: BlenderDiplom](https://www.blenderdiplom.com)"
+                    "biography": "## Biography\n\n[Gottfried Hofmann](https://libregraphicsmeeting.org/2025/hosts/Gottfried/) and Frederik Steinmetz have been contributing\nto the Blender community with tutorials, teaching, patches and addons. Together\nthey are known as BlenderDiplom for their free tutorials on the subject.\n\nSince 2011 their expertise has grown from modelling/texturing and animation\nacross physics simulations like particles, fluids and smoke all the way over\nto python development. They have been speakers at several Blender Conferences\nand Libre Graphics Leipzig. And are now ready to talk about their latest\nrealm: browser-based interactivity.\n\n## Links\n\n* [website: BlenderDiplom](https://www.blenderdiplom.com)"
                   }
                 ],
                 "links": []
@@ -625,7 +625,7 @@
               {
                 "guid": "c67d7cb4-8b65-524a-ba74-bee430604e59",
                 "code": "MAKINGWATERFALLS",
-                "id": 2,
+                "id": 3330112692,
                 "logo": null,
                 "date": "2025-05-30T08:35:00.000Z",
                 "start": "10:35",
@@ -644,7 +644,7 @@
                 "persons": [
                   {
                     "code": "TOM",
-                    "id": 0,
+                    "id": 1723169705,
                     "name": "Tom Lechner",
                     "avatar": null,
                     "guid": "66b57ba9-19a7-5241-b296-9c4d3071efa8",
@@ -657,7 +657,7 @@
               {
                 "guid": "03d26efe-cf7d-56d4-8087-ad066a6f0731",
                 "code": "FONTRA",
-                "id": 3,
+                "id": 64122622,
                 "logo": null,
                 "date": "2025-05-30T09:00:00.000Z",
                 "start": "11:00",
@@ -676,7 +676,7 @@
                 "persons": [
                   {
                     "code": "DAVE",
-                    "id": 0,
+                    "id": 1455155935,
                     "name": "Dave Crossland",
                     "avatar": null,
                     "guid": "56bbeadf-7bd6-5d8e-a8d4-5efdb9e5cc2a",
@@ -685,7 +685,7 @@
                   },
                   {
                     "code": "LASSE",
-                    "id": 1,
+                    "id": 3771085974,
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
@@ -698,7 +698,7 @@
               {
                 "guid": "fe3690ef-9185-573e-956c-d762e88e5260",
                 "code": "INTRODUCTIONUSABILITYUXEVALUATIONMETHODS",
-                "id": 4,
+                "id": 4264988911,
                 "logo": null,
                 "date": "2025-05-30T09:25:00.000Z",
                 "start": "11:25",
@@ -717,7 +717,7 @@
                 "persons": [
                   {
                     "code": "SIMONH",
-                    "id": 0,
+                    "id": 3022607454,
                     "name": "Simon Harhues",
                     "avatar": null,
                     "guid": "b429545e-0949-5db1-993b-54a1aec5b62b",
@@ -730,7 +730,7 @@
               {
                 "guid": "8dd10a7d-1826-53f7-a359-0d4107783e30",
                 "code": "LIGHTNINGTALKS",
-                "id": 8,
+                "id": 2379287165,
                 "logo": null,
                 "date": "2025-05-30T13:30:00.000Z",
                 "start": "15:30",
@@ -749,7 +749,7 @@
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -758,7 +758,7 @@
                   },
                   {
                     "code": "TBD",
-                    "id": 1,
+                    "id": 3065806949,
                     "name": "TBD (Undetermined)",
                     "avatar": null,
                     "guid": "b6bc8065-d469-578a-add1-8770cca77349",
@@ -771,7 +771,7 @@
               {
                 "guid": "abd14105-785c-52c6-8962-d557195462a7",
                 "code": "3000PCTFASTERFILESAVINGWITHTIMETRAVEL",
-                "id": 10,
+                "id": 2882617605,
                 "logo": null,
                 "date": "2025-05-30T14:50:00.000Z",
                 "start": "16:50",
@@ -790,7 +790,7 @@
                 "persons": [
                   {
                     "code": "CARSTEN",
-                    "id": 0,
+                    "id": 2134182700,
                     "name": "Carsten Hartenfels",
                     "avatar": null,
                     "guid": "7f350b2c-0b8c-5f16-b542-64d7068c8117",
@@ -803,7 +803,7 @@
               {
                 "guid": "250fa898-d6e8-50ba-95d2-a0ad1361f3f1",
                 "code": "FROMPRINTERDUSTTILLGRAPHICSDAWNPRESENTATION",
-                "id": 11,
+                "id": 621783192,
                 "logo": null,
                 "date": "2025-05-30T15:15:00.000Z",
                 "start": "17:15",
@@ -822,30 +822,30 @@
                 "persons": [
                   {
                     "code": "XPUB",
-                    "id": 0,
+                    "id": 74248528,
                     "name": "XPUB",
                     "avatar": null,
                     "guid": "046cf150-6045-5a9b-ab15-ee2d4bd645b0",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/XPUB/",
-                    "biography": "## Biography\n\nXPUB is the Master of Arts in Fine Art and Design: Experimental Publishing\nof the Piet Zwart Institute in Rotterdam (NL). XPUB focuses on the acts of\nmaking things public and creating publics in the age of post-digital networks.\n\n## People\n\n{{ macro.hostLinkList(['Manetta', 'Joseph']) }}\n\n## Links\n\n* [website: xpub.nl](https://xpub.nl/)"
+                    "biography": "## Biography\n\nXPUB is the Master of Arts in Fine Art and Design: Experimental Publishing\nof the Piet Zwart Institute in Rotterdam (NL). XPUB focuses on the acts of\nmaking things public and creating publics in the age of post-digital networks.\n\n## People\n\n\n * [Manetta Berends](https://libregraphicsmeeting.org/2025/hosts/Manetta/)\n * [Joseph Knierzinger](https://libregraphicsmeeting.org/2025/hosts/Joseph/)\n\n\n## Links\n\n* [website: xpub.nl](https://xpub.nl/)"
                   },
                   {
                     "code": "MANETTA",
-                    "id": 1,
+                    "id": 747733016,
                     "name": "Manetta Berends",
                     "avatar": null,
                     "guid": "2c918018-0cb4-5727-9109-1ddd84f9e47c",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Manetta/",
-                    "biography": "## Biography\n\nManetta Berends (she/her) works with forms of networked publishing,\nsituated software and collective infrastructures. She is a prototyping tutor\nat the Master Experimental Publishing ({{ macro.hostLink('XPUB') }}),\nco-runs an artistic server called creative crowds (CC) and works on various\npublishing projects and artistic tools.\n\n\n## Organization\n\n{{ macro.hostLinkList(['XPUB']) }}\n\n## Links\n\n* [website: manettaberends.nl](https://manettaberends.nl)"
+                    "biography": "## Biography\n\nManetta Berends (she/her) works with forms of networked publishing,\nsituated software and collective infrastructures. She is a prototyping tutor\nat the Master Experimental Publishing ([XPUB](https://libregraphicsmeeting.org/2025/hosts/XPUB/)),\nco-runs an artistic server called creative crowds (CC) and works on various\npublishing projects and artistic tools.\n\n\n## Organization\n\n\n * [XPUB](https://libregraphicsmeeting.org/2025/hosts/XPUB/)\n\n\n## Links\n\n* [website: manettaberends.nl](https://manettaberends.nl)"
                   },
                   {
                     "code": "JOSEPH",
-                    "id": 2,
+                    "id": 637688486,
                     "name": "Joseph Knierzinger",
                     "avatar": null,
                     "guid": "26025aa6-a5bf-5641-8e35-ca77d9b48b56",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Joseph/",
-                    "biography": "## Biography\n\nPrototyping tutor at {{ macro.hostLink('XPUB') }}.\n\n## Organization\n\n{{ macro.hostLinkList(['XPUB']) }}"
+                    "biography": "## Biography\n\nPrototyping tutor at [XPUB](https://libregraphicsmeeting.org/2025/hosts/XPUB/).\n\n## Organization\n\n\n * [XPUB](https://libregraphicsmeeting.org/2025/hosts/XPUB/)\n"
                   }
                 ],
                 "links": []
@@ -853,7 +853,7 @@
               {
                 "guid": "80c9eab1-6a89-55ab-9ce6-d9264f72822d",
                 "code": "ELEPHANTINTHEROOMWHOOWNSTHEIMAGE",
-                "id": 12,
+                "id": 2160716465,
                 "logo": null,
                 "date": "2025-05-30T15:40:00.000Z",
                 "start": "17:40",
@@ -872,7 +872,7 @@
                 "persons": [
                   {
                     "code": "EYLUL",
-                    "id": 0,
+                    "id": 704388118,
                     "name": "Eylul Dogruel",
                     "avatar": null,
                     "guid": "29fc1c16-cb3e-52bd-89fd-941a765bff41",
@@ -885,7 +885,7 @@
               {
                 "guid": "8c2d4f0a-6a17-51b3-a566-4006183992cf",
                 "code": "LIBREDESIGNERSANDTHESOFTWAREAPOCALYPSE",
-                "id": 13,
+                "id": 2351779594,
                 "logo": null,
                 "date": "2025-05-30T16:05:00.000Z",
                 "start": "18:05",
@@ -904,7 +904,7 @@
                 "persons": [
                   {
                     "code": "NEIL",
-                    "id": 0,
+                    "id": 2899160849,
                     "name": "Neil C Smith",
                     "avatar": null,
                     "guid": "accdaf11-d87b-594e-ae8b-ad603071f8ff",
@@ -927,7 +927,7 @@
               {
                 "guid": "8f8066f8-dda8-5fd1-856f-4c74f464a7d6",
                 "code": "INKSCAPEUIVISIONGOINGFORWARD",
-                "id": 1,
+                "id": 2407556856,
                 "logo": null,
                 "date": "2025-05-31T08:10:00.000Z",
                 "start": "10:10",
@@ -946,7 +946,7 @@
                 "persons": [
                   {
                     "code": "HENRIQUE",
-                    "id": 0,
+                    "id": 857528703,
                     "name": "Henrique Perticarati",
                     "avatar": null,
                     "guid": "331cd97f-5f77-559c-9fda-922ac8f5d078",
@@ -959,7 +959,7 @@
               {
                 "guid": "251d6cd1-362b-5468-a98c-44ed8b5fa83c",
                 "code": "TYPEROOF",
-                "id": 2,
+                "id": 622685393,
                 "logo": null,
                 "date": "2025-05-31T08:35:00.000Z",
                 "start": "10:35",
@@ -978,7 +978,7 @@
                 "persons": [
                   {
                     "code": "LASSE",
-                    "id": 0,
+                    "id": 3771085974,
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
@@ -991,7 +991,7 @@
               {
                 "guid": "4dff28cf-df53-5d2c-886d-1deeb60535e5",
                 "code": "PRINTINGMAPSWITHSPOTCOLORS",
-                "id": 3,
+                "id": 1308567759,
                 "logo": null,
                 "date": "2025-05-31T09:00:00.000Z",
                 "start": "11:00",
@@ -1004,36 +1004,36 @@
                 "track": null,
                 "type": "talk",
                 "language": "en",
-                "abstract": "… using Qgis and Scribus with a little help from Inkscape, and Ghostscript.\n\n### A happy-ending story about finding out the tips and tricks along the way.\n\nLast November, we've been comissioned to produce a small series of printed\nmaps for a cultural center in Lessines, Belgium, to celebrate memories of\nLouis Scutenaire and René Magritte. We aimed for a project using three colors,\nand decided to go for spot color printing - using libre graphics tools, mainly\nQGIS for the design of the map, and Scribus for layout elements and to prepare\nthe pdfs for printing.\n\nWe also used Inkscape to vectorize some small illustrations, as well as\nGhostscript to check and sometimes fix the resulting PDFs.\n\nThen, once we decided that it would be spot color printing, we had to find\nout a workflow from QGIS to Scribus in order to produce PDFs for spot-color\nprinting. It was not without a few obstacles that we encountered, as both\nQGIS and Scribus present limitations in terms of color processing or vector\nrendering.\n\nWe will present our productive investigation into both QGIS and Scribus,\ndescribe how we use QGIS functionalities to optimize the maps for spot color\nprinting and show the tips and tricks we learned along the way - and share\nthe results, hoping to inspire other mapmakers around to give it a try.\n\n{{ macro.blockImage('events/printing_maps_with_spot_colors-feYCQ39ktaCeaGSR.png', 'A') }}",
+                "abstract": "… using Qgis and Scribus with a little help from Inkscape, and Ghostscript.\n\n### A happy-ending story about finding out the tips and tricks along the way.\n\nLast November, we've been comissioned to produce a small series of printed\nmaps for a cultural center in Lessines, Belgium, to celebrate memories of\nLouis Scutenaire and René Magritte. We aimed for a project using three colors,\nand decided to go for spot color printing - using libre graphics tools, mainly\nQGIS for the design of the map, and Scribus for layout elements and to prepare\nthe pdfs for printing.\n\nWe also used Inkscape to vectorize some small illustrations, as well as\nGhostscript to check and sometimes fix the resulting PDFs.\n\nThen, once we decided that it would be spot color printing, we had to find\nout a workflow from QGIS to Scribus in order to produce PDFs for spot-color\nprinting. It was not without a few obstacles that we encountered, as both\nQGIS and Scribus present limitations in terms of color processing or vector\nrendering.\n\nWe will present our productive investigation into both QGIS and Scribus,\ndescribe how we use QGIS functionalities to optimize the maps for spot color\nprinting and show the tips and tricks we learned along the way - and share\nthe results, hoping to inspire other mapmakers around to give it a try.\n\n![A](https://libregraphicsmeeting.org/2025/img/events/printing_maps_with_spot_colors-feYCQ39ktaCeaGSR.png)",
                 "recording_license": "",
                 "do_not_record": false,
                 "persons": [
                   {
                     "code": "ATELIERCARTOGRAPHIQUE",
-                    "id": 0,
+                    "id": 1071701612,
                     "name": "Atelier cartographique",
                     "avatar": null,
                     "guid": "3fe0de6c-1717-5e26-8491-abf2c169cca8",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Atelier_cartographique/",
-                    "biography": "## Biography\n\nWe are a Brussels-based cooperative of cartographic practices. Our professions\nweave together software writing, design and territorial research to explore\nother modes of urban, social and political interaction.\n\nEach representation of the territory is produced from a specific point of\nview and is embedded within a particular production and reception context.\nWe commit to bring to light that no description of the territory is neutral,\nand to bring to life the underlying intentions within the projects with\nwhich we are associated.\n\n## People\n\n{{ macro.hostLinkList(['Julie', 'Pierre']) }}\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
+                    "biography": "## Biography\n\nWe are a Brussels-based cooperative of cartographic practices. Our professions\nweave together software writing, design and territorial research to explore\nother modes of urban, social and political interaction.\n\nEach representation of the territory is produced from a specific point of\nview and is embedded within a particular production and reception context.\nWe commit to bring to light that no description of the territory is neutral,\nand to bring to life the underlying intentions within the projects with\nwhich we are associated.\n\n## People\n\n\n * [Julie Vanderhaeghen](https://libregraphicsmeeting.org/2025/hosts/Julie/)\n * [Pierre Marchand](https://libregraphicsmeeting.org/2025/hosts/Pierre/)\n\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
                   },
                   {
                     "code": "PIERRE",
-                    "id": 1,
+                    "id": 2370962918,
                     "name": "Pierre Marchand",
                     "avatar": null,
                     "guid": "8d5205e6-38e1-5c9b-a65e-054ee504e9ed",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Pierre/",
-                    "biography": "## Biography\n\nPierre Marchand writes software and is a researcher at UGent (S:PAM)\nHe was co-developer of the open-source packages Scribus, Fontmatrix,\nWaend and Cartostation. A former visual artist and forestry technician,\nhe is a programmer-architect for collective projects linked to digital\ndata and its representation. His research focuses on a form of speculative\nprogramming that activates the dynamics of questioning, both in relation\nto the tools and to their historical and cultural dimensions, by\nexploring the processes involved in the formation of a digital sensibility.\n\n## Organization\n\n{{ macro.hostLinkList(['Atelier_cartographique']) }}\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
+                    "biography": "## Biography\n\nPierre Marchand writes software and is a researcher at UGent (S:PAM)\nHe was co-developer of the open-source packages Scribus, Fontmatrix,\nWaend and Cartostation. A former visual artist and forestry technician,\nhe is a programmer-architect for collective projects linked to digital\ndata and its representation. His research focuses on a form of speculative\nprogramming that activates the dynamics of questioning, both in relation\nto the tools and to their historical and cultural dimensions, by\nexploring the processes involved in the formation of a digital sensibility.\n\n## Organization\n\n\n * [Atelier cartographique](https://libregraphicsmeeting.org/2025/hosts/Atelier_cartographique/)\n\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
                   },
                   {
                     "code": "JULIE",
-                    "id": 2,
+                    "id": 3110033794,
                     "name": "Julie Vanderhaeghen",
                     "avatar": null,
                     "guid": "b95f5982-0f2a-5fc4-9dda-1c4b4aaacd9a",
                     "url": "https://libregraphicsmeeting.org/2025/hosts/Julie/",
-                    "biography": "## Biography\n\nJulie Vanderhaeghen is a geographer and illustrator, and a researcher at\nUGent (S:PAM). She has a cross-disciplinary role at AC, alternating\ncoordination with visual and technical questions and interventions.\n\n## Organization\n\n{{ macro.hostLinkList(['Atelier_cartographique']) }}\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
+                    "biography": "## Biography\n\nJulie Vanderhaeghen is a geographer and illustrator, and a researcher at\nUGent (S:PAM). She has a cross-disciplinary role at AC, alternating\ncoordination with visual and technical questions and interventions.\n\n## Organization\n\n\n * [Atelier cartographique](https://libregraphicsmeeting.org/2025/hosts/Atelier_cartographique/)\n\n\n## Links\n\n* [website: Atelier cartographique](https://atelier-cartographique.be)"
                   }
                 ],
                 "links": []
@@ -1041,7 +1041,7 @@
               {
                 "guid": "3b9fa3d6-faa6-5b02-803e-5eb59d04e7f7",
                 "code": "BUILDINGWEBSITEDESIGNSYSTEMWITHATOMICDESIGNPRINCIPLES",
-                "id": 4,
+                "id": 1000317910,
                 "logo": null,
                 "date": "2025-05-31T09:25:00.000Z",
                 "start": "11:25",
@@ -1060,7 +1060,7 @@
                 "persons": [
                   {
                     "code": "MARA",
-                    "id": 0,
+                    "id": 4197762154,
                     "name": "María \"Tatica\" Leandro",
                     "avatar": null,
                     "guid": "fa34c46a-12d4-55d9-8784-3e8f0fc44673",
@@ -1073,7 +1073,7 @@
               {
                 "guid": "a38d1f83-8455-5fcb-b42e-7fe17cae6fea",
                 "code": "HOWTORUNAFILMFESTIVALONLIBREGRAPHICS",
-                "id": 8,
+                "id": 2743934851,
                 "logo": null,
                 "date": "2025-05-31T13:30:00.000Z",
                 "start": "15:30",
@@ -1092,7 +1092,7 @@
                 "persons": [
                   {
                     "code": "MARC",
-                    "id": 0,
+                    "id": 677491741,
                     "name": "Marc Rodrigues",
                     "avatar": null,
                     "guid": "2861b41d-57fd-530e-aad6-68c685f0d60e",
@@ -1105,7 +1105,7 @@
               {
                 "guid": "7a50d3dd-e7d2-5cfd-aff9-aaadd0545786",
                 "code": "INKSTITCH",
-                "id": 9,
+                "id": 2052117469,
                 "logo": null,
                 "date": "2025-05-31T13:55:00.000Z",
                 "start": "15:55",
@@ -1124,7 +1124,7 @@
                 "persons": [
                   {
                     "code": "DANIEL",
-                    "id": 0,
+                    "id": 1173119633,
                     "name": "Daniel K. Schneider",
                     "avatar": null,
                     "guid": "45ec6291-ef0c-5b05-9465-836bf69fc4ec",
@@ -1137,7 +1137,7 @@
               {
                 "guid": "71623577-350a-5ced-82dc-d4b756788d6d",
                 "code": "NEXTLGM",
-                "id": 11,
+                "id": 1902261623,
                 "logo": null,
                 "date": "2025-05-31T14:50:00.000Z",
                 "start": "16:50",
@@ -1150,13 +1150,13 @@
                 "track": null,
                 "type": "discussion",
                 "language": "en",
-                "abstract": "We discuss our conclusions of our special focus [re:imagination]({{rootPath}}/program/label-re:imagination)\nand find out more about the next edition of the LGM.\n\n<div class=\"call_for_action\">\nCall for<br />\n<a href=\"{{rootPath}}/news/2025-05-08_0001-call-for-local-organizers-2026-2027\">Local organizers</a><br />\n2026 and 2027.\n</div>\n\n## Special focus – RE:imagination\n\nThe Libre Graphics Meeting faced significant challenges during and after\nthe pandemic. In [Rennes](/2024), France, 2024, the local organization team revitalized\nthe event, and now we aim to rebuild the international community and\nstrengthen the structures around the Libre Graphics Meeting.\n\nJoin us to reconnect with old friends and forge new connections. Under the\ntheme of **RE:imagination**, we are going to explore the future of the Libre\nGraphics Meeting together.",
+                "abstract": "We discuss our conclusions of our special focus [re:imagination](/program/label-re:imagination)\nand find out more about the next edition of the LGM.\n\n<div class=\"call_for_action\">\nCall for<br />\n<a href=\"/news/2025-05-08_0001-call-for-local-organizers-2026-2027\">Local organizers</a><br />\n2026 and 2027.\n</div>\n\n## Special focus – RE:imagination\n\nThe Libre Graphics Meeting faced significant challenges during and after\nthe pandemic. In [Rennes](/2024), France, 2024, the local organization team revitalized\nthe event, and now we aim to rebuild the international community and\nstrengthen the structures around the Libre Graphics Meeting.\n\nJoin us to reconnect with old friends and forge new connections. Under the\ntheme of **RE:imagination**, we are going to explore the future of the Libre\nGraphics Meeting together.",
                 "recording_license": "",
                 "do_not_record": false,
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -1165,7 +1165,7 @@
                   },
                   {
                     "code": "TBD",
-                    "id": 1,
+                    "id": 3065806949,
                     "name": "TBD (Undetermined)",
                     "avatar": null,
                     "guid": "b6bc8065-d469-578a-add1-8770cca77349",
@@ -1178,7 +1178,7 @@
               {
                 "guid": "3f5c83c8-6503-5b2f-ab9d-5e7e89aaa6b8",
                 "code": "GOODBYE",
-                "id": 12,
+                "id": 1063027656,
                 "logo": null,
                 "date": "2025-05-31T15:40:00.000Z",
                 "start": "17:40",
@@ -1197,7 +1197,7 @@
                 "persons": [
                   {
                     "code": "LGM",
-                    "id": 0,
+                    "id": 1646698273,
                     "name": "LGM Community",
                     "avatar": null,
                     "guid": "62269f21-2b8d-5488-b9f5-a031ea106aea",
@@ -1206,7 +1206,7 @@
                   },
                   {
                     "code": "LASSE",
-                    "id": 1,
+                    "id": 3771085974,
                     "name": "Lasse Fister",
                     "avatar": null,
                     "guid": "e0c63496-be82-5802-8f32-7705d7b83cff",
