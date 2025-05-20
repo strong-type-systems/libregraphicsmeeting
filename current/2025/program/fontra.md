@@ -2,7 +2,7 @@
 labels: [fonts, typography, vector]
 type: talk
 title: "Fontra —\nThe Browser-Based Font Editor"
-hosts: [Dave, Lasse]
+hosts: [Lasse]
 ---
 
 Fontra is a novel, libre, browser-based, cross-platform, variable-first font editor.
