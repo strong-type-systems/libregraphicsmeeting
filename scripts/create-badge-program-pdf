@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+import path from 'node:path';
+import puppeteer from 'puppeteer';
+import { mkdir } from 'node:fs/promises';
+
+async function runTest() {
+    const browser = await puppeteer.launch({
+        headless: false
+      , timeout: 100000
+      // , executablePath: '/usr/bin/google-chrome-stable'
+      , executablePath:  '/usr/bin/chromium-browser'
+    });
+
+    try {
+        const url = 'http://localhost:8081/2025/program/badge'
+        //const url = 'http://libregraphicsmeeting.org/2025/program/'
+          , basename = path.basename(url)
+          , targetFolder = `./badge/`
+          , createDir = await mkdir(targetFolder, { recursive: true })
+          ;
+
+        const page = await browser.newPage();
+        await page.goto(url, {
+             waitUntil: ["load", "domcontentloaded"]
+        });
+
+        // Saves the PDF
+        const result = await page.pdf({
+             path: `${targetFolder}/badge-program.pdf`
+           //, height: '297mm'
+           // , width: '105mm'
+           , preferCSSPageSize: true
+        });
+        console.log(`DONE ${targetFolder}/badge-program.pdf`);
+    }
+    catch(error) {
+        console.error(error);
+        throw error;
+    }
+    finally {
+        await browser.close();
+    }
+}
+
+runTest();

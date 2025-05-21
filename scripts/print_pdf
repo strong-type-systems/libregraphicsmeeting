@@ -1,0 +1,60 @@
+#! /usr/bin/env python3
+
+import sys
+import cups
+
+if __name__ == '__main__':
+    pdf_file = sys.argv[1]
+    conn = cups.Connection()
+    printers = conn.getPrinters()
+    printer_names = [*printers.keys()]
+    print('printer_names:', printer_names)
+    printer_name = printer_names[0]
+    # https://openprinting.github.io/cups/doc/options.html
+    # $ lpstat -p -d
+    #   HP-LaserJet-Pro-MFP-M225dw
+    # $ lpoptions -p HP-LaserJet-Pro-MFP-M225dw
+    #       copies=1
+    #       device-uri=socket://192.168.178.23
+    #       finishings=3
+    #       job-cancel-after=10800
+    #       job-hold-until=no-hold
+    #       job-priority=50
+    #       job-sheets=none,none
+    #       marker-change-time=1747835260
+    #       marker-colors=#000000
+    #       marker-levels=49
+    #       marker-names='Black Cartridge HP CF283X'
+    #       marker-types=toner
+    #       number-up=1
+    #       print-color-mode=color
+    #       printer-commands=AutoConfigure,Clean,PrintSelfTestPage
+    #       printer-info='HP LaserJet Pro MFP M225dw'
+    #       printer-is-accepting-jobs=true
+    #       printer-is-shared=true
+    #       printer-is-temporary=false
+    #       printer-location
+    #       printer-make-and-model='Generic PostScript Printer'
+    #       printer-state=3
+    #       printer-state-change-time=1747835260
+    #       printer-state-reasons=none
+    #       printer-type=8400972
+    #       printer-uri-supported=ipp://localhost/printers/HP-LaserJet-Pro-MFP-M225dw
+    # $ lpoptions -p HP-LaserJet-Pro-MFP-M225dw -l
+    #       PageSize/Media Size: *Letter Legal Executive Tabloid A3 A4 A5 B5 EnvISOB5 Env10 EnvC5 EnvDL EnvMonarch
+    #       InputSlot/Media Source: *Default Upper Manual
+    #       Duplex/2-Sided Printing: *None DuplexNoTumble DuplexTumble
+    #       Option1/Duplexer: *False True
+
+    ppd_connection_options = {
+        'media': 'A4' # Custom.105x297mm  it doesn't take the custom 110x297 format anyways
+      # , 'sides': 'two-sided-long-edge' not working with the special 110x297 format
+      , 'job-sheets': 'none'
+      , 'position': 'top-center'
+      #, 'scaling': '100' # %
+      , 'print-scaling': 'none'
+      # , 'natural-scaling': '100' # %
+      , 'copies': '1'
+    } # ppd_options
+    cups_job_id = conn.printFile(printer_name, pdf_file,f'print from {sys.argv[0]} ', ppd_connection_options)
+    print('cups_job_id', cups_job_id);

@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# runlike: /web_2025>$ ./scripts/frames-to-video clip_frames/test/
+# run like: /web_2025>$ ./scripts/frames-to-video clip_frames/test/
 # creates clip_frames/test.mkv
 
 

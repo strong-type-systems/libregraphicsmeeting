@@ -6,8 +6,10 @@ import { mkdir } from 'node:fs/promises';
 
 async function runTest() {
     const browser = await puppeteer.launch({
-        headless: false,
-        timeout: 100000
+        headless: false
+      , timeout: 100000
+      // , executablePath: '/usr/bin/google-chrome-stable'
+      , executablePath:  '/usr/bin/chromium-browser'
     });
 
     try {
@@ -42,11 +44,14 @@ async function runTest() {
             });
             console.log(`DONE ${i} of ${l} time: ${currentTime - tOffset}s (offset ${tOffset})`);
         }
-    } finally {
+    }
+    catch(error) {
+        console.error(error);
+        throw error;
+    }
+    finally {
         await browser.close();
     }
-
-    browser.close();
 }
 
 
