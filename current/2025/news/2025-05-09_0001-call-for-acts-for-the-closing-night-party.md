@@ -5,9 +5,9 @@ title: Call for Acts for the Closing Night Party
 lead: "<s>Saturday, May 31st: After the conference program, we have a venue but not a line-up. Yet!</s>"
 ---
 
-*UPDATE* **we don't have a venue anymore!** I was very late to request Desi
-from the beginning and we had a miscommunication. Today (May, 21th) they
-pulled back. The line-up was coming together, thus, this call can be
+*UPDATE:* **We don’t have a venue anymore! I was very late requesting Desi
+from the beginning, and we had a miscommunication. Today (May 21st), they
+pulled back.  The line-up was coming together, thus, this call can be
 regarded a success. If we can put up a closing night party, it will be
 published here.
 
