@@ -1026,6 +1026,7 @@ h2:has(+ .event-hosts, + .event-labels) {
 .schedule :is(th) {
     padding-inline-start: .1em;
     padding-inline-end: .6em;
+    padding-block: 0;
 }
 
 .schedule td, .schedule_item-type-sessions li:not(:last-child) {
