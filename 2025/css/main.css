@@ -22,6 +22,7 @@
     --text-wght: 400;
     --text-grad: 0;
     --text-slnt: 0;
+    --text-xtra: 468;
     /* use this instead of em*/
     --font-size: 1;
     /* only used for opsz. We don't yet get the actual document fs*/
@@ -43,7 +44,9 @@ header nav.ui_collapsible_mixin-open:after
             "wdth" var(--text-wdth, 100),
             "wght" var(--text-wght, 400),
             "GRAD" var(--text-grad, 0),
-            "slnt" var(--text-slnt, 0);
+            "slnt" var(--text-slnt, 0),
+            "XTRA" var(--text-xtra, 468);
+
 }
 
 h1 {
