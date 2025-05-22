@@ -1,0 +1,66 @@
+#!/usr/bin/env node
+
+import path from 'node:path';
+import puppeteer from 'puppeteer';
+import { mkdir } from 'node:fs/promises';
+
+async function runTest() {
+    const browser = await puppeteer.launch({
+        headless: true
+      , timeout: 100000
+      // , executablePath: '/usr/bin/google-chrome-stable'
+      , executablePath:  '/usr/bin/chromium-browser'
+    });
+
+    try {
+        const url = 'http://localhost:8081/2025/print/badge-name/'
+        //const url = 'http://libregraphicsmeeting.org/2025/program/'
+          , basename = path.basename(url)
+          , targetFolder = `./badge`
+          , createDir = await mkdir(targetFolder, { recursive: true })
+          ;
+
+        const page = await browser.newPage();
+        await page.goto(url, {
+             waitUntil: ["load", "domcontentloaded"]
+        });
+
+        // Inject Name particles...
+        await page.evaluate(
+            async (line1, line2, line3, role)=>{
+                    const contents = [
+                        ['.namebox_line-1', line1 || '']
+                      , ['.namebox_line-2', line2 || '']
+                      , ['.namebox_line-3', line3 || '']
+                      , ['.namebox_role', role || '']
+                    ];
+                    for(const [selector, content] of contents) {
+                        for(const element of document.querySelectorAll(selector))
+                            element.textContent = content;
+                    }
+                }
+          , 'Marc-Alexandre' // line1
+          , 'Barbe' // line 2
+          , ''// line 3
+          , 'speaker' // role
+        );
+        // Saves the PDF
+        // This should go to temp and be deleted after print!
+        const result = await page.pdf({
+             path: `${targetFolder}/badge-name.pdf`
+           //, height: '297mm'
+           // , width: '105mm'
+           , preferCSSPageSize: true
+        });
+        console.log(`DONE ${targetFolder}/badge-name.pdf`);
+    }
+    catch(error) {
+        console.error(error);
+        throw error;
+    }
+    finally {
+        await browser.close();
+    }
+}
+
+runTest();

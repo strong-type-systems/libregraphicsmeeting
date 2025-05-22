@@ -1,0 +1,37 @@
+---
+layout: badge-page.njk
+title: Program
+rootClass: badge-name
+docFontSize: 10 # make it fit the page!
+line1: ''
+line2: ''
+line3: ''
+role: ''
+
+---
+{%- macro renderSide(line1, line2, line3, role) -%}
+<div class="lgm_signet">
+    <img src="{{rootPath}}/css/lgm_2025-boxes_regular.svg" alt="The LGM-signet: three rotated rectangles, from left to right, declining in size, touching each other. "/>
+</div>
+<div class="namebox">
+    <p class="namebox_line namebox_line-1">{{line1 if line1 !== undefined else '(undefined)'}}</p>
+    <p class="namebox_line namebox_line-2">{{line2 if line2 !== undefined else '(undefined)'}}</p>
+    <p class="namebox_line namebox_line-3">{{line3 if line3 !== undefined else '(undefined)'}}</p>
+    <p class="namebox_role">{{role if role !== undefined else '(undefined)'}}</p>
+</div>
+<div class="lgm_logo">
+    <p class="lgm_logo_line lgm_logo_line-1"><span class="lgm_logo-libre_graphics">Libre Graphics</span></p>
+    <p class="lgm_logo_line lgm_logo_line-2"><span class="lgm_logo-meeting">Meeting</span> <span class="lgm_logo-2025">2025</span></p>
+    <p class="lgm_logo_line lgm_logo_line-3"><span class="lgm_logo-nuremberg">Nuremberg</span></p>
+    <p class="lgm_logo_line lgm_logo_line-4"><span class="lgm_logo-date">May 28 — 31</span></p>
+    <p class="lgm_logo_line lgm_logo_line-5"><span class="lgm_logo-re">RE:</span><span class="lgm_logo-imagination">imagination</span></p>
+</div>
+{%- endmacro -%}
+
+<div class="side side-a">
+{{ renderSide(line1, line2, line3, role) }}
+</div>
+
+<div class="side side-b">
+{{ renderSide(line1, line2, line3, role) }}
+</div>

@@ -6,7 +6,7 @@ import { mkdir } from 'node:fs/promises';
 
 async function runTest() {
     const browser = await puppeteer.launch({
-        headless: false
+        headless: true
       , timeout: 100000
       // , executablePath: '/usr/bin/google-chrome-stable'
       , executablePath:  '/usr/bin/chromium-browser'
@@ -26,14 +26,14 @@ async function runTest() {
         await page.goto(url, {
             waitUntil: ["load", "domcontentloaded"]
         });
-        const videoCtrlInit = await page.evaluate(async ()=>await backgroundTransitioner.videoCtrlInit());
+        await page.evaluate(async ()=>await backgroundTransitioner.videoCtrlInit());
         const frameRate = 50
           , seconds= 15
           , tOffset=3
           ;
         for(let i=0,l=seconds * frameRate;i<l;i++) {
             const currentTime = tOffset + i/frameRate;
-            const videoCtrlInit = await page.evaluate(
+            await page.evaluate(
                 async (currentTime)=>await backgroundTransitioner.videoCtrlSetToTime(currentTime)
               , currentTime
             );

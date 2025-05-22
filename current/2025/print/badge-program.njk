@@ -2,7 +2,7 @@
 layout: badge-page.njk
 title: Program
 rootClass: badge-program
-docFontSize: 7.3 # make it fit the page!
+docFontSize: 7.4 # make it fit the page!
 ---
 {%- macro renderTypeBreak(scheduleItem) -%}
 {{ scheduleItem.event.title }} ({{scheduleItem.fullDurationMin}} min)
@@ -113,6 +113,3 @@ docFontSize: 7.3 # make it fit the page!
     {{ renderScheduleRow(dailySchedules.timeZone[1], endItem) }}
 </table>
 {% endfor %}
-
-{# {% schedule dailySchedules, collections.allEvents %} #}
-

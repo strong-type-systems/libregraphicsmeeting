@@ -74,8 +74,124 @@ h2 {
   font-size: calc(1pt * var(--document-font-size-pt));
 }
 
-article {
-    padding: 5mm 10mm;
+.badge-program {
+    article {
+        padding: 5mm 10mm;
+        line-height: 1.2;
+    }
+}
+
+.badge-name {
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 148.5mm;
+        box-sizing: border-box;
+        padding: 8mm 0 4mm 0;
+    }
+
+    .side-b {
+        transform: rotate(0.5turn);
+    }
+
+    .lgm_signet img {
+        width: 90mm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .namebox{
+        line-height: 1;
+        text-align: center;
+        p {
+            margin: 0;
+        }
+    }
+    .namebox_line {
+        --font-size: 3.5;
+        --text-wght: 750;
+        --text-wdth: 0;
+    }
+    .namebox_role {
+        line-height: 2;
+        text-transform: uppercase;
+        --font-size: 1.2;
+    }
+
+    .lgm_logo_line {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lgm_logo{
+        text-transform: uppercase;
+        --font-size: 2.9;
+        --x-text-wdth: 1;
+        --x-text-xtra: 1;
+        line-height: .83;
+        /* It doesn't center nicely otherwise, as the <p> elements
+           develop some right margin. Perhaps because of white space?
+        */
+        width: 77mm;
+        white-space: nowrap;
+    }
+
+    .lgm_logo-libre_graphics,
+    .lgm_logo-2025,
+    .lgm_logo-date,
+    .lgm_logo-re
+    {
+        --text-wdth: 151;
+        --text-wght: 405;
+    }
+
+    .lgm_logo-meeting,
+    .lgm_logo-nuremberg,
+    .lgm_logo-imagination
+    {
+        --text-wdth: 120;
+        --text-wght: 1000;
+    }
+
+
+    .lgm_logo_line-1 {}
+    .lgm_logo-libre_graphics {
+        --text-xtra: 352;
+    }
+
+    .lgm_logo_line-2{}
+    .lgm_logo-meeting{
+        --text-xtra: 503;
+    }
+    .lgm_logo-2025{
+        --text-xtra: 323;
+    }
+
+    .lgm_logo_line-3{}
+    .lgm_logo-nuremberg{
+        --text-xtra: 536;
+    }
+
+    .lgm_logo_line-4{}
+    .lgm_logo-date{
+        --text-xtra: 595;
+    }
+
+    .lgm_logo_line-5{}
+    .lgm_logo-re{
+        --text-xtra: 323;
+    }
+    .lgm_logo-imagination{
+        --text-xtra: 330;
+    }
 }
 
 body {

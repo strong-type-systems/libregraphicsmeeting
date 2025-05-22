@@ -6,7 +6,7 @@ import { mkdir } from 'node:fs/promises';
 
 async function runTest() {
     const browser = await puppeteer.launch({
-        headless: false
+        headless: true
       , timeout: 100000
       // , executablePath: '/usr/bin/google-chrome-stable'
       , executablePath:  '/usr/bin/chromium-browser'
