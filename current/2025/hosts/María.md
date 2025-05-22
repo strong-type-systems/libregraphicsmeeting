@@ -1,6 +1,6 @@
 ---
 layout: host.njk
-fullName: 'María "Tatica" Leandro'
+fullName: 'María “Tatica” Leandro'
 ---
 
 ## Biography
