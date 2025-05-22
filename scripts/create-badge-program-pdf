@@ -13,7 +13,7 @@ async function runTest() {
     });
 
     try {
-        const url = 'http://localhost:8081/2025/program/badge'
+        const url = 'http://localhost:8081/2025/print/badge-program/'
         //const url = 'http://libregraphicsmeeting.org/2025/program/'
           , basename = path.basename(url)
           , targetFolder = `./badge/`
