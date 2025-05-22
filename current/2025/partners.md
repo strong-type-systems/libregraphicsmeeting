@@ -11,7 +11,7 @@ eleventyNavigation:
 Thank you to our partners. Your contributions play a vital role
 in making LGM happen. We appreciate your dedication and support.
 
-## Organization and Design
+## Organization, Event Management, Design, and Web
 
 {{ macro.partner('Strong Type Systems GmbH', 'https://strong-type.systems/',
     rootPath + '/img/partners/strong-type-systems_logo.svg') }}
