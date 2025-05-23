@@ -3,6 +3,7 @@ labels: ['permacomputing']
 type: talk
 title: "Permacomputing: Fermenting Regenerative Aesthetics"
 hosts: ['Brendan']
+clipsInjectClass: adjust-long-title
 ---
 
 Images created with digital graphic techniques have played a central role

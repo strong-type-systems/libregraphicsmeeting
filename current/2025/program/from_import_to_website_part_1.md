@@ -3,6 +3,7 @@ labels: [photography, web, ART, RawTherapee, toolbox]
 type: workshop
 title: "From the Import to the Website — part\xa01: importing and developing raw captures"
 hosts: [Anna]
+clipsInjectClass: adjust-very-long-title
 ---
 
 
