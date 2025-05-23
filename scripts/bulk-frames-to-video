@@ -1,0 +1,21 @@
+#! /usr/bin/env bash
+# run like: /web_2025>$ ./scripts/frames-to-video clip_frames/test/
+# creates clip_frames/test.mkv
+
+
+#Am besten schmeckt uns
+#  ein MKV/MP4 File
+#  mit H264/AAC Codecs, 1080p50, yuv422, rec709.
+
+SOURCE="$1"
+MY_DIR="`dirname $0`"
+TARGET_DIR="$2"
+
+echo SOURCE: $SOURCE
+for CLIP_SOURCE in $SOURCE/*/ ; do
+    ${MY_DIR}/frames-to-video $CLIP_SOURCE
+    # ffmpeg -y  -framerate 50 -i ${CLIP_SOURCE}frame_\%10d.png -c:v libx264 -r 50 -pix_fmt yuv422p ${TARGET_FILE}
+done
+
+
+
