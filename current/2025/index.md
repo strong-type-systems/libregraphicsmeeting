@@ -21,6 +21,22 @@ The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany 
 The Libre Graphics Meeting  is an annual meeting on Free/Libre and
 Open Source software for graphics.
 
+## Directions
+
+The main location is:<br />
+**Karl-Bröger-Zentrum**<br />
+Karl-Bröger-Straße 9<br />
+90459 Nürnberg<br /><br />
+See the [Venues page]({{rootPath}}/venues) for more details.
+
+## Live Streaming
+
+Go to [https://streaming.media.ccc.de/](https://streaming.media.ccc.de/)
+
+## During the event
+
+Use our [IRC/Matrix Channel]({{rootPath}}/contact/#chat--matrix-and-irc) for direct updates and to stay in contact.
+
 ## Key Actions
  1. Read our [Program]({{rootPath}}/program),
  2.
