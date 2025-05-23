@@ -1,10 +1,32 @@
 #!/usr/bin/env node
-
+/**
+ * Usage:
+ *   # use https://libregraphicsmeeting.org
+ *   $ ./scripts/create-badge-program-pdf
+ *   >>> URL: https://libregraphicsmeeting.org/2025/print/badge-program/
+ *   >>> targetPath: badge/badge-program.pdf
+ *
+ *   # with explicit url
+ *   $ ./scripts/create-badge-program-pdf --base-url http://localhost:8081
+ *   >>> URL: http://localhost:8081/2025/print/badge-program/
+ *   >>> targetPath: badge/badge-program.pdf
+ *
+ *   # with explicit target
+ *   $ ./scripts/create-badge-program-pdf --target badge/other-program.pdf
+ *   >>> URL: https://libregraphicsmeeting.org/2025/print/badge-program/
+ *   >>> targetPath: badge/other-program.pdf
+ *
+ *   # with explicit url and target
+ *   $ ./scripts/create-badge-program-pdf --base-url http://localhost:8081 --target badge/other-program.pdf
+ *   >>> URL: http://localhost:8081/2025/print/badge-program/
+ *   >>> targetPath: badge/other-program.pdf
+ */
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { mkdir } from 'node:fs/promises';
+import { ArgumentParser } from 'argparse';
 
-async function runTest() {
+async function runTest(baseUrl, targetPath) {
     const browser = await puppeteer.launch({
         headless: true
       , timeout: 100000
@@ -13,12 +35,9 @@ async function runTest() {
     });
 
     try {
-        const url = 'http://localhost:8081/2025/print/badge-program/'
-        //const url = 'http://libregraphicsmeeting.org/2025/program/'
-          , basename = path.basename(url)
-          , targetFolder = `./badge/`
-          , createDir = await mkdir(targetFolder, { recursive: true })
-          ;
+        const url = new URL('2025/print/badge-program/', baseUrl);
+        console.log(`URL: ${url}`);
+        console.log(`targetPath: ${targetPath}`);
 
         const page = await browser.newPage();
         await page.goto(url, {
@@ -27,12 +46,12 @@ async function runTest() {
 
         // Saves the PDF
         const result = await page.pdf({
-             path: `${targetFolder}/badge-program.pdf`
+             path: targetPath
            //, height: '297mm'
            // , width: '105mm'
            , preferCSSPageSize: true
         });
-        console.log(`DONE ${targetFolder}/badge-program.pdf`);
+        console.log(`DONE ${targetPath}`);
     }
     catch(error) {
         console.error(error);
@@ -43,4 +62,19 @@ async function runTest() {
     }
 }
 
-runTest();
+const parser = new ArgumentParser({ description: 'Generate the bade program side PDF for LGM 2025.' });
+
+parser.add_argument('--base-url', {
+    dest: 'baseUrl'
+  , default: 'https://libregraphicsmeeting.org'
+  , help: 'The base source url for badge, include the port number if necessary (e.g. "http://localhost:8081").'
+});
+
+parser.add_argument('--target', {
+    dest: 'target'
+  , default: 'badge/badge-program.pdf'
+  , help: 'The file path to save the badge program to.'
+});
+
+let args = parser.parse_args();
+runTest(args.baseUrl, args.target);

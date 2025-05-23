@@ -1,10 +1,38 @@
 #!/usr/bin/env node
+/**
+ * Usage:
+ *
+ * On bash use $'\ua0' (non breaking space) to create an empty line.
+ *
+ *   $ ./scripts/create-badge-name-pdf --base-url http://localhost:8081  badge/john-doe.pdf -1 'John' -2 'Doe' -r s
+ *   >>> URL: http://localhost:8081/2025/print/badge-name/
+ *       targetPath: badge/john-doe.pdf
+ *       ---Badge---
+ *       John
+ *       Doe
+ *       Speaker
+ *       -----------
+ *       DONE: badge/john-doe.pdf
 
+ */
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { mkdir } from 'node:fs/promises';
+import { ArgumentParser } from 'argparse';
 
-async function runTest() {
+
+const formatRole = {
+    speaker: 'Speaker'
+  , s: 'Speaker'
+  , volunteer: 'Volunteer'
+  , v: 'Volunteer'
+  , attendee: ''
+  , a: ''
+  , organizer: 'Organizer'
+  , o: 'Organizer'
+};
+
+async function runTest(baseUrl, line1, line2, line3, role, blank, noStatic, targetPath) {
     const browser = await puppeteer.launch({
         headless: true
       , timeout: 100000
@@ -13,12 +41,19 @@ async function runTest() {
     });
 
     try {
-        const url = 'http://localhost:8081/2025/print/badge-name/'
-        //const url = 'http://libregraphicsmeeting.org/2025/program/'
-          , basename = path.basename(url)
-          , targetFolder = `./badge`
-          , createDir = await mkdir(targetFolder, { recursive: true })
-          ;
+        const url = new URL('2025/print/badge-name/', baseUrl);
+        console.log(`URL: ${url}`);
+        console.log(`targetPath: ${targetPath}`);
+        const lines = blank
+            ? ['\xA0', '\xA0', '\xA0']
+            : [line1, line2, line3]
+            ;
+
+        console.log('---Badge---')
+        lines.filter(l=> l.trim() !== '').map(l=>console.log(l));
+        if(formatRole[role])
+            console.log(formatRole[role])
+        console.log('-----------')
 
         const page = await browser.newPage();
         await page.goto(url, {
@@ -27,7 +62,9 @@ async function runTest() {
 
         // Inject Name particles...
         await page.evaluate(
-            async (line1, line2, line3, role)=>{
+            async (line1, line2, line3, role, noStatic)=>{
+                    if(noStatic)
+                        document.body.classList.add('no-static');
                     const contents = [
                         ['.namebox_line-1', line1 || '']
                       , ['.namebox_line-2', line2 || '']
@@ -39,20 +76,16 @@ async function runTest() {
                             element.textContent = content;
                     }
                 }
-          , 'Marc-Alexandre' // line1
-          , 'Barbe' // line 2
-          , ''// line 3
-          , 'speaker' // role
-        );
+          , ...lines, formatRole[role], noStatic);
         // Saves the PDF
         // This should go to temp and be deleted after print!
         const result = await page.pdf({
-             path: `${targetFolder}/badge-name.pdf`
+             path: targetPath
            //, height: '297mm'
            // , width: '105mm'
            , preferCSSPageSize: true
         });
-        console.log(`DONE ${targetFolder}/badge-name.pdf`);
+        console.log('DONE:', targetPath);
     }
     catch(error) {
         console.error(error);
@@ -63,4 +96,46 @@ async function runTest() {
     }
 }
 
-runTest();
+
+const parser = new ArgumentParser({ description: 'Generate the frames for a clip for LGM 2025.' });
+
+parser.add_argument('--base-url', {
+    dest: 'baseUrl'
+  , default: 'https://libregraphicsmeeting.org'
+  , help: 'The base source url for the clips, include the port number if necessary (e.g. "http://localhost:8081").'
+});
+
+
+parser.add_argument('target', {
+    help: 'The file path to save the badge to.'
+});
+
+
+for(let i=1,l=3;i<=l;i++)
+    parser.add_argument(`-${i}`, `--line${i}`, {
+        dest: `line${i}`
+      , default: ''
+      , help: `Content of Line ${i} use $'\\ua0' (on Bash a no breaking space) for an empty yet vertical space consuming line.`
+    });
+
+parser.add_argument('-b', '--blank', {
+    dest: 'blank'
+  , action: 'store_true'
+  , help: 'Create a blank badge to fill out by hand.'
+});
+
+parser.add_argument('-n', '--no-static', {
+    dest: 'noStatic'
+  , action: 'store_true'
+  , help: 'Don\'t print the static design elements, e.g. to print the name etc. on a blank badge that was created with -b/--blank'
+});
+
+parser.add_argument('-r', '--role', {
+    dest: 'role'
+  , choices: Object.keys(formatRole)
+  , default: 'attendee'
+  , help: 'The role of the badge holder.'
+});
+
+let args = parser.parse_args();
+runTest(args.baseUrl, args.line1, args.line2, args.line3, args.role, args.blank, args.noStatic, args.target);
