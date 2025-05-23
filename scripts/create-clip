@@ -1,10 +1,19 @@
 #!/usr/bin/env node
-
+/**
+ * Usage:
+ *   # use https://libregraphicsmeeting.org
+ *   $ ./scripts/create-clip /2025/clips/curved_geometry_freecad ./clip_frames
+ *
+ *   # With explicit url
+ *   $ ./scripts/create-clip --base-url=http://localhost:8081 /2025/clips/curved_geometry_freecad ./clip_frames
+ *
+ */
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { mkdir } from 'node:fs/promises';
+import { ArgumentParser } from 'argparse';
 
-async function runTest() {
+async function runTest(baseUrl, clipPath, targetFolder, targetUseBaseName, verbose) {
     const browser = await puppeteer.launch({
         headless: true
       , timeout: 100000
@@ -13,14 +22,16 @@ async function runTest() {
     });
 
     try {
+        const url = new URL(clipPath, baseUrl)
+          , basename = path.basename(clipPath)
 
-        const url = 'http://localhost:8081/2025/clips/test/'
-          , basename = path.basename(url)
-          , targetFolder = `./clip_frames/${basename}/`
-          , createDir = await mkdir(targetFolder, { recursive: true })
+          , fullTargetFolder = targetUseBaseName
+                ? path.join(targetFolder, basename)
+                : targetFolder
+          , createDir = await mkdir(fullTargetFolder, { recursive: true })
           ;
-
-
+        console.log(`Source: ${url}`);
+        console.log(`Target: ${fullTargetFolder}`);
         const page = await browser.newPage();
         await page.setViewport({ width: 1920, height: 1080 });
         await page.goto(url, {
@@ -39,10 +50,11 @@ async function runTest() {
             );
             await page.screenshot({
                 type: "png",
-                path: `${targetFolder}frame_${String(i).padStart(10, '0')}.png`,
+                path: path.join(fullTargetFolder, `frame_${String(i).padStart(10, '0')}.png`),
                 fullPage: true,
             });
-            console.log(`DONE ${i} of ${l} time: ${currentTime - tOffset}s (offset ${tOffset})`);
+            if(verbose)
+                console.log(`${i} of ${l} time: ${currentTime - tOffset}s (offset ${tOffset})`);
         }
     }
     catch(error) {
@@ -55,4 +67,41 @@ async function runTest() {
 }
 
 
-runTest();
+const parser = new ArgumentParser({ description: 'Generate the frames for a clip for LGM 2025.' });
+
+parser.add_argument('--base-url', {
+    dest: 'baseUrl'
+  , default: 'https://libregraphicsmeeting.org'
+  , help: 'The base source url for the clips, include the port number if necessary (e.g. "http://localhost:8081").'
+});
+
+parser.add_argument('--target-dir', {
+    dest: 'targetDir'
+  , default: 'clip_frames'
+  , help: 'The target directory to store the clips.'
+});
+
+parser.add_argument('-n', '--no-base', {
+    dest: 'noBase'
+  , action: 'store_true'
+  , help: 'Don\'t use the source baseName in the target directory.'
+});
+
+parser.add_argument('-v', '--verbose', {
+    dest: 'verbose'
+  , action: 'store_true'
+  , help: 'More verbose output.'
+});
+
+parser.add_argument('source', {
+    help: 'The path to the clip source'
+});
+
+parser.add_argument('target', {
+    help: 'The directory path to save the clip frames to, will be created.'
+});
+
+
+let args = parser.parse_args();
+//console.log('args:', args);
+runTest(args.baseUrl, args.source, args.target, !args.noBase, args.verbose);

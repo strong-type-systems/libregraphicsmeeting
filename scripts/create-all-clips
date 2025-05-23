@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+# run like:
+#   $ /web_2025> ./scripts/create_all_clips http://localhost:8081 ./clip_frames
+#   $ /web_2025> ./scripts/create-all-clips http://libregraphicsmeeting.org ./clip_frames
+
+BASEURL="$1"
+MY_DIR="`dirname $0`"
+TARGET_DIR="$2"
+
+
+# fetch {BASEURL}/2025/clips.txt
+CLIPS="`wget -qO- ${BASEURL}/2025/clips.txt`"
+
+#for each clip in CLIPS
+while IFS= read -r clip; do
+    echo "$clip ..."
+    ./${MY_DIR}/create-clip --base-url=${BASEURL} $clip $TARGET_DIR
+done <<< "$CLIPS"
