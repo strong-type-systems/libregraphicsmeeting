@@ -13,4 +13,5 @@ TARGET_DIR=$(dirname "$1")
 TARGET_BASE=$(basename "$1")
 TARGET_FILE=${TARGET_DIR}/${TARGET_BASE}.mkv
 
+echo $SOURCE creating $TARGET_FILE
 ffmpeg -y  -framerate 50 -i ${SOURCE}frame_\%10d.png -c:v libx264 -r 50 -pix_fmt yuv422p ${TARGET_FILE}
