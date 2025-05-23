@@ -16,4 +16,4 @@ you have trouble contributing this way, feel free to contact us directly:
 
 ## Call for Slides
 
-The public announcement is at: [Call for Slides: State of Libre Graphics]({{rootPath}}news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/).
+The public announcement is at: [Call for Slides: State of Libre Graphics]({{rootPath}}/news/2025-05-06_0001-call-for-slides-state-of-libre-graphics/).
