@@ -80,6 +80,8 @@ function _sortEventsByDate (a, b) {
     return aDate - bDate;
 }
 
+const onlineScheduleData = await schedule.getOnlineScheduleData();
+
 export default function (eleventyConfig) {
     // Output directory: _site
     const dir = {
@@ -218,7 +220,7 @@ export default function (eleventyConfig) {
         return hosts
     })
 
-
+    eleventyConfig.addGlobalData('onlineScheduleData', onlineScheduleData);
     eleventyConfig.addGlobalData('dailySchedules', schedule.createDailySchedules());
 
     const _isProgramItem = item=>item.page.filePathStem.startsWith(`${rootPath}/program/`)
