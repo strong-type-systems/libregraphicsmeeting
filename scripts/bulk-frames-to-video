@@ -14,7 +14,6 @@ TARGET_DIR="$2"
 echo SOURCE: $SOURCE
 for CLIP_SOURCE in $SOURCE/*/ ; do
     ${MY_DIR}/frames-to-video $CLIP_SOURCE
-    # ffmpeg -y  -framerate 50 -i ${CLIP_SOURCE}frame_\%10d.png -c:v libx264 -r 50 -pix_fmt yuv422p ${TARGET_FILE}
 done
 
 
