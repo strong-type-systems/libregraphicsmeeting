@@ -185,6 +185,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addShortcode('newsDate', newsDate);
     eleventyConfig.addShortcode('news', renderNews);
+    eleventyConfig.addPairedShortcode("slide", content=>`<section>\n${content}\n</section>`);
 
     // I use this for the css and js files. Especially IPhone seems
     // to have trouble to update these when they have changed. Looks

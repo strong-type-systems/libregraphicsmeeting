@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html "lang="en" class="presentation{% if layoutClass %}{{ layoutClass }}{% endif %}">
+    <head>
+        <meta charset="utf-8">
+        <title>{%- if title %}{{title}} - {% endif-%}
+        Libre Graphics Meeting 2025 – RE:imagination, Nuremberg, Germany</title>
+        <meta name="viewport" content="initial-scale=1,shrink-to-fit=no">
+        <link
+            rel="stylesheet"
+            href="{% cacheBusterUrl 'css/main.css' %}"/>
+        <script src="{% cacheBusterUrl 'js/main.js' %}"
+            async
+            type="module"></script>
+        <script async type="module">
+            import Reveal from '{{rootPath}}/js/revealjs/reveal.esm.js';
+            //import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+
+            let deck = new Reveal({
+                //plugins: [Markdown],
+                width: 1920,
+                height: 1080,
+
+                // Factor of the display size that should remain empty around
+                // the content
+                margin: 0.04,
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.2,
+                maxScale: 2.0,
+            });
+            deck.initialize();
+        </script>
+        <link rel="stylesheet" href="{{rootPath}}/js/revealjs/reveal.css" />
+        <!--<link rel="stylesheet" href="{{rootPath}}/js/revealjs/theme/simple.css" />-->
+        {% if headInject %}
+            {{ headInject | safe }}
+        {% endif %}
+    </head>
+    <body>
+        <article class="reveal">
+            <div class="slides">
+                <section>revealjs</section>
+                {{ content | safe }}
+            </div>
+        </div> <!-- wrapper -->
+    </body>
+</html>
