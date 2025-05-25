@@ -786,7 +786,7 @@ nav li.active > a:hover {
     }
 }
 
-.content h1 {
+:is(.content, .reveal) h1 {
     --font-size: 4;
     --text-wdth: 54;
     --text-wght: 500;
@@ -816,16 +816,16 @@ ol.news{
       padding-inline-start: 0;
 }
 
-.content :is(h1, h2, h3, h4, h5, h5) {
+:is(.content, .reveal) :is(h1, h2, h3, h4, h5, h5) {
     margin-block-end: 0;
     line-height: 1.2;
 }
 
-.content :is(h2,h3,h4,h5) {
+:is(.content, .reveal) :is(h2,h3,h4,h5) {
     --text-wght: 600
 }
 
-.content :is(p, li, .sponsorship, time, table.schedule) {
+:is(.content, .reveal) :is(p, li, .sponsorship, time, table.schedule) {
     --text-grad: 0;
     --font-size: 1.4;
     margin: 0;
@@ -857,7 +857,7 @@ ol.news{
 }
 
 
-.content blockquote p {
+:is(.content, .reveal) blockquote p {
     --font-size: 2.5;
     --text-wght: 200;
     --text-slnt: -7;
@@ -867,13 +867,13 @@ ol.news{
     margin: 1rem 0;
 }
 
-.content a {
+:is(.content, .reveal) a {
     color: black;
     text-decoration: underline;
     text-decoration-thickness: .2em;
     text-decoration-color: var(--greenyellow, greenyellow);
 }
-.content a:hover {
+:is(.content, .reveal) a:hover {
     --text-grad: 50;
 }
 
@@ -1328,3 +1328,25 @@ h2:has(+ .event-hosts, + .event-labels) {
     font-size: calc(var(--font-size, 1) * var(--document-font-size-pt, 12) * 1pt);
   }
 }
+
+.presentation {
+    --document-font-size-pt: 30;
+}
+
+.presentation * {
+        font-size: calc(var(--font-size, 1) * var(--document-font-size-pt, 12) * 1pt);
+    }
+
+.presentation body{
+        max-width: initial;
+    }
+
+.presentation .reveal section{
+        background: white;
+        width: 100%;
+        height: 100%;
+    }
+
+.presentation .heading_anchor {
+        display: none;
+    }
