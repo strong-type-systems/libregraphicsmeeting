@@ -42,4 +42,4 @@
 /2025/clips/upstage_workshop
 /2025/clips/usability_conduct_heuristic_evaluation
 /2025/clips/welcome
-
+/2025/clips/outro
