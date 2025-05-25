@@ -181,6 +181,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData('logo_boxes',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-boxes.svg`));
     eleventyConfig.addGlobalData('logo_text',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-text.svg`));
     eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
+    eleventyConfig.addGlobalData('logo_compact',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-compact.svg`));
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addShortcode('newsDate', newsDate);
     eleventyConfig.addShortcode('news', renderNews);

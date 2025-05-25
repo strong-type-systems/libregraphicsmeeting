@@ -12,14 +12,21 @@
             async
             type="module"></script>
     </head>
-    <body class="clips-container">
+    <body class="clips-container{% if layoutBodyClass %} {{ layoutBodyClass }}{% endif %}">
             <article>
-                {{ logo_boxes | safe}}
-                {{ logo_text | safe}}
-                {{ reimagination | safe}}
-                <div class="presentation-payload {{clip.data.clipsInjectClass}}">
-                    {{ content | safe }}
-                </div>
+
+        {% if layoutBodyClass === "outro" %}
+            {{ logo_compact | safe}}
+            {{ content | safe }}
+        {% else %}
+            {{ logo_boxes | safe}}
+            {{ logo_text | safe}}
+            {{ reimagination | safe}}
+            <div class="presentation-payload {{clip.data.clipsInjectClass}}">
+                {{ content | safe }}
+            </div>
+        {% endif %}
+
                 <div class="filler filler-1"></div>
                 <div class="filler filler-2"></div>
             </article>
