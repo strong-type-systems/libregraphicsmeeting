@@ -7,10 +7,6 @@ hosts: [LGM, Lasse, SimonH]
 
 We're kicking of this years special focus -- RE:imagination -- exploring the possible futures of the Libre Graphics Meeting.
 
-## TODO: Keynote?
-
-This may be a placeholder for a keynote, that still needs to be determined.
-
 ## Special focus – RE:imagination
 
 The Libre Graphics Meeting faced significant challenges during and after
