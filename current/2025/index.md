@@ -23,26 +23,23 @@ Open Source software for graphics.
 
 ## Directions
 
-The main location is:<br />
-**Karl-Bröger-Zentrum**<br />
-Karl-Bröger-Straße 9<br />
-90459 Nürnberg<br /><br />
+>**Karl-Bröger-Zentrum**<br />
+>Karl-Bröger-Straße 9<br />
+>90459 Nürnberg
+
 See the [Venues page]({{rootPath}}/venues) for more details.
-
-## Live Streaming
-
-Go to [https://streaming.media.ccc.de/](https://streaming.media.ccc.de/)
 
 ## During the event
 
 Use our [IRC/Matrix Channel]({{rootPath}}/contact/#chat--matrix-and-irc) for direct updates and to stay in contact.
 
-## Key Actions
- 1. Read our [Program]({{rootPath}}/program),
- 2.
-    - if you plan to attend, please [Register!]({{rootPath}}/register) yourself,
-    - otherwise, [a live broadcast and recordings will be available]({{rootPath}}/news/2025-03-29_0001-video-streaming-and-recording/), monitor this site for further directions,
- 3. and consider to [Donate!]({{rootPath}}/donate).
+## Live Streaming
+
+<iframe src="https://streaming.media.ccc.de/lgm2025/embed/main/hls/native"
+width="100%" style="aspect-ratio:1024/576" frameborder="none" allowfullscreen="allowfullscreen"
+seamless="seamless" scrolling="no"></iframe>
+
+Or go to [https://streaming.media.ccc.de/](https://streaming.media.ccc.de/)
 
 <article>
 {% heading 'h1', 'Latest News', 'latest-news' %}
