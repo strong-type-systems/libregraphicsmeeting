@@ -10,7 +10,7 @@ Processing is one of the most widely used open-source tools for creative coding 
 
 A remarkable thing about Processing is the consistency of its API. Most Processing code written twenty years ago still runs in Processing today with only minor changes. That kind of longevity is rare in software and speaks to the project's thoughtful design.
 
-But behind the scenes, the project has been struggling.
+But behind the scenes, the project struggled.
 
 For a long time, Processing relied on a small, dedicated core team. As contributors moved on, fewer people remained who understood the full complexity of the codebase. Maintenance became harder. Key libraries stopped working. By the time Processing 4 was released, the project was already in a difficult place.
 
