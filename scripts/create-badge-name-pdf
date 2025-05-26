@@ -30,6 +30,8 @@ const formatRole = {
   , a: ''
   , organizer: 'Organizer'
   , o: 'Organizer'
+  , technician: 'Technician'
+  , t: 'Technician'
 };
 
 async function runTest(baseUrl, line1, line2, line3, role, blank, noStatic, targetPath) {
