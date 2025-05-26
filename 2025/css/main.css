@@ -1006,7 +1006,7 @@ h2:has(+ .event-hosts, + .event-labels) {
     vertical-align: top;
 }
 
-.schedule .page-link {
+.schedule .page-link, .closing-night strong {
     --text-wght: 600;
     --text-wdth: 54;
 }
