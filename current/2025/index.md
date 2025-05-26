@@ -31,7 +31,7 @@ See the [Venues page]({{rootPath}}/venues) for more details.
 
 ## During the event
 
-* Check the [Program]({{rootPath}}/program) for update.
+* Check the [Program]({{rootPath}}/program) for updates.
 * Use our [IRC/Matrix Channel]({{rootPath}}/contact/#chat--matrix-and-irc) for direct updates and to stay in contact.
 
 ## Live Streaming
