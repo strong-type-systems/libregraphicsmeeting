@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+/**
+ * Usage:
+ *
+ * $ ./scripts/csv-to-name-badges ../lgm25nbg/Attendees/Hosts-for-bagges.csv badge/hosts/
+ * $ pdfunite badge/hosts/* badge/all-hosts.pdf
+ *
+ * # use localhoast to not DOS the website
+ * $ /scripts/csv-to-name-badges --base-url=http://localhost:8080/ ../lgm25nbg/Attendees/Attendees-for-bagges.csv badge/attendees/
+ * $ pdfunite badge/attendees/* badge/all-attendees.pdf
+ */
+
+import process from 'node:process';
+import path from 'node:path';
+import { mkdir, readFile } from 'node:fs/promises';
+import { ArgumentParser } from 'argparse';
+import { exec } from 'node:child_process';
+
+async function main(sourceCSV, targetDir, baseUrl) {
+    const csv = await readFile(sourceCSV, { encoding: 'utf8' });
+    for(const line of csv.split('\n')) {
+        if(line.trim() === '') continue;
+        const args = line.split(',').map(f=>f.trim())
+          , myDir =  path.dirname(process.argv[1])
+          , targetFileName = `${args.join('_')}.pdf`
+          , target = path.join(targetDir, targetFileName).replaceAll(' ', '-')
+          , lines = []
+          , role =  args.at(3)
+          ;
+        for(const [i, l] of args.slice(0, 3).entries()){
+            if(l.trim() === '') continue;
+            lines.push(`-${i+1} "${l}"`)
+        }
+        const cmd = `${path.join(myDir, 'create-badge-name-pdf')} ${lines.join(' ')} --base-url ${baseUrl} -r ${role} ${target}`;
+        console.log(`calling:`, cmd);
+        await exec(cmd, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error executing command: ${error.message}`);
+                return;
+            }
+            if (stderr) {
+                console.error(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+        });
+    }
+}
+
+const parser = new ArgumentParser({ description: 'Generate the frames for a clip for LGM 2025.' });
+
+parser.add_argument('--base-url', {
+    dest: 'baseUrl'
+  , default: 'https://libregraphicsmeeting.org'
+  , help: 'The base source url for badge, include the port number if necessary (e.g. "http://localhost:8081").'
+});
+
+parser.add_argument('source', {
+    help: 'The source csv file.'
+});
+
+parser.add_argument('target', {
+    help: 'The target directory.'
+});
+
+let args = parser.parse_args();
+main(args.source, args.target, args.baseUrl);
