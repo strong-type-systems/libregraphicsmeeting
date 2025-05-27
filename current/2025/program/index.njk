@@ -8,91 +8,8 @@ eleventyNavigation:
 
 {% heading 'h1', title, page.fileSlug %}
 
-
-{%- macro renderTypeBreak(scheduleItem) -%}
-{{ scheduleItem.event.title }} ({{scheduleItem.fullDurationMin}} min)
-{%- endmacro -%}
-
-{%- macro ownType(page, pos) -%}
-    {%- if page.data.type -%}
-      <span class="schedule_item-own_type">{{'—' if pos === 'before' else '' }}{{ page.data.type }}{{'—' if pos === 'after' else '' }}</span>
-    {%- endif -%}
-{%- endmacro -%}
-
-{%- macro pagelink(page) -%}
-    <a class="page-link" href="{{page.url}}">{{page.data.title}}</a>
-{%- endmacro -%}
-
-
-{%- macro renderSingleEvent(scheduleItem, key) -%}
-  {%- if collections.allEvents.has(key) -%}
-      {% set page = collections.allEvents.get(key) %}
-        {{- pagelink(page) -}} {{- ownType(page, 'before') -}}
-    {%-for host in page.data.hosts %}
-      {{ macro.hostLink(host) }}
-    {% endfor %}
-    {%-for label in page.data.labels %}
-      <a class="label-link" href="{{rootPath}}/program/label-{{label | slugify}}">#{{label}}</a>
-    {%- endfor %}
-  {%- endif -%}
-{%- endmacro -%}
-
-{%- macro renderTypeTalk(scheduleItem) -%}
-  {%- set key = scheduleItem.keys[0] -%}
-  {{- renderSingleEvent(scheduleItem, key) -}}
-{%- endmacro -%}
-
-{%- macro renderTypeSessions(scheduleItem) -%}
-  <h3>Parallel Sessions</h3>
-  <ul>
-  {%- for key in scheduleItem.keys -%}
-  <li>{{ renderSingleEvent(scheduleItem, key) }}</li>
-  {%- endfor -%}
-  </ul>
-{%- endmacro -%}
-
-{%- macro renderSchedulItem(scheduleItem) -%}
-  {% if scheduleItem.type === 'break' %}
-    {{ renderTypeBreak(scheduleItem) }}
-  {% elif ['talk', 'community', 'general', 'lightning', 'keynote'].includes(scheduleItem.type) %}
-    {{ renderTypeTalk(scheduleItem) }}
-  {% elif scheduleItem.type === 'sessions' %}
-    {{ renderTypeSessions(scheduleItem) }}
-  {% elif scheduleItem.type === 'inject' %}
-    {{ scheduleItem.content }}
-  {% endif %}
-{%- endmacro -%}
-
-
-{%- macro renderScheduleRow(timeZoneName, scheduleItem) -%}
-{% set date = scheduleItem.startTime %}
-<tr class="schedule_item schedule_item-type-{{scheduleItem.type}}">
-    <th class="schedule_item-time">
-        <time datetime="{{date.toISOString()}}">{{
-          date.toLocaleTimeString('en-US', {
-              hour: '2-digit',
-              minute:'2-digit',
-              hour12: false,
-              timeZone: timeZoneName})
-        }}</time>
-    </th>
-    <td class="schedule_item-content">
-    {{ renderSchedulItem(scheduleItem) }}
-    </td>
-</tr>
-{%- endmacro -%}
-
-{%- macro legend() -%}
-<section class="schedule-legend">
-  <h3>Legend</h3>
-  <span class="legend-general">general, LGM-community</span>
-  <span class="legend-talk">talk, lightning talks</span>
-  <span class="legend-sessions">parallel sessions</span>
-</section>
-{%- endmacro -%}
-
 {% for dayData in dailySchedules.days %}
-    {{ legend() }}
+    {{ macro.legend() }}
     {% set formattedDate = dayData.dateAndStartTime.toLocaleDateString('en-DE', {
                     weekday: "long",
                     year: "numeric",
@@ -106,11 +23,11 @@ eleventyNavigation:
     {% heading 'h2', formattedDate, day %}
 <table class="schedule">
     {% for scheduleItem in dayData.schedule %}
-    {{ renderScheduleRow(dailySchedules.timeZone[1], scheduleItem) }}
+    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], scheduleItem) }}
     {% endfor %}
     {% set scheduleItem = dayData.schedule | last %}
     {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
-    {{ renderScheduleRow(dailySchedules.timeZone[1], endItem) }}
+    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], endItem) }}
 </table>
 {% endfor %}
 

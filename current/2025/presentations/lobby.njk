@@ -1,0 +1,121 @@
+---
+title: Example presentation
+revealjsOptions:
+    controls: false
+    autoSlide: 10000
+    loop: true
+    transition: fade
+injectStyles: >
+    --document-font-size-pt: 22;
+    h2 {
+        width: 80%;
+        text-align: left;
+    }
+
+    .schedule-legend {
+          margin-top: auto;
+    }
+
+    .schedule-legend h3 {
+        margin-top: 0;
+    }
+    .sponsors {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        &.sponsorship-level_gold img {
+            width: 320px;
+        }
+        &.sponsorship-level_silver img{
+            width: 210px;
+        }
+    }
+pagination:
+    data: dailySchedules.days # paginationDaysData
+    size: 1
+    alias: dayData
+slicesSetup:
+    0: [ {"s":0, "e":7}, {"s":7, "e":Infinity} ]
+    1: [ {"s":0, "e":3}, {"s":3, "e":5}, {"s":5, "e":Infinity} ]
+    2: [ {"s":0, "e":6}, {"s":6, "e":8}, {"s":8, "e":Infinity} ]
+    3: [ {"s":0, "e":5}, {"s":5, "e":7}, {"s":7, "e":Infinity} ]
+---
+
+{%- set index = pagination.pageNumber %}
+
+
+{%- set sliceSetup = slicesSetup[index] %}
+{%- set formattedDate = dayData.dateAndStartTime.toLocaleDateString('en-DE', {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    timeZone: dailySchedules.timeZone[1],
+                    timeZoneName: 'short'
+                })
+-%}
+{%- set day = dayData.dateAndStartTime.toLocaleDateString('en-US', { weekday: "long", timeZone: dailySchedules.timeZone[1]}) -%}
+{%- for startEnd in sliceSetup -%}
+{%- slide -%}
+    {%- heading 'h2', formattedDate, day -%}
+<table class="schedule">
+    {% for scheduleItem in dayData.schedule.slice(startEnd.s, startEnd.e) %}
+    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], scheduleItem) }}
+    {% endfor %}
+    {% set scheduleItem = dayData.schedule | last %}
+    {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
+    {% if startEnd.e === Infinity or startEnd.e +1 >=  dayData.schedule.length %}
+        {{- macro.renderScheduleRow(dailySchedules.timeZone[1], endItem) -}}
+    {% endif %}
+</table>
+{{ macro.legend('div') }}
+{% endslide %}
+
+{% endfor %}
+
+{% if day === "Saturday" %}
+{%- slide -%}
+{% heading 'h2', 'Final Gathering at Bruderherz', 'final-gathering' %}
+<div class="closing-night">
+<p>
+Join us for the last evening of the conference at Bruderherz. Food and
+drinks are available. If you're interested, please describe what you
+plan to order at the conference front desk so that the restaurant can
+better prepare.<br />
+<strong>Start Time</strong> 19:00<br />
+<strong>Directions</strong> Luitpoldstraße 15, 90402 Nürnberg<br />
+<a href="https://bruderherznuernberg.de"/>https://bruderherznuernberg.de</a>
+</p>
+</div>
+
+{%- endslide -%}
+{% endif %}
+
+{%- slide -%}
+
+
+<h2>Gold Partners</h2>
+
+<div class="sponsors sponsorship-level_gold">
+    <img src="{{rootPath + '/img/partners/font-bureau_logo.svg'}}"/>
+    <div>
+        <img src="{{rootPath + '/img/partners/gimp_logo.svg'}}"><br />
+        <p style="text-align: center">GIMP</p>
+    </div>
+</div>
+
+<h2 style="margin: 0">Silver Partners</h2>
+
+<div class="sponsors sponsorship-level_silver">
+    <img src="{{rootPath + '/img/partners/b1-systems_logo.svg'}}"/>
+</div>
+
+<p style="margin-top: 1em;">Thank you to all our sponsoring partners: without your support, LGM would
+not be the incredible event it is. Your contributions make all the
+difference, and we truly appreciate your partnership.</p>
+
+
+{%- endslide -%}
+
+
+

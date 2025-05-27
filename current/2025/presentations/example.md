@@ -1,14 +1,22 @@
 ---
 title: Example presentation
+revealjsOptions:
+    controls: false
+    # autoSlide: 5000
+    # loop: true
+    # transition: fade
+injectStyles: >
+    .redlists ul {
+        background: red;
+    }
 ---
-
 
 {% slide %}
 ## To Be Determined
 We are looking for someone taking over.
 {% endslide %}
 
-{% slide %}
+{% slide {'class': 'redlists'} %}
 # This seems to be working
 ## I'm nicely surprised
 * can
@@ -18,7 +26,7 @@ We are looking for someone taking over.
 {% endslide %}
 
 
-{% slide %}
+{% verticalslides %}
 {% slide %}
 # Vertical slides
 {% endslide %}
@@ -26,4 +34,4 @@ We are looking for someone taking over.
 ## Is this workin
 Would be cool
 {% endslide %}
-{% endslide %}
+{% endverticalslides %}

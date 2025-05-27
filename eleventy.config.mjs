@@ -185,7 +185,19 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addShortcode('newsDate', newsDate);
     eleventyConfig.addShortcode('news', renderNews);
-    eleventyConfig.addPairedShortcode("slide", content=>`<section>\n${content}\n</section>`);
+    eleventyConfig.addPairedShortcode('slide', wrapShortcode((content, attributes)=>{
+        const attrs = []
+        if(attributes) {
+            for(const [attr, val] of Object.entries(attributes))
+               attrs.push(`${attr}="${val}"`);
+        }
+        return `<section>\n<div ${attrs.join(' ')}>\n${content}\n</div>\n</section>`;
+    }));
+    eleventyConfig.addPairedShortcode('verticalslides', wrapShortcode((content)=>{
+        return `<section>\n${content}\n</section>`;
+    }));
+
+    eleventyConfig.addFilter("asJSON", value=>JSON.stringify(value));
 
     // I use this for the css and js files. Especially IPhone seems
     // to have trouble to update these when they have changed. Looks

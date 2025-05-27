@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html "lang="en" class="presentation{% if layoutClass %}{{ layoutClass }}{% endif %}">
+<html lang="en" class="presentation{% if layoutClass %}{{ layoutClass }}{% endif %}">
     <head>
         <meta charset="utf-8">
         <title>{%- if title %}{{title}} - {% endif-%}
@@ -27,11 +27,50 @@
                 // Bounds for smallest/largest possible scale to apply to content
                 minScale: 0.2,
                 maxScale: 2.0,
+                controls: false,
+                ... ({{ (revealjsOptions or false) | asJSON | safe }} || {})
             });
             deck.initialize();
         </script>
         <link rel="stylesheet" href="{{rootPath}}/js/revealjs/reveal.css" />
         <!--<link rel="stylesheet" href="{{rootPath}}/js/revealjs/theme/simple.css" />-->
+        <style>
+            .slides > section {
+                a {
+                    text-decoration: none;
+                }
+
+                & > div {
+                    padding-top: 2em;
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: left;
+
+                    display: flex;
+                    flex-direction: column;
+                    --justify-content: space-between;
+                    height: calc(100% - 4em);
+
+                }
+                :is(h1, h2) {
+                    text-align: center
+                }
+                h2 {
+                    margin-bottom: .5em;
+                }
+                .schedule h3{
+                    margin-top: 0;
+                }
+
+        </style>
+        {% if injectStyles %}
+        <style>
+            .slides section {
+                {{injectStyles | safe}}
+            }
+        </style>
+        {% endif %}
+
         {% if headInject %}
             {{ headInject | safe }}
         {% endif %}
@@ -39,9 +78,8 @@
     <body>
         <article class="reveal">
             <div class="slides">
-                <section>revealjs</section>
                 {{ content | safe }}
             </div>
-        </div> <!-- wrapper -->
+        </article> <!-- wrapper -->
     </body>
 </html>
