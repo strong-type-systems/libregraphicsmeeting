@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html "lang="en" class="presentation">
+<html lang="en" class="presentation">
     <head>
         <meta charset="utf-8">
         <title>Example presentation - Libre Graphics Meeting 2025 – RE:imagination, Nuremberg, Germany</title>
@@ -26,22 +26,66 @@
                 // Bounds for smallest/largest possible scale to apply to content
                 minScale: 0.2,
                 maxScale: 2.0,
+                controls: false,
+                ... ({"controls":false} || {})
             });
             deck.initialize();
         </script>
         <link rel="stylesheet" href="/2025/js/revealjs/reveal.css" />
         <!--<link rel="stylesheet" href="/2025/js/revealjs/theme/simple.css" />-->
+        <style>
+            .slides > section {
+                a {
+                    text-decoration: none;
+                }
+
+                & > div {
+                    padding-top: 2em;
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: left;
+
+                    display: flex;
+                    flex-direction: column;
+                    --justify-content: space-between;
+                    height: calc(100% - 4em);
+
+                }
+                :is(h1, h2) {
+                    text-align: center
+                }
+                h2 {
+                    margin-bottom: .5em;
+                }
+                .schedule h3{
+                    margin-top: 0;
+                }
+
+        </style>
+        
+        <style>
+            .slides section {
+                .redlists ul {
+    background: red;
+}
+
+            }
+        </style>
+        
+
         
     </head>
     <body>
         <article class="reveal">
             <div class="slides">
-                <section>revealjs</section>
                 <section>
+<div >
 <h2><a id="to-be-determined" class="heading_anchor" href="#to-be-determined" aria-hidden="true">#</a>To Be Determined</h2>
 <p>We are looking for someone taking over.</p>
+</div>
 </section>
 <section>
+<div class="redlists">
 <h1><a id="this-seems-to-be-working" class="heading_anchor" href="#this-seems-to-be-working" aria-hidden="true">#</a>This seems to be working</h1>
 <h2><a id="im-nicely-surprised" class="heading_anchor" href="#im-nicely-surprised" aria-hidden="true">#</a>I’m nicely surprised</h2>
 <ul>
@@ -50,18 +94,23 @@
 <li>have</li>
 <li>lists?</li>
 </ul>
+</div>
 </section>
 <section>
 <section>
+<div >
 <h1><a id="vertical-slides" class="heading_anchor" href="#vertical-slides" aria-hidden="true">#</a>Vertical slides</h1>
+</div>
 </section>
 <section>
+<div >
 <h2><a id="is-this-workin" class="heading_anchor" href="#is-this-workin" aria-hidden="true">#</a>Is this workin</h2>
 <p>Would be cool</p>
+</div>
 </section>
 </section>
 
             </div>
-        </div> <!-- wrapper -->
+        </article> <!-- wrapper -->
     </body>
 </html>
