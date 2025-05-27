@@ -54,7 +54,7 @@ if __name__ == '__main__':
       #, 'scaling': '100' # %
       , 'print-scaling': 'none'
       # , 'natural-scaling': '100' # %
-      , 'copies': '1'
+      , 'copies': sys.argv[2] or '1'
     } # ppd_options
     cups_job_id = conn.printFile(printer_name, pdf_file,f'print from {sys.argv[0]} ', ppd_connection_options)
     print('cups_job_id', cups_job_id);
