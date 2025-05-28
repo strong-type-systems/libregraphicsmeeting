@@ -1,7 +1,7 @@
 ---
 labels: []
 type: talk
-title: "Lightning Talks"
+title: "Lightning Talks Thursday"
 hosts: [LGM, TBD]
 ---
 
