@@ -9,9 +9,7 @@ headInject: >
 ---
 
 <div class="call_for_action">
-Please<br />
-<a href="{{rootPath}}/register">Register!</a><br />
-yourself.
+Just come by!
 </div>
 
 # Welcome

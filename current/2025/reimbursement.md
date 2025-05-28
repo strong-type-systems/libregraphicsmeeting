@@ -1,7 +1,7 @@
 ---
 title: Reimbursement
 eleventyNavigation:
-  parent: Register
+  parent: Donate
   key: Reimbursement
   order: 3
 ---

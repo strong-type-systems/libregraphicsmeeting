@@ -1,10 +1,9 @@
 ---
 title: Donate!
 eleventyNavigation:
-  parent: Register
   key: Donate
   title: Donate!
-  order: 1
+  order: 3
 ---
 
 # {{title}}

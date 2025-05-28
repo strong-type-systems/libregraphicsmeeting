@@ -4,6 +4,15 @@ eleventyNavigation:
   key: Register
   title: Register!
   order: 3
+  parent: Donate
+---
+
+<div class="call_for_action">
+Just come by!
+</div>
+
+The event is on! Registrations are not required anymore.
+
 ---
 
 # {{title}}
