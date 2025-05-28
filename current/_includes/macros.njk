@@ -127,10 +127,10 @@ Example Macro: <strong>{{title}}</strong>
 {%- endmacro -%}
 
 {%- macro legend(tag) -%}
-<{{tag}} class="schedule-legend">
+<{{tag or "section" }} class="schedule-legend">
   <h3>Legend</h3>
   <span class="legend-general">general, LGM-community</span>
   <span class="legend-talk">talk, lightning talks</span>
   <span class="legend-sessions">parallel sessions</span>
-</{{tag}}>
+</{{tag or "section"}}>
 {%- endmacro -%}
