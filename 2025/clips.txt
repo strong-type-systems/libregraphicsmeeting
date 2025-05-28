@@ -19,7 +19,8 @@
 /2025/clips/inkscape_ui_vision_going_forward
 /2025/clips/introduction_usability-ux_evaluation_methods
 /2025/clips/libre_designers_and_the_software_apocalypse
-/2025/clips/lightning_talks
+/2025/clips/lightning_talks_friday
+/2025/clips/lightning_talks_thursday
 /2025/clips/making_waterfalls
 /2025/clips/next_LGM
 /2025/clips/open-source_immersive_animations
