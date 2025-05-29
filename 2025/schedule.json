@@ -1,7 +1,7 @@
 {
   "schedule": {
     "url": "https://libregraphicsmeeting.org/2025/schedule.json",
-    "version": "4",
+    "version": "5",
     "base_url": "https://libregraphicsmeeting.org/2025",
     "conference": {
       "acronym": "lgm2025",
@@ -578,7 +578,7 @@
           "index": 3,
           "date": "2025-05-30",
           "day_start": "2025-05-30T10:00:00+02:00",
-          "day_end": "2025-05-30T18:30:00+02:00",
+          "day_end": "2025-05-30T18:15:00+02:00",
           "rooms": {
             "main": [
               {
@@ -764,8 +764,8 @@
                 "code": "3000PCTFASTERFILESAVINGWITHTIMETRAVEL",
                 "id": 2882617605,
                 "logo": null,
-                "date": "2025-05-30T16:50:00+02:00",
-                "start": "16:50",
+                "date": "2025-05-30T17:00:00+02:00",
+                "start": "17:00",
                 "duration": "0:25",
                 "room": "main",
                 "slug": "3000-pct-faster-file-saving-with-time-travel",
@@ -796,8 +796,8 @@
                 "code": "FROMPRINTERDUSTTILLGRAPHICSDAWNPRESENTATION",
                 "id": 621783192,
                 "logo": null,
-                "date": "2025-05-30T17:15:00+02:00",
-                "start": "17:15",
+                "date": "2025-05-30T17:25:00+02:00",
+                "start": "17:25",
                 "duration": "0:25",
                 "room": "main",
                 "slug": "from_printer_dust_till_graphics_dawn_presentation",
@@ -842,44 +842,12 @@
                 "links": []
               },
               {
-                "guid": "80c9eab1-6a89-55ab-9ce6-d9264f72822d",
-                "code": "ELEPHANTINTHEROOMWHOOWNSTHEIMAGE",
-                "id": 2160716465,
-                "logo": null,
-                "date": "2025-05-30T17:40:00+02:00",
-                "start": "17:40",
-                "duration": "0:25",
-                "room": "main",
-                "slug": "elephant_in_the_room-who_owns_the_image",
-                "url": "https://libregraphicsmeeting.org/2025/program/elephant_in_the_room-who_owns_the_image/",
-                "title": "The Elephant in the Room: Who Owns the Image?",
-                "subtitle": "",
-                "track": null,
-                "type": "talk",
-                "language": "en",
-                "abstract": "What does generative neural networks and selfies taken by macaque\nmonkeys have in common? Recent debacle around AI has brought discussions\naround intellectual property and the ownership of works. The problem\nhowever might be deeper than we think: rooted around our assumptions\nabout what an idea is and how it comes to being. So how do we sustain\ncreativity and what does that mean for our community? What are the\nanswers, if any?",
-                "recording_license": "",
-                "do_not_record": false,
-                "persons": [
-                  {
-                    "code": "EYLUL",
-                    "id": 704388118,
-                    "name": "Eylul Dogruel",
-                    "avatar": null,
-                    "guid": "29fc1c16-cb3e-52bd-89fd-941a765bff41",
-                    "url": "https://libregraphicsmeeting.org/2025/hosts/Eylul/",
-                    "biography": "## Biography\n\nEylul Dogruel is a multidisciplinary visual artist from Istanbul,\nTurkey. Her work focuses on the interaction between materials and and\ntheir style elements, and has been shown in international exhibits and\nevents. In addition to favoring free and open sourced software in her\nown work, Eylul is involved in advocacy for free culture, open source\nsoftware in art and art education. She also teaches photography part\ntime in Istanbul Technical University and is a contributor to the Ubuntu\nStudio project."
-                  }
-                ],
-                "links": []
-              },
-              {
                 "guid": "8c2d4f0a-6a17-51b3-a566-4006183992cf",
                 "code": "LIBREDESIGNERSANDTHESOFTWAREAPOCALYPSE",
                 "id": 2351779594,
                 "logo": null,
-                "date": "2025-05-30T18:05:00+02:00",
-                "start": "18:05",
+                "date": "2025-05-30T17:50:00+02:00",
+                "start": "17:50",
                 "duration": "0:25",
                 "room": "main",
                 "slug": "libre_designers_and_the_software_apocalypse",
