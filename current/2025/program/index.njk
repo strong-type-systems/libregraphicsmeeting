@@ -29,6 +29,18 @@ eleventyNavigation:
     {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
     {{ macro.renderScheduleRow(dailySchedules.timeZone[1], endItem) }}
 </table>
+
+
+{% if day === "Friday" %}
+
+{% heading 'h2', 'Friday Evening Photowalk', 'Photowalk' %}
+
+<p>
+Bring your gear. We meet after the days program at the venue.
+</p>
+
+{% endif %}
+
 {% endfor %}
 
 {% heading 'h2', 'Final Gathering at <a href="https://bruderherznuernberg.de"/>Bruderherz</a>', 'final-gathering' %}
