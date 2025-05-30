@@ -1,5 +1,5 @@
 ---
-labels: ['usability', 'ux']
+labels: ['usability', 'ux', 'Südstadtforum-1']
 type: workshop
 title: "Conduct a Heuristic Evaluation of your/an Application to Find Potential Usability Issues"
 hosts: ['SimonH']

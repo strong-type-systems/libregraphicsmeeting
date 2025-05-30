@@ -1,5 +1,5 @@
 ---
-labels: [photography, web, Digikam, Wordpress, toolbox]
+labels: [photography, web, Digikam, Wordpress, toolbox, KBZ-Seminar]
 type: workshop
 title: "From the Import to the Website — part\xa02: editing metadata and creating a sophisticated web photo gallery or archive"
 hosts: [Anna]

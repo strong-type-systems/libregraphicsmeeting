@@ -1,5 +1,5 @@
 ---
-labels: ['Hubs', 'Blender', 'web', '3d']
+labels: ['Hubs', 'Blender', 'web', '3d', 'Südstadtforum-2']
 type: workshop
 title: "Re:Imagining a 3D and Interactive Internet"
 hosts: [Gottfried, Frederik]

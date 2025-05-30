@@ -1,5 +1,5 @@
 ---
-labels: [photography, web, ART, RawTherapee, toolbox]
+labels: [photography, web, ART, RawTherapee, toolbox, KBZ-Seminar]
 type: workshop
 title: "From the Import to the Website — part\xa01: importing and developing raw captures"
 hosts: [Anna]

@@ -64,10 +64,20 @@ slicesSetup:
     {% endfor %}
     {% set scheduleItem = dayData.schedule | last %}
     {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
-    {% if startEnd.e === Infinity or startEnd.e +1 >=  dayData.schedule.length %}
+    {% if dayData.schedule.length - 1 <= startEnd.e  %}
         {{- macro.renderScheduleRow(dailySchedules.timeZone[1], endItem) -}}
     {% endif %}
 </table>
+
+{% if dayData.schedule.length - 1 <= startEnd.e  and day === "Friday" %}
+    <div>
+        {% heading 'h2', 'Friday Evening Photowalk', 'Photowalk' %}
+        <p style="margin-top: -.5em">
+            Bring your gear. We meet after the days program at the venue.
+        </p>
+    </div>
+{% endif %}
+
 {{ macro.legend('div') }}
 {% endslide %}
 
@@ -87,6 +97,7 @@ better prepare.<br />
 <a href="https://bruderherznuernberg.de"/>https://bruderherznuernberg.de</a>
 </p>
 </div>
+
 
 {%- endslide -%}
 {% endif %}

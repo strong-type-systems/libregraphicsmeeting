@@ -1,5 +1,5 @@
 ---
-labels: ['permacomputing']
+labels: ['permacomputing', KBZ-Hall]
 type: BoF
 title: "Permacomputing"
 hosts: ['Brendan']
