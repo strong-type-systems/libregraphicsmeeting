@@ -1,5 +1,5 @@
 ---
-labels: [printing, PostScript, Ghostscript, XPUB, 'Südstadtforum-2']
+labels: [printing, PostScript, Ghostscript, XPUB]
 type: talk
 title: "From Printer Dust Till Graphics Dawn"
 hosts: [XPUB, Manetta, Joseph]
