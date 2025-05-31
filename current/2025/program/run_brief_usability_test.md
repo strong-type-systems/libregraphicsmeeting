@@ -1,5 +1,5 @@
 ---
-labels: ['usability', 'ux']
+labels: ['usability', 'ux', 'Südstadtforum-1']
 type: workshop
 title: "Run a Brief Usability Test to Find Usability Issues"
 hosts: ['SimonH']
