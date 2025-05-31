@@ -18,6 +18,19 @@ injectStyles: >
 
 {% endslide %}
 
+{% slide %}
+
+# RE:imagination
+
+## Presmise
+
+The Libre Graphics Meeting faced significant challenges during and after
+the pandemic. In Rennes, France, 2024, the local organization team revitalized
+the event, and now we aim to rebuild the international community and
+strengthen the structures around the Libre Graphics Meeting.
+
+{% endslide %}
+
 
 {% slide {class: "chat"}%}
 
@@ -48,7 +61,7 @@ injectStyles: >
 
 {% slide %}
 
-# A Proposal is contains:
+# A Proposal contains:
 
 - City
 - Venue
@@ -84,6 +97,12 @@ injectStyles: >
 
 # What you can do
 
+Discuss with your neighbor.
+
+{% endslide %}
+
+# What you can do
+
 - Post on Mastodon (use **#libregraphicsmeeting** and **#lgm**)
   - And follow **@lgm@post.lurk.org**
 - Write a blog post
@@ -91,7 +110,6 @@ injectStyles: >
 - Keep the energy up and support
 
 {% endslide %}
-
 
 {% slide %}
 
