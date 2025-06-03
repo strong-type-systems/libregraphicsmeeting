@@ -101,6 +101,8 @@ Discuss with your neighbor.
 
 {% endslide %}
 
+{% slide %}
+
 # What you can do
 
 - Post on Mastodon (use **#libregraphicsmeeting** and **#lgm**)
