@@ -17,6 +17,8 @@ The 18th annual Libre Graphics Meeting (LGM) has taken place in Nuremberg, Germa
 The Libre Graphics Meeting  is the annual meeting on Free/Libre and
 Open Source software for graphics.
 
+[![Group photo]({{rootPath}}/img/lgm-group-photo-2025.jpg)]({{rootPath}}/img/lgm-group-photo-2025-full.jpg)
+
 ## The recordings
 
 All the talks have been recorded by [Chaos-West TV] and can be found on [media.ccc.de](https://media.ccc.de/b/events/lgm/2025).
