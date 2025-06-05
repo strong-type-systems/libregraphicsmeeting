@@ -3,6 +3,7 @@ labels: [printing, maps, Qgis, Scribus, Inkscape, Ghostscript, PostScript, toolb
 type: talk
 title: "Printing Maps with Spot Colors"
 hosts: ['Atelier_cartographique', Pierre, Julie]
+recording: 83668-printing-maps-with-spot-colors
 ---
 
 

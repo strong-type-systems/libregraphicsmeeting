@@ -3,6 +3,7 @@ labels: [fonts, typography, web, printing, animation]
 type: talk
 title: "TypeRoof —\nType Tooling Infrastructure"
 hosts: [Lasse]
+recording: 83667--typeroof-type-tooling-infrastructure-
 ---
 
 TypeRoof is **type tooling infrastructure**. It provides type proofing

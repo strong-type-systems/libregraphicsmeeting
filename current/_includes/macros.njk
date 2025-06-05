@@ -51,6 +51,13 @@ Example Macro: <strong>{{title}}</strong>
 </div>
 {% endmacro %}
 
+{# urlArgument is the part of the recordings url after https://media.ccc.de/v/lgm25-upstream-2025- #}
+{%- macro mediaCCCLink(urlArgument, altTitle, showTitle) -%}
+<a class="media-ccc-link {% if showTitle %}show-title{% endif %}"
+    title="Recording of {{ altTitle }}"
+    href="https://media.ccc.de/v/lgm25-upstream-2025-{{ urlArgument }}"
+    ><span>Recording of  {{ altTitle }}</span></a>
+{%- endmacro -%}
 
 
 {%- macro renderTypeBreak(scheduleItem) -%}
@@ -68,7 +75,7 @@ Example Macro: <strong>{{title}}</strong>
 {%- endmacro -%}
 
 
-{%- macro renderSingleEvent(scheduleItem, key) -%}
+{%- macro renderSingleEvent(scheduleItem, key, addRecordingLink) -%}
   {%- if collections.allEvents.has(key) -%}
       {% set page = collections.allEvents.get(key) %}
         {{- pagelink(page) -}} {{- ownType(page, 'before') -}}
@@ -78,37 +85,40 @@ Example Macro: <strong>{{title}}</strong>
     {%-for label in page.data.labels %}
       <a class="label-link" href="{{rootPath}}/program/label-{{label | slugify}}">#{{label}}</a>
     {%- endfor %}
+    {%- if addRecordingLink and page.data.recording %}
+        {{ mediaCCCLink(page.data.recording, page.data.title) }}
+    {%- endif -%}
   {%- endif -%}
 {%- endmacro -%}
 
-{%- macro renderTypeTalk(scheduleItem) -%}
+{%- macro renderTypeTalk(scheduleItem, addRecordingLink) -%}
   {%- set key = scheduleItem.keys[0] -%}
-  {{- renderSingleEvent(scheduleItem, key) -}}
+  {{- renderSingleEvent(scheduleItem, key, addRecordingLink) -}}
 {%- endmacro -%}
 
-{%- macro renderTypeSessions(scheduleItem) -%}
+{%- macro renderTypeSessions(scheduleItem, addRecordingLink) -%}
   <h3>Parallel Sessions</h3>
   <ul>
   {%- for key in scheduleItem.keys -%}
-  <li>{{ renderSingleEvent(scheduleItem, key) }}</li>
+  <li>{{ renderSingleEvent(scheduleItem, key, addRecordingLink) }}</li>
   {%- endfor -%}
   </ul>
 {%- endmacro -%}
 
-{%- macro renderSchedulItem(scheduleItem) -%}
+{%- macro renderSchedulItem(scheduleItem, addRecordingLink) -%}
   {% if scheduleItem.type === 'break' %}
     {{ renderTypeBreak(scheduleItem) }}
   {% elif ['talk', 'community', 'general', 'lightning', 'keynote'].includes(scheduleItem.type) %}
-    {{ renderTypeTalk(scheduleItem) }}
+    {{ renderTypeTalk(scheduleItem, addRecordingLink) }}
   {% elif scheduleItem.type === 'sessions' %}
-    {{ renderTypeSessions(scheduleItem) }}
+    {{ renderTypeSessions(scheduleItem, addRecordingLink) }}
   {% elif scheduleItem.type === 'inject' %}
     {{ scheduleItem.content }}
   {% endif %}
 {%- endmacro -%}
 
 
-{%- macro renderScheduleRow(timeZoneName, scheduleItem) -%}
+{%- macro renderScheduleRow(timeZoneName, scheduleItem, addRecordingLink) -%}
 {% set date = scheduleItem.startTime %}
 <tr class="schedule_item schedule_item-type-{{scheduleItem.type}}">
     <th class="schedule_item-time">
@@ -121,7 +131,7 @@ Example Macro: <strong>{{title}}</strong>
         }}</time>
     </th>
     <td class="schedule_item-content">
-    {{ renderSchedulItem(scheduleItem) }}
+    {{ renderSchedulItem(scheduleItem, addRecordingLink) }}
     </td>
 </tr>
 {%- endmacro -%}

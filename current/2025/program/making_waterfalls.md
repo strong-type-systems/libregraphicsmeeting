@@ -3,6 +3,7 @@ labels: [Godot, Blender, Gimp, Krita, 3d]
 type: talk
 title: "Making Waterfalls"
 hosts: [Tom]
+recording: 83659-making-waterfalls
 ---
 
 Come learn about some ways to create waterfalls for video games!

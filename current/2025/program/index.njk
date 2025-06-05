@@ -23,11 +23,11 @@ eleventyNavigation:
     {% heading 'h2', formattedDate, day %}
 <table class="schedule">
     {% for scheduleItem in dayData.schedule %}
-    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], scheduleItem) }}
+    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], scheduleItem, true) }}
     {% endfor %}
     {% set scheduleItem = dayData.schedule | last %}
     {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
-    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], endItem) }}
+    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], endItem, true) }}
 </table>
 
 

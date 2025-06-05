@@ -3,6 +3,7 @@ labels: [printing, PostScript, Ghostscript, XPUB]
 type: talk
 title: "From Printer Dust Till Graphics Dawn"
 hosts: [XPUB, Manetta, Joseph]
+recording: 83663-from-printer-dust-till-graphics-dawn
 ---
 
 In this presentation, we partly follow this year's topic "RE:imagination"

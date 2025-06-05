@@ -3,6 +3,7 @@ labels: [coding, tools, ui, ux]
 type: talk
 title: "Libre Designers and the Software Apocalypse"
 hosts: [Neil]
+recording: 83665-libre-designers-and-the-software-apocalypse
 ---
 
 So, is LGM all about libre tools that software developers make that

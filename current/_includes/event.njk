@@ -53,6 +53,19 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
 </ul>
 {% endif %}
 
+{%- import "macros.njk" as macro with context -%}
+{%- if recording %}
+{% heading 'h2', 'Recording', 'recording' %}
+<iframe
+    style="aspect-ratio: 1024/576"
+    width="100%"
+    src="https://media.ccc.de/v/lgm25-upstream-2025-{{recording}}/oembed"
+    frameborder="0"
+    allowfullscreen></iframe>
+<p>{{ macro.mediaCCCLink(recording, title, true) }}</p>
+{%- endif -%}
+
+
 {% heading 'h2', 'Abstract', 'abstract' %}
 
 {{ content | safe }}

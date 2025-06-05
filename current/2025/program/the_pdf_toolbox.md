@@ -3,6 +3,7 @@ labels: [pdf, toolbox]
 type: talk
 title: "The PDF Toolbox"
 hosts: [Cédric]
+recording: 83656-the-pdf-toolbox
 ---
 
 It is well known that PDF has become a very popular file format.

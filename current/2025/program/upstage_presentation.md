@@ -3,6 +3,7 @@ labels: ['UpStage', 'cyberformance', 'live']
 type: talk
 title: UpStage
 hosts: ['Helen', 'Gloria']
+recording: 83648-upstage
 ---
 
 UpStage, the artist-led platform for cyberformance (live online performance), celebrated its 20 th anniversary
