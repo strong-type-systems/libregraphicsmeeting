@@ -971,10 +971,42 @@ h1 .event-type{
     white-space: nowrap;
 }
 
-h2:has(+ .event-hosts, + .event-labels) {
+h2:has(+ .event-hosts, + .event-labels, + .media-ccc-link) {
     display: inline-block;
     --font-size: 1.4;
 }
+
+a.media-ccc-link {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+a.media-ccc-link span {
+        position: absolute;
+        top: -1000em;
+        left: -1000em;
+    }
+
+a.media-ccc-link.show-title span {
+        position: initial;
+    }
+
+a.media-ccc-link:after {
+        display: inline-block;
+        content: '';
+        background: url("../img/partners/media-ccc-de_logo.svg");
+        --aspect-ratio: calc(44/42);
+        --height: calc(1em * var(--line-height));
+        height: var(--height);
+        width: calc( var(--height) * var(--aspect-ratio) );
+        background-size: cover;
+        vertical-align: bottom;
+    }
+
+a.media-ccc-link.show-title:after{
+        margin-left: .3em;
+    }
 
 .event-hosts,
 .event-labels {
