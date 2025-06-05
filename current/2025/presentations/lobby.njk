@@ -60,12 +60,12 @@ slicesSetup:
     {%- heading 'h2', formattedDate, day -%}
 <table class="schedule">
     {% for scheduleItem in dayData.schedule.slice(startEnd.s, startEnd.e) %}
-    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], scheduleItem) }}
+    {{ macro.renderScheduleRow(dailySchedules.timeZone[1], scheduleItem, false) }}
     {% endfor %}
     {% set scheduleItem = dayData.schedule | last %}
     {% set endItem = {startTime: dayData.realEndTime, type: "inject", content: "Day's End"} %}
     {% if dayData.schedule.length - 1 <= startEnd.e  %}
-        {{- macro.renderScheduleRow(dailySchedules.timeZone[1], endItem) -}}
+        {{- macro.renderScheduleRow(dailySchedules.timeZone[1], endItem, false) -}}
     {% endif %}
 </table>
 

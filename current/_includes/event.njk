@@ -29,11 +29,6 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
 {%-endset -%}
 {% heading 'h1', h1Content, page.fileSlug %}
 
-{%- if recording.length %}
-{% heading 'h2', 'Recording', 'recording' %}
-<a href="https://media.ccc.de/v/lgm25-upstream-2025-{{-recording}}" class="media-ccc-link"><img src="{{rootPath}}/img/media-ccc-de.png" alt="Recording of {{-title}}) }}"</a>
-{%- endif -%}
-
 {% if hosts.length %}
 {% heading 'h2', 'Hosted By', 'hosted-by' %}
 <ul class="event-hosts">
@@ -57,6 +52,19 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
 {%- endfor %}
 </ul>
 {% endif %}
+
+{%- import "macros.njk" as macro with context -%}
+{%- if recording %}
+{% heading 'h2', 'Recording', 'recording' %}
+<iframe
+    style="aspect-ratio: 1024/576"
+    width="100%"
+    src="https://media.ccc.de/v/lgm25-upstream-2025-{{recording}}/oembed"
+    frameborder="0"
+    allowfullscreen></iframe>
+<p>{{ macro.mediaCCCLink(recording, title, true) }}</p>
+{%- endif -%}
+
 
 {% heading 'h2', 'Abstract', 'abstract' %}
 
