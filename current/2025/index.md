@@ -12,18 +12,19 @@ headInject: >
 Spread the recordings!
 </div>
 
-The 18th annual Libre Graphics Meeting (LGM) has taken place in Nuremberg, Germany on May 28–31, 2025.
+# Welcome
 
-The Libre Graphics Meeting  is the annual meeting on Free/Libre and
+The 18th annual Libre Graphics Meeting (LGM) took place in Nuremberg, Germany on May 28–31, 2025.
+
+The Libre Graphics Meeting is the annual meeting on Free/Libre and
 Open Source software for graphics.
 
-[![Group photo]({{rootPath}}/img/lgm-group-photo-2025.jpg)]({{rootPath}}/img/lgm-group-photo-2025-full.jpg)
+{{ macro.blockImage('lgm-group-photo-2025.jpg', 'Group photo') }}
 
 ## The recordings
 
-All the talks have been recorded by [Chaos-West TV] and can be found on [media.ccc.de](https://media.ccc.de/b/events/lgm/2025).
-
-In the [Program]({{rootPath}}/program) you find a direct link for each event that has been recorded.
+All talks have been recorded by [Chaos-West TV](https://chaoswest.tv/) and can be found on [media.ccc.de](https://media.ccc.de/b/events/lgm/2025).
+In the [Program]({{rootPath}}/program), you'll find a direct link to each recorded event.
 
 ## Stay in contact
 
