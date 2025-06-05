@@ -51,6 +51,12 @@ Example Macro: <strong>{{title}}</strong>
 </div>
 {% endmacro %}
 
+{# urlArgument is the part of the recordings url after https://media.ccc.de/v/lgm25-upstream-2025- #}
+{%- macro mediaCCCLink(urlArgument, altTitle) -%}
+<div class="media-ccc-link">
+<a href="https://media.ccc.de/v/lgm25-upstream-2025-{{ urlArgument }}">{{ blockImage('media-ccc-de.png', 'Recording of ' + altTitle) }}</a>
+</div>
+{%- endmacro -%}
 
 
 {%- macro renderTypeBreak(scheduleItem) -%}
@@ -78,6 +84,10 @@ Example Macro: <strong>{{title}}</strong>
     {%-for label in page.data.labels %}
       <a class="label-link" href="{{rootPath}}/program/label-{{label | slugify}}">#{{label}}</a>
     {%- endfor %}
+    {%- if page.data.recording.length %}
+
+    {{ mediaCCCLink(page.data.recording, page.data.title) }}
+    {%- endif -%}
   {%- endif -%}
 {%- endmacro -%}
 

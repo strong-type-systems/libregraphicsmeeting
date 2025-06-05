@@ -977,9 +977,16 @@ h1 .event-type{
     white-space: nowrap;
 }
 
-h2:has(+ .event-hosts, + .event-labels) {
+h2:has(+ .event-hosts, + .event-labels, + .media-ccc-link) {
     display: inline-block;
     --font-size: 1.4;
+}
+
+a.media-ccc-link {
+    &:after {
+        content: '';
+        display: block;
+    }
 }
 
 .event-hosts,

@@ -3,6 +3,7 @@ labels: ['KiCAD', 'cad']
 type: talk
 title: "PCB Artwork with KiCAD"
 hosts: [SimonB]
+recording: 83655-pcb-artwork-with-kicad
 ---
 
 At the 2014 edition of LGM in Leipzig I've shown the evolution on

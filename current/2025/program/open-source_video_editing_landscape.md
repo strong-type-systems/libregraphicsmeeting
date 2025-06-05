@@ -3,6 +3,7 @@ labels: ['video', 'toolbox']
 type: talk
 title: "A View on the Open-Source Video Editing Landscape"
 hosts: ['Simran']
+recording: 83652-a-view-on-the-open-source-video-editing-landscape
 ---
 
 Whether it is stitching together some travel footage or producing high-quality film content, there are many ways people want to work with the medium "video". Their needs for video editing solutions are diverse, and so is their budget.

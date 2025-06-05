@@ -29,6 +29,11 @@ Back to <a href="{{rootPath}}/program">Program</a><br />
 {%-endset -%}
 {% heading 'h1', h1Content, page.fileSlug %}
 
+{%- if recording.length %}
+{% heading 'h2', 'Recording', 'recording' %}
+<a href="https://media.ccc.de/v/lgm25-upstream-2025-{{-recording}}" class="media-ccc-link"><img src="{{rootPath}}/img/media-ccc-de.png" atl="Recording of {{-title}}) }}</a>
+{%- endif -%}
+
 {% if hosts.length %}
 {% heading 'h2', 'Hosted By', 'hosted-by' %}
 <ul class="event-hosts">

@@ -3,6 +3,7 @@ labels: ['Hubs', 'Blender', 'web', '3d']
 type: talk
 title: "Re:Imagining a 3D and Interactive Internet"
 hosts: [Gottfried, Frederik]
+recording: 83658-re-imagining-a-3d-and-interactive-internet
 ---
 
 Hubs is an open-source interactive browser based 3D meeting space. It is

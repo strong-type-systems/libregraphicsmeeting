@@ -4,6 +4,7 @@ type: talk
 title: "The State of Processing: How We’re Bringing a Creative Coding Icon Back to Life"
 hosts: ['Raphaël', 'Stef']
 clipsInjectClass: adjust-long-title
+recording: 83647-the-state-of-processing-how-we-re-bringing-a-creative-coding-icon-back-to-life
 ---
 
 Processing is one of the most widely used open-source tools for creative coding and CS education. Since it was first released in 2001, it has been instrumental in teaching coding to students, artists, and designers worldwide, serving as a gateway into programming for people who might never have touched code otherwise.

@@ -3,6 +3,7 @@ labels: []
 type: talk
 title: "State of Libre Graphics"
 hosts: [LGM, MABarbe]
+recording: 83646-state-of-libre-graphics
 ---
 
 An update from the many projects of our community.

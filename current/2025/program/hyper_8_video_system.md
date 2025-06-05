@@ -3,6 +3,7 @@ labels: ['video', 'web', 'PeerTube']
 type: talk
 title: "Hyper 8 Video System"
 hosts: ['SimonR']
+recording: 83657-hyper-8-video-system
 ---
 
 [Hyper 8](https://simonrepp.com/hyper8) is a static site generator for video, developed since 2023 and

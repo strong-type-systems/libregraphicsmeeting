@@ -3,6 +3,7 @@ labels: ['usability', 'ux']
 type: talk
 title: "Introduction to Usability/UX Evaluation Methods"
 hosts: ['SimonH']
+recording: 83661-introduction-to-usability-ux-evaluation-methods
 ---
 
 The session will start with an introduction to the topic of usability and user experience (UX),

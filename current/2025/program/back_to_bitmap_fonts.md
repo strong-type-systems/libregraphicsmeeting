@@ -3,6 +3,7 @@ labels: [fonts, typography, vector]
 type: talk
 title: "Let's All Go Back To Bitmap Fonts!"
 hosts: ['Nathan']
+recording: 83649-let-s-all-go-back-to-bitmap-fonts-
 ---
 
 Scalable vector fonts have been the norm for decades, but that doesn't

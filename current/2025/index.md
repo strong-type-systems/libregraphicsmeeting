@@ -9,36 +9,26 @@ headInject: >
 ---
 
 <div class="call_for_action">
-Just come by!
+Spread the recordings!
 </div>
 
-# Welcome
+The 18th annual Libre Graphics Meeting (LGM) has taken place in Nuremberg, Germany on May 28–31, 2025.
 
-The 18th annual Libre Graphics Meeting (LGM) will be held in Nuremberg, Germany on May 28–31, 2025.
-
-The Libre Graphics Meeting  is an annual meeting on Free/Libre and
+The Libre Graphics Meeting  is the annual meeting on Free/Libre and
 Open Source software for graphics.
 
-## Directions
+## The recordings
 
->**Karl-Bröger-Zentrum**<br />
->Karl-Bröger-Straße 9<br />
->90459 Nürnberg
+All the talks have been recorded by [Chaos-West TV] and can be found on [media.ccc.de](https://media.ccc.de/b/events/lgm/2025).
 
-See the [Venues page]({{rootPath}}/venues) for more details.
+In the [Program]({{rootPath}}/program) you find a direct link for each event that has been recorded.
 
-## During the event
+## Stay in contact
 
-* Check the [Program]({{rootPath}}/program) for updates.
-* Use our [IRC/Matrix Channel]({{rootPath}}/contact/#chat--matrix-and-irc) for direct updates and to stay in contact.
+You can get in touch with the people of the Libre Graphics Meeting:
 
-## Live Streaming
-
-<iframe src="https://streaming.media.ccc.de/lgm2025/embed/main/hls/native"
-width="100%" style="aspect-ratio:1024/576" frameborder="none" allowfullscreen="allowfullscreen"
-seamless="seamless" scrolling="no"></iframe>
-
-Or go to [https://streaming.media.ccc.de/](https://streaming.media.ccc.de/)
+- Join our [IRC/Matrix Channel]({{rootPath}}/contact/#chat--matrix-and-irc).
+- Follow us in the Fediverse: [@lgm@post.lurk.org](https://post.lurk.org/@lgm)
 
 <article>
 {% heading 'h1', 'Latest News', 'latest-news' %}
@@ -66,5 +56,3 @@ strengthen the structures around the Libre Graphics Meeting.
 Join us to reconnect with old friends and forge new connections. Under the
 theme of [RE:imagination]({{rootPath}}/program/label-re-imagination/),
 we are going to explore the future of the Libre Graphics Meeting together.
-
-
