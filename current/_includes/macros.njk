@@ -43,11 +43,17 @@ Example Macro: <strong>{{title}}</strong>
 </ul>
 {%- endmacro -%}
 
-{% macro blockImage(file, alt) %}
+{% macro blockImage(file, alt, link) %}
 <div class="block-image">
+{% if link %}
+    <a href="{{ link }}">
+{%- endif -%}
 <img
     src="{{rootPath}}/img/{{file}}"
     alt="{{alt}}" />
+{%- if link -%}
+    </a>
+{% endif %}
 </div>
 {% endmacro %}
 
