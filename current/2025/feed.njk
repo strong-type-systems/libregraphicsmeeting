@@ -37,7 +37,7 @@
     <content type="html">
     {%- set fullContent -%}
     <p class="lead">{{post.data.lead}}</p>
-    {{ post.content }}
+    {{ post.content | safe }}
     {%- endset -%}
     {{ fullContent | renderTransforms(post.data.page, metadata.base) }}</content>
   </entry>
