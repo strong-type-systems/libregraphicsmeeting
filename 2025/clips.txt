@@ -38,8 +38,8 @@
 /2025/clips/state_of_libre_graphics
 /2025/clips/state_of_processing
 /2025/clips/the_pdf_toolbox
-/2025/clips/type-roof
 /2025/clips/upstage_presentation
+/2025/clips/type-roof
 /2025/clips/upstage_workshop
 /2025/clips/usability_conduct_heuristic_evaluation
 /2025/clips/welcome
