@@ -36,7 +36,7 @@
     <id>{{ absolutePostUrl }}</id>
     <content type="html">
     {%- set fullContent -%}
-    <p class="lead">{{post.data.lead}}</p>
+    <p class="lead">{{ post.data.lead| safe }}</p>
     {{ post.content | safe }}
     {%- endset -%}
     {{ fullContent | renderTransforms(post.data.page, metadata.base) }}</content>
