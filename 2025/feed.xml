@@ -4,12 +4,36 @@
   <subtitle>The Libre Graphics Meeting is an annual meeting on Free/Libre and Open Source software for graphics.</subtitle>
   <link href="https://libregraphicsmeeting.org/2025/feed.xml" rel="self" />
   <link href="https://libregraphicsmeeting.org/" />
-  <updated>2025-05-19T00:00:00Z</updated>
+  <updated>2025-08-29T00:00:00Z</updated>
   <id>https://libregraphicsmeeting.org/</id>
   <author>
     <name>Lasse Fister</name>
     <email>libregraphicsmeeting@strong-type.systems</email>
   </author>
+  <entry>
+    <title>Venue candidates for the Libre Graphics Meeting 2026</title>
+    <link href="https://libregraphicsmeeting.org/2025/news/2025-08-29_venue-candidates-libre-graphics-meeting/" />
+    <updated>2025-08-29T00:00:00Z</updated>
+    <id>https://libregraphicsmeeting.org/2025/news/2025-08-29_venue-candidates-libre-graphics-meeting/</id>
+    <content type="html">
+    &lt;p class=&quot;lead&quot;&gt;After the LGM 2025 in Nuremberg, we went home with a couple of &quot;vague&quot; proposals for hosting next year&#39;s LGM.
+&lt;/p&gt;
+    &lt;p&gt;Because of the short preparation period, Lasse was asked if he would agree to organize a second LGM in Nuremberg next year. He accepted to consider it.&lt;/p&gt;
+&lt;p&gt;August 20th was the soft deadline for proposing a candidature and during the bi-weekly LGM online meetings, the only concrete proposal we had, was the one for a second LGM in Nuremberg.&lt;/p&gt;
+&lt;h2&gt;&lt;a id=&quot;vote&quot; class=&quot;heading_anchor&quot; href=&quot;https://libregraphicsmeeting.org/2025/news/2025-08-29_venue-candidates-libre-graphics-meeting/#vote&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;Vote&lt;/h2&gt;
+&lt;p&gt;We are now asking the community to vote for this proposal, cheer for it, and/or raise your concerns:
+&lt;br&gt;&lt;br&gt;
+&lt;a href=&quot;https://framadate.org/L3qQLzfuCiHeNh1k&quot;&gt;https://framadate.org/L3qQLzfuCiHeNh1k&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+then join and have small online LGM party on September 3rd:&lt;br&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://matrix.to/#/#lgm:kde.org&quot;&gt;https://matrix.to/#/#lgm:kde.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;irc:irc.libera.chat/#lgm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a id=&quot;heads-up&quot; class=&quot;heading_anchor&quot; href=&quot;https://libregraphicsmeeting.org/2025/news/2025-08-29_venue-candidates-libre-graphics-meeting/#heads-up&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;Heads Up&lt;/h2&gt;
+&lt;p&gt;As soon as this decision is settled, we’ll start the process for finding our 2027 location.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Sponsorship Announcement: Font Bureau</title>
     <link href="https://libregraphicsmeeting.org/2025/news/2025-05-19_0002-sponsoring-update-welcome-fontbureau/" />
