@@ -183,8 +183,8 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData('reimagination',  fs.readFileSync(`${dir.input}/2025/css/re-imagination.svg`));
     eleventyConfig.addGlobalData('logo_compact',  fs.readFileSync(`${dir.input}/2025/css/lgm_2025-compact.svg`));
     eleventyConfig.addPlugin(pluginRss);
-    eleventyConfig.addShortcode('newsDate', newsDate);
-    eleventyConfig.addShortcode('news', renderNews);
+    eleventyConfig.addShortcode('newsDate', wrapShortcode(newsDate));
+    eleventyConfig.addShortcode('news', wrapShortcode(renderNews));
     eleventyConfig.addPairedShortcode('slide', wrapShortcode((content, attributes)=>{
         const attrs = []
         if(attributes) {
