@@ -24,6 +24,9 @@ difference, and we truly appreciate your partnership.
     rootPath + '/img/partners/gimp_logo.svg',
     'GNU Image Manipulation Program ') }}
 
+{{ macro.sponsor('gold', 'Google', 'https://www.google.com/',
+    rootPath + '/img/partners/google_logo.svg') }}
+
 ## Silver Partners
 
 {{ macro.sponsor('silver', 'B1 Systems', 'https://www.b1-systems.de',
